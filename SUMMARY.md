@@ -15,4 +15,5 @@
 ## Misc
 
 * [Universal Rendering](misc/universal-rendering.md)
+* [Using with typescript](misc/using-with-typescript.md)
 
