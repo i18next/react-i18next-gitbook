@@ -12,3 +12,7 @@
 * [Translate HOC](components/translate-hoc.md)
 * [Interpolate](components/interpolate.md)
 
+## Misc
+
+* [Universal Rendering](misc/universal-rendering.md)
+
