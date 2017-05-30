@@ -1,10 +1,17 @@
-<!-- toc -->
-# My Awesome API
+# What is react-i18next?
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+react-i18next is an **internationalization** addon for **reactjs** and is based on [i18next](http://i18next.com).
+
+The module asserts that needed translations get loaded for your components and that your content gets rerendered on language changes.
+
+As react-i18next builds on [i18next](http://i18next.com) you can use it on any other UI framework or on the server (node.js) too. As react philosophy: **Learn once - use everywhere**.
 
 
-# My Awesome API
+# On top: Localization as a service
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
 
+It even provides with [locize.com](http://locize.com) a own translation management tool - localization as a service offering.
+
+<img src="/assets/img/dashboard.png" width="50%" />
+
+[Learn more about the enterprise offering](/for-enterprises.md)
