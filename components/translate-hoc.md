@@ -10,6 +10,8 @@ To learn more about using the `t` function have a look at i18next documentation:
 - [plurals](https://www.i18next.com/plurals.html)
 - ...
 
+**Important:** needs to be nested inside a [I18nextProvider](/components/i18nextprovider.md) or you will need to pass the i18next instance via prop i18n.
+
 ```js
 import React from 'react';
 import { translate } from 'react-i18next';
