@@ -38,7 +38,7 @@ export default translate()(TranslatableView);
 
 ```
 
-### The translate hocs take a few options:
+### The translate hoc can take a few options:
 
 ```js
 export default translate('defaultNamespace', { wait: true })(TranslatableView);
