@@ -14,4 +14,4 @@ It even provides with [locize.com](http://locize.com) a own translation manageme
 
 <img src="/assets/img/dashboard.png" width="50%" />
 
-[Learn more about the enterprise offering](/for-enterprises.md)
+[Learn more about the enterprise offering](https://www.i18next.com/for-enterprises.html)
