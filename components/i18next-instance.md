@@ -28,4 +28,4 @@ export default i18n;
 
 For more initialization options have look at the [docs](https://www.i18next.com/configuration-options.html).
 
-The instance should be passed to the I18nextProvider
+The instance should be passed to the [I18nextProvider](/components/i18nextprovider.md).
