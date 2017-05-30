@@ -15,3 +15,5 @@ ReactDOM.render(
   document.getElementById('app')
 );
 ```
+
+For the i18n instance have a look at the [i18n page](/components/i18next-instance.md).
