@@ -5,7 +5,7 @@
 * [Introduction](README.md)
 * [Getting started](getting-started.md)
 
-## Methods
+## Components
 
-* [Defining Methods](methods.md)
+* [i18next instance](components/i18next-instance.md)
 
