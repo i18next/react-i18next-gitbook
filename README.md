@@ -1,5 +1,17 @@
 # What is react-i18next?
 
+<iframe src="https://ghbtns.com/github-btn.html?user=i18next&repo=react-i18next&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+
+[![Travis](https://img.shields.io/travis/i18next/react-i18next/master.svg?style=flat-square)](https://travis-ci.org/i18next/react-i18next)
+[![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/i18next/react-i18next)
+[![Coveralls](https://img.shields.io/coveralls/i18next/react-i18next/master.svg?style=flat-square)](https://coveralls.io/github/i18next/react-i18next)
+[![Package Quality](http://npm.packagequality.com/shield/react-i18next.svg)](http://packagequality.com/#?package=react-i18next)
+[![npm version](https://img.shields.io/npm/v/react-i18next.svg?style=flat-square)](https://www.npmjs.com/package/react-i18next)
+[![Bower](https://img.shields.io/bower/v/react-i18next.svg?style=flat-square)]()
+[![David](https://img.shields.io/david/i18next/react-i18next.svg?style=flat-square)](https://david-dm.org/i18next/react-i18next)
+
+
+
 react-i18next is an **internationalization** addon for **reactjs** and is based on [i18next](http://i18next.com).
 
 The module asserts that needed translations get loaded for your components and that your content gets rerendered on language changes.
