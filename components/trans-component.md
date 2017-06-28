@@ -4,7 +4,8 @@ This component enables you to nest any react content to be translated as one str
 
 Lets say you want to create following html output:
 
-Hello **Arthur**, you have 42 unread messages. [Go to messages](/#).
+<div style="font-size: 20px;">Hello <strong>Arthur</strong>, you have 42 unread messages. <a href="/#">Go to messages</a>.
+</div>
 
 Your react code would have looked something like:
 
@@ -31,4 +32,5 @@ en:
 "userMessagesUnread_plural": "Hello <1><0>{{name}}</0></1>, you have <3>{{count}}</3> unread messages.  <5>Go to messages</5>.",
 ```
 
+For a working sample have a look [here](https://github.com/i18next/react-i18next/blob/master/example/webpack2/app/components/View.js#L41).
 
