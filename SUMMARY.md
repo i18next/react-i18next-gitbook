@@ -11,6 +11,7 @@
 * [I18nextProvider](components/i18nextprovider.md)
 * [Translate HOC](components/translate-hoc.md)
 * [Interpolate](components/interpolate.md)
+* [Trans Component](components/trans-component.md)
 
 ## Misc
 
