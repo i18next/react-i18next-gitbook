@@ -4,7 +4,7 @@ This component enables you to nest any react content to be translated as one str
 
 Lets say you want to create following html output:
 
-<div style="font-size: 20px;">Hello <strong>Arthur</strong>, you have 42 unread messages. <a href="/#">Go to messages</a>.
+<div style="font-size: 20px; margin-bottom: 40px;">Hello <strong>Arthur</strong>, you have 42 unread messages. <a href="/#">Go to messages</a>.
 </div>
 
 Your react code would have looked something like:
