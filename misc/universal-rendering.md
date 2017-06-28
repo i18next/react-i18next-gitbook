@@ -36,4 +36,7 @@ app.use((req, res) => {
 });
 ```
 
-Full [sample/boilerplate](https://github.com/simpleblack/react-redux-universal-hot-example) for universal rendering.
+## samples
+
+- [Universal boilerplate](https://github.com/simpleblack/react-redux-universal-hot-example).
+- [nextjs](https://github.com/i18next/react-i18next/tree/master/example/nextjs)
