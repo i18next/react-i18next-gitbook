@@ -32,5 +32,12 @@ en:
 "userMessagesUnread_plural": "Hello <1><0>{{name}}</0></1>, you have <3>{{count}}</3> unread messages.  <5>Go to messages</5>.",
 ```
 
+- **saveMissing** will send a valid defaultValue
+
 For a working sample have a look [here](https://github.com/i18next/react-i18next/blob/master/example/webpack2/app/components/View.js#L41).
+
+## props
+
+- **i18nextKey**: is optional if you prefer to use text as keys you can omit that and the translation will be used as key.
+- **count**: optional count if you use a plural
 
