@@ -1,4 +1,4 @@
-# Universal Rendering
+# Serverside Rendering
 
 __loadNamespaces__: Function that will pre-load all namespaces used by your components.  Works well with `react-router` `match` function
 
