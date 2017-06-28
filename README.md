@@ -18,6 +18,32 @@ The module asserts that needed translations get loaded for your components and t
 
 As react-i18next builds on [i18next](http://i18next.com) you can use it on any other UI framework or on the server (node.js) too. As react philosophy: **Learn once - use everywhere**.
 
+# How does my code look like
+
+**Before:** Your react code would have looked something like:
+
+```js
+...
+<div>Just simple content</div>
+<div>
+    Hello <strong title="this is your name">{name}</strong>, you have {count} unread message(s). <Link to="/msgs">Go to messages</Link>.
+</div>
+...
+```
+
+**After:** With the trans component just change it to:
+
+```js
+...
+<div>{t('simpleContent')}</div>
+<Trans i18nKey="userMessagesUnread" count={count}>
+    Hello <strong title={t('nameTitle')}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
+</Trans>
+...
+```
+
+If you prefer not using semantic keys for your content but prefer using your content - [that's also possible](https://www.i18next.com/principles/fallback.html#key-fallback).
+
 
 # On top: Localization as a service
 
