@@ -20,7 +20,7 @@ ReactDOM.render(
 
 For the i18n instance have a look at the [i18n page](/components/i18next-instance.md).
 
-### The translate hoc can use some props it gets passed:
+### The i18nextProvider can use some props it gets passed:
 
 options | default | description
 --------|---------|-------------
