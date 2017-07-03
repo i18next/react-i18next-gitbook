@@ -20,6 +20,11 @@ Based on the zero dependencies and build tools react-i18next is optimal suited f
 
 As react-i18next builds on [i18next](http://i18next.com) you can use it on any other UI framework or on the server (node.js) too. As react philosophy - but: **Learn once - translate everywhere**.
 
+
+[![video](https://raw.githubusercontent.com/i18next/react-i18next/master/example/locize-example/video_sample.png)](https://www.youtube.com/watch?v=9NOzJhgmyQE)
+
+[watch the video](https://www.youtube.com/watch?v=9NOzJhgmyQE)
+
 # How does my code look like
 
 **Before:** Your react code would have looked something like:
