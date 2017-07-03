@@ -12,7 +12,7 @@
 
 
 
-react-i18next is an **internationalization** addon for **reactjs** and is based on [i18next](http://i18next.com).
+react-i18next is an **internationalization** addon for **reactjs** / **reactnative** and is based on [i18next](http://i18next.com).
 
 The module asserts that needed translations get loaded for your components and that your content gets rerendered on language changes.
 
