@@ -72,3 +72,6 @@ ReactDOM.render(
 ```
 
 For complete code and samples: [have a look at the samples (react, react-native, nextjs](https://github.com/i18next/react-i18next/tree/master/example).
+
+Or have a look at the interactive [webpackbin](https://www.webpackbin.com/bins/-KoCD3kvA-4QJNaHpkxi)
+
