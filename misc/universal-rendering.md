@@ -10,7 +10,7 @@ To learn more you should checkout our samples:
 
 ## pass language and translations down to client
 
-Both the i18nextProvider and translate hoc allows to pass in initial I18nStore and initial Language\`. By doing so the translations won't be loaded and initial clientside render will avoid any flickering or rerender by checksum mismatch:
+Both the i18nextProvider and translate hoc allows to pass in initial I18nStore and initial Language. By doing so the translations won't be loaded and initial clientside render will avoid any flickering or rerender by checksum mismatch:
 
 ## loadNamespaces helper
 
