@@ -4,22 +4,22 @@
 
 To learn more you should checkout our samples:
 
-- [nextjs (sample provided by react-i18next)](https://github.com/i18next/react-i18next/tree/master/example/nextjs)
-- [razzle (sample provided by react-i18next)](https://github.com/i18next/react-i18next/tree/master/example/razzle-ssr)
-- [simpleblack's boilerplate](https://github.com/simpleblack/react-redux-universal-hot-example)
+* [nextjs \(sample provided by react-i18next\)](https://github.com/i18next/react-i18next/tree/master/example/nextjs)
+* [razzle \(sample provided by react-i18next\)](https://github.com/i18next/react-i18next/tree/master/example/razzle-ssr)
+* [simpleblack's boilerplate](https://github.com/simpleblack/react-redux-universal-hot-example)
 
 ## pass language and translations down to client
 
-Both the [i18nextProvider](/components/i18nextprovider.md) and [translate hoc](/components/translate-hoc.md) allows to pass in initialI18nStore` and `initialLanguage`. By doing so the translations won't be loaded and initial clientside render will avoid any flickering or rerender by checksum mismatch:
+Both the i18nextProvider and translate hoc allows to pass in initial I18nStore and initial Language\`. By doing so the translations won't be loaded and initial clientside render will avoid any flickering or rerender by checksum mismatch:
 
 ## loadNamespaces helper
 
-__loadNamespaces__: Function that will pre-load all namespaces used by your components.  Works well with `react-router` `match` function
+**loadNamespaces**: Function that will pre-load all namespaces used by your components.  Works well with `react-router` `match` function
 
-__props__:
+**props**:
 
-- components: Components that need to have namespaces loaded.
-- i18n: the i18n instance to load translations into
+* components: Components that need to have namespaces loaded.
+* i18n: the i18n instance to load translations into
 
 ```javascript
 import { I18nextProvider, loadNamespaces } from 'react-i18next';
@@ -35,7 +35,7 @@ match({...matchArguments}, (error, redirectLocation, renderProps) => {
 
 ## use the i18next-express-middleware
 
-When using [i18next-express-middleware](https://github.com/i18next/i18next-express-middleware), you can use `req.i18n` as the `i18next` instance for `I18nextProvider` it will assert no request conflicts happen (each request gets it's cloned instance of i18next):
+When using [i18next-express-middleware](https://github.com/i18next/i18next-express-middleware), you can use `req.i18n` as the `i18next` instance for `I18nextProvider` it will assert no request conflicts happen \(each request gets it's cloned instance of i18next\):
 
 ```javascript
 import { I18nextProvider } from 'react-i18next';
@@ -52,4 +52,6 @@ app.use((req, res) => {
    // render as desired now ...
 });
 ```
+
+
 
