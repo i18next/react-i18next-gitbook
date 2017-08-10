@@ -90,7 +90,7 @@ function TranslatableView(props) {
 a) Use standard interpolation of i18next and dangerously insert that:
 
 ```js
-<div dangerouslySetInnerHTML={t('my-label', { link: yourURL }} />
+<div dangerouslySetInnerHTML={{ __html: t('my-label', { link: yourURL }) }} />
 ```
 
 b) use markdown, eg. [react-remarkable](https://github.com/acdlite/react-remarkable) and pass markdown formatted content from translations to the markdown component.
