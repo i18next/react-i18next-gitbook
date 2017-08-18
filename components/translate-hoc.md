@@ -38,6 +38,47 @@ export default translate()(TranslatableView);
 
 ```
 
+### Set defaults for all your translate hoc
+
+Below you see how to pass options for one hoc. But most time you like to change those values for every component.
+
+So there are two options:
+
+#### a) Set those on i18next init:
+
+```
+i18next.init({
+  // ... other options
+  react: {
+    wait: false,
+    withRef: false,
+    bindI18n: 'languageChanged loaded',
+    bindStore: 'added removed',
+    nsMode: 'default'
+  }
+});
+```
+
+You can set every option excluding the `translateFuncName` as we need that before creating an instance to set the childContextTypes.
+
+#### b) Use the setDefaults function:
+
+```
+import translate from 'react-i18next';
+
+translate.setDefaults({
+  wait: false,
+  withRef: false,
+  bindI18n: 'languageChanged loaded',
+  bindStore: 'added removed',
+  nsMode: 'default',
+  translateFuncName: 't'
+});
+```
+
+Here you can also set the default for `translateFuncName` property.
+
+
 ### The translate hoc can take a few options:
 
 ```js
