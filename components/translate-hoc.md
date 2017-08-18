@@ -46,7 +46,7 @@ So there are two options:
 
 #### a) Set those on i18next init:
 
-```
+```js
 i18next.init({
   // ... other options
   react: {
@@ -63,7 +63,7 @@ You can set every option excluding the `translateFuncName` as we need that befor
 
 #### b) Use the setDefaults function:
 
-```
+```js
 import translate from 'react-i18next';
 
 translate.setDefaults({
