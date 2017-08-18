@@ -38,7 +38,7 @@ export default translate()(TranslatableView);
 
 ```
 
-### Set defaults for all your translate hoc
+### Set defaults for all your translate hoc components
 
 Below you see how to pass options for one hoc. But most time you like to change those values for every component.
 
