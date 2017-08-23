@@ -10,7 +10,7 @@ To learn more about using the `t` function have a look at i18next documentation:
 - [plurals](https://www.i18next.com/plurals.html)
 - ...
 
-**Important:** needs to be nested inside a [I18nextProvider](/components/i18nextprovider.md) or you will need to pass the i18next instance via prop i18n.
+Can be nested inside a [I18nextProvider](/components/i18nextprovider.md). If not you will need to pass the i18next instance via prop i18n, in options or by using setI18n function (see below).
 
 ```js
 import React from 'react';
@@ -36,6 +36,17 @@ export default translate('defaultNamespace')(TranslatableView);
 export default translate()(TranslatableView);
 
 
+```
+
+### Using setI18n instead of the i18nextProvider
+
+You can set the instance like to avoid using the i18nextProvider:
+
+```js
+import translate from 'react-i18next';
+import i18n from './i18n';
+
+translate.setI18n(i18n);
 ```
 
 ### Set defaults for all your translate hoc components
