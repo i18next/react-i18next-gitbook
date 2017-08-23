@@ -1,6 +1,6 @@
 # I18nextProvider
 
-The provider is responsible to pass the i18next instance down to all the translate hocs using react context.
+The provider is responsible to pass the i18next instance down to all the translate hocs using react context. Alternatively you can pass that directly in the [translate hoc](/components/translate-hoc.md).
 
 ```js
 import React from 'react';

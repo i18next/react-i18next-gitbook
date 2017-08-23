@@ -34,4 +34,4 @@ export default i18n;
 
 For more initialization options have look at the [docs](https://www.i18next.com/configuration-options.html).
 
-The instance should be passed to the [I18nextProvider](/components/i18nextprovider.md).
+The instance could be passed to the [I18nextProvider](/components/i18nextprovider.md) or directly to the [translate hoc](/components/translate-hoc.md).
