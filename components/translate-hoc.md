@@ -4,13 +4,13 @@ The translate hoc is responsible to pass the `t` function to your component whic
 
 To learn more about using the `t` function have a look at i18next documentation:
 
-- [essentials](https://www.i18next.com/essentials.html)
-- [interpolation](https://www.i18next.com/interpolation.html)
-- [formatting](https://www.i18next.com/formatting.html)
-- [plurals](https://www.i18next.com/plurals.html)
-- ...
+* [essentials](https://www.i18next.com/essentials.html)
+* [interpolation](https://www.i18next.com/interpolation.html)
+* [formatting](https://www.i18next.com/formatting.html)
+* [plurals](https://www.i18next.com/plurals.html)
+* ...
 
-Can be nested inside a [I18nextProvider](/components/i18nextprovider.md). If not you will need to pass the i18next instance via prop i18n, in options or by using setI18n function (see below).
+Can be nested inside a [I18nextProvider](/components/i18nextprovider.md). If not you will need to pass the i18next instance via prop i18n, in options or by using setI18n function \(see below\).
 
 ```js
 import React from 'react';
@@ -34,13 +34,11 @@ export default translate('defaultNamespace')(TranslatableView);
 
 // short for using defaultNS of i18next
 export default translate()(TranslatableView);
-
-
 ```
 
 ### Using setI18n instead of the i18nextProvider
 
-You can set the instance like to avoid using the i18nextProvider:
+You can set the i18n instance using the setI18n function to avoid using the i18nextProvider:
 
 ```js
 import translate from 'react-i18next';
@@ -55,7 +53,7 @@ Below you see how to pass options for one hoc. But most time you like to change 
 
 So there are two options:
 
-#### a) Set those on i18next init:
+#### a\) Set those on i18next init:
 
 ```js
 i18next.init({
@@ -72,7 +70,7 @@ i18next.init({
 
 You can set every option excluding the `translateFuncName` as we need that before creating an instance to set the childContextTypes.
 
-#### b) Use the setDefaults function:
+#### b\) Use the setDefaults function:
 
 ```js
 import translate from 'react-i18next';
@@ -89,34 +87,29 @@ translate.setDefaults({
 
 Here you can also set the default for `translateFuncName` property.
 
-
 ### The translate hoc can take a few options:
 
 ```js
 export default translate('defaultNamespace', { wait: true })(TranslatableView);
 ```
 
-options | default | description
---------|---------|-------------
-wait    | false   | assert all provided namespaces are loaded before rendering the component (can be set [globally](/components/i18next-instance.md) too)
-nsMode  | 'default' | *default:* namespaces will be loaded an the first will be set as default or *fallback:* namespaces will be used as fallbacks used in order provided
-bindI18n | 'languageChanged loaded' | which events trigger a rerender, can be set to false or string of events
-bindStore | 'added removed' | which events on store trigger a rerender, can be set to false or string of events
-withRef | false | store a ref to the wrapped component and access it by `decoratedComponent.getWrappedInstance();`
-translateFuncName | 't' | name for the t function added to props
-i18n | undefined | pass i18next via options (useful for [next.js usage](https://github.com/i18next/react-i18next/tree/master/example/nextjs)
+| options | default | description |
+| --- | --- | --- |
+| wait | false | assert all provided namespaces are loaded before rendering the component \(can be set [globally](/components/i18next-instance.md) too\) |
+| nsMode | 'default' | _default:_ namespaces will be loaded an the first will be set as default or _fallback:_ namespaces will be used as fallbacks used in order provided |
+| bindI18n | 'languageChanged loaded' | which events trigger a rerender, can be set to false or string of events |
+| bindStore | 'added removed' | which events on store trigger a rerender, can be set to false or string of events |
+| withRef | false | store a ref to the wrapped component and access it by `decoratedComponent.getWrappedInstance();` |
+| translateFuncName | 't' | name for the t function added to props |
+| i18n | undefined | pass i18next via options \(useful for [next.js usage](https://github.com/i18next/react-i18next/tree/master/example/nextjs) |
 
 ### The translate hoc can use some props it gets passed:
 
-options | default | description
---------|---------|-------------
-i18n    | undefined   | pass i18next instance by props instead of having it on context
-initialI18nStore | undefined | pass in initial translations (useful for [next.js usage](https://github.com/i18next/react-i18next/blob/master/example/nextjs/pages/index.js#L29)
-initialLanguage | undefined | pass in initial language (useful for [next.js usage](https://github.com/i18next/react-i18next/blob/master/example/nextjs/pages/index.js#L29)
-
-
-
-
+| options | default | description |
+| --- | --- | --- |
+| i18n | undefined | pass i18next instance by props instead of having it on context |
+| initialI18nStore | undefined | pass in initial translations \(useful for [next.js usage](https://github.com/i18next/react-i18next/blob/master/example/nextjs/pages/index.js#L29) |
+| initialLanguage | undefined | pass in initial language \(useful for [next.js usage](https://github.com/i18next/react-i18next/blob/master/example/nextjs/pages/index.js#L29) |
 
 
 
