@@ -61,16 +61,17 @@ export default i18n;
 ### Example test using this configuration
 
 ```javascript
+import React from 'react';
 import { Provider } from 'react-redux';
 import { mount } from 'enzyme';
 import { I18nextProvider } from 'react-i18next';
 import configureStore from 'redux-mock-store';
-import ContactTable from './ContactTable'; // This is a React container under test, which imports a decorated component
+import ContactTable from './ContactTable';
 import actionTypes from '../constants';
 import i18n from '../i18nForTests';
 
 const mockStore = configureStore([]);
-const store = mockStore({ contacts: [] });
+const store = mockStore({ contacts: [ ] });
 
 it('dispatches SORT_TABLE', () => {
   const enzymeWrapper = mount(
@@ -80,7 +81,7 @@ it('dispatches SORT_TABLE', () => {
       </I18nextProvider>
     </Provider>
   );
-  console.log(enzymeWrapper.html());                                                                                               enzymeWrapper.find('th').simulate('click');
+  enzymeWrapper.find('.sort').simulate('click');
   const actions = store.getActions();
   expect(actions).toEqual([{ type: actionTypes.SORT_TABLE }]);
 });
