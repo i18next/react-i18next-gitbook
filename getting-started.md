@@ -26,14 +26,58 @@ You can also directly add a script tag loading i18next from one of the CDNs prov
 - [https://unpkg.com/react-i18next/react-i18next.js](https://unpkg.com/react-i18next/react-i18next.js)
 - [https://unpkg.com/react-i18next/react-i18next.min.js](https://unpkg.com/react-i18next/react-i18next.min.js)
 
-## Basic sample
+## Basic sample using render props
+
+This basic sample uses render props and passes the i18next instance to it via internal context handling by using the reactI18nextModule on i18next.
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { I18n } from 'react-i18next';
+
+import App from './components/App'; // your entry page
+import i18n from './i18n'; // initialized i18next instance using reactI18nextModule
+
+class App extends React.Component {
+  render() {
+    return (
+      <I18n>
+        {
+          (t, { i18n }) => (
+            <div>
+              <h1>{t('appName')}</h1>
+              <button 
+                onClick={() => { i18n.changeLanguage('de'); }}>{t('nav:linkDE')}
+              </button>
+              <button
+                onClick={() => { i18n.changeLanguage('en'); }}>{t('nav:linkEN')}
+              </button>
+              <a
+                href='https://github.com/i18next/react-i18next'
+                target='_blank'
+              >
+                {t('nav:link1')}
+              </a>
+            </div>
+          )
+        }
+      </I18n>
+    )
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById('app'));
+```
+
+## Basic sample using HOC
+
+This basic sample uses the [I18nextProvider](/components/i18nextprovider.md) and the [translate hoc](/components/translate-hoc.md).
 
 ```js
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { I18nextProvider, translate } from 'react-i18next';
 
-import App from './components/App'; // your entry page
 import i18n from './i18n'; // initialized i18next instance
 
 @translate(['view', 'nav'], { wait: true })
