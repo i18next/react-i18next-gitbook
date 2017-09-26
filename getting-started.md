@@ -35,7 +35,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { I18n } from 'react-i18next';
 
-import App from './components/App'; // your entry page
 import i18n from './i18n'; // initialized i18next instance using reactI18nextModule
 
 class App extends React.Component {
