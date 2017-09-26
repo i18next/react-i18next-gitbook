@@ -100,7 +100,6 @@ export default translate('defaultNamespace', { wait: true })(TranslatableView);
 | bindI18n | 'languageChanged loaded' | which events trigger a rerender, can be set to false or string of events |
 | bindStore | 'added removed' | which events on store trigger a rerender, can be set to false or string of events |
 | withRef | false | store a ref to the wrapped component and access it by `decoratedComponent.getWrappedInstance();` |
-| translateFuncName | 't' | name for the t function added to props |
 | i18n | undefined | pass i18next via options \(useful for [next.js usage](https://github.com/i18next/react-i18next/tree/master/example/nextjs) |
 
 ### The translate hoc can use some props it gets passed:
