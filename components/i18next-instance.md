@@ -26,6 +26,8 @@ i18n
     // react i18next special options (optional)
     react: {
       wait: false, // set to true if you like to wait for loaded in every translated hoc
+      bindI18n: 'languageChanged loaded',
+      bindStore: 'added removed',
       nsMode: 'default' // set it to fallback to let passed namespaces to translated hoc act as fallbacks
     }
   });
