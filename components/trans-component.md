@@ -49,4 +49,8 @@ b) use the [saveMissing feature](https://www.i18next.com/configuration-options.h
 - **i18nKey**: is optional if you prefer to use text as keys you can omit that and the translation will be used as key.
 - **count**: optional count if you use a plural
 - **parent**: a component to wrap the content into (default div)
+- **i18n**: i18next instance to use if not provided via context (using hoc or render props)
+- **t**: t function to use if not provided via context (using hoc or render props)
+
+
 

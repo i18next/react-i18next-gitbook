@@ -46,6 +46,8 @@ __props__:
 - parent: optional component to wrap translation into (default 'span')
 - useDangerouslySetInnerHTML: allows use of raw html tags in translation values
 - dangerouslySetInnerHTMLPartElement: optional component to wrap parts of translation values into (default 'span'), used with `useDangerouslySetInnerHTML={true}` only
+- i18n: i18next instance to use if not provided via context (using hoc or render props)
+- t: t function to use if not provided via context (using hoc or render props)
 - ...props: values to interpolate into found translation (eg. `my value with {{replaceMe}} interpolation`)
 
 ### using useDangerouslySetInnerHtml
