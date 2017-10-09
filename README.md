@@ -51,7 +51,7 @@ As react-i18next builds on [i18next](http://i18next.com) you can use it on any o
 
 If you prefer not using semantic keys for your content but prefer using your content - [that's also possible](https://www.i18next.com/principles/fallback.html#key-fallback).
 
-Or have a look at the interactive playground at [webpackbin](https://www.webpackbin.com/bins/-KvMK7GooEOLVwtqEzgq)
+Or have a look at the interactive playground at [webpackbin](https://www.webpackbin.com/bins/-KvzvUPFsBVI_74Jll99)
 
 
 # On top: Localization as a service
