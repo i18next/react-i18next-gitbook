@@ -28,9 +28,18 @@ const stubInterpolate = function () {
 };
 ```
 
+Or mock it like:
+
+```js
+jest.mock('react-i18next', () => ({
+  // this mock makes sure any components using the translate HoC receive the t function as a prop
+  translate: () => Component => props => <Component t={() => ''} {...props} />,
+}));
+```
+
 ## Testing without stubbing
 
-Alternatively, you could also test I18next without stubbing anything, by providing the correct configuration and fully wrapping your container in the provider. 
+Alternatively, you could also test I18next without stubbing anything, by providing the correct configuration and fully wrapping your container in the provider.
 
 ### Example configuration for testing
 
@@ -86,3 +95,6 @@ it('dispatches SORT_TABLE', () => {
   expect(actions).toEqual([{ type: actionTypes.SORT_TABLE }]);
 });
 ```
+
+
+
