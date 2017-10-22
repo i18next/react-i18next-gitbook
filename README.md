@@ -57,7 +57,7 @@ Or have a look at the interactive playground at [webpackbin](https://www.webpack
 # On top: Localization as a service
 
 
-It even provides with [locize.com](http://locize.com/?utm_source=react_i18next_com) a own translation management tool - localization as a service offering.
+It even provides with [locize.com](http://locize.com/?utm_source=react_i18next_com&utm_medium=gitbook) a own translation management tool - localization as a service offering.
 
 <img src="/assets/img/dashboard.png" width="50%" />
 
