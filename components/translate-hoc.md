@@ -41,7 +41,7 @@ export default translate()(TranslatableView);
 You can set the i18n instance using the setI18n function to avoid using the i18nextProvider:
 
 ```js
-import translate from 'react-i18next';
+import { translate } from 'react-i18next';
 import i18n from './i18n';
 
 translate.setI18n(i18n);
