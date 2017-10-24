@@ -80,8 +80,7 @@ translate.setDefaults({
   withRef: false,
   bindI18n: 'languageChanged loaded',
   bindStore: 'added removed',
-  nsMode: 'default',
-  translateFuncName: 't'
+  nsMode: 'default'
 });
 ```
 
