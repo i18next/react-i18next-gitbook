@@ -68,8 +68,6 @@ i18next.init({
 });
 ```
 
-You can set every option excluding the `translateFuncName` as we need that before creating an instance to set the childContextTypes.
-
 #### b\) Use the setDefaults function:
 
 ```js
@@ -83,8 +81,6 @@ translate.setDefaults({
   nsMode: 'default'
 });
 ```
-
-Here you can also set the default for `translateFuncName` property.
 
 ### The translate hoc can take a few options:
 
