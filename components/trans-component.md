@@ -34,7 +34,7 @@ en:
 
 - **saveMissing** will send a valid defaultValue
 
-For a working sample have a look [here](https://github.com/i18next/react-i18next/blob/master/example/webpack2/app/components/View.js#L41).
+For a working sample have a look [here](https://github.com/i18next/react-i18next/blob/master/example/react_renderProps/src/App.js#L20).
 
 ## how to get the correct translation strings
 
