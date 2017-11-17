@@ -52,5 +52,19 @@ b) use the [saveMissing feature](https://www.i18next.com/configuration-options.h
 - **i18n**: i18next instance to use if not provided via context (using hoc or render props)
 - **t**: t function to use if not provided via context (using hoc or render props)
 
+## additional options on i18next.init
+
+```js
+i18next.init({
+  // ...
+  react: {
+    // ...
+    hashTransKey: function(defaultValue) {
+      // return a key based on defaultValue or if you prefer to just remind you should set a key return false and throw an error
+    }
+  }
+});
+```
+
 
 
