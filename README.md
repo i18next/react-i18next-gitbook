@@ -11,7 +11,6 @@
 [![David](https://img.shields.io/david/i18next/react-i18next.svg?style=flat-square)](https://david-dm.org/i18next/react-i18next)
 
 
-
 react-i18next is an **internationalization** addon for **reactjs** / **reactnative** and is based on [i18next](http://i18next.com).
 
 The module asserts that needed translations get loaded for your components and that your content gets rerendered on language changes.
