@@ -48,7 +48,7 @@ b) use the [saveMissing feature](https://www.i18next.com/configuration-options.h
 
 - **i18nKey**: is optional if you prefer to use text as keys you can omit that and the translation will be used as key.
 - **count**: optional count if you use a plural
-- **parent**: a component to wrap the content into (default div)
+- **parent**: a component to wrap the content into (default none, can be globally set on i18next.init)
 - **i18n**: i18next instance to use if not provided via context (using hoc or render props)
 - **t**: t function to use if not provided via context (using hoc or render props)
 
@@ -61,7 +61,8 @@ i18next.init({
     // ...
     hashTransKey: function(defaultValue) {
       // return a key based on defaultValue or if you prefer to just remind you should set a key return false and throw an error
-    }
+    },
+    defaultTransParent: 'div' // a valid react element
   }
 });
 ```
