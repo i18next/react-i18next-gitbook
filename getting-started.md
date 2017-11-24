@@ -46,10 +46,10 @@ class App extends React.Component {
             <div>
               <h1>{t('appName')}</h1>
               <button 
-                onClick={() => { i18n.changeLanguage('de'); }}>{t('nav:linkDE')}
+                onClick={() => { i18n.changeLanguage('de'); }}>{t('nav.linkDE')}
               </button>
               <button
-                onClick={() => { i18n.changeLanguage('en'); }}>{t('nav:linkEN')}
+                onClick={() => { i18n.changeLanguage('en'); }}>{t('nav.linkEN')}
               </button>
               <a
                 href='https://github.com/i18next/react-i18next'
@@ -90,10 +90,10 @@ class TranslatableView extends React.Component {
       <div>
         <h1>{t('appName')}</h1>
         <button 
-          onClick={() => toggle('de')}>{t('nav:linkDE')}
+          onClick={() => toggle('de')}>{t('nav.linkDE')}
         </button>
         <button
-          onClick={() => toggle('en')}>{t('nav:linkEN')}
+          onClick={() => toggle('en')}>{t('nav.linkEN')}
         </button>
         <a
           href='https://github.com/i18next/react-i18next'
