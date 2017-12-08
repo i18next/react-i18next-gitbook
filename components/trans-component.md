@@ -44,6 +44,40 @@ a) use `debug = true` in i18next init call and watch your console for the missin
 
 b) use the [saveMissing feature](https://www.i18next.com/configuration-options.html#missing-keys) of i18next to get those translations pushed to your backend or handled by a custom missing key handler.
 
+c) understand how those numbers get generated from child index:
+
+**jsx:**
+
+```js
+...
+<Trans i18nKey="userMessagesUnread" count={count}>
+    Hello <strong title={t('nameTitle')}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
+</Trans>
+...
+```
+
+**results in string:**
+
+```
+"Hello <1><0>{{name}}</0></1>, you have <3>{{count}}</3> unread message. <5>Go to message</5>."
+```
+
+**based on:**
+
+Pseudo code for the Trans component children:
+
+```js
+Trans.children = [
+  'Hello ',
+  { children: [{ name: 'Jan'  }] }, // index 1 -> child object index 0
+  ', you have',
+  { count: 10 }, // index 3
+  ' unread messages. ',
+  { children: [ 'Go to messages' ] }, // index 5 -> just a string child
+  '.'
+]
+```
+
 ## props
 
 - **i18nKey**: is optional if you prefer to use text as keys you can omit that and the translation will be used as key.
