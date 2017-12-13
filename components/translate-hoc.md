@@ -96,6 +96,7 @@ export default translate('defaultNamespace', { wait: true })(TranslatableView);
 | bindStore | 'added removed' | which events on store trigger a rerender, can be set to false or string of events |
 | withRef | false | store a ref to the wrapped component and access it by `decoratedComponent.getWrappedInstance();` |
 | i18n | undefined | pass i18next via options \(useful for [next.js usage](https://github.com/i18next/react-i18next/tree/master/example/nextjs) |
+| usePureComponent | false | use shallowEqual on props change if set to true |
 
 ### The translate hoc can use some props it gets passed:
 
