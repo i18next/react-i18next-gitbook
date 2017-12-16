@@ -34,6 +34,11 @@ export default translate('defaultNamespace')(TranslatableView);
 
 // short for using defaultNS of i18next
 export default translate()(TranslatableView);
+
+// using a function to return namespaces based on props
+export default translate((props => props.namespaces)(TranslatableView);
+
+
 ```
 
 ### Using setI18n instead of the i18nextProvider
