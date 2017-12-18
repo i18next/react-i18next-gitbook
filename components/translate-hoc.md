@@ -36,7 +36,7 @@ export default translate('defaultNamespace')(TranslatableView);
 export default translate()(TranslatableView);
 
 // using a function to return namespaces based on props
-export default translate((props => props.namespaces)(TranslatableView);
+export default translate((props) => props.namespaces)(TranslatableView);
 
 
 ```
