@@ -17,7 +17,7 @@ To learn more about using the `t` function have a look at i18next documentation:
 import React from 'react';
 import { I18n } from 'react-i18next';
 
-function TranslatableView() {
+function TranslatableView(props) {
   const { t } = props;
 
   return (
