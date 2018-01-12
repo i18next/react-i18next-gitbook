@@ -1,6 +1,6 @@
 # Translate HOC
 
-The translate hoc is responsible to pass the `t` function to your component which enables all the translation functionality provide by i18next. Further it asserts the component gets rerendered on language change or changes to the translations themself.
+The translate [hoc](https://reactjs.org/docs/higher-order-components.html) is responsible to pass the `t` function to your component which enables all the translation functionality provide by i18next. Further it asserts the component gets rerendered on language change or changes to the translations themself.
 
 To learn more about using the `t` function have a look at i18next documentation:
 
