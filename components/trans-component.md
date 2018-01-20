@@ -96,11 +96,12 @@ i18next.init({
     hashTransKey: function(defaultValue) {
       // return a key based on defaultValue or if you prefer to just remind you should set a key return false and throw an error
     },
-    defaultTransParent: 'div' // a valid react element
+    defaultTransParent: 'div' // a valid react element - required before react 16
   }
 });
 ```
 
+Please note that if you are running **React 15 or below**, you need to set `defaultTransParent`.
 
 
 
