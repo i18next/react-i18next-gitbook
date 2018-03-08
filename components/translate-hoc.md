@@ -17,7 +17,10 @@ import React from 'react';
 import { translate } from 'react-i18next';
 
 function TranslatableView(props) {
-  const { t } = props;
+  const { t, tReady } = props;
+  // tReady true if translations loaded.
+  // Use wait option to not render before loaded
+  // or render placeholder yourself if not tReady=false
 
   return (
     <div>

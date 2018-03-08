@@ -21,7 +21,7 @@ function TranslatableView() {
   return (
     <I18n ns={['defaultNamespace', 'anotherNamespace']}>
       {
-        (t, { i18n }) => (
+        (t, { i18n, t, ready }) => (
           <div>
             <h1>{t('keyFromDefault')}</h1>
             <p>{t('anotherNamespace:key.from.another.namespace', { /* options t options */ })}</p>
