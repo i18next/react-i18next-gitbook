@@ -31,9 +31,12 @@ const stubInterpolate = function () {
 Or mock it like:
 
 ```js
-jest.mock('react-i18next', () => ({
+jest.mock("react-i18next", () => ({
   // this mock makes sure any components using the translate HoC receive the t function as a prop
-  translate: () => Component => props => <Component t={() => ''} {...props} />,
+  translate: () => Component => {
+    Component.defaultProps = { ...Component.defaultProps, t: () => "" };
+    return Component;
+  },
 }));
 ```
 
