@@ -19,19 +19,19 @@ Or use [https://github.com/kadirahq/react-stubber](https://github.com/kadirahq/r
 
 ```js
 const tDefault = (key) => key;
-const StubbableInterpolate = mayBeStubbed(Interpolate);                                                                              
-const stubInterpolate = function () {                                                                                                
-    stub(StubbableInterpolate, (props, context) => {                                                                             
-        const t = (context && context.t) || tDefault;                                                                               
-        return (<span>{t(props.i18nKey)}</span>);                                                                                    
-    });                                                                                                                          
+const StubbableInterpolate = mayBeStubbed(Interpolate);
+const stubInterpolate = function () {
+    stub(StubbableInterpolate, (props, context) => {
+        const t = (context && context.t) || tDefault;
+        return (<span>{t(props.i18nKey)}</span>);
+    });
 };
 ```
 
 Or mock it like:
 
 ```js
-jest.mock("react-i18next", () => ({
+jest.mock('react-i18next', () => ({
   // this mock makes sure any components using the translate HoC receive the t function as a prop
   translate: () => Component => {
     Component.defaultProps = { ...Component.defaultProps, t: () => "" };
