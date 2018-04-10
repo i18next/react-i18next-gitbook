@@ -1,12 +1,12 @@
 # Interpolate
 
-We highly recommend to have a look at the new [trans component](/components/trans-component.md) as it provides a better experience!!
+We highly recommend to have a look at the new [trans component](trans-component.md) as it provides a better experience!!
 
-The interpolate component enables you to interpolate react components into translation strings (eg. to use links).
+The interpolate component enables you to interpolate react components into translation strings \(eg. to use links\).
 
 the key:
 
-```json
+```javascript
 {
     "interpolateSample": "you can interpolate {{value}} or {{component}} via interpolate component!"
 }
@@ -14,7 +14,7 @@ the key:
 
 sample:
 
-```js
+```javascript
 import React from 'react';
 import { translate, Interpolate } from 'react-i18next';
 
@@ -39,24 +39,24 @@ function TranslatableView(props) {
 
 You can use [formatting](https://www.i18next.com/formatting.html) as in i18next.
 
-__props__:
+**props**:
 
-- i18nKey: the key to lookup
-- options: [options](http://i18next.com/docs/options/#t-options) to use for translation (exclude interpolation variables!)
-- parent: optional component to wrap translation into (default 'span')
-- useDangerouslySetInnerHTML: allows use of raw html tags in translation values
-- dangerouslySetInnerHTMLPartElement: optional component to wrap parts of translation values into (default 'span'), used with `useDangerouslySetInnerHTML={true}` only
-- i18n: i18next instance to use if not provided via context (using hoc or render props)
-- t: t function to use if not provided via context (using hoc or render props)
-- ...props: values to interpolate into found translation (eg. `my value with {{replaceMe}} interpolation`)
+* i18nKey: the key to lookup
+* options: [options](http://i18next.com/docs/options/#t-options) to use for translation \(exclude interpolation variables!\)
+* parent: optional component to wrap translation into \(default 'span'\)
+* useDangerouslySetInnerHTML: allows use of raw html tags in translation values
+* dangerouslySetInnerHTMLPartElement: optional component to wrap parts of translation values into \(default 'span'\), used with `useDangerouslySetInnerHTML={true}` only
+* i18n: i18next instance to use if not provided via context \(using hoc or render props\)
+* t: t function to use if not provided via context \(using hoc or render props\)
+* ...props: values to interpolate into found translation \(eg. `my value with {{replaceMe}} interpolation`\)
 
-### using useDangerouslySetInnerHtml
+## using useDangerouslySetInnerHtml
 
 Allows having html tags inside the translation with a restriction as those get wrapped in spans. You can't have a interpolation value inside a html tag.
 
 the key:
 
-```json
+```javascript
 {
 "interpolateSample": "you <strong>can</strong> interpolate {{value}} or {{component}} via interpolate component!"
 }
@@ -64,7 +64,7 @@ the key:
 
 sample:
 
-```js
+```javascript
 import React from 'react';
 import { translate, Interpolate } from 'react-i18next';
 
@@ -87,12 +87,13 @@ function TranslatableView(props) {
 }
 ```
 
-### Alternatives
+## Alternatives
 
-a) Use standard interpolation of i18next and dangerously insert that:
+a\) Use standard interpolation of i18next and dangerously insert that:
 
-```js
+```javascript
 <div dangerouslySetInnerHTML={{ __html: t('my-label', { link: yourURL }) }} />
 ```
 
-b) use markdown, eg. [react-remarkable](https://github.com/acdlite/react-remarkable) and pass markdown formatted content from translations to the markdown component.
+b\) use markdown, eg. [react-remarkable](https://github.com/acdlite/react-remarkable) and pass markdown formatted content from translations to the markdown component.
+

@@ -16,3 +16,4 @@ const instance = i18n
 
 export default instance
 ```
+

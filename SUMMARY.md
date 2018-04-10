@@ -1,9 +1,11 @@
-# Summary
+# Table of contents
+
+* [Introduction](README.md)
 
 ## Overview
 
-* [Introduction](README.md)
-* [Getting started](getting-started.md)
+* [Introduction](overview/introduction.md)
+* [Getting started](overview/getting-started.md)
 
 ## Components
 
@@ -16,7 +18,7 @@
 
 ## Misc
 
-* [Serverside Rendering](misc/universal-rendering.md)
+* [Serverside Rendering](misc/serverside-rendering.md)
 * [Using with typescript](misc/using-with-typescript.md)
 * [Testing](misc/testing.md)
 

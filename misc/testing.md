@@ -2,14 +2,14 @@
 
 For testing purpose of your component you should export the pure component without extending with the translate hoc and test that:
 
-```js
+```javascript
 export MyComponent;
 export default translate('ns')(MyComponent);
 ```
 
 in the test test the myComponent export passing a t function mock:
 
-```js
+```javascript
 import { MyComponent } from './myComponent';
 
 <MyComponent t={key => key} />
@@ -17,7 +17,7 @@ import { MyComponent } from './myComponent';
 
 Or use [https://github.com/kadirahq/react-stubber](https://github.com/kadirahq/react-stubber) to stub i18n functionality:
 
-```js
+```javascript
 const tDefault = (key) => key;
 const StubbableInterpolate = mayBeStubbed(Interpolate);
 const stubInterpolate = function () {
@@ -30,7 +30,7 @@ const stubInterpolate = function () {
 
 Or mock it like:
 
-```js
+```javascript
 jest.mock('react-i18next', () => ({
   // this mock makes sure any components using the translate HoC receive the t function as a prop
   translate: () => Component => {
@@ -98,6 +98,4 @@ it('dispatches SORT_TABLE', () => {
   expect(actions).toEqual([{ type: actionTypes.SORT_TABLE }]);
 });
 ```
-
-
 

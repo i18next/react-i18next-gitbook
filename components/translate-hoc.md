@@ -10,9 +10,9 @@ To learn more about using the `t` function have a look at i18next documentation:
 * [plurals](https://www.i18next.com/plurals.html)
 * ...
 
-Can be nested inside a [I18nextProvider](/components/i18nextprovider.md). If not you will need to pass the i18next instance via prop i18n, in options or by using setI18n function \(see below\).
+Can be nested inside a [I18nextProvider](i18nextprovider.md). If not you will need to pass the i18next instance via prop i18n, in options or by using setI18n function \(see below\).
 
-```js
+```javascript
 import React from 'react';
 import { translate } from 'react-i18next';
 
@@ -40,30 +40,28 @@ export default translate()(TranslatableView);
 
 // using a function to return namespaces based on props
 export default translate((props) => props.namespaces)(TranslatableView);
-
-
 ```
 
-### Using setI18n instead of the i18nextProvider
+## Using setI18n instead of the i18nextProvider
 
 You can set the i18n instance using the setI18n function to avoid using the i18nextProvider:
 
-```js
+```javascript
 import { translate } from 'react-i18next';
 import i18n from './i18n';
 
 translate.setI18n(i18n);
 ```
 
-### Set defaults for all your translate hoc components
+## Set defaults for all your translate hoc components
 
 Below you see how to pass options for one hoc. But most time you like to change those values for every component.
 
 So there are two options:
 
-#### a\) Set those on i18next init:
+### a\) Set those on i18next init:
 
-```js
+```javascript
 i18next.init({
   // ... other options
   react: {
@@ -76,9 +74,9 @@ i18next.init({
 });
 ```
 
-#### b\) Use the setDefaults function:
+### b\) Use the setDefaults function:
 
-```js
+```javascript
 import { translate } from 'react-i18next';
 
 translate.setDefaults({
@@ -90,15 +88,15 @@ translate.setDefaults({
 });
 ```
 
-### The translate hoc can take a few options:
+## The translate hoc can take a few options:
 
-```js
+```javascript
 export default translate('defaultNamespace', { wait: true })(TranslatableView);
 ```
 
 | options | default | description |
 | --- | --- | --- |
-| wait | false | assert all provided namespaces are loaded before rendering the component \(can be set [globally](/components/i18next-instance.md) too\) |
+| wait | false | assert all provided namespaces are loaded before rendering the component \(can be set [globally](i18next-instance.md) too\) |
 | nsMode | 'default' | _default:_ namespaces will be loaded an the first will be set as default or _fallback:_ namespaces will be used as fallbacks used in order provided |
 | bindI18n | 'languageChanged loaded' | which events trigger a rerender, can be set to false or string of events |
 | bindStore | 'added removed' | which events on store trigger a rerender, can be set to false or string of events |
@@ -106,13 +104,11 @@ export default translate('defaultNamespace', { wait: true })(TranslatableView);
 | i18n | undefined | pass i18next via options \(useful for [next.js usage](https://github.com/i18next/react-i18next/tree/master/example/nextjs) |
 | usePureComponent | false | use shallowEqual on props change if set to true |
 
-### The translate hoc can use some props it gets passed:
+## The translate hoc can use some props it gets passed:
 
 | options | default | description |
 | --- | --- | --- |
 | i18n | undefined | pass i18next instance by props instead of having it on context |
 | initialI18nStore | undefined | pass in initial translations \(useful for [next.js usage](https://github.com/i18next/react-i18next/blob/master/example/nextjs/pages/index.js#L29) |
 | initialLanguage | undefined | pass in initial language \(useful for [next.js usage](https://github.com/i18next/react-i18next/blob/master/example/nextjs/pages/index.js#L29) |
-
-
 

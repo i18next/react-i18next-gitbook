@@ -20,7 +20,7 @@ react-i18next is an **internationalization** addon for **reactjs** / **reactnati
 
 The module asserts that needed translations get loaded for your components and that your content gets rerendered on language changes.
 
-Based on the zero dependencies and build tools react-i18next is optimal suited for **serverside rendering** too. [Learn more](misc/serverside-rendering.md).
+Based on the zero dependencies and build tools react-i18next is optimal suited for **serverside rendering** too. [Learn more](../misc/serverside-rendering.md).
 
 As react-i18next builds on [i18next](http://i18next.com) you can use it on any other UI framework or on the server \(node.js\) too. As react philosophy - but: **Learn once - translate everywhere**.
 
@@ -54,13 +54,13 @@ As react-i18next builds on [i18next](http://i18next.com) you can use it on any o
 
 If you prefer not using semantic keys for your content but prefer using your content - [that's also possible](https://www.i18next.com/principles/fallback.html#key-fallback).
 
-Or have a look at the interactive playground at [codesandbox.io](https://codesandbox.io/s/8n252n822)
+Or have a look at the interactive playground at [webpackbin](https://www.webpackbin.com/bins/-KvzvUPFsBVI_74Jll99)
 
 ## On top: Localization as a service
 
 It even provides with [locize.com](http://locize.com/?utm_source=react_i18next_com&utm_medium=gitbook) a own translation management tool - localization as a service offering.
 
-![](.gitbook/assets/dashboard.png)
+![](../.gitbook/assets/dashboard.png)
 
 [Learn more about the enterprise offering](https://www.i18next.com/for-enterprises.html)
 
