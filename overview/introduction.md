@@ -28,7 +28,7 @@ As react-i18next builds on [i18next](http://i18next.com) you can use it on any o
 
 [watch the video](https://www.youtube.com/watch?v=9NOzJhgmyQE)
 
-## How does my code look like
+## What does my code look like
 
 **Before:** Your react code would have looked something like:
 
