@@ -40,6 +40,8 @@ jest.mock('react-i18next', () => ({
 }));
 ```
 
+You can find a full sample for testing with jest here: [https://github.com/i18next/react-i18next/tree/master/example/test-jest](https://github.com/i18next/react-i18next/tree/master/example/test-jest)
+
 ## Testing without stubbing
 
 Alternatively, you could also test I18next without stubbing anything, by providing the correct configuration and fully wrapping your container in the provider.
