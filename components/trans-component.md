@@ -2,7 +2,7 @@
 
 This component enables you to nest any react content to be translated as one string. Supports both plural and interpolation.
 
-Lets say you want to create following html output:
+Let's say you want to create following html output:
 
 Hello **Arthur**, you have 42 unread messages. [Go to messages]().
 
