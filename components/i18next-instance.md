@@ -1,6 +1,6 @@
 # i18next instance
 
-The instance is a initialized i18next instance. In the following code snipplet we add a backend to load translations from server and a language detector for detecting user language.
+The instance is an initialized i18next instance. In the following code snippet, we add a backend to load translations from server and a language detector for detecting user language.
 
 You can learn more about [i18next](http://i18next.com) and [plugins](https://www.i18next.com/plugins-and-utils.html#plugins) on the i18next website.
 
