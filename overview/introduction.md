@@ -20,7 +20,7 @@ react-i18next is an **internationalization** addon for **reactjs** / **reactnati
 
 The module asserts that needed translations get loaded for your components and that your content gets rerendered on language changes.
 
-Based on the zero dependencies and build tools react-i18next is optimal suited for **serverside rendering** too. [Learn more](../misc/serverside-rendering.md).
+Based on the zero dependencies and build tools react-i18next is optimally suited for **serverside rendering** too. [Learn more](../misc/serverside-rendering.md).
 
 As react-i18next builds on [i18next](http://i18next.com) you can use it on any other UI framework or on the server \(node.js\) too. As react philosophy - but: **Learn once - translate everywhere**.
 
