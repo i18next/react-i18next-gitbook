@@ -1,6 +1,6 @@
 # I18n \(render prop\)
 
-The I18n component passes `t` function to child function and triggers loading the translation files needed. Further it asserts the component gets rerendered on language change or changes to the translations themself.
+The I18n component passes `t` function to child function and triggers loading the translation files needed. Further it asserts the component gets rerendered on language change or changes to the translations themselves.
 
 To learn more about using the `t` function have a look at i18next documentation:
 
