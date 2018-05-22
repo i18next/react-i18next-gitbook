@@ -2,7 +2,7 @@
 
 This component enables you to nest any react content to be translated as one string. Supports both plural and interpolation.
 
-Lets say you want to create following html output:
+Let's say you want to create following html output:
 
 Hello **Arthur**, you have 42 unread messages. [Go to messages]().
 
@@ -79,7 +79,7 @@ Trans.children = [
 
 ## props
 
-* **i18nKey**: is optional if you prefer to use text as keys you can omit that and the translation will be used as key.
+* **i18nKey**: is optional if you prefer to use text as keys you can omit that and the translation will be used as a key.
 * **count**: optional count if you use a plural
 * **parent**: a component to wrap the content into \(default none, can be globally set on i18next.init\)
 * **i18n**: i18next instance to use if not provided via context \(using hoc or render props\)
