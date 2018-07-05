@@ -31,7 +31,53 @@ You can also directly add a script tag loading i18next from one of the CDNs prov
 * [https://unpkg.com/react-i18next/react-i18next.js](https://unpkg.com/react-i18next/react-i18next.js)
 * [https://unpkg.com/react-i18next/react-i18next.min.js](https://unpkg.com/react-i18next/react-i18next.min.js)
 
-## Basic sample using render props
+## Translation "how to"
+
+You got two options to translate your content:
+
+### Simple content
+
+**Before:**
+
+```javascript
+<div>Just simple content</div>
+```
+
+**After:**
+
+```javascript
+<div>{t('simpleContent')}</div>
+```
+
+{% hint style="info" %}
+You will get passed down the t function by using the [render prop](../components/i18n-render-prop.md) or [hoc](../components/translate-hoc.md).
+{% endhint %}
+
+### Complexer jsx tree
+
+**Before:** Your react code would have looked something like:
+
+```javascript
+<div>
+    Hello <strong title="this is your name">{name}</strong>, you have {count} unread message(s). <Link to="/msgs">Go to messages</Link>.
+</div>
+```
+
+**After:** With the trans component just change it to:
+
+```javascript
+<Trans i18nKey="userMessagesUnread" count={count}>
+    Hello <strong title={t('nameTitle')}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
+</Trans>
+```
+
+{% hint style="info" %}
+Learn more about the Trans Component [here](../components/trans-component.md)
+{% endhint %}
+
+## Basic sample 
+
+### using render props
 
 This basic sample uses render props and passes the[ i18next instance](../components/i18next-instance.md) to it via internal context handling by using the `reactI18nextModule` on i18next.
 
@@ -73,7 +119,7 @@ class App extends React.Component {
 ReactDOM.render(<App />, document.getElementById('app'));
 ```
 
-## Basic sample using HOC and Provider
+### using HOC and Provider
 
 This basic sample uses the [I18nextProvider](../components/i18nextprovider.md) and the [translate hoc](../components/translate-hoc.md).
 
@@ -123,7 +169,7 @@ ReactDOM.render(
 );
 ```
 
-## Extended Examples
+## Extended samples
 
 {% hint style="success" %}
 For complete code and samples: [have a look at the samples \(react, react-native, nextjs](https://github.com/i18next/react-i18next/tree/master/example), ...\).

@@ -2,20 +2,6 @@
 
 ## What is react-i18next?
 
-![Travis](https://img.shields.io/travis/i18next/react-i18next/master.svg?style=flat-square)
-
-![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)
-
-![Coveralls](https://img.shields.io/coveralls/i18next/react-i18next/master.svg?style=flat-square)
-
-![Package Quality](http://npm.packagequality.com/shield/react-i18next.svg)
-
-![npm version](https://img.shields.io/npm/v/react-i18next.svg?style=flat-square)
-
-![Bower](https://img.shields.io/bower/v/react-i18next.svg?style=flat-square)
-
-![David](https://img.shields.io/david/i18next/react-i18next.svg?style=flat-square)
-
 react-i18next is an **internationalization** addon for **reactjs** / **reactnative** and is based on [i18next](http://i18next.com).
 
 The module asserts that needed translations get loaded for your components and that your content gets rerendered on language changes.
