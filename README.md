@@ -8,6 +8,16 @@ The module asserts that needed translations get loaded for your components and t
 
 Based on the zero dependencies and build tools react-i18next is optimal suited for **serverside rendering** too. [Learn more](misc/serverside-rendering.md).
 
+{% hint style="info" %}
+If your app is **very simple** and there is:
+
+* No need to trigger rerender on language change
+* No need for lazy loading namespaces
+* No use case for the [Trans component](components/trans-component.md)
+
+You can just use i18next directly _\(import it - init somewhere - and use i18next.t\)_
+{% endhint %}
+
 As react-i18next builds on [i18next](http://i18next.com) you can use it on any other UI framework or on the server \(node.js\) too. As react philosophy - but: **Learn once - translate everywhere**.
 
 ![video](https://raw.githubusercontent.com/i18next/react-i18next/master/example/locize-example/video_sample.png)
