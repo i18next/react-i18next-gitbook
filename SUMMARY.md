@@ -19,9 +19,9 @@
 
 ## Misc
 
+* [The Trans Component Explained](misc/the-trans-component-explained.md)
 * [I18n and context](misc/i18n-and-context.md)
 * [Serverside Rendering](misc/serverside-rendering.md)
 * [Using with typescript](misc/using-with-typescript.md)
 * [Testing](misc/testing.md)
-* [The Trans Component Explained](misc/the-trans-component-explained.md)
 
