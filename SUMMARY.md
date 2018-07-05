@@ -23,4 +23,5 @@
 * [Serverside Rendering](misc/serverside-rendering.md)
 * [Using with typescript](misc/using-with-typescript.md)
 * [Testing](misc/testing.md)
+* [The Trans Component Explained](misc/the-trans-component-explained.md)
 

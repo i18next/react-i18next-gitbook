@@ -83,6 +83,10 @@ Trans.children = [
 ]
 ```
 
+{% hint style="info" %}
+For an in dept expanation have a look at the ["The Trans Component Explained"](../misc/the-trans-component-explained.md) page!
+{% endhint %}
+
 ## Trans props
 
 | _**name**_ | _**type \(default\)**_ | _**description**_ |
