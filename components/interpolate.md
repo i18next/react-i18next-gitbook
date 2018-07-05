@@ -1,6 +1,8 @@
 # Interpolate
 
-We highly recommend having a look at the new [trans component](trans-component.md) as it provides a better experience!!
+{% hint style="danger" %}
+We highly recommend having a look at the new [trans component](trans-component.md) as it provides a better experience as this component will be remove in future!!
+{% endhint %}
 
 The interpolate component enables you to interpolate react components into translation strings \(eg. to use links\).
 
@@ -8,7 +10,7 @@ the key:
 
 ```javascript
 {
-    "interpolateSample": "you can interpolate {{value}} or {{component}} via interpolate component!"
+  "interpolateSample": "you can interpolate {{value}} or {{component}} via interpolate component!"
 }
 ```
 

@@ -1,24 +1,24 @@
 # Serverside Rendering
 
-## samples
+## Samples
 
-To learn more you should checkout our samples:
+To learn more you should have a look at our samples:
 
 * [nextjs \(sample provided by react-i18next\)](https://github.com/i18next/react-i18next/tree/master/example/nextjs)
 * [razzle \(sample provided by react-i18next\)](https://github.com/i18next/react-i18next/tree/master/example/razzle-ssr)
 * [simpleblack's boilerplate](https://github.com/simpleblack/react-redux-universal-hot-example)
 
-**Important:**
-
-The usage of the reactI18nextModule for holding the i18n instance is not a valid option \(the instance would be set globally\). Always use the I18nextProvider like done in the samples above.
+{% hint style="info" %}
+The usage of the `reactI18nextModule` for holding the i18n instance is not a valid option \(the instance would be set globally\). Always use the I18nextProvider like done in the samples above.
+{% endhint %}
 
 For futher information see this [issue](https://github.com/i18next/react-i18next/issues/375).
 
-## pass language and translations down to client
+## Pass language and translations down to client
 
-Both the [i18nextProvider](../components/i18nextprovider.md) and [translate hoc](../components/translate-hoc.md) allows to pass in initial I18nStore and initial Language. By doing so the translations won't be loaded and initial clientside render will avoid any flickering or rerender by checksum mismatch.
+Both the [i18nextProvider](../components/i18nextprovider.md) and [translate hoc](../components/translate-hoc.md) allows to pass in `initialI18nStore` and `initialLanguage`. By doing so the translations won't be loaded and initial clientside render will avoid any flickering or rerender by checksum mismatch.
 
-For details check the docs of those components or have a look at the examples above.
+For details check the docs of those components or **have a look at the examples above**.
 
 ## loadNamespaces helper
 

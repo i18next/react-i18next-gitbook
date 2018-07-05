@@ -40,7 +40,9 @@ jest.mock('react-i18next', () => ({
 }));
 ```
 
+{% hint style="success" %}
 You can find a full sample for testing with jest here: [https://github.com/i18next/react-i18next/tree/master/example/test-jest](https://github.com/i18next/react-i18next/tree/master/example/test-jest)
+{% endhint %}
 
 ## Testing without stubbing
 
@@ -103,7 +105,7 @@ it('dispatches SORT_TABLE', () => {
 
 As translations aren't provided, `this.props.i18n.language` will be `undefined`. In case your application relies on that value you can mock resources by adding these lines to the object passed to init:
 
-```
+```text
 i18n
   .init({
     ...
@@ -115,3 +117,4 @@ i18n
 ```
 
 Now in your component `this.props.i18n.language` will return `en`.
+

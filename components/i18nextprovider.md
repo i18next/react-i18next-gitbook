@@ -1,6 +1,6 @@
 # I18nextProvider
 
-The provider is responsible to pass the i18next instance down to all the translate hocs using react context. Alternatively, you can pass that directly in the [translate hoc](translate-hoc.md).
+The provider is responsible to pass the i18next instance passed in by props down to all the [translate hocs](translate-hoc.md) or [I18n](i18n-render-prop.md) using react context.
 
 ```javascript
 import React from 'react';
@@ -18,13 +18,13 @@ ReactDOM.render(
 );
 ```
 
-For the i18n instance have a look at the [i18n page](i18next-instance.md).
+For the i18n instance have a look at the [i18next instance page](i18next-instance.md).
 
-## The i18nextProvider can use some props it gets passed:
+## The I18nextProvider props:
 
-| options | default | description |
+| _**name**_ | **type \(**_**default\)**_ | _**description**_ |
 | --- | --- | --- |
-| i18n | undefined | pass i18next instance the provider will pass it down to translation components by context |
-| initialI18nStore | undefined | pass in initial translations \(useful for [serverside rendering](../misc/serverside-rendering.md)\) |
-| initialLanguage | undefined | pass in initial language \(useful for [serverside rendering](../misc/serverside-rendering.md)\) |
+| **i18n** | object \(undefined\) | pass i18next instance the provider will pass it down to translation components by context |
+| initialI18nStore | object \(undefined\) | pass in initial translations \(useful for [serverside rendering](../misc/serverside-rendering.md)\) |
+| initialLanguage | string \(undefined\) | pass in initial language \(useful for [serverside rendering](../misc/serverside-rendering.md)\) |
 

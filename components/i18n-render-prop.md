@@ -1,14 +1,16 @@
 # I18n \(render prop\)
 
-The I18n component passes `t` function to child function and triggers loading the translation files needed. Further it asserts the component gets rerendered on language change or changes to the translations themselves.
+The I18n component passes the [**t** function](https://www.i18next.com/overview/api#t) to child function and triggers loading the translation files defined. Further it asserts the component gets rerendered on language change or on changes to the translations themselves.
 
-To learn more about using the `t` function have a look at i18next documentation:
+{% hint style="info" %}
+To learn more about using the **t** function have a look at i18next documentation:
 
 * [essentials](https://www.i18next.com/essentials.html)
 * [interpolation](https://www.i18next.com/interpolation.html)
 * [formatting](https://www.i18next.com/formatting.html)
 * [plurals](https://www.i18next.com/plurals.html)
 * ...
+{% endhint %}
 
 ## Sample usage
 
@@ -34,13 +36,13 @@ function TranslatableView() {
 
 ## I18n props
 
-| options | default | description |
+| _**options**_ | _**type \(default\)**_ | _**description**_ |
 | --- | --- | --- |
-| wait | false | assert all provided namespaces are loaded before rendering the component \(can be set [globally](i18next-instance.md) too\) |
-| nsMode | 'default' | _default:_ namespaces will be loaded an the first will be set as default or _fallback:_ namespaces will be used as fallbacks used in order provided |
-| bindI18n | 'languageChanged loaded' | which events trigger a rerender, can be set to false or string of events |
-| bindStore | 'added removed' | which events on store trigger a rerender, can be set to false or string of events |
-| i18n | undefined | pass i18next via options \(useful for [next.js usage](https://github.com/i18next/react-i18next/tree/master/example/nextjs) |
-| initialI18nStore | undefined | pass in initial translations \(useful for [next.js usage](https://github.com/i18next/react-i18next/blob/master/example/nextjs/pages/index.js#L29) |
-| initialLanguage | undefined | pass in initial language \(useful for [next.js usage](https://github.com/i18next/react-i18next/blob/master/example/nextjs/pages/index.js#L29) |
+| wait | boolean \(false\) | assert all provided namespaces are loaded before rendering the component \(can be set [globally](i18next-instance.md) too\) |
+| nsMode | string \('default'\) | _default:_ namespaces will be loaded an the first will be set as default or _fallback:_ namespaces will be used as fallbacks used in order provided |
+| bindI18n | string \('languageChanged loaded'\) | which events trigger a rerender, can be set to false or string of events |
+| bindStore | string \('added removed'\) | which events on store trigger a rerender, can be set to false or string of events |
+| i18n | object \(undefined\) | pass i18next via options \(useful for [next.js usage](https://github.com/i18next/react-i18next/tree/master/example/nextjs) |
+| initialI18nStore | object \(undefined\) | pass in initial translations \(useful for [next.js usage](https://github.com/i18next/react-i18next/blob/master/example/nextjs/pages/index.js#L29) |
+| initialLanguage | string \(undefined\) | pass in initial language \(useful for [next.js usage](https://github.com/i18next/react-i18next/blob/master/example/nextjs/pages/index.js#L29) |
 
