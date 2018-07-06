@@ -107,6 +107,7 @@ export default translate(
 | nsMode | string \('default'\) | _default:_ namespaces will be loaded an the first will be set as default or _fallback:_ namespaces will be used as fallbacks used in order provided |
 | bindI18n | string \('languageChanged loaded'\) | which events trigger a rerender, can be set to false or string of events |
 | bindStore | string \('added removed'\) | which events on store trigger a rerender, can be set to false or string of events |
+| omitBoundRerenders | boolean \(true\) | Does not trigger rerenders while state not ready - avoiding unneeded renders on init |
 | withRef | boolean \(false\) | store a ref to the wrapped component and access it by `Component. getWrappedInstance();` |
 | i18n | object \(undefined\) | pass i18next via options \(useful for [next.js usage](https://github.com/i18next/react-i18next/tree/master/example/nextjs) |
 | usePureComponent | boolean \(false\) | use shallowEqual on props change if set to true |
