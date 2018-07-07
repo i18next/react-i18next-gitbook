@@ -1,9 +1,9 @@
 # Translate HOC
 
-The translate [hoc](https://reactjs.org/docs/higher-order-components.html) is responsible to pass the [**t** function](https://www.i18next.com/overview/api#t) to your component which enables all the translation functionality provide by i18next. Further it asserts the component gets rerendered on language change or changes to the translations themself.
+The translate [hoc](https://reactjs.org/docs/higher-order-components.html) is responsible for passing the [**t** function](https://www.i18next.com/overview/api#t) to your component which enables all the translation functionality provided by i18next. Further, it asserts the component gets re-rendered on language change or changes to the translations themselves.
 
 {% hint style="info" %}
-To learn more about using the **t** function have a look at i18next documentation:
+To learn more about using the **t** function have a look at i18next's documentation:
 
 * [essentials](https://www.i18next.com/essentials.html)
 * [interpolation](https://www.i18next.com/interpolation.html)
@@ -12,7 +12,7 @@ To learn more about using the **t** function have a look at i18next documentatio
 * ...
 {% endhint %}
 
-Can be nested inside a [I18nextProvider](i18nextprovider.md). If not you will need to pass the i18next instance via prop `i18n`, in options or by using `setI18n` function \(see below\).
+Can be nested inside a [I18nextProvider](i18nextprovider.md). If not, you will need to pass the i18next instance via prop `i18n`, in options or by using `setI18n` function \(see below\).
 
 ## Sample
 
