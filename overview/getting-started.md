@@ -33,6 +33,10 @@ You can also directly add a script tag loading i18next from one of the CDNs prov
 
 ## Translation "how to"
 
+{% hint style="info" %}
+You should read the [i18next](https://www.i18next.com) documentation at some point as we do not repeat all the [configuration options](https://www.i18next.com/overview/configuration-options) or translation functionalities like [plurals](https://www.i18next.com/translation-function/plurals), [formatting](https://www.i18next.com/translation-function/formatting), [interpolation](https://www.i18next.com/translation-function/interpolation), ...
+{% endhint %}
+
 You got two options to translate your content:
 
 ### Simple content

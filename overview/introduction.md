@@ -4,6 +4,10 @@
 
 react-i18next is an **internationalization** addon for **reactjs** / **reactnative** and is based on [i18next](http://i18next.com).
 
+{% hint style="info" %}
+You should read the [i18next](https://www.i18next.com) documentation at some point as we do not repeat all the [configuration options](https://www.i18next.com/overview/configuration-options) or translation functionalities like [plurals](https://www.i18next.com/translation-function/plurals), [formatting](https://www.i18next.com/translation-function/formatting), [interpolation](https://www.i18next.com/translation-function/interpolation), ...
+{% endhint %}
+
 The module asserts that needed translations get loaded for your components and that your content gets rerendered on language changes.
 
 Based on the zero dependencies and build tools react-i18next is optimally suited for **serverside rendering** too. [Learn more](../misc/serverside-rendering.md).
