@@ -19,9 +19,10 @@
 
 ## Misc
 
+* [Using with ICU format](misc/using-with-icu-format.md)
+* [Using with typescript](misc/using-with-typescript.md)
 * [The Trans Component Explained](misc/the-trans-component-explained.md)
 * [I18n and context](misc/i18n-and-context.md)
-* [Testing](misc/testing.md)
 * [Serverside Rendering](misc/serverside-rendering.md)
-* [Using with typescript](misc/using-with-typescript.md)
+* [Testing](misc/testing.md)
 
