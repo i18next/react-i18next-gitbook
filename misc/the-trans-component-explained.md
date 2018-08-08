@@ -70,7 +70,7 @@ JSX template:
 
 ```text
 <Trans i18nKey='userMessagesUnread' count={count}>
-    <strong title={t('nameTitle')}>{{name='Jan'}}</strong>{{count}}<Link to="/msgs">third node</Link>
+    <strong title={t('nameTitle')}>{{name: 'Jan'}}</strong>{{count}}<Link to="/msgs">third node</Link>
 </Trans>
 ```
 
