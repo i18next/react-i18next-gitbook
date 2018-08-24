@@ -41,18 +41,18 @@ match({...matchArguments}, (error, redirectLocation, renderProps) => {
 });
 ```
 
-## report used namespaces
+## Report used namespaces
 
-[i18nextProvider](../components/i18nextprovider.md) also accept a `reportNS` prop which is called for every namespace that is loaded with the [translate hoc](../components/translate-hoc.md).
+[I18nextProvider](../components/i18nextprovider.md) also accept a `reportNS` prop which is called for every namespace that is loaded with the [translate HOC](../components/translate-hoc.md).
 
-You can use it to pass only the used namespaces down to the client like in the following example:
+You can use it to pass only the necessary namespaces down to the client like in the following example:
 
 ```javascript
 import { I18nextProvider } from 'react-i18next';
 import { renderToString } from 'react-dom/server';
 
-// i18nInstance is a i18next instance with all languages and namespaces preloaded
 import i18nInstance from './i18nInstance';
+// i18nInstance is a i18next instance with all languages and namespaces preloaded
 
 const namespaces = new Set();
 
@@ -75,8 +75,17 @@ Array.from(namespaces).forEach(ns => {
     i18nInstance.services.resourceStore.data[initialLanguage][ns];
 });
 
-// Then you can inject in the rendered HTML:
-// window.initialI18nStore = JSON.parse('${JSON.stringify(initialI18nStore)}');
+// Then you can inject in the rendered HTML
+
+const markupWithI18n = `
+  ${markup}
+  <script>
+    window.initialLanguage = ${JSON.stringify(initialLanguage)};
+    window.initialI18nStore = ${JSON.stringify(initialI18nStore)};
+  </script>
+`;
+
+// ...
 ```
 
 ## use the i18next-express-middleware
