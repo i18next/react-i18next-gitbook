@@ -36,56 +36,9 @@ import { match } from 'react-router';
 match({...matchArguments}, (error, redirectLocation, renderProps) => {
    loadNamespaces({ ...renderProps, i18n: i18nInstance })
    .then(()=>{
-      // All i18n namespaces required to render this route are loaded
+      // All i18n namespaces required to render this route are loaded   
    })
 });
-```
-
-## Report used namespaces
-
-[I18nextProvider](../components/i18nextprovider.md) also accept a `reportNS` prop which is called for every namespace that is loaded with the [translate HOC](../components/translate-hoc.md).
-
-You can use it to pass only the necessary namespaces down to the client like in the following example:
-
-```javascript
-import { I18nextProvider } from 'react-i18next';
-import { renderToString } from 'react-dom/server';
-
-import i18nInstance from './i18nInstance';
-// i18nInstance is a i18next instance with all languages and namespaces preloaded
-
-const namespaces = new Set();
-
-const App = () => (
-  <I18nextProvider i18n={i18nInstance} reportNS={ns => namespaces.add(ns)}>
-    {bodyComponent}
-  </I18nextProvider>
-);
-
-const markup = renderToString(<App />);
-
-// Now we can use `namespaces` to construct a initialI18nStore object
-// and pass it down to client through HTML. Example:
-
-const initialLanguage = 'en';
-const initialI18nStore = { [initialLanguage]: {} };
-
-Array.from(namespaces).forEach(ns => {
-  initialI18nStore[initialLanguage][ns] =
-    i18nInstance.services.resourceStore.data[initialLanguage][ns];
-});
-
-// Then you can inject in the rendered HTML
-
-const markupWithI18n = `
-  ${markup}
-  <script>
-    window.initialLanguage = ${JSON.stringify(initialLanguage)};
-    window.initialI18nStore = ${JSON.stringify(initialI18nStore)};
-  </script>
-`;
-
-// ...
 ```
 
 ## use the i18next-express-middleware

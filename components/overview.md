@@ -12,7 +12,7 @@ While we primary rely on react context to pass down **i18n** and **t** the compo
 ### Components
 
 | Component | Props | Provides | Consumes |
-| --- | --- | --- | --- | --- |
+| :--- | :--- | :--- | :--- |
 | [I18nextProvider](i18nextprovider.md) | **i18n,** defaultNS | **i18n,** defaultNs |  |
 | [I18n](i18n-render-prop.md) is a render prop |  | **t**, i18n | i18n |
 | [Translate HOC](translate-hoc.md) |  | **t**, i18n | i18n |

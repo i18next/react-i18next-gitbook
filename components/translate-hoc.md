@@ -102,7 +102,7 @@ export default translate(
 ```
 
 | _**option**_ | _**type \(default\)**_ | _**description**_ |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | wait | boolean \(false\) | assert all provided namespaces are loaded before rendering the component \(can be set [globally](i18next-instance.md) too\) |
 | nsMode | string \('default'\) | _default:_ namespaces will be loaded an the first will be set as default or _fallback:_ namespaces will be used as fallbacks used in order provided |
 | bindI18n | string \('languageChanged loaded'\) | which events trigger a rerender, can be set to false or string of events |
@@ -115,7 +115,7 @@ export default translate(
 ## The translate hoc props:
 
 | _**name**_ | _**type \(default\)**_ | _**description**_ |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | i18n | object \(undefined\) | pass i18next instance by props instead of having it on context |
 | initialI18nStore | object \(undefined\) | pass in initial translations \(useful for [next.js usage](https://github.com/i18next/react-i18next/blob/master/example/nextjs/pages/index.js#L29) |
 | initialLanguage | object \(undefined\) | pass in initial language \(useful for [next.js usage](https://github.com/i18next/react-i18next/blob/master/example/nextjs/pages/index.js#L29) |

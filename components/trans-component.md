@@ -90,7 +90,7 @@ For an in dept expanation have a look at the ["The Trans Component Explained"](.
 ## Trans props
 
 | _**name**_ | _**type \(default\)**_ | _**description**_ |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| :--- | :--- | :--- |
 | i18nKey | string \(undefined\) | is optional if you prefer to use text as keys you can omit that and the translation will be used as a key. |
 | count | integer \(undefined\) | optional count if you use a plural |
 | parent | node \(undefined\) | a component to wrap the content into \(default none, can be globally set on i18next.init\) -&gt; needed for **react &lt; v16** |

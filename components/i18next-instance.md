@@ -45,7 +45,7 @@ export default i18n;
 All additional options for react in init options:
 
 | _**options**_ | _**default**_ | _**description**_ |
-| --- | --- | --- |
+| :--- | :--- | :--- |
 | wait | false | assert all provided namespaces are loaded before rendering the component \(can be set [globally](i18next-instance.md) too\) |
 | nsMode | 'default' | _default:_ namespaces will be loaded an the first will be set as default or _fallback:_ namespaces will be used as fallbacks used in order provided |
 | bindI18n | 'languageChanged loaded' | which events trigger a rerender, can be set to false or string of events |
