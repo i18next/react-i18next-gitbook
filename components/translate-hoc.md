@@ -117,6 +117,6 @@ export default translate(
 | _**name**_ | _**type \(default\)**_ | _**description**_ |
 | :--- | :--- | :--- |
 | i18n | object \(undefined\) | pass i18next instance by props instead of having it on context |
-| initialI18nStore | object \(undefined\) | pass in initial translations \(useful for [next.js usage](https://github.com/i18next/react-i18next/blob/master/example/nextjs/pages/index.js#L29) |
-| initialLanguage | object \(undefined\) | pass in initial language \(useful for [next.js usage](https://github.com/i18next/react-i18next/blob/master/example/nextjs/pages/index.js#L29) |
+| initialI18nStore | object \(undefined\) | pass in initial translations \(useful for [next.js usage](https://github.com/i18next/react-i18next/tree/master/example/nextjs) |
+| initialLanguage | object \(undefined\) | pass in initial language \(useful for [next.js usage](https://github.com/i18next/react-i18next/tree/master/example/nextjs) |
 
