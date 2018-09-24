@@ -38,7 +38,7 @@ function TranslatableView() {
 
 | _**options**_ | _**type \(default\)**_ | _**description**_ |
 | :--- | :--- | :--- |
-| wait | boolean \(false\) | assert all provided namespaces are loaded before rendering the component \(can be set [globally](i18next-instance.md) too\) |
+| wait | boolean \(false\) | assert all provided namespaces are loaded before rendering the component \(can be set [globally](i18next-instance.md) too\); note that rendering will not be blocked again when dynamically updating the `ns` prop after initial mount |
 | nsMode | string \('default'\) | _default:_ namespaces will be loaded an the first will be set as default or _fallback:_ namespaces will be used as fallbacks used in order provided |
 | bindI18n | string \('languageChanged loaded'\) | which events trigger a rerender, can be set to false or string of events |
 | bindStore | string \('added removed'\) | which events on store trigger a rerender, can be set to false or string of events |
