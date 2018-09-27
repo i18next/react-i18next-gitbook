@@ -7,7 +7,7 @@ export MyComponent;
 export default translate('ns')(MyComponent);
 ```
 
-in the test test the myComponent export passing a t function mock:
+In the test, test the myComponent export passing a t function mock:
 
 ```javascript
 import { MyComponent } from './myComponent';
