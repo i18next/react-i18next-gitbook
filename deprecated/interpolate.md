@@ -1,7 +1,9 @@
 # Interpolate
 
 {% hint style="danger" %}
-We highly recommend having a look at the new [trans component](trans-component.md) as it provides a better experience as this component will be remove in future!!
+Deprecated: We highly recommend having a look at the new [trans component](../components/trans-component.md) as it provides a better experience. 
+
+This component will be remove in the next major version v9.0.0!!
 {% endhint %}
 
 The interpolate component enables you to interpolate react components into translation strings \(eg. to use links\).

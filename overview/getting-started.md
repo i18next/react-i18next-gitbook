@@ -2,16 +2,13 @@
 
 ## Installation
 
-### Install using npm, bower
+### Install using npm
 
-react-i18next can be added to your project using **npm** or **bower**:
+react-i18next can be added to your project using **npm**:
 
 ```bash
 # npm
 $ npm install react-i18next --save
-
-# bower
-$ bower install react-i18next
 ```
 
 The default export is UMD compatible \(commonjs, requirejs, global\).
@@ -19,12 +16,12 @@ The default export is UMD compatible \(commonjs, requirejs, global\).
 In the `/dist` folder you find additional builds for `commonjs`, `es6 modules`.
 
 {% hint style="info" %}
-_Optimized to load react-i18next in webpack, rollup, ... The correct entry points are already configured in the package.json so there should be no extra setup to get the best build option._
+The module is optimized to load by webpack, rollup, ... The correct entry points are already configured in the package.json. There should be no extra setup needed to get the best build option.
 {% endhint %}
 
 ### Load from CDN
 
-You can also directly add a script tag loading i18next from one of the CDNs providing it:
+You can also add a script tag to load react-i18next from one of the CDNs providing it, eg.:
 
 **unpkg.com**
 
@@ -34,12 +31,14 @@ You can also directly add a script tag loading i18next from one of the CDNs prov
 ## Translation "how to"
 
 {% hint style="info" %}
-You should read the [i18next](https://www.i18next.com) documentation at some point as we do not repeat all the [configuration options](https://www.i18next.com/overview/configuration-options) or translation functionalities like [plurals](https://www.i18next.com/translation-function/plurals), [formatting](https://www.i18next.com/translation-function/formatting), [interpolation](https://www.i18next.com/translation-function/interpolation), ...
+You should read the [i18next](https://www.i18next.com) documentation at some point as we do not repeat all the [configuration options](https://www.i18next.com/overview/configuration-options) and translation functionalities like [plurals](https://www.i18next.com/translation-function/plurals), [formatting](https://www.i18next.com/translation-function/formatting), [interpolation](https://www.i18next.com/translation-function/interpolation), ... here.
 {% endhint %}
 
 You got two options to translate your content:
 
 ### Simple content
+
+Simple content can easily be translated using the provided `t` function.
 
 **Before:**
 
@@ -54,16 +53,18 @@ You got two options to translate your content:
 ```
 
 {% hint style="info" %}
-You will get passed down the t function by using the [render prop](../components/i18n-render-prop.md) or [hoc](../components/translate-hoc.md).
+You will get the t function by using the [NamespacesConsumer](../components/namespacesconsumer.md) render prop or [withNamespaces](../components/withnamespaces.md) hoc.
 {% endhint %}
 
-### Complexer jsx tree
+### JSX tree
+
+Sometimes you might want to include html formatting or components like links into your translations. \(Always try to get the best result for your translators - the final string to translate should be a complete sentence\).
 
 **Before:** Your react code would have looked something like:
 
 ```javascript
 <div>
-    Hello <strong title="this is your name">{name}</strong>, you have {count} unread message(s). <Link to="/msgs">Go to messages</Link>.
+  Hello <strong title="this is your name">{name}</strong>, you have {count} unread message(s). <Link to="/msgs">Go to messages</Link>.
 </div>
 ```
 
@@ -71,7 +72,7 @@ You will get passed down the t function by using the [render prop](../components
 
 ```javascript
 <Trans i18nKey="userMessagesUnread" count={count}>
-    Hello <strong title={t('nameTitle')}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
+  Hello <strong title={t('nameTitle')}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
 </Trans>
 ```
 
@@ -81,97 +82,51 @@ Learn more about the Trans Component [here](../components/trans-component.md)
 
 ## Basic sample 
 
-### using render props
-
-This basic sample uses render props and passes the[ i18next instance](../components/i18next-instance.md) to it via internal context handling by using the `reactI18nextModule` on i18next.
+This basic sample tries to have all needed to get a first success using the `reactI18nextModule` on i18next.
 
 ```javascript
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { I18n } from 'react-i18next';
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import i18n from "i18next";
+import { withI18n, reactI18nextModule } from "react-i18next";
 
-import i18n from './i18n'; // initialized i18next instance using reactI18nextModule
-
-class App extends React.Component {
-  render() {
-    return (
-      <I18n>
-        {
-          (t, { i18n }) => (
-            <div>
-              <h1>{t('appName')}</h1>
-              <button 
-                onClick={() => { i18n.changeLanguage('de'); }}>{t('nav.linkDE')}
-              </button>
-              <button
-                onClick={() => { i18n.changeLanguage('en'); }}>{t('nav.linkEN')}
-              </button>
-              <a
-                href='https://github.com/i18next/react-i18next'
-                target='_blank'
-              >
-                {t('nav:link1')}
-              </a>
-            </div>
-          )
+i18n
+  .use(reactI18nextModule) // passes i18n down to react-i18next
+  .init({
+    resources: {
+      en: {
+        translation: {
+          "Welcome to React": "Welcome to React and react-i18next"
         }
-      </I18n>
-    )
-  }
-}
+      }
+    },
+    lng: "en",
+    fallbackLng: "en",
 
-ReactDOM.render(<App />, document.getElementById('app'));
-```
+    interpolation: {
+      escapeValue: false
+    }
+  });
 
-### using HOC and Provider
-
-This basic sample uses the [I18nextProvider](../components/i18nextprovider.md) and the [translate hoc](../components/translate-hoc.md).
-
-{% hint style="info" %}
-_Instead of the provider you also just can use the reactI18nextModule._
-{% endhint %}
-
-```javascript
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { I18nextProvider, translate } from 'react-i18next';
-
-import i18n from './i18n'; // initialized i18next instance
-
-@translate(['view', 'nav'], { wait: true })
-class TranslatableView extends React.Component {
+class App extends Component {
   render() {
     const { t } = this.props;
 
-    const toggle = lng => i18n.changeLanguage(lng);
-
-    return (
-      <div>
-        <h1>{t('appName')}</h1>
-        <button 
-          onClick={() => toggle('de')}>{t('nav.linkDE')}
-        </button>
-        <button
-          onClick={() => toggle('en')}>{t('nav.linkEN')}
-        </button>
-        <a
-          href='https://github.com/i18next/react-i18next'
-          target='_blank'
-        >
-          {t('nav:link1')}
-        </a>
-      </div>
-    )
+    return <h2>{t('Welcome to React')}</h2>;
   }
 }
+const AppWithI18n = withI18n()(App); // pass `t` function to App
 
+// append app to dom
 ReactDOM.render(
-  <I18nextProvider i18n={ i18n }>
-    <TranslatableView />
-  </I18nextProvider>,
-  document.getElementById('app')
+  <AppWithI18n />,
+  document.getElementById("root")
 );
 ```
+
+#### RESULT:
+
+![](../.gitbook/assets/screen-shot-2018-09-30-at-16.58.18.png)
 
 ## Extended samples
 

@@ -1,6 +1,6 @@
 # I18nextProvider
 
-The provider is responsible to pass the i18next instance passed in by props down to all the [translate hocs](translate-hoc.md) or [I18n](i18n-render-prop.md) using react context.
+The provider is responsible to pass the i18next instance passed in by props down to all the [withNamespaces](withnamespaces.md) hocs or [NamespacesConsumer](namespacesconsumer.md) render prop using react context api.
 
 ```javascript
 import React from 'react';
@@ -19,6 +19,8 @@ ReactDOM.render(
 ```
 
 For the i18n instance have a look at the [i18next instance page](i18next-instance.md).
+
+As an alternative you can use the [reactI18nextModule](i18next-instance.md) in the i18n instance.
 
 ## The I18nextProvider props:
 

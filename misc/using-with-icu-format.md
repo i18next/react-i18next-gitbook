@@ -61,7 +61,7 @@ To dynamically import the needed locale-data have a look here: [https://github.c
 
 ### using t function
 
-```jsx
+```javascript
 import React, { Component } from 'react';
 import { translate } from 'react-i18next';
 
@@ -84,7 +84,7 @@ As is including plain ICU syntax inside a JSX node will result in invalid JSX as
 
 So the default option is to use the [Trans Component](../components/trans-component.md) just with props like:
 
-```jsx
+```javascript
 import { Trans } from 'react-i18next';
 
 const user = 'John Doe';
@@ -122,7 +122,7 @@ $ yarn upgrade react-scripts@2.0.0-next.47d2d941
 ```
 {% endhint %}
 
-```jsx
+```javascript
 import { Trans } from 'react-i18next/icu.macro';
 
 const user = 'John Doe';
@@ -138,7 +138,7 @@ The correct string for translations will be shown in the browser console output 
 
 **More samples:**
 
-```jsx
+```markup
 // basic interpolation
 <Trans>Welcome, { name }!</Trans>
 
@@ -158,7 +158,7 @@ The correct string for translations will be shown in the browser console output 
 
 There is no way to directly add the needed ICU format inside a JSX child - so we had to add another component that gets transpiled to needed Trans component:
 
-```jsx
+```javascript
 import { Select } from 'react-i18next/icu.macro';
 
 // simple select
@@ -171,7 +171,7 @@ import { Select } from 'react-i18next/icu.macro';
 />
 ```
 
-```jsx
+```javascript
 import { Select } from 'react-i18next/icu.macro';
 
 // select with inner components
@@ -186,7 +186,7 @@ import { Select } from 'react-i18next/icu.macro';
 
 #### Plural
 
-```jsx
+```javascript
 import { Plural } from 'react-i18next/icu.macro';
 
 // simple plural
@@ -199,7 +199,7 @@ import { Plural } from 'react-i18next/icu.macro';
 />
 ```
 
-```jsx
+```javascript
 import { Plural } from 'react-i18next/icu.macro';
 
 // plural with inner components

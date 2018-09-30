@@ -1,9 +1,15 @@
 # Translate HOC
 
+{% hint style="warning" %}
+Will be removed in the next major react-i18next version \(v9.0.0\).
+
+The component can be replaced without changes with the new [withNamespaces](../components/withnamespaces.md) hoc.
+{% endhint %}
+
 The translate [hoc](https://reactjs.org/docs/higher-order-components.html) is responsible for passing the [**t** function](https://www.i18next.com/overview/api#t) to your component which enables all the translation functionality provided by i18next. Further, it asserts the component gets re-rendered on language change or changes to the translations themselves.
 
 {% hint style="info" %}
-To learn more about using the **t** function have a look at i18next's documentation:
+To learn more about using the **t** function have a look at i18next documentation:
 
 * [essentials](https://www.i18next.com/essentials.html)
 * [interpolation](https://www.i18next.com/interpolation.html)
@@ -12,7 +18,7 @@ To learn more about using the **t** function have a look at i18next's documentat
 * ...
 {% endhint %}
 
-Can be nested inside a [I18nextProvider](i18nextprovider.md). If not, you will need to pass the i18next instance via prop `i18n`, in options or by using `setI18n` function \(see below\).
+Can be nested inside a [I18nextProvider](../components/i18nextprovider.md). If not, you will need to pass the i18next instance via prop `i18n`, in options or by using `setI18n` function \(see below\).
 
 ## Sample
 
@@ -103,7 +109,7 @@ export default translate(
 
 | _**option**_ | _**type \(default\)**_ | _**description**_ |
 | :--- | :--- | :--- |
-| wait | boolean \(false\) | assert all provided namespaces are loaded before rendering the component \(can be set [globally](i18next-instance.md) too\) |
+| wait | boolean \(false\) | assert all provided namespaces are loaded before rendering the component \(can be set [globally](../components/i18next-instance.md) too\) |
 | nsMode | string \('default'\) | _default:_ namespaces will be loaded an the first will be set as default or _fallback:_ namespaces will be used as fallbacks used in order provided |
 | bindI18n | string \('languageChanged loaded'\) | which events trigger a rerender, can be set to false or string of events |
 | bindStore | string \('added removed'\) | which events on store trigger a rerender, can be set to false or string of events |

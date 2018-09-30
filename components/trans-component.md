@@ -1,6 +1,26 @@
 # Trans Component
 
+## Important note
+
+While the Trans components gives you a lot of power by letting you interpolate or translate complexer react elements. 
+
+The truth is - In most cases you won't need it. **As long you have no react nodes you like to be integrated into a translated text** \(text formatting, like `strong`, `i`, ...\) **or adding some link component - you won't need it.**
+
+All can be done by using the `t` function you get by the [translate hoc](../deprecated/translate-hoc.md) or [I18n render prop](../deprecated/i18n-render-prop.md).
+
+{% hint style="info" %}
+Using the **t** function have a look at i18next documentation:
+
+* [essentials](https://www.i18next.com/essentials.html)
+* [interpolation](https://www.i18next.com/interpolation.html)
+* [formatting](https://www.i18next.com/formatting.html)
+* [plurals](https://www.i18next.com/plurals.html)
+* ...
+{% endhint %}
+
 ## Sample
+
+So you learned there is no need to use the Trans component everywhere \(the plain t function will just do fine in most cases\).
 
 This component enables you to nest any react content to be translated as one string. Supports both plural and interpolation.
 
@@ -27,8 +47,8 @@ _Let's say you want to create following html output:_
 _Your en.json \(translation strings\) will look like:_
 
 ```javascript
-"userMessagesUnread": "Hello <1><0>{{name}}</0></1>, you have <3>{{count}}</3> unread message. <5>Go to message</5>.",
-"userMessagesUnread_plural": "Hello <1><0>{{name}}</0></1>, you have <3>{{count}}</3> unread messages.  <5>Go to messages</5>.",
+"userMessagesUnread": "Hello <1>{{name}}</1>, you have {{count}} unread message. <5>Go to message</5>.",
+"userMessagesUnread_plural": "Hello <1>{{name}}</1>, you have {{count}} unread messages.  <5>Go to messages</5>.",
 ```
 
 {% hint style="info" %}
@@ -66,25 +86,28 @@ Guessing replacement tags _\(&lt;0&gt;&lt;/0&gt;\)_ of your component right is r
 **results in string:**
 
 ```text
-"Hello <1><0>{{name}}</0></1>, you have <3>{{count}}</3> unread message. <5>Go to message</5>."
+"Hello <1>{{name}}</1>, you have {{count}} unread message. <5>Go to message</5>."
 ```
 
 **based on** the node tree**:**
 
 ```javascript
 Trans.children = [
-  'Hello ',
-  { children: [{ name: 'Jan'  }] }, // index 1 -> child object index 0
-  ', you have',
-  { count: 10 }, // index 3
-  ' unread messages. ',
-  { children: [ 'Go to messages' ] }, // index 5 -> just a string child
+  'Hello ',                           // index 0: only a string
+  { children: [{ name: 'Jan'  }] },   // index 1: element strong -> child object for interpolation
+  ', you have',                       // index 2: only a string
+  { count: 10 },                      // index 3: just object for interpolation
+  ' unread messages. ',               // index 4
+  { children: [ 'Go to messages' ] }, // index 5: element link -> child just a string
   '.'
 ]
 ```
 
 {% hint style="info" %}
-For an in depth explanation have a look at the ["The Trans Component Explained"](../misc/the-trans-component-explained.md) page!
+**Rules:**  
+- child is a string =&gt; nothing to wrap just take the string  
+- child is an object =&gt; nothing to to it's used for interpolation  
+- child is an element: wrap it's children in &lt;i&gt;&lt;/i&gt; where i is the index of that element position in children and handle it's children with same rules \(starting element.children index at 0 again\)
 {% endhint %}
 
 ## Trans props

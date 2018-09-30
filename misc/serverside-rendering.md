@@ -16,7 +16,7 @@ For futher information see this [issue](https://github.com/i18next/react-i18next
 
 ## Pass language and translations down to client
 
-Both the [i18nextProvider](../components/i18nextprovider.md) and [translate hoc](../components/translate-hoc.md) allows to pass in `initialI18nStore` and `initialLanguage`. By doing so the translations won't be loaded and initial clientside render will avoid any flickering or rerender by checksum mismatch.
+Both the [i18nextProvider](../components/i18nextprovider.md) and [translate hoc](../deprecated/translate-hoc.md) allows to pass in `initialI18nStore` and `initialLanguage`. By doing so the translations won't be loaded and initial clientside render will avoid any flickering or rerender by checksum mismatch.
 
 For details check the docs of those components or **have a look at the examples above**.
 

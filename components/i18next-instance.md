@@ -5,9 +5,9 @@ The instance is an initialized i18next instance. In the following code snippet, 
 > You can learn more about [i18next](http://i18next.com) and [plugins](https://www.i18next.com/plugins-and-utils.html#plugins) on the i18next website.
 
 {% hint style="info" %}
-The instance could be passed to the [I18nextProvider](i18nextprovider.md) or directly to the [translate hoc](translate-hoc.md).
+The instance could be passed to the [I18nextProvider](i18nextprovider.md) or directly to the [translate hoc](../deprecated/translate-hoc.md).
 
-The **reactI18nextModule** used below is an alternative to using the [I18nextProvider](i18nextprovider.md) and asserts that components \([render prop](i18n-render-prop.md), [hoc](translate-hoc.md)\) lower in the element tree get access to the i18n instance.
+The **reactI18nextModule** used below is an alternative to using the [I18nextProvider](i18nextprovider.md) and asserts that components \([render prop](../deprecated/i18n-render-prop.md), [hoc](../deprecated/translate-hoc.md)\) lower in the element tree get access to the i18n instance.
 {% endhint %}
 
 ```javascript
@@ -46,7 +46,7 @@ All additional options for react in init options:
 
 | _**options**_ | _**default**_ | _**description**_ |
 | :--- | :--- | :--- |
-| wait | false | assert all provided namespaces are loaded before rendering the component \(can be set [globally](i18next-instance.md) too\); note that rendering will not be blocked again when dynamically updating `ns` on the [render prop component](i18n-render-prop.md) after initial mount |
+| wait | false | assert all provided namespaces are loaded before rendering the component \(can be set [globally](i18next-instance.md) too\); note that rendering will not be blocked again when dynamically updating `ns` on the [render prop component](../deprecated/i18n-render-prop.md) after initial mount |
 | nsMode | 'default' | _default:_ namespaces will be loaded an the first will be set as default or _fallback:_ namespaces will be used as fallbacks used in order provided |
 | bindI18n | 'languageChanged loaded' | which events trigger a rerender, can be set to false or string of events |
 | bindStore | 'added removed' | which events on store trigger a rerender, can be set to false or string of events |
