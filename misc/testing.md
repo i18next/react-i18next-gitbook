@@ -1,10 +1,10 @@
 # Testing
 
-For testing purpose of your component you should export the pure component without extending with the translate hoc and test that:
+For testing purpose of your component you should export the pure component without extending with the withNamespaces hoc and test that:
 
 ```javascript
 export MyComponent;
-export default translate('ns')(MyComponent);
+export default withNamespaces('ns')(MyComponent);
 ```
 
 In the test, test the myComponent export passing a t function mock:
@@ -33,7 +33,7 @@ Or mock it like:
 ```javascript
 jest.mock('react-i18next', () => ({
   // this mock makes sure any components using the translate HoC receive the t function as a prop
-  translate: () => Component => {
+  withNamespaces: () => Component => {
     Component.defaultProps = { ...Component.defaultProps, t: () => "" };
     return Component;
   },
