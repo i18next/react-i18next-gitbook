@@ -120,6 +120,17 @@ export default withNamespaces(
       </td>
     </tr>
     <tr>
+      <td style="text-align:left">innerRef</td>
+      <td style="text-align:left">function or object (undefined)</td>
+      <td style="text-align:left">
+        <p>either pass in a object React.createRef or a ref function like (c) =>
+          this.myRef = c;</p>
+        <p></p>
+        <p><a href="https://gist.github.com/gaearon/1a018a023347fe1c2476073330cc5509">read more</a>
+        </p>
+      </td>
+    </tr>
+    <tr>
       <td style="text-align:left">bindI18n</td>
       <td style="text-align:left">string ('languageChanged loaded')</td>
       <td style="text-align:left">which events trigger a rerender, can be set to false or string of events</td>
