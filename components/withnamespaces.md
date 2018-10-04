@@ -137,12 +137,6 @@ export default withNamespaces(
         on init</td>
     </tr>
     <tr>
-      <td style="text-align:left">withRef</td>
-      <td style="text-align:left">boolean (false)</td>
-      <td style="text-align:left">store a ref to the wrapped component and access it by <code>Component. getWrappedInstance();</code>
-      </td>
-    </tr>
-    <tr>
       <td style="text-align:left">i18n</td>
       <td style="text-align:left">object (undefined)</td>
       <td style="text-align:left">pass i18next via options (useful for <a href="https://github.com/i18next/react-i18next/tree/master/example/nextjs">next.js usage</a>
