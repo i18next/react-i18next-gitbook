@@ -7,6 +7,10 @@
 * [Introduction](overview/introduction.md)
 * [Getting started](overview/getting-started.md)
 
+## Guides
+
+* [Drawbacks of other i18n solutions](guides/the-drawbacks-of-other-i18n-solutions.md)
+
 ## Components
 
 * [Overview](components/overview.md)
