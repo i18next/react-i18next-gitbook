@@ -112,13 +112,13 @@ Thanks to using [kentcdodds/babel-plugin-macros](https://github.com/kentcdodds/b
   
 Check [https://github.com/kentcdodds/babel-plugin-macros/blob/master/other/docs/user.md](https://github.com/kentcdodds/babel-plugin-macros/blob/master/other/docs/user.md) for setting babel-plugin-macros up.
 
-Using create-react-app? Make sure you are using alpha version of react-scripts 2.0 as it includes the macro plugin.
+Using create-react-app? Make sure you are using react-scripts v2 as it includes the macro plugin.
 
 ```
 $ # Create a new application
-$ npx create-react-app@next --scripts-version=2.0.0-next.47d2d941
+$ npx create-react-app
 $ # Upgrade an existing application
-$ yarn upgrade react-scripts@2.0.0-next.47d2d941
+$ yarn upgrade react-scripts@2
 ```
 {% endhint %}
 
