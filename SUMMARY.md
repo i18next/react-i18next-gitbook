@@ -1,15 +1,14 @@
 # Table of contents
 
 * [Introduction](README.md)
-
-## Overview
-
-* [Introduction](overview/introduction.md)
-* [Getting started](overview/getting-started.md)
+* [Getting started](getting-started.md)
 
 ## Guides
 
 * [Drawbacks of other i18n solutions](guides/the-drawbacks-of-other-i18n-solutions.md)
+* [Quick start](guides/quick-start.md)
+* [Step by step guide](guides/step-by-step-guide.md)
+* [Extracting translations](guides/extracting-translations.md)
 
 ## Components
 

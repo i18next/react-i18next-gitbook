@@ -3,7 +3,7 @@
 i18next itself is flexible enough to support multiple existing i18next formats beside it's own.
 
 {% hint style="info" %}
-Find the full working sample here: 
+Find the full working sample here:
 
 [https://github.com/i18next/react-i18next/tree/master/example/react-icu](https://github.com/i18next/react-i18next/tree/master/example/react-icu)
 {% endhint %}
@@ -50,7 +50,6 @@ i18n
 
 
 export default i18n;
-
 ```
 
 {% hint style="info" %}
@@ -108,13 +107,13 @@ While this works the resulting JSX is very verbose - guess we could do better.
 ### using babel macros \(Trans, Plural, Select\)
 
 {% hint style="info" %}
-Thanks to using [kentcdodds/babel-plugin-macros](https://github.com/kentcdodds/babel-plugin-macros) we could use some babel magic to transpile nicer looking jsx to above Trans markup.  
-  
+Thanks to using [kentcdodds/babel-plugin-macros](https://github.com/kentcdodds/babel-plugin-macros) we could use some babel magic to transpile nicer looking jsx to above Trans markup.
+
 Check [https://github.com/kentcdodds/babel-plugin-macros/blob/master/other/docs/user.md](https://github.com/kentcdodds/babel-plugin-macros/blob/master/other/docs/user.md) for setting babel-plugin-macros up.
 
 Using create-react-app? Make sure you are using react-scripts v2 as it includes the macro plugin.
 
-```
+```text
 $ # Create a new application
 $ npx create-react-app
 $ # Upgrade an existing application
@@ -213,10 +212,10 @@ import { Plural } from 'react-i18next/icu.macro';
 ```
 
 {% hint style="info" %}
-The needed plural forms can be looked up in the official unicode cldr table: [http://www.unicode.org/cldr/charts/33/supplemental/language\_plural\_rules.html](http://www.unicode.org/cldr/charts/33/supplemental/language_plural_rules.html)  
-  
-In addition to the plural forms you can specify results for given number values like show above:  
-  
+The needed plural forms can be looked up in the official unicode cldr table: [http://www.unicode.org/cldr/charts/33/supplemental/language\_plural\_rules.html](http://www.unicode.org/cldr/charts/33/supplemental/language_plural_rules.html)
+
+In addition to the plural forms you can specify results for given number values like show above:
+
 `0="show if zero"`
 
 in ICU it would be `=0 {show if zero}` but `=` is not allowed to be leading char in attributes so we replaced it with `$`
