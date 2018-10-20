@@ -30,7 +30,6 @@
 
 * [Using with ICU format](misc/using-with-icu-format.md)
 * [Using  with fluent format](misc/using-with-fluent-format.md)
-* [Using with typescript](misc/using-with-typescript.md)
 * [Serverside Rendering](misc/serverside-rendering.md)
 * [Testing](misc/testing.md)
 
