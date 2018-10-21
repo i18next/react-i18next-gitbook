@@ -78,7 +78,7 @@ That's what the [withNamespaces](../components/withnamespaces.md) higher order c
 
 ### Scale and split your translations into multiple files
 
-When your project you do not only want to have code splitting but you also like to load translations on demand to avoid loading all translations upfront resulting in bad load times of your website.
+When your project gets bigger you do not only want code splitting but you also like to load translations on demand to avoid loading all translations upfront which would result in bad load times for your website.
 
 With loading translations asynchronous there comes an other problem - does your framework handle the pending state during loading translation?
 
