@@ -85,9 +85,9 @@ function App ({ t }) {
 export default withNamespaces()(App);
 ```
 
-## Adding more languages
+## 1\) Adding more languages
 
-### 1\) Add an additional language file
+### a\) Add an additional language file
 
 **translation.json** \(/public/locales/**de**/translation.json\)
 
@@ -97,7 +97,7 @@ export default withNamespaces()(App);
 }
 ```
 
-### 2\) Add the additional translations on init
+### b\) Add the additional translations on init
 
 in i18n.js:
 
@@ -119,7 +119,7 @@ const resources = {
 // ...
 ```
 
-### 3\) Auto detect the user language
+### c\) Auto detect the user language
 
 As the language is set on `i18n.init` you either could create some custom code setting the needed language or just use one of the provided language detectors coming with i18next.
 
@@ -177,7 +177,7 @@ export default i18n;
 
 Now we already are able to set language based on the browsers set language or by appending `?lng=LANGUAGE` to the URL.
 
-### 4\) Let the user toggle the language
+### d\) Let the user toggle the language
 
 Call [i18n.changeLanguage](https://www.i18next.com/overview/api#changelanguage) is all needed to do.
 
@@ -207,7 +207,7 @@ export default withNamespaces()(App);
 It's essential to have at least your outer page level / container component wrapped with the [withNamespaces](../components/withnamespaces.md) or [NamespacesConsumer](../components/namespacesconsumer.md) as those are bound to the [languageChanged event](https://www.i18next.com/overview/api#onlanguagechanged) and trigger a needed rerender.
 {% endhint %}
 
-## Lazy loading translations
+## 2\) Lazy loading translations
 
 We not yet started splitting translations into multiple files \(which is highly recommended for larger projects\) but we already see that adding more languages would result in bundling unneeded translations into the application.
 
@@ -217,7 +217,7 @@ This for sure works but comes with one drawback. If you have a change in your tr
 
 This might not be a problem when starting but at some point you will learn localization is a complete different beast than just adding i18n to your code. You will keep translations as separated from your code as you can - so developers and translators can work as independent as possible.
 
-### 1\) Adding lazy loading for translations
+### a\) Adding lazy loading for translations
 
 This will be simpler than you think. All needed to be done is adding another package called [i18next-xhr-backend](https://github.com/i18next/i18next-xhr-backend) and using that.
 
@@ -259,7 +259,7 @@ export default i18n;
 i18next  implementation is smart enough to only load needed languages and comes with intelligent deduplications so even multiple load requests for files in different code locations result in one request while notifying all needed requester.
 {% endhint %}
 
-### 2\) Loading multiple translation files
+### b\) Loading multiple translation files
 
 Lets assume your project started to grow and you like to split translations into multiple files.
 
@@ -309,7 +309,7 @@ function Page2 ({ t }) {
 export default withNamespaces('page2')(Page2);
 ```
 
-### 3\) Handle rendering while translations are not yet loaded
+### c\) Handle rendering while translations are not yet loaded
 
 In the above `Page2` you will notice the initial render will trigger the load for `page2.json` but also render the page without the translations ready. There will be a rerender when the translations where loaded resulting in the page flickering.
 
@@ -378,5 +378,151 @@ You can set the wait option either globally for all instances or individually li
 `withNamepaces('page2', { wait: true })(Page2);`
 {% endhint %}
 
+## 3\) Sidequest: natural vs. keybased catalog
 
+### a\) natural keys
+
+Until now we had organised translation and keys in natural language.
+
+```jsx
+<h1>{t('Welcome on page2')}</h1>
+```
+
+Having translation files like:
+
+```javascript
+{
+  "Welcome on page2": "Welcome on page2"
+}
+```
+
+This was possible by setting `keySeparator: false` on `i18n.init`
+
+The upside of this the code can be more readable but the content of the key might get soon rather different from the value it reflects. You could even go a step further by disabling any fallback language an [using the key as fallback](https://www.i18next.com/principles/fallback#key-fallback) - but be aware if you got a typo in the key acting as fallback value you will need to change it.
+
+### b\) keybased catalog
+
+Some i18n frameworks organise having more technical keys allowing those to be even structured into hierarchies. This is the default in i18next too - so removing `keySeparator: false` on `i18n.init` would enable having catalogs and `t` usage like:
+
+```javascript
+{
+  "titles": {
+    "page2": "Welcome on page2"
+  }
+}
+```
+
+accessed like:
+
+```jsx
+<h1>{t('titles.page2')}</h1>
+```
+
+If you prefer natural or keybased is a matter of taste...both can be used with react-i18next. Just avoid mixing those styles.
+
+## 4\) HOCs are dead - long lives the render props
+
+We won't open a debate over which is better as in our opinion both have their use case and there is no reason to just use one of the two options.
+
+So you already saw before that you can use the [withNamespaces](../components/withnamespaces.md) to decorate your component to pass the `t` function down.
+
+The same works with [a render prop](../components/namespacesconsumer.md):
+
+```jsx
+import React from 'react';
+
+// the render prop
+import { NamespacesConsumer } from 'react-i18next';
+
+export default function Page2 () {
+  (
+    <NamespacesConsumer ns={['page2', 'common']}>
+      {
+        (t, { i18n, ready }) => (
+          ready ?
+            <h1>{t('Welcome on page2')}</h1> :
+            <p>{t('common:loading')}</p>
+        )
+      }
+    </NamespacesConsumer>
+  )
+}
+```
+
+## 5\) Translate JXS nodes as one string
+
+Let's translate this:
+
+> Translating content with **formatting** or a [link](step-by-step-guide.md#5-translate-jxs-nodes-as-one-string) is a pain.
+
+For this your JSX might look like:
+
+```jsx
+<p>
+  Translating content with 
+  <strong>formatting</strong> 
+  or a 
+  <a href="#">link</a> 
+  is a pain.
+</p>
+```
+
+So naiv approach using the `t` function would result in
+
+```jsx
+<p>
+  { t('Translating content with ') }
+  <strong>t('formatting')</strong> 
+  { t(' or a ') }
+  <a href="#">t('link')</a> 
+  { t(' is a pain.') }
+</p>
+```
+
+So you end up with 5 keys in your translation file and your translator has no idea about how this 5 keys relate to each other. Further what happens in other languages where the order needs to be changed?!?
+
+So you won't have luck with this approach.
+
+### Using the Trans component
+
+The [Trans component](../components/trans-component.md) enables you to keep this as one sentence by replacing the JSX nodes with indexed pseudo tags.
+
+```jsx
+import { Trans } from 'react-i18next';
+
+// ...
+
+<p>
+  <Trans>
+    Translating content with 
+    <strong>formatting</strong> 
+    or a 
+    <a href="#">link</a> 
+    is a pain.
+  </Trans>
+</p>
+```
+
+Resulting in JSON:
+
+```javascript
+{
+  "Translating content with <1>formatting</1> or a <3>link</3> is a pain.": 
+"Translating content with <1>formatting</1> or a <3>link</3> is a pain."
+}
+```
+
+The `<1>`, `<3>` pseudo tags are based on the index of appearance in `nodes.children`:
+
+```jsx
+<Trans>
+  Translating content with     // index 0
+  <strong>formatting</strong>  // index 1
+  or a                         // index 2
+  <a href="#">link</a>         // index 3
+  is a pain.                   // index 4
+</Trans>
+```
+
+The Trans component also supports interpolation and plurals just read the [full documentation](../components/trans-component.md) of that component.
 
