@@ -7,14 +7,14 @@ We expect you having an existing react application - if not give [create-react-a
 Install both react-i18next and i18next package:
 
 ```bash
-npm install react-i18next i18next
+npm install react-i18next i18next --save
 ```
 
 Why do you need i18next package? i18next is the core that provides all translation functionality while react-i18next gives some extra power for using with react.
 
 ## Configure i18next
 
-Create a new file `i18n.js` beside your `app.js` containing following content:
+Create a new file `i18n.js` beside your `index.js` containing following content:
 
 ```javascript
 import i18n from "i18next";
@@ -35,6 +35,8 @@ i18n
   .init({
     resources,
     lng: "en",
+    
+    keySeparator: false, // we do not use keys in form messages.welcome
 
     interpolation: {
       escapeValue: false // react already safes from xss
@@ -46,7 +48,7 @@ i18n
 
 The interesting part here is by `i18n.use(reactI18nextModule)` we pass the i18n instance to react-i18next which will make it available for all the components via the context api.
 
-Then import that in `app.js`:
+Then import that in `index.js`:
 
 ```javascript
 import React, { Component } from "react";
