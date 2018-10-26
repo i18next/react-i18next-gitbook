@@ -127,7 +127,7 @@ const [t, ready, i18n] = useT(['page1', 'common']);
 ```
 
 {% hint style="info" %}
-Please not the t function will be either bound to the default namespace defined on i18next init or to the first one passed in in arguments.
+Please note the t function will be either bound to the default namespace defined on i18next init or to the first one passed in in arguments.
 {% endhint %}
 
 #### Using the withT HOC
