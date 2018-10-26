@@ -3,6 +3,10 @@
 * [Introduction](README.md)
 * [Getting started](getting-started.md)
 
+## Experimental
+
+* [Using with hooks](future/using-with-hooks.md)
+
 ## Guides
 
 * [Drawbacks of other i18n solutions](guides/the-drawbacks-of-other-i18n-solutions.md)
