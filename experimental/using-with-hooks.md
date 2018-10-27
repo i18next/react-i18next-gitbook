@@ -1,4 +1,4 @@
-# Using with hooks
+# Using with hooks and Suspense
 
 When we first heard about react [introducing hooks](https://reactjs.org/docs/hooks-intro.html) \(that was yesterday\) our feelings were mixed. But one night and a few hours of coding later we are convinced this is the best thing happening to web development after the introduction of react itself.
 
@@ -66,12 +66,6 @@ i18n
 
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
-    },
-
-    // special options for react-i18next
-    // learn more: https://react.i18next.com/components/i18next-instance
-    react: {
-      wait: true
     }
   });
 
@@ -104,26 +98,32 @@ ReactDOM.render(
 You can use the hook inside your functional components like:
 
 ```jsx
-import React from 'react';
+import React, { Suspense } from 'react';
 import { useT } from 'react-i18next/hooks';
 
-export default function MyComponent () {
-  const [t, ready, i18n] = useT();
-  
-  // not yet loaded the translations
-  // render nothing or a placeholder?!?
-  if (!ready) return null;
+function MyComponent() {
+  const [t, i18n] = useT();
   
   return <h1>{t('Welcome to React')}</h1>
+}
+
+// i18n translations might still be loaded by the xhr backend
+// use react's Suspense
+function App() {
+  return (
+    <Suspense fallback={<Spinner />}>
+      <MyComponent />
+    </Suspense>
+  );
 }
 ```
 
 The useT hook function takes one options argument. You can either pass in a namespace or a array of namespaces to load.
 
 ```javascript
-const [t, ready, i18n] = useT('common');
+const [t, i18n] = useT('common');
 
-const [t, ready, i18n] = useT(['page1', 'common']);
+const [t, i18n] = useT(['page1', 'common']);
 ```
 
 {% hint style="info" %}
@@ -140,16 +140,24 @@ import { withT } from 'react-i18next/hooks';
 
 class LegacyComponentClass extends Component {
   render() {
-    const { t, ready } = this.props;
-
-    if (!ready) return null;
+    const { t } = this.props;
 
     return (
       <h1>{t('Welcome to React')}</h1>
     )
   }
 }
-export default withT()(LegacyComponentClass)
+const MyComponent = withT()(LegacyComponentClass)
+
+// i18n translations might still be loaded by the xhr backend
+// use react's Suspense
+function App() {
+  return (
+    <Suspense fallback={<Spinner />}>
+      <MyComponent />
+    </Suspense>
+  );
+}
 ```
 
 The withT hook function takes one options argument. You can either pass in a namespace or a array of namespaces to load.

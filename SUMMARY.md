@@ -5,7 +5,7 @@
 
 ## Experimental
 
-* [Using with hooks](experimental/using-with-hooks.md)
+* [Using with hooks and Suspense](experimental/using-with-hooks.md)
 
 ## Guides
 
