@@ -129,7 +129,7 @@ Don't worry if you do not yet understand how the Trans component works in detail
 
 ## Next steps
 
-Depending on your learn type you now could read the more in dept [step by step](step-by-step-guide.md) guide and learn how to load translations using xhr or how to change the language.
+Depending on your learn type you now could read the more in depth [step by step](step-by-step-guide.md) guide and learn how to load translations using xhr or how to change the language.
 
 Prefer having code to checkout? Directly dive our examples:
 
