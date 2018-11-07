@@ -170,7 +170,7 @@ i18n
     interpolation: {
       escapeValue: false // react already safes from xss
     }
-  )};
+  });
   
 export default i18n;
 ```
@@ -250,7 +250,7 @@ i18n
     interpolation: {
       escapeValue: false // react already safes from xss
     }
-  )};
+  });
   
 export default i18n;
 ```
@@ -365,7 +365,7 @@ i18n
     react: {
       wait: true
     }
-  )};
+  });
   
 export default i18n;
 ```
