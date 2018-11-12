@@ -129,7 +129,7 @@ ReactDOM.render(
 ![Preview of content](.gitbook/assets/screen-shot-2018-09-30-at-16.58.18.png)
 
 {% hint style="info" %}
-This sample while very simple does come with some [drawbacks](guides/the-drawbacks-of-other-i18n-solutions.md) to getting the full potential from using react-i18next you should read the extended [step by step guilde](guides/step-by-step-guide.md).
+This sample while very simple does come with some [drawbacks](guides/the-drawbacks-of-other-i18n-solutions.md) to getting the full potential from using react-i18next you should read the extended [step by step guide](guides/step-by-step-guide.md).
 {% endhint %}
 
 ## Extended samples
