@@ -49,7 +49,7 @@ function MyComponent({ t }) {
   )
 }
 
-const MyComponentWithHoc = withNamespaces()(myComponent);
+const MyComponentWithHoc = withNamespaces()(MyComponent);
 ```
 
 ## Getting the t function
