@@ -26,7 +26,7 @@ i18n.init({
 
 class App extends Component {
   render() {
-    return <h2>{i18next.t('Welcome to React')}</h2>;
+    return <h2>{i18n.t('Welcome to React')}</h2>;
   }
 }
 
