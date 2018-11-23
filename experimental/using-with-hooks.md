@@ -93,16 +93,16 @@ ReactDOM.render(
 
 ### Translate your content
 
-#### Using the useT hook
+#### Using the useTranslation hook
 
 You can use the hook inside your functional components like:
 
 ```jsx
 import React, { Suspense } from 'react';
-import { useT } from 'react-i18next/hooks';
+import { useTranslation } from 'react-i18next/hooks';
 
 function MyComponent() {
-  const [t, i18n] = useT();
+  const [t, i18n] = useTranslation();
   
   return <h1>{t('Welcome to React')}</h1>
 }
@@ -121,22 +121,22 @@ function App() {
 The useT hook function takes one options argument. You can either pass in a namespace or a array of namespaces to load.
 
 ```javascript
-const [t, i18n] = useT('common');
+const [t, i18n] = useTranslation('common');
 
-const [t, i18n] = useT(['page1', 'common']);
+const [t, i18n] = useTranslation(['page1', 'common']);
 ```
 
 {% hint style="info" %}
 Please note the t function will be either bound to the default namespace defined on i18next init or to the first one passed in in arguments.
 {% endhint %}
 
-#### Using the withT HOC
+#### Using the withTranslation HOC
 
 There might be some legacy cases where you still forced to use classes. No worry we still provide a hoc to cover this cases:
 
 ```jsx
 import React, { Component } from 'react';
-import { withT } from 'react-i18next/hooks';
+import { withTranslation } from 'react-i18next/hooks';
 
 class LegacyComponentClass extends Component {
   render() {
@@ -147,7 +147,7 @@ class LegacyComponentClass extends Component {
     )
   }
 }
-const MyComponent = withT()(LegacyComponentClass)
+const MyComponent = withTranslation()(LegacyComponentClass)
 
 // i18n translations might still be loaded by the xhr backend
 // use react's Suspense
@@ -163,9 +163,9 @@ function App() {
 The withT hook function takes one options argument. You can either pass in a namespace or a array of namespaces to load.
 
 ```javascript
-withT('common')(LegacyComponentClass);
+withTranslation('common')(LegacyComponentClass);
 
-withT(['page1', 'common'])(LegacyComponentClass);
+withTranslation(['page1', 'common'])(LegacyComponentClass);
 ```
 
 #### Using the Trans component
