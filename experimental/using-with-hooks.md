@@ -118,7 +118,7 @@ function App() {
 }
 ```
 
-The useT hook function takes one options argument. You can either pass in a namespace or a array of namespaces to load.
+The useTranslation hook function takes one options argument. You can either pass in a namespace or a array of namespaces to load.
 
 ```javascript
 const [t, i18n] = useTranslation('common');
@@ -160,7 +160,7 @@ function App() {
 }
 ```
 
-The withT hook function takes one options argument. You can either pass in a namespace or a array of namespaces to load.
+The withTranslation hook function takes one options argument. You can either pass in a namespace or a array of namespaces to load.
 
 ```javascript
 withTranslation('common')(LegacyComponentClass);
