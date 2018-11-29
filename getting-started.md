@@ -80,7 +80,7 @@ Sometimes you might want to include html formatting or components like links int
 Learn more about the Trans Component [here](components/trans-component.md)
 {% endhint %}
 
-## Basic sample 
+## Basic sample
 
 This basic sample tries to add i18n in a one file sample.
 
@@ -139,6 +139,4 @@ For complete code and samples: [have a look at the samples \(react, react-native
 
 Or have a look at the interactive [codesandbox](https://codesandbox.io/s/l4qrory2nl).
 {% endhint %}
-
-
 

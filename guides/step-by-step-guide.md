@@ -44,14 +44,14 @@ i18n
   .init({
     resources,
     lng: "en",
-    
+
     keySeparator: false, // we do not use keys in form messages.welcome
 
     interpolation: {
       escapeValue: false // react already safes from xss
     }
   });
-  
+
 export default i18n;
 ```
 
@@ -164,14 +164,14 @@ i18n
     resources,
     lng: "en",
     fallbackLng: "en", // use en if detected lng is not available
-    
+
     keySeparator: false, // we do not use keys in form messages.welcome
 
     interpolation: {
       escapeValue: false // react already safes from xss
     }
   });
-  
+
 export default i18n;
 ```
 
@@ -244,19 +244,19 @@ i18n
   .init({
     lng: "en",
     fallbackLng: "en", // use en if detected lng is not available
-    
+
     keySeparator: false, // we do not use keys in form messages.welcome
 
     interpolation: {
       escapeValue: false // react already safes from xss
     }
   });
-  
+
 export default i18n;
 ```
 
 {% hint style="info" %}
-i18next  implementation is smart enough to only load needed languages and comes with intelligent deduplications so even multiple load requests for files in different code locations result in one request while notifying all needed requester.
+i18next implementation is smart enough to only load needed languages and comes with intelligent deduplications so even multiple load requests for files in different code locations result in one request while notifying all needed requester.
 {% endhint %}
 
 ### b\) Loading multiple translation files
@@ -354,27 +354,27 @@ i18n
   .init({
     lng: "en",
     fallbackLng: "en", // use en if detected lng is not available
-    
+
     keySeparator: false, // we do not use keys in form messages.welcome
 
     interpolation: {
       escapeValue: false // react already safes from xss
     },
-    
+
     // react-i18next options
     react: {
       wait: true
     }
   });
-  
+
 export default i18n;
 ```
 
 Now `Page2` will be blank until the needed translation files were loaded.
 
 {% hint style="info" %}
-You can set the wait option either globally for all instances or individually like:  
-  
+You can set the wait option either globally for all instances or individually like:
+
 `withNamepaces('page2', { wait: true })(Page2);`
 {% endhint %}
 

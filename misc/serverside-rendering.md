@@ -1,10 +1,13 @@
 # Serverside Rendering
 
+## Using next.js?
+
+You should have a look at [next-i18next](https://github.com/isaachinman/next-i18next) which extends react-i18next to bring it to next.js the easiest way.
+
 ## Samples
 
 To learn more you should have a look at our samples:
 
-* [nextjs \(sample provided by react-i18next\)](https://github.com/i18next/react-i18next/tree/master/example/nextjs)
 * [razzle \(sample provided by react-i18next\)](https://github.com/i18next/react-i18next/tree/master/example/razzle-ssr)
 * [simpleblack's boilerplate](https://github.com/simpleblack/react-redux-universal-hot-example)
 

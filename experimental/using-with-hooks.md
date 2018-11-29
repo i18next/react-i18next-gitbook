@@ -103,7 +103,7 @@ import { useTranslation } from 'react-i18next/hooks';
 
 function MyComponent() {
   const [t, i18n] = useTranslation();
-  
+
   return <h1>{t('Welcome to React')}</h1>
 }
 

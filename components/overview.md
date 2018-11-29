@@ -91,7 +91,7 @@ import { reactI18nextModule } from 'react-i18next';
 i18n
   .use(reactI18nextModule) // if not using I18nextProvider
   .init({ /* options */ });
-  
+
 export default i18n;
 ```
 
