@@ -57,6 +57,29 @@ export default withNamespaces((props) => props.namespaces)(TranslatableView);
 
 If not using the [reactI18nextModule](i18next-instance.md) this hoc should be nested inside a [I18nextProvider](i18nextprovider.md). Alternatively you can pass the i18next instance via prop `i18n`.
 
+## Using with TypeScript
+
+To help you using TypeScript and the @withNamespaces decorator here is a trival example:
+
+```jsx
+import * as React from 'react';
+import { withNamespaces, WithNamespaces } from 'react-i18next';
+
+class MyComponent extends React.PureComponent<WithNamespaces> {
+  public render() {
+    const { t } = this.props;
+    return (
+      <React.Fragment>
+        <span>{t('my-component-content')}</span>
+      </React.Fragment>
+    );
+  }
+}
+export default withNamespaces()(MyComponent);
+```
+
+
+
 ## Set defaults for all used withNamespaces
 
 Most time you like to change those values for every component.
