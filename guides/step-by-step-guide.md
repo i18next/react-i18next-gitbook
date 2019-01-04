@@ -449,7 +449,7 @@ export default function Page2 () {
 }
 ```
 
-## 5\) Translate JXS nodes as one string
+## 5\) Translate JSX nodes as one string
 
 Let's translate this:
 
