@@ -6,7 +6,7 @@ react-i18next depends on i18next to provide the localization features. So there 
 2. The [translation function](https://www.i18next.com/overview/api#t) \(short **t**\)
 
 {% hint style="info" %}
-While we primary rely on react context to pass down **i18n** and **t** the components are build to also accept those via props, options or in case of i18n via internal context / reactI18nextModule.
+While we primary rely on react context to pass down **i18n** and **t** the components are built to also accept those via props, options or in case of i18n via internal context / reactI18nextModule.
 {% endhint %}
 
 ## Components
@@ -54,14 +54,14 @@ const MyComponentWithHoc = withNamespaces()(MyComponent);
 
 ## Getting the t function
 
-For getting the **t** function \(providing the translation functionality\) down to your component you got two options:
+To get the **t** function \(providing the translation functionality\) down to your component you have two options:
 
 1. Using the [withNamespaces](withnamespaces.md) hoc
 2. Using the [NamespacesConsumer](namespacesconsumer.md) render prop
 
 ## Getting the i18n function into the flow
 
-You got following options to pass the [i18next instance](i18next-instance.md) to the hoc, render prop and Trans component:
+You have the following options to pass the [i18next instance](i18next-instance.md) to the hoc, render prop and Trans component:
 
 ### Use the [provider](i18nextprovider.md)
 
