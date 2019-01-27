@@ -1,6 +1,6 @@
 # Drawbacks of other i18n solutions
 
-Lets make the sample using our own base i18n framework [i18next](https://i18next.com). Like all other solutions those come with some drawbacks we will highlight after creating the samples.
+Let's make the sample using our own base i18n framework [i18next](https://i18next.com). Like all other solutions, some come [drawbacks](#the-drawbacks). These will be highlighted after samples.
 
 ## Using a pure javascript i18n framework
 
@@ -13,7 +13,7 @@ import i18n from "i18next";
 const resources = {
   en: {
     translation: {
-      "Welcome to React": "Welcome to React and react-i18next"
+      "welcome": "Welcome to React and react-i18next"
     }
   }
 };
@@ -26,7 +26,7 @@ i18n.init({
 
 class App extends Component {
   render() {
-    return <h2>{i18n.t('Welcome to React')}</h2>;
+    return <h2>{i18n.t('welcome')}</h2>;
   }
 }
 
@@ -39,9 +39,9 @@ ReactDOM.render(
 
 ## More react adapted "react-i18n"
 
-The above is basically how every i18n framework for react works out there. The translations and language get set on init and a translation function is made available. You easily could extend this hiding the i18n.init inside a provider and pass down t function by context to another component for translated strings.
+The above is basically how every i18n framework for react works. The translations and language get set when initiated and a translation function is made available. You could easily extend this hiding the i18n.init inside a provider and pass down the function by context to another component to translate strings.
 
-So lets make this more visible with some pseudo code:
+So let's make this more visible with some pseudo code:
 
 ```javascript
 import React, { Component } from "react";
@@ -53,7 +53,7 @@ import resources from './catalog-en.json';
 
 class App extends Component {
   render() {
-    return <h2><FormttedString msg="Welcome to React" /></h2>;
+    return <h2><FormattedString msg="welcome" /></h2>;
   }
 }
 
@@ -68,7 +68,7 @@ ReactDOM.render(
 
 ## The drawbacks
 
-Before we come to the drawbacks lets highlight some advantage of those solutions above - they are very simple to get started.
+Before we come to the drawbacks let's highlight some advantage of those solutions above - they are very simple to get started.
 
 ### Changing the language
 
@@ -80,13 +80,13 @@ That's what the [withNamespaces](../components/withnamespaces.md) higher order c
 
 When your project gets bigger you do not only want code splitting but you also like to load translations on demand to avoid loading all translations upfront which would result in bad load times for your website.
 
-With loading translations asynchronous there comes an other problem - does your framework handle the pending state during loading translation?
+With loading translations asynchronous there comes another problem - does your framework handle the pending state during loading translation?
 
 That's what the [withNamespaces](../components/withnamespaces.md) higher order component or [NamespacesConsumer](../components/namespacesconsumer.md) render prop do!
 
 ### Can you translate combined jsx nodes in one sentence
 
-Lets take following content:
+Let's take following content:
 
 ```javascript
 <p>
