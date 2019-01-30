@@ -204,7 +204,7 @@ export default withNamespaces()(App);
 ```
 
 {% hint style="info" %}
-It's essential to have at least your outer page level / container component wrapped with the [withNamespaces](../components/withnamespaces.md) or [NamespacesConsumer](../components/namespacesconsumer.md) as those are bound to the [languageChanged event](https://www.i18next.com/overview/api#onlanguagechanged) and trigger a needed rerender.
+It's essential to have at least your outer page level / container component wrapped with the [withNamespaces](../v9/withnamespaces.md) or [NamespacesConsumer](../v9/namespacesconsumer.md) as those are bound to the [languageChanged event](https://www.i18next.com/overview/api#onlanguagechanged) and trigger a needed rerender.
 {% endhint %}
 
 ## 2\) Lazy loading translations
@@ -424,9 +424,9 @@ If you prefer natural or keybased is a matter of taste...both can be used with r
 
 We won't open a debate over which is better as in our opinion both have their use case and there is no reason to just use one of the two options.
 
-So you already saw before that you can use the [withNamespaces](../components/withnamespaces.md) to decorate your component to pass the `t` function down.
+So you already saw before that you can use the [withNamespaces](../v9/withnamespaces.md) to decorate your component to pass the `t` function down.
 
-The same works with [a render prop](../components/namespacesconsumer.md):
+The same works with [a render prop](../v9/namespacesconsumer.md):
 
 ```jsx
 import React from 'react';
@@ -485,7 +485,7 @@ So you won't have luck with this approach.
 
 ### Using the Trans component
 
-The [Trans component](../components/trans-component.md) enables you to keep this as one sentence by replacing the JSX nodes with indexed pseudo tags.
+The [Trans component](../v9/trans-component.md) enables you to keep this as one sentence by replacing the JSX nodes with indexed pseudo tags.
 
 ```jsx
 import { Trans } from 'react-i18next';
@@ -524,5 +524,5 @@ The `<1>`, `<3>` pseudo tags are based on the index of appearance in `nodes.chil
 </Trans>
 ```
 
-The Trans component also supports interpolation and plurals just read the [full documentation](../components/trans-component.md) of that component.
+The Trans component also supports interpolation and plurals just read the [full documentation](../v9/trans-component.md) of that component.
 

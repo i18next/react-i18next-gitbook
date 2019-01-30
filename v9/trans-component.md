@@ -6,7 +6,7 @@ While the Trans components gives you a lot of power by letting you interpolate o
 
 The truth is - In most cases you won't need it. **As long you have no react nodes you like to be integrated into a translated text** \(text formatting, like `strong`, `i`, ...\) **or adding some link component - you won't need it.**
 
-All can be done by using the `t` function you get by the [translate hoc](../deprecated/translate-hoc.md) or [I18n render prop](../deprecated/i18n-render-prop.md).
+All can be done by using the `t` function you get by the [translate hoc]() or [I18n render prop]().
 
 {% hint style="info" %}
 Using the **t** function have a look at i18next documentation:

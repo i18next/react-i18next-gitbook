@@ -16,7 +16,11 @@ Just forget everything...go to the current getting started guide 😄. Nothing w
 
 ## Took the red pill: Learn about the new react-i18next 🌈
 
-So there it is **v8.2.0** of react-i18next. Forget about importing from `react-i18next` the shiny things are imported from `react-i18next/hooks` .
+So there it is **v10.0.0-alpha.1** of react-i18next.
+
+```bash
+npm i react-i18next@next
+```
 
 From here everything gets easier.
 
@@ -27,7 +31,7 @@ We expect you having an existing react application supporting [hooks](https://re
 Install both react-i18next and i18next package:
 
 ```bash
-npm install react-i18next i18next --save
+npm install react-i18next@next i18next --save
 
 // when like to detect user language and load translation
 npm install i18next-xhr-backend i18next-browser-languagedetector --save
@@ -41,7 +45,7 @@ Create a new file `i18n.js` beside your `index.js` containing following content:
 
 ```javascript
 import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next/hooks';
+import { initReactI18next } from 'react-i18next';
 
 import Backend from 'i18next-xhr-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -99,7 +103,7 @@ You can use the hook inside your functional components like:
 
 ```jsx
 import React, { Suspense } from 'react';
-import { useTranslation } from 'react-i18next/hooks';
+import { useTranslation } from 'react-i18next';
 
 function MyComponent() {
   const [t, i18n] = useTranslation();
@@ -136,7 +140,7 @@ There might be some legacy cases where you still forced to use classes. No worry
 
 ```jsx
 import React, { Component } from 'react';
-import { withTranslation } from 'react-i18next/hooks';
+import { withTranslation } from 'react-i18next';
 
 class LegacyComponentClass extends Component {
   render() {
@@ -174,7 +178,7 @@ The Trans component is the best way to translate a JSX tree in one translation. 
 
 ```jsx
 import React from 'react';
-import { Trans } from 'react-i18next/hooks';
+import { Trans } from 'react-i18next';
 
 export default function MyComponent () {
   return <Trans>Welcome to <strong>React</strong></Trans>
@@ -184,11 +188,11 @@ export default function MyComponent () {
 "Welcome to <1>React</1>": "Welcome to <1>React and react-i18next</1>"
 ```
 
-Don't worry if you do not yet understand how the Trans component works in detail. Learn more about it [here](../components/trans-component.md).
+Don't worry if you do not yet understand how the Trans component works in detail. Learn more about it [here](../v9/trans-component.md).
 
 ## See the sample
 
 Prefer having code to checkout? Directly dive into our example:
 
-* [using hooks with react-i18next](https://github.com/i18next/react-i18next/tree/master/example/react-hooks)
+* [using hooks with react-i18next](https://github.com/i18next/react-i18next/tree/master/example/react)
 

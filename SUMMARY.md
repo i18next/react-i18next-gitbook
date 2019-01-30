@@ -3,10 +3,6 @@
 * [Introduction](README.md)
 * [Getting started](getting-started.md)
 
-## Experimental
-
-* [Using with hooks and Suspense](experimental/using-with-hooks.md)
-
 ## Guides
 
 * [Drawbacks of other i18n solutions](guides/the-drawbacks-of-other-i18n-solutions.md)
@@ -14,21 +10,20 @@
 * [Step by step guide](guides/step-by-step-guide.md)
 * [Extracting translations](guides/extracting-translations.md)
 
-## Components
+## v10
 
-* [Overview](components/overview.md)
-* [i18next instance](components/i18next-instance.md)
-* [I18nextProvider](components/i18nextprovider.md)
-* [withI18n](components/withi18n.md)
-* [withNamespaces](components/withnamespaces.md)
-* [NamespacesConsumer](components/namespacesconsumer.md)
-* [Trans Component](components/trans-component.md)
+* [Using with hooks and Suspense](experimental/using-with-hooks.md)
 
-## deprecated
+## v9
 
-* [Translate HOC](deprecated/translate-hoc.md)
-* [I18n \(render prop\)](deprecated/i18n-render-prop.md)
-* [Interpolate](deprecated/interpolate.md)
+* [Overview](v9/overview.md)
+* [i18next instance](v9/i18next-instance.md)
+* [I18nextProvider](v9/i18nextprovider.md)
+* [withI18n](v9/withi18n.md)
+* [withNamespaces](v9/withnamespaces.md)
+* [NamespacesConsumer](v9/namespacesconsumer.md)
+* [Trans Component](v9/trans-component.md)
+* [Interpolate](v9/interpolate.md)
 
 ## Misc
 

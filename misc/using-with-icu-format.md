@@ -12,7 +12,7 @@ Find the full working sample here:
 
 ## Extend the i18n instance with ICU module
 
-To enable ICU format you will need to include the [i18next-icu](https://github.com/i18next/i18next-icu) module into your [i18next instance](../components/i18next-instance.md).
+To enable ICU format you will need to include the [i18next-icu](https://github.com/i18next/i18next-icu) module into your [i18next instance](../v9/i18next-instance.md).
 
 ```javascript
 import i18n from 'i18next';
@@ -81,7 +81,7 @@ export default translate()(myComponent);
 
 As is including plain ICU syntax inside a JSX node will result in invalid JSX as the ICU format uses curly brackets that are reserved by JSX.
 
-So the default option is to use the [Trans Component](../components/trans-component.md) just with props like:
+So the default option is to use the [Trans Component](../v9/trans-component.md) just with props like:
 
 ```javascript
 import { Trans } from 'react-i18next';

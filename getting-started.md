@@ -53,7 +53,7 @@ Simple content can easily be translated using the provided `t` function.
 ```
 
 {% hint style="info" %}
-You will get the t function by using the [NamespacesConsumer](components/namespacesconsumer.md) render prop or [withNamespaces](components/withnamespaces.md) hoc.
+You will get the t function by using the [NamespacesConsumer](v9/namespacesconsumer.md) render prop or [withNamespaces](v9/withnamespaces.md) hoc.
 {% endhint %}
 
 ### JSX tree
@@ -77,7 +77,7 @@ Sometimes you might want to include html formatting or components like links int
 ```
 
 {% hint style="info" %}
-Learn more about the Trans Component [here](components/trans-component.md)
+Learn more about the Trans Component [here](v9/trans-component.md)
 {% endhint %}
 
 ## Basic sample

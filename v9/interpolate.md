@@ -1,7 +1,7 @@
 # Interpolate
 
 {% hint style="danger" %}
-Deprecated: We highly recommend having a look at the new [trans component](../components/trans-component.md) as it provides a better experience. 
+Deprecated: We highly recommend having a look at the new [trans component](trans-component.md) as it provides a better experience. 
 
 This component will be remove in the next major version v9.0.0!!
 {% endhint %}

@@ -1,6 +1,6 @@
 # Drawbacks of other i18n solutions
 
-Let's make the sample using our own base i18n framework [i18next](https://i18next.com). Like all other solutions, some come [drawbacks](#the-drawbacks). These will be highlighted after samples.
+Let's make the sample using our own base i18n framework [i18next](https://i18next.com). Like all other solutions, some come [drawbacks](the-drawbacks-of-other-i18n-solutions.md#the-drawbacks). These will be highlighted after samples.
 
 ## Using a pure javascript i18n framework
 
@@ -74,7 +74,7 @@ Before we come to the drawbacks let's highlight some advantage of those solution
 
 Can you easily change the language? Get the translations in other language loaded? Does the language change trigger a rerender?
 
-That's what the [withNamespaces](../components/withnamespaces.md) higher order component or [NamespacesConsumer](../components/namespacesconsumer.md) render prop do!
+That's what the [withNamespaces](../v9/withnamespaces.md) higher order component or [NamespacesConsumer](../v9/namespacesconsumer.md) render prop do!
 
 ### Scale and split your translations into multiple files
 
@@ -82,7 +82,7 @@ When your project gets bigger you do not only want code splitting but you also l
 
 With loading translations asynchronous there comes another problem - does your framework handle the pending state during loading translation?
 
-That's what the [withNamespaces](../components/withnamespaces.md) higher order component or [NamespacesConsumer](../components/namespacesconsumer.md) render prop do!
+That's what the [withNamespaces](../v9/withnamespaces.md) higher order component or [NamespacesConsumer](../v9/namespacesconsumer.md) render prop do!
 
 ### Can you translate combined jsx nodes in one sentence
 
@@ -101,5 +101,5 @@ In most frameworks you will end having to split this into multiple translation s
 Hello <1>{name}</1>, you have <3>{count} unread message(s)</3>.
 ```
 
-You can do this using the [Trans component](../components/trans-component.md).
+You can do this using the [Trans component](../v9/trans-component.md).
 

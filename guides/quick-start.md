@@ -84,7 +84,7 @@ function MyComponent ({ t }) {
 export default withNamespaces()(myComponent);
 ```
 
-Learn more about the higher order component [withNamespaces](../components/withnamespaces.md).
+Learn more about the higher order component [withNamespaces](../v9/withnamespaces.md).
 
 ### Using the render prop
 
@@ -107,7 +107,7 @@ export default function MyComponent () {
 }
 ```
 
-Learn more about the render prop [NamespacesConsumer](../components/namespacesconsumer.md).
+Learn more about the render prop [NamespacesConsumer](../v9/namespacesconsumer.md).
 
 ### Using the Trans component
 
@@ -125,7 +125,7 @@ export default function MyComponent () {
 "<0>Welcome to React</0>": "<0>Welcome to React and react-i18next</0>"
 ```
 
-Don't worry if you do not yet understand how the Trans component works in detail. Learn more about it [here](../components/trans-component.md).
+Don't worry if you do not yet understand how the Trans component works in detail. Learn more about it [here](../v9/trans-component.md).
 
 ## Next steps
 
