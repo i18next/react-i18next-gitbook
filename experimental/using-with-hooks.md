@@ -77,7 +77,7 @@ i18n
 export default i18n;
 ```
 
-The interesting part here is by `i18n.use(initReactI18n)` we pass the i18n instance to react-i18next which will make it available for all the components.
+The interesting part here is by `i18n.use(initReactI18next)` we pass the i18n instance to react-i18next which will make it available for all the components.
 
 Then import that in `index.js`:
 
