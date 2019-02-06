@@ -24,7 +24,7 @@ This component enables you to nest any react content to be translated as one str
 
 _Let's say you want to create following html output:_
 
-> Hello **Arthur**, you have 42 unread messages. [Go to messages](../v9/trans-component.md).
+> Hello **Arthur**, you have 42 unread messages. [Go to messages](../legacy/trans-component.md).
 
 **Before:** Your react code would have looked something like:
 

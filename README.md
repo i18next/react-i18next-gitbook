@@ -10,7 +10,7 @@ You should read the [i18next](https://www.i18next.com) documentation. The [confi
 
 The module provides multiple components eg. to assert that needed translations get loaded or that your content gets rendered when the language changes.
 
-react-i18next is optimally suited for **serverside rendering**. It provides extra extension point to eg. work with next.js. [Learn more](v9/serverside-rendering.md).
+react-i18next is optimally suited for **serverside rendering**. It provides extra extension point to eg. work with next.js. [Learn more](legacy/serverside-rendering.md).
 
 As react-i18next depends on [i18next](http://i18next.com) you can use it on any other UI framework and serverside \(node.js, .net, ...\) too. Like the react philosophy - just:
 

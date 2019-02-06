@@ -1,4 +1,4 @@
-# Step by step guide
+# Step by step guide \(v9\)
 
 Lets start with the sample created in the [quick start guide](../guides/quick-start.md) and extend it to be of more use.
 

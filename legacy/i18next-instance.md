@@ -1,4 +1,4 @@
-# i18next instance
+# i18next instance \(v9\)
 
 The instance is an initialized i18next instance. In the following code snippet, we add a backend to load translations from server and a language detector for detecting user language.
 

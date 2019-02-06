@@ -83,7 +83,7 @@ function MyComponent () {
 }
 ```
 
-Learn more about the hook [useTranslation](../experimental/usetranslation-hook.md).
+Learn more about the hook [useTranslation](../latest/usetranslation-hook.md).
 
 ### Using the HOC
 
@@ -104,7 +104,7 @@ function MyComponent ({ t }) {
 export default withTranslation()(myComponent);
 ```
 
-Learn more about the higher order component [withTranslation](../experimental/withtranslation-hoc.md).
+Learn more about the higher order component [withTranslation](../latest/withtranslation-hoc.md).
 
 ### Using the render prop
 
@@ -127,7 +127,7 @@ export default function MyComponent () {
 }
 ```
 
-Learn more about the render prop [Translation](../experimental/translation-render-prop.md).
+Learn more about the render prop [Translation](../latest/translation-render-prop.md).
 
 ### Using the Trans component
 
@@ -145,11 +145,11 @@ export default function MyComponent () {
 "<0>Welcome to React</0>": "<0>Welcome to React and react-i18next</0>"
 ```
 
-Don't worry if you do not yet understand how the Trans component works in detail. Learn more about it [here](../experimental/trans-component.md).
+Don't worry if you do not yet understand how the Trans component works in detail. Learn more about it [here](../latest/trans-component.md).
 
 ## Next steps
 
-Depending on your learn type you now could read the more in depth [step by step](../experimental/using-with-hooks.md) guide and learn how to load translations using xhr or how to change the language.
+Depending on your learn type you now could read the more in depth [step by step](../latest/using-with-hooks.md) guide and learn how to load translations using xhr or how to change the language.
 
 Prefer having code to checkout? Directly dive our examples:
 

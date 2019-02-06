@@ -1,4 +1,4 @@
-# I18nextProvider
+# I18nextProvider \(v9\)
 
 The provider is responsible to pass the i18next instance passed in by props down to all the [withNamespaces](withnamespaces.md) hocs or [NamespacesConsumer](namespacesconsumer.md) render prop using react context api.
 

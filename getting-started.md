@@ -51,7 +51,7 @@ Simple content can easily be translated using the provided `t` function.
 ```
 
 {% hint style="info" %}
-You will get the t function by using the [useTranslation](experimental/usetranslation-hook.md) hook or the [withTranslation](experimental/withtranslation-hoc.md) hoc.
+You will get the t function by using the [useTranslation](latest/usetranslation-hook.md) hook or the [withTranslation](latest/withtranslation-hoc.md) hoc.
 {% endhint %}
 
 ### JSX tree
@@ -75,7 +75,7 @@ Sometimes you might want to include html formatting or components like links int
 ```
 
 {% hint style="info" %}
-Learn more about the Trans Component [here](experimental/trans-component.md) 
+Learn more about the Trans Component [here](latest/trans-component.md) 
 {% endhint %}
 
 ## Basic sample
@@ -124,6 +124,6 @@ ReactDOM.render(
 ![Preview of content](.gitbook/assets/screen-shot-2018-09-30-at-16.58.18.png)
 
 {% hint style="info" %}
-This sample while very simple does come with some [drawbacks](guides/the-drawbacks-of-other-i18n-solutions.md) to getting the full potential from using react-i18next you should read the extended [step by step guide](experimental/using-with-hooks.md).
+This sample while very simple does come with some [drawbacks](guides/the-drawbacks-of-other-i18n-solutions.md) to getting the full potential from using react-i18next you should read the extended [step by step guide](latest/using-with-hooks.md).
 {% endhint %}
 
