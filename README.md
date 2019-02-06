@@ -8,9 +8,9 @@ react-i18next is a powerful **internationalization** framework for **reactjs** /
 You should read the [i18next](https://www.i18next.com) documentation. The [configuration options](https://www.i18next.com/overview/configuration-options) and translation functionalities like [plurals](https://www.i18next.com/translation-function/plurals), [formatting](https://www.i18next.com/translation-function/formatting), [interpolation](https://www.i18next.com/translation-function/interpolation), ... are documented there.
 {% endhint %}
 
-The module provides multiple components eg. to assert that needed translations get loaded or that your content get newly rendered when the language changes.
+The module provides multiple components eg. to assert that needed translations get loaded or that your content gets rendered when the language changes.
 
-react-i18next is optimally suited for **serverside rendering**. It provides extra extension point to eg. work with next.js. [Learn more](misc/serverside-rendering.md).
+react-i18next is optimally suited for **serverside rendering**. It provides extra extension point to eg. work with next.js. [Learn more](v9/serverside-rendering.md).
 
 As react-i18next depends on [i18next](http://i18next.com) you can use it on any other UI framework and serverside \(node.js, .net, ...\) too. Like the react philosophy - just:
 

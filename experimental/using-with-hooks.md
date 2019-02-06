@@ -1,37 +1,13 @@
-# Using with hooks and Suspense
+# Step by step guide
 
-When we first heard about react [introducing hooks](https://reactjs.org/docs/hooks-intro.html) \(that was yesterday\) our feelings were mixed. But one night and a few hours of coding later we are convinced this is the best thing happening to web development after the introduction of react itself.
-
-So we are proud to.....wait a second....
-
-![](../.gitbook/assets/pill.jpeg)
-
-> After this, there is no turning **back**. You take the blue pill—the story ends, you wake up in your bed and believe whatever you want to believe. You take the red pill—you stay in Wonderland, and I show you how deep the rabbit hole goes. Remember: all I'm offering is the truth.  
->   
-> The matrix \(1999\)
-
-## Took the blue pill?
-
-Just forget everything...go to the current getting started guide 😄. Nothing will change for you.
-
-## Took the red pill: Learn about the new react-i18next 🌈
-
-So there it is **v10.0.0-alpha.1** of react-i18next.
-
-```bash
-npm i react-i18next@next
-```
-
-From here everything gets easier.
-
-### Install needed dependencies
+## Install needed dependencies
 
 We expect you having an existing react application supporting [hooks](https://reactjs.org/docs/hooks-intro.html) \(v16.7.0-alpha of react and react-dom\).
 
 Install both react-i18next and i18next package:
 
 ```bash
-npm install react-i18next@next i18next --save
+npm install react-i18next i18next --save
 
 // when like to detect user language and load translation
 npm install i18next-xhr-backend i18next-browser-languagedetector --save
@@ -77,7 +53,7 @@ i18n
 export default i18n;
 ```
 
-The interesting part here is by `i18n.use(initReactI18n)` we pass the i18n instance to react-i18next which will make it available for all the components.
+The interesting part here is by `i18n.use(initReactI18next)` we pass the i18n instance to react-i18next which will make it available for all the components.
 
 Then import that in `index.js`:
 

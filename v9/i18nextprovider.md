@@ -28,6 +28,6 @@ As an alternative you can use the [reactI18nextModule](i18next-instance.md) in t
 | :--- | :--- | :--- |
 | **i18n** | object \(undefined\) | pass i18next instance the provider will pass it down to translation components by context |
 | defaultNS | string \(undefined\) | optionally pass down a default namespace to your translate HOC, I18n render prop \(without having to specify it there\) |
-| initialI18nStore | object \(undefined\) | pass in initial translations \(useful for [serverside rendering](../misc/serverside-rendering.md)\) |
-| initialLanguage | string \(undefined\) | pass in initial language \(useful for [serverside rendering](../misc/serverside-rendering.md)\) |
+| initialI18nStore | object \(undefined\) | pass in initial translations \(useful for [serverside rendering](serverside-rendering.md)\) |
+| initialLanguage | string \(undefined\) | pass in initial language \(useful for [serverside rendering](serverside-rendering.md)\) |
 

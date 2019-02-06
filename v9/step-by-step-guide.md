@@ -1,6 +1,6 @@
 # Step by step guide
 
-Lets start with the sample created in the [quick start guide](quick-start.md) and extend it to be of more use.
+Lets start with the sample created in the [quick start guide](../guides/quick-start.md) and extend it to be of more use.
 
 {% hint style="info" %}
 react-i18next will run in any environment without you having to do changes to your babel or webpack setup.
@@ -11,7 +11,7 @@ react-i18next will run in any environment without you having to do changes to yo
 We have installed the needed i18n packages react-i18next and i18next:
 
 ```bash
-npm install react-i18next i18next --save
+npm install react-i18next@legacy i18next --save
 ```
 
 Added following files:
@@ -204,7 +204,7 @@ export default withNamespaces()(App);
 ```
 
 {% hint style="info" %}
-It's essential to have at least your outer page level / container component wrapped with the [withNamespaces](../v9/withnamespaces.md) or [NamespacesConsumer](../v9/namespacesconsumer.md) as those are bound to the [languageChanged event](https://www.i18next.com/overview/api#onlanguagechanged) and trigger a needed rerender.
+It's essential to have at least your outer page level / container component wrapped with the [withNamespaces](withnamespaces.md) or [NamespacesConsumer](namespacesconsumer.md) as those are bound to the [languageChanged event](https://www.i18next.com/overview/api#onlanguagechanged) and trigger a needed rerender.
 {% endhint %}
 
 ## 2\) Lazy loading translations
@@ -424,9 +424,9 @@ If you prefer natural or keybased is a matter of taste...both can be used with r
 
 We won't open a debate over which is better as in our opinion both have their use case and there is no reason to just use one of the two options.
 
-So you already saw before that you can use the [withNamespaces](../v9/withnamespaces.md) to decorate your component to pass the `t` function down.
+So you already saw before that you can use the [withNamespaces](withnamespaces.md) to decorate your component to pass the `t` function down.
 
-The same works with [a render prop](../v9/namespacesconsumer.md):
+The same works with [a render prop](namespacesconsumer.md):
 
 ```jsx
 import React from 'react';
@@ -485,7 +485,7 @@ So you won't have luck with this approach.
 
 ### Using the Trans component
 
-The [Trans component](../v9/trans-component.md) enables you to keep this as one sentence by replacing the JSX nodes with indexed pseudo tags.
+The [Trans component](trans-component.md) enables you to keep this as one sentence by replacing the JSX nodes with indexed pseudo tags.
 
 ```jsx
 import { Trans } from 'react-i18next';
@@ -524,5 +524,5 @@ The `<1>`, `<3>` pseudo tags are based on the index of appearance in `nodes.chil
 </Trans>
 ```
 
-The Trans component also supports interpolation and plurals just read the [full documentation](../v9/trans-component.md) of that component.
+The Trans component also supports interpolation and plurals just read the [full documentation](trans-component.md) of that component.
 

@@ -18,7 +18,7 @@ Create a new file `i18n.js` beside your `index.js` containing following content:
 
 ```javascript
 import i18n from "i18next";
-import { reactI18nextModule } from "react-i18next";
+import { initReactI18next } from "react-i18next";
 
 // the translations
 // (tip move them in a JSON file and import them)
@@ -31,7 +31,7 @@ const resources = {
 };
 
 i18n
-  .use(reactI18nextModule) // passes i18n down to react-i18next
+  .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     resources,
     lng: "en",
@@ -46,7 +46,7 @@ i18n
   export default i18n;
 ```
 
-The interesting part here is by `i18n.use(reactI18nextModule)` we pass the i18n instance to react-i18next which will make it available for all the components via the context api.
+The interesting part here is by `i18n.use(initReactI18next)` we pass the i18n instance to react-i18next which will make it available for all the components via the context api.
 
 Then import that in `index.js`:
 
@@ -65,6 +65,26 @@ ReactDOM.render(
 
 ## Translate your content
 
+### Using the hook
+
+Using the hook in functional components is one of the options you got.
+
+The `t` function is in i18next the main function to translate content for all the options read the [documentation](https://www.i18next.com/translation-function/essentials).
+
+```jsx
+import React from 'react';
+
+// the hook
+import { useTranslation } from 'react-i18next';
+
+function MyComponent () {
+  const [t, i18n] = useTranslation();
+  return <h1>{t('Welcome to React')}</h1>
+}
+```
+
+Learn more about the hook [useTranslation](../experimental/usetranslation-hook.md).
+
 ### Using the HOC
 
 Using higher order components is one of the most used method to extend existing components by passing additional props to them.
@@ -75,16 +95,16 @@ The `t` function is in i18next the main function to translate content for all th
 import React from 'react';
 
 // the hoc
-import { withNamespaces } from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 function MyComponent ({ t }) {
   return <h1>{t('Welcome to React')}</h1>
 }
 
-export default withNamespaces()(myComponent);
+export default withTranslation()(myComponent);
 ```
 
-Learn more about the higher order component [withNamespaces](../v9/withnamespaces.md).
+Learn more about the higher order component [withTranslation](../experimental/withtranslation-hoc.md).
 
 ### Using the render prop
 
@@ -94,20 +114,20 @@ The render prop enables you to use the `t` function inside your component.
 import React from 'react';
 
 // the render prop
-import { NamespacesConsumer } from 'react-i18next';
+import { Translation } from 'react-i18next';
 
 export default function MyComponent () {
   return (
-    <NamespacesConsumer>
+    <Translation>
       {
         t => <h1>{t('Welcome to React')}</h1>
       }
-    </NamespacesConsumer>
+    </Translation>
   )
 }
 ```
 
-Learn more about the render prop [NamespacesConsumer](../v9/namespacesconsumer.md).
+Learn more about the render prop [Translation](../experimental/translation-render-prop.md).
 
 ### Using the Trans component
 
@@ -125,22 +145,13 @@ export default function MyComponent () {
 "<0>Welcome to React</0>": "<0>Welcome to React and react-i18next</0>"
 ```
 
-Don't worry if you do not yet understand how the Trans component works in detail. Learn more about it [here](../v9/trans-component.md).
+Don't worry if you do not yet understand how the Trans component works in detail. Learn more about it [here](../experimental/trans-component.md).
 
 ## Next steps
 
-Depending on your learn type you now could read the more in depth [step by step](step-by-step-guide.md) guide and learn how to load translations using xhr or how to change the language.
+Depending on your learn type you now could read the more in depth [step by step](../experimental/using-with-hooks.md) guide and learn how to load translations using xhr or how to change the language.
 
 Prefer having code to checkout? Directly dive our examples:
 
 * [Example react](https://github.com/i18next/react-i18next/tree/master/example/react)
-* [Example preact](https://github.com/i18next/react-i18next/tree/master/example/preact)
-* [Example react-native](https://github.com/i18next/react-i18next/tree/master/example/reactnative-expo)
-* [Example expo.io](https://github.com/i18next/react-i18next/tree/master/example/reactnative-expo)
-* [Example next.js](https://github.com/i18next/react-i18next/tree/master/example/nextjs)
-* [Example razzle](https://github.com/i18next/react-i18next/tree/master/example/razzle-ssr)
-* [Example hashbase / beaker browser](https://github.com/i18next/react-i18next/tree/master/example/dat)
-* [Example storybook](https://github.com/i18next/react-i18next/tree/master/example/storybook)
-* [Example locize.com](https://github.com/i18next/react-i18next/tree/master/example/locize-example)
-* [Example test with jest](https://github.com/i18next/react-i18next/tree/master/example/test-jest)
 

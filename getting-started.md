@@ -11,9 +11,7 @@ react-i18next can be added to your project using **npm**:
 $ npm install react-i18next --save
 ```
 
-The default export is UMD compatible \(commonjs, requirejs, global\).
-
-In the `/dist` folder you find additional builds for `commonjs`, `es6 modules`.
+In the `/dist` folder you find specific builds for `commonjs`, `es6 modules`,...
 
 {% hint style="info" %}
 The module is optimized to load by webpack, rollup, ... The correct entry points are already configured in the package.json. There should be no extra setup needed to get the best build option.
@@ -53,7 +51,7 @@ Simple content can easily be translated using the provided `t` function.
 ```
 
 {% hint style="info" %}
-You will get the t function by using the [NamespacesConsumer](v9/namespacesconsumer.md) render prop or [withNamespaces](v9/withnamespaces.md) hoc.
+You will get the t function by using the [useTranslation](experimental/usetranslation-hook.md) hook or the [withTranslation](experimental/withtranslation-hoc.md) hoc.
 {% endhint %}
 
 ### JSX tree
@@ -77,7 +75,7 @@ Sometimes you might want to include html formatting or components like links int
 ```
 
 {% hint style="info" %}
-Learn more about the Trans Component [here](v9/trans-component.md)
+Learn more about the Trans Component [here](experimental/trans-component.md) 
 {% endhint %}
 
 ## Basic sample
@@ -85,13 +83,13 @@ Learn more about the Trans Component [here](v9/trans-component.md)
 This basic sample tries to add i18n in a one file sample.
 
 ```javascript
-import React, { Component } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import i18n from "i18next";
-import { withI18n, reactI18nextModule } from "react-i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
 
 i18n
-  .use(reactI18nextModule) // passes i18n down to react-i18next
+  .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     resources: {
       en: {
@@ -108,18 +106,15 @@ i18n
     }
   });
 
-class App extends Component {
-  render() {
-    const { t } = this.props;
+function App() {
+  const [t] = useTranslation();
 
-    return <h2>{t('Welcome to React')}</h2>;
-  }
+  return <h2>{t('Welcome to React')}</h2>;
 }
-const AppWithI18n = withI18n()(App); // pass `t` function to App
 
 // append app to dom
 ReactDOM.render(
-  <AppWithI18n />,
+  <App />,
   document.getElementById("root")
 );
 ```
@@ -129,14 +124,6 @@ ReactDOM.render(
 ![Preview of content](.gitbook/assets/screen-shot-2018-09-30-at-16.58.18.png)
 
 {% hint style="info" %}
-This sample while very simple does come with some [drawbacks](guides/the-drawbacks-of-other-i18n-solutions.md) to getting the full potential from using react-i18next you should read the extended [step by step guide](guides/step-by-step-guide.md).
-{% endhint %}
-
-## Extended samples
-
-{% hint style="success" %}
-For complete code and samples: [have a look at the samples \(react, react-native, nextjs](https://github.com/i18next/react-i18next/tree/master/example), ...\).
-
-Or have a look at the interactive [codesandbox](https://codesandbox.io/s/l4qrory2nl).
+This sample while very simple does come with some [drawbacks](guides/the-drawbacks-of-other-i18n-solutions.md) to getting the full potential from using react-i18next you should read the extended [step by step guide](experimental/using-with-hooks.md).
 {% endhint %}
 
