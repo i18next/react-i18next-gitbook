@@ -107,7 +107,7 @@ i18n
   });
 
 function App() {
-  const [t] = useTranslation();
+  const { t } = useTranslation();
 
   return <h2>{t('Welcome to React')}</h2>;
 }

@@ -82,7 +82,7 @@ import React, { Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 
 function MyComponent() {
-  const [t, i18n] = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return <h1>{t('Welcome to React')}</h1>
 }
@@ -98,12 +98,12 @@ function App() {
 }
 ```
 
-The useTranslation hook function takes one options argument. You can either pass in a namespace or a array of namespaces to load.
+The useTranslation hook function takes one options argument. You can either pass in a namespace or an array of namespaces to load.
 
 ```javascript
-const [t, i18n] = useTranslation('common');
+const { t, i18n } = useTranslation('common');
 
-const [t, i18n] = useTranslation(['page1', 'common']);
+const { t, i18n } = useTranslation(['page1', 'common']);
 ```
 
 {% hint style="info" %}

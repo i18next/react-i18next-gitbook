@@ -9,7 +9,8 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 export function MyComponent() {
-  const [t, i18n] = useTranslation();
+  const { t, i18n } = useTranslation();
+  // or const [t, i18n] = useTranslation();
   
   return <p>{t('my translated text')}</p>
 }
@@ -36,12 +37,12 @@ Use the `useTranslation` hook inside your **functional components** to access th
 ```javascript
 // load a specific namespace
 // the t function will be set to that namespace as default
-const [t, i18n] = useTranslation('ns1');
+const { t, i18n } = useTranslation('ns1');
 t('key'); // will be looked up from namespace ns1
 
 // load multiple namespaces
 // the t function will be set to first namespace as default
-const [t, i18n] = useTranslation(['ns1', 'ns2', 'ns3']);
+const { t, i18n } = useTranslation(['ns1', 'ns2', 'ns3']);
 t('key'); // will be looked up from namespace ns1
 t('ns2:key'); // will be looked up from namespace ns2
 ```
@@ -53,6 +54,6 @@ t('ns2:key'); // will be looked up from namespace ns2
 // use only if you do not like the default instance
 // set by i18next.use(initReactI18next) or the I18nextProvider
 import i18n from './i18n';
-const [t, i18n] = useTranslation('ns1', { i18n });
+const { t, i18n } = useTranslation('ns1', { i18n });
 ```
 
