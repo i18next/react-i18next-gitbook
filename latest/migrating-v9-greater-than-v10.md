@@ -1,4 +1,4 @@
-# Migrating v9 -&gt; v10
+# Migrating v9 to v10
 
 v10 is a complete rewrite taking the chance to clean up some complexity added from v1 to v9.
 

@@ -19,7 +19,7 @@
 * [Trans Component](latest/trans-component.md)
 * [I18nextProvider](latest/i18nextprovider.md)
 * [SSR \(additional components\)](latest/ssr.md)
-* [Migrating v9 -&gt; v10](latest/migrating-v9-greater-than-v10.md)
+* [Migrating v9 to v10](latest/migrating-v9-greater-than-v10.md)
 
 ## Misc
 
