@@ -164,7 +164,7 @@ export default function MyComponent () {
 "Welcome to <1>React</1>": "Welcome to <1>React and react-i18next</1>"
 ```
 
-Don't worry if you do not yet understand how the Trans component works in detail. Learn more about it [here](../legacy/trans-component.md).
+Don't worry if you do not yet understand how the Trans component works in detail. Learn more about it [here](../legacy-v9/trans-component.md).
 
 ## See the sample
 

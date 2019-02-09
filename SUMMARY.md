@@ -7,6 +7,7 @@
 
 * [Drawbacks of other i18n solutions](guides/the-drawbacks-of-other-i18n-solutions.md)
 * [Quick start](guides/quick-start.md)
+* [Multiple Translation Files](guides/multiple-translation-files.md)
 * [Extracting translations](guides/extracting-translations.md)
 
 ## latest
@@ -29,14 +30,14 @@
 
 ## legacy v9
 
-* [Step by step guide \(v9\)](legacy/step-by-step-guide.md)
-* [Overview \(v9\)](legacy/overview.md)
-* [i18next instance \(v9\)](legacy/i18next-instance.md)
-* [I18nextProvider \(v9\)](legacy/i18nextprovider.md)
-* [withI18n \(v9\)](legacy/withi18n.md)
-* [withNamespaces \(v9\)](legacy/withnamespaces.md)
-* [NamespacesConsumer \(v9\)](legacy/namespacesconsumer.md)
-* [Trans Component \(v9\)](legacy/trans-component.md)
-* [Interpolate \(v9\)](legacy/interpolate.md)
-* [SSR \(v9\)](legacy/serverside-rendering.md)
+* [Step by step guide \(v9\)](legacy-v9/step-by-step-guide.md)
+* [Overview \(v9\)](legacy-v9/overview.md)
+* [i18next instance \(v9\)](legacy-v9/i18next-instance.md)
+* [I18nextProvider \(v9\)](legacy-v9/i18nextprovider.md)
+* [withI18n \(v9\)](legacy-v9/withi18n.md)
+* [withNamespaces \(v9\)](legacy-v9/withnamespaces.md)
+* [NamespacesConsumer \(v9\)](legacy-v9/namespacesconsumer.md)
+* [Trans Component \(v9\)](legacy-v9/trans-component.md)
+* [Interpolate \(v9\)](legacy-v9/interpolate.md)
+* [SSR \(v9\)](legacy-v9/serverside-rendering.md)
 
