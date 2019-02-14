@@ -24,8 +24,8 @@ To avoid asynchronous loading of translation on the client side \(and the possib
 import React from 'react';
 import { useSSR } from 'react-i18next';
 
-export function InitSSR({ initialLanguage, initialI18nStore }) {
-  useSSR(initialLanguage, initialI18nStore);
+export function InitSSR({ initialI18nStore, initialLanguage }) {
+  useSSR(initialI18nStore, initialLanguage);
   
   return <App />
 }
