@@ -101,7 +101,7 @@ function MyComponent ({ t }) {
   return <h1>{t('Welcome to React')}</h1>
 }
 
-export default withTranslation()(myComponent);
+export default withTranslation()(MyComponent);
 ```
 
 Learn more about the higher order component [withTranslation](../latest/withtranslation-hoc.md).
