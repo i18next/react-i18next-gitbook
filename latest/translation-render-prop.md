@@ -26,7 +26,7 @@ i18n.changeLanguage('en-US');
 ```
 
 {% hint style="info" %}
-The `Translation` render prop will trigger a [Suspense](https://reactjs.org/docs/code-splitting.html#suspense) if not ready \(eg. pending load of translation files\).
+The `Translation` render prop will trigger a [Suspense](https://reactjs.org/docs/code-splitting.html#suspense) if not ready \(eg. pending load of translation files\). You can set `useSuspense` to false if prefer not using Suspense.
 {% endhint %}
 
 ## When to use?

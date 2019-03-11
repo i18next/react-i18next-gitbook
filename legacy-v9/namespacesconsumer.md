@@ -72,7 +72,7 @@ function TranslatableView() {
     </tr>
     <tr>
       <td style="text-align:left">nsMode</td>
-      <td style="text-align:left">string ('default')</td>
+      <td style="text-align:left">string (&apos;default&apos;)</td>
       <td style="text-align:left"><em>default:</em> namespaces will be loaded an the first will be set as
         default
         <br />
@@ -80,12 +80,12 @@ function TranslatableView() {
     </tr>
     <tr>
       <td style="text-align:left">bindI18n</td>
-      <td style="text-align:left">string ('languageChanged loaded')</td>
+      <td style="text-align:left">string (&apos;languageChanged loaded&apos;)</td>
       <td style="text-align:left">which events trigger a rerender, can be set to false or string of events</td>
     </tr>
     <tr>
       <td style="text-align:left">bindStore</td>
-      <td style="text-align:left">string ('added removed')</td>
+      <td style="text-align:left">string (&apos;added removed&apos;)</td>
       <td style="text-align:left">which events on store trigger a rerender, can be set to false or string
         of events</td>
     </tr>

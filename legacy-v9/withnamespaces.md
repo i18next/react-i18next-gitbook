@@ -134,7 +134,7 @@ export default withNamespaces(
     </tr>
     <tr>
       <td style="text-align:left">nsMode</td>
-      <td style="text-align:left">string ('default')</td>
+      <td style="text-align:left">string (&apos;default&apos;)</td>
       <td style="text-align:left">
         <p><em>default:</em> namespaces will be loaded an the first will be set as
           default or</p>
@@ -146,7 +146,7 @@ export default withNamespaces(
       <td style="text-align:left">innerRef</td>
       <td style="text-align:left">function or object (undefined)</td>
       <td style="text-align:left">
-        <p>either pass in a object React.createRef or a ref function like (c) =>
+        <p>either pass in a object React.createRef or a ref function like (c) =&gt;
           this.myRef = c;</p>
         <p></p>
         <p><a href="https://gist.github.com/gaearon/1a018a023347fe1c2476073330cc5509">read more</a>
@@ -155,12 +155,12 @@ export default withNamespaces(
     </tr>
     <tr>
       <td style="text-align:left">bindI18n</td>
-      <td style="text-align:left">string ('languageChanged loaded')</td>
+      <td style="text-align:left">string (&apos;languageChanged loaded&apos;)</td>
       <td style="text-align:left">which events trigger a rerender, can be set to false or string of events</td>
     </tr>
     <tr>
       <td style="text-align:left">bindStore</td>
-      <td style="text-align:left">string ('added removed')</td>
+      <td style="text-align:left">string (&apos;added removed&apos;)</td>
       <td style="text-align:left">which events on store trigger a rerender, can be set to false or string
         of events</td>
     </tr>

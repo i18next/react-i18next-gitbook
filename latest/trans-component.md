@@ -16,7 +16,9 @@ Using the **t** function have a look at i18next documentation:
 * ...
 {% endhint %}
 
-## Sample
+## Samples
+
+### Using with react components
 
 So you learned there is no need to use the Trans component everywhere \(the plain t function will just do fine in most cases\).
 
@@ -52,6 +54,43 @@ _Your en.json \(translation strings\) will look like:_
 {% hint style="info" %}
 [**saveMissing**](https://www.i18next.com/overview/configuration-options#missing-keys) will send a valid defaultValue
 {% endhint %}
+
+### Using for &lt;br /&gt; and other simple html elements in translations \(v10.4.0\)
+
+{% hint style="info" %}
+This was newly added in react-i18next@**v10.4.0**
+
+Allows elements not having additional attributes like className and only no children \(void\) or one text child:  
+  
+- &lt;br/&gt;  
+- &lt;strong&gt;bold&lt;/strong&gt;  
+- &lt;p&gt;some paragraph&lt;/p&gt;  
+  
+but not:  
+  
+- &lt;i className="icon-gear" /&gt;  
+- &lt;strong title="something"&gt;bold something&lt;/strong&gt;
+{% endhint %}
+
+It allows you to have basic html tags inside your translations which will get converted to valid react elements:
+
+```jsx
+<Trans i18nKey="welcomeUser">
+  Hello <strong>{{name}}</strong>.
+</Trans>
+// -> "welcomeUser": "Hello <strong>{{name}}</strong>.",
+<Trans i18nKey="multiline">
+  Some newlines <br/> would be <br/> fine
+</Trans>
+// -> "multiline": "Some newlines <br/> would be <br/> fine
+```
+
+You can use i18next.options.react to adapt this behaviour:
+
+| option | default | description |
+| :--- | :--- | :--- |
+| transSupportBasicHtmlNodes | true | convert eg. &lt;br/&gt; found in translations to a react component of type br |
+| transKeepBasicHtmlNodesFor | \['br', 'strong', 'i', 'p'\] | Which nodes not to convert in defaultValue generation in the Trans component. |
 
 ### Alternative usage
 
@@ -131,7 +170,10 @@ i18next.init({
     hashTransKey: function(defaultValue) {
       // return a key based on defaultValue or if you prefer to just remind you should set a key return false and throw an error
     },
-    defaultTransParent: 'div' // a valid react element - required before react 16
+    defaultTransParent: 'div', // a valid react element - required before react 16
+    transEmptyNodeValue: '', // what to return for empty Trans
+    transSupportBasicHtmlNodes: true, // allow <br/> and simple html elements in translations
+    transKeepBasicHtmlNodesFor: ['br', 'strong', 'i'], // don't convert to <1></1> if simple react elements
   }
 });
 ```

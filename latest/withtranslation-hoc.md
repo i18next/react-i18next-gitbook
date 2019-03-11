@@ -22,7 +22,7 @@ i18n.changeLanguage('en-US');
 ```
 
 {% hint style="info" %}
-The `withTranslation` HOC will trigger a [Suspense](https://reactjs.org/docs/code-splitting.html#suspense) if not ready \(eg. pending load of translation files\).
+The `withTranslation` HOC will trigger a [Suspense](https://reactjs.org/docs/code-splitting.html#suspense) if not ready \(eg. pending load of translation files\). You can set `useSuspense` to false if prefer not using Suspense.
 {% endhint %}
 
 ## When to use?
@@ -61,5 +61,50 @@ import i18n from './i18n';
 const ExtendedComponent = withTranslation('ns1')(MyComponent);
 
 <ExtendedComponent i18n={i18n} />
+```
+
+### Not using Suspense
+
+```javascript
+// use tReady prop in MyComponent to check if translations
+// are already loaded or not
+const ExtendedComponent = withTranslation()(MyComponent);
+
+<ExtendedComponent useSuspense={false} />
+```
+
+## Problems
+
+### Does not hoist non-react statics
+
+Use [hoist-non-react-statics](https://github.com/mridgway/hoist-non-react-statics) yourself:
+
+```jsx
+import React, { Component } from 'react';
+import { withTranslation } from 'react-i18next';
+import hoistStatics from 'hoist-non-react-statics';
+
+class MyComponent extends Component {
+  static ...
+}
+
+export default hoistStatics(withTranslation(MyComponent), MyComponent);
+```
+
+Or simply hoist the one/two statics yourself:
+
+```jsx
+import React, { Component } from 'react';
+import { withTranslation } from 'react-i18next';
+import hoistStatics from 'hoist-non-react-statics';
+
+class MyComponent extends Component {
+  static ...
+}
+
+const Extended = withTranslation(MyComponent);
+Extended.static = MyComponent.static;
+
+export default Extended;
 ```
 

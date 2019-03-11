@@ -23,7 +23,7 @@ i18n.changeLanguage('en-US');
 ```
 
 {% hint style="info" %}
-The `useTranslation` hook will trigger a [Suspense](https://reactjs.org/docs/code-splitting.html#suspense) if not ready \(eg. pending load of translation files\).
+The `useTranslation` hook will trigger a [Suspense](https://reactjs.org/docs/code-splitting.html#suspense) if not ready \(eg. pending load of translation files\). You can set `useSuspense` to false if prefer not using Suspense.
 {% endhint %}
 
 ## When to use?
@@ -55,5 +55,12 @@ t('ns2:key'); // will be looked up from namespace ns2
 // set by i18next.use(initReactI18next) or the I18nextProvider
 import i18n from './i18n';
 const { t, i18n } = useTranslation('ns1', { i18n });
+```
+
+### Not using Suspense
+
+```javascript
+// additional ready will state if translations are loaded or not
+const { t, i18n, ready } = useTranslation('ns1', { useSuspense: false });
 ```
 
