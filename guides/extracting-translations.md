@@ -4,7 +4,7 @@ At some point you will come to the question how to get new translation key/value
 
 ## 1\) Adding new strings manually
 
-Why for sure this is the last efficient method for adding new translations we know a lot of projects doing this. There is actually nothing wrong with it beside being some extra work developers could avoid.
+While for sure this is the least efficient method for adding new translations, we know a lot of projects doing this. There is actually nothing wrong with it beside being some extra work developers could avoid.
 
 ## 2\) Using an extraction tool
 
@@ -42,11 +42,11 @@ i18n
 export default i18n;
 ```
 
-Check the [options](https://github.com/i18next/i18next-xhr-backend#backend-options) for where missing translation gets send.
+Check the [options](https://github.com/i18next/i18next-xhr-backend#backend-options) for where missing translation gets sent.
 
 Using node.js and express? You can get that endpoint for free: [https://github.com/i18next/i18next-express-middleware\#add-routes](https://github.com/i18next/i18next-express-middleware#add-routes)
 
-This is the most convenient way of working with react-i18next just develop and run your applications without worrying to much about adding translations to your catalog as those get added automatically.
+This is the most convenient way of working with react-i18next just develop and run your applications without worrying too much about adding translations to your catalog as those get added automatically.
 
 {% hint style="info" %}
 Wanna have this process on steroids? Just hook up a [locize.com](https://locize.com) localization project using the provided backend and get both the saveMissing and loading of translations automated in a true continuous localization process.
