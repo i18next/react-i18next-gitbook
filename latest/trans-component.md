@@ -78,11 +78,11 @@ It allows you to have basic html tags inside your translations which will get co
 <Trans i18nKey="welcomeUser">
   Hello <strong>{{name}}</strong>.
 </Trans>
-// -> "welcomeUser": "Hello <strong>{{name}}</strong>.",
+// JSON -> "welcomeUser": "Hello <strong>{{name}}</strong>.",
 <Trans i18nKey="multiline">
   Some newlines <br/> would be <br/> fine
 </Trans>
-// -> "multiline": "Some newlines <br/> would be <br/> fine
+// JSON -> "multiline": "Some newlines <br/> would be <br/> fine
 ```
 
 You can use i18next.options.react to adapt this behaviour:
@@ -91,6 +91,22 @@ You can use i18next.options.react to adapt this behaviour:
 | :--- | :--- | :--- |
 | transSupportBasicHtmlNodes | true | convert eg. &lt;br/&gt; found in translations to a react component of type br |
 | transKeepBasicHtmlNodesFor | \['br', 'strong', 'i', 'p'\] | Which nodes not to convert in defaultValue generation in the Trans component. |
+
+### Using with lists \(v10.5.0\)
+
+You can use list.map as children. Mapping dynamic content.
+
+```jsx
+<Trans i18nKey="list_map">
+  My dogs are named:
+  <ul i18nIsDynamicList>
+     {['rupert', 'max'].map(dog => (<li>{dog}</li>))}
+  </ul>
+</Trans>
+// JSON -> "list_map": "My dogs are named: <1></1>"
+```
+
+Setting `i18nIsDynamicList` on the wrapping element will assert the nodeToString function creating the string for saveMissing will not contain children.
 
 ### Alternative usage
 
