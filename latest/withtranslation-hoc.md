@@ -88,7 +88,7 @@ class MyComponent extends Component {
   static ...
 }
 
-export default hoistStatics(withTranslation(MyComponent), MyComponent);
+export default hoistStatics(withTranslation()(MyComponent), MyComponent);
 ```
 
 Or simply hoist the one/two statics yourself:
@@ -102,7 +102,7 @@ class MyComponent extends Component {
   static ...
 }
 
-const Extended = withTranslation(MyComponent);
+const Extended = withTranslation()(MyComponent);
 Extended.static = MyComponent.static;
 
 export default Extended;
