@@ -82,7 +82,7 @@ It allows you to have basic html tags inside your translations which will get co
 <Trans i18nKey="multiline">
   Some newlines <br/> would be <br/> fine
 </Trans>
-// JSON -> "multiline": "Some newlines <br/> would be <br/> fine
+// JSON -> "multiline": "Some newlines <br/> would be <br/> fine"
 ```
 
 You can use i18next.options.react to adapt this behaviour:
