@@ -27,7 +27,7 @@ The `withTranslation` HOC will trigger a [Suspense](https://reactjs.org/docs/cod
 
 ## When to use?
 
-Use the `withTranslation` HOC to wrap **any component \(class or function\)** to access the translation function or i18n instance. 
+Use the `withTranslation` HOC to wrap **any component \(class or function\)** to access the translation function or i18n instance.
 
 ## withTranslation params
 
@@ -73,9 +73,25 @@ const ExtendedComponent = withTranslation()(MyComponent);
 <ExtendedComponent useSuspense={false} />
 ```
 
-## Problems
+## How to
 
-### Does not hoist non-react statics
+### use ref \(&gt;= v10.6.0\)
+
+You can use forwardRefs like:
+
+```jsx
+const Wrapped = withTranslation('translation', { withRef: true })(MyComponent);
+
+// then pass a ref in your render method like
+const myRef = React.createRef();
+<Wrapped ref={myRef} />;
+
+// use myRef.current to access it
+```
+
+### hoist non-react statics
+
+The HOC does not hoist statics itself so you might append those statics manually or by using a module.
 
 Use [hoist-non-react-statics](https://github.com/mridgway/hoist-non-react-statics) yourself:
 

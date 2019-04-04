@@ -106,6 +106,8 @@ const { t, i18n } = useTranslation('common');
 const { t, i18n } = useTranslation(['page1', 'common']);
 ```
 
+Files are plain JSON you can checkout the full sample [here](https://github.com/i18next/react-i18next/tree/master/example/react/public/locales).
+
 {% hint style="info" %}
 Please note the t function will be either bound to the default namespace defined on i18next init or to the first one passed in in arguments.
 {% endhint %}
