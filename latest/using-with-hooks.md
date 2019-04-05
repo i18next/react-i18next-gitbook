@@ -117,7 +117,7 @@ Please note the t function will be either bound to the default namespace defined
 There might be some legacy cases where you still forced to use classes. No worry we still provide a hoc to cover this cases:
 
 ```jsx
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
 import { withTranslation } from 'react-i18next';
 
 class LegacyComponentClass extends Component {
