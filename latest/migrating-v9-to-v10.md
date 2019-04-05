@@ -23,6 +23,18 @@ export function MyComponent() {
 
 The Interpolation which was for a long time marked as deprecated and replaced by the Trans Component was removed finally. So you will need to replace it with the Trans Component.
 
+## Migration
+
+Replace your components like described below. Not having to use `Suspense` in your existing App you can set `useSuspense: false` in react.init options.react:
+
+```javascript
+i18n.init({
+  react: {
+    useSuspense: false
+  }
+});
+```
+
 ## Components v9 -&gt; v10
 
 | Type | v9 | v10 |
