@@ -91,7 +91,7 @@ function MyComponent() {
 // use react's Suspense
 function App() {
   return (
-    <Suspense fallback={<Spinner />}>
+    <Suspense fallback="loading">
       <MyComponent />
     </Suspense>
   );
@@ -135,7 +135,7 @@ const MyComponent = withTranslation()(LegacyComponentClass)
 // use react's Suspense
 function App() {
   return (
-    <Suspense fallback={<Spinner />}>
+    <Suspense fallback="loading">
       <MyComponent />
     </Suspense>
   );
