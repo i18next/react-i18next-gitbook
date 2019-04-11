@@ -5,7 +5,7 @@ i18next itself is flexible enough to support multiple existing i18next formats b
 {% hint style="info" %}
 Find the full working sample here:
 
-[https://github.com/i18next/react-i18next/tree/master/example/react-icu](https://github.com/i18next/react-i18next/tree/master/example/react-icu)
+[https://github.com/i18next/react-i18next/tree/master/example/v9.x.x/react-icu](https://github.com/i18next/react-i18next/tree/master/example/v9.x.x/react-icu)
 {% endhint %}
 
 ![](../.gitbook/assets/screen-shot-2018-07-30-at-10.25.19.png)
