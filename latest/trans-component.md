@@ -7,7 +7,6 @@ While the Trans components gives you a lot of power by letting you interpolate o
 **As long you have no react nodes you like to be integrated into a translated text** \(text formatting, like `strong`, `i`, ...\) **or adding some link component - you won't need it** - most can be done by using the good old `t` function.
 
 {% hint style="info" %}
-
 Using the **t** function have a look at i18next documentation:
 
 * [essentials](https://www.i18next.com/essentials.html)
@@ -15,6 +14,7 @@ Using the **t** function have a look at i18next documentation:
 * [formatting](https://www.i18next.com/formatting.html)
 * [plurals](https://www.i18next.com/plurals.html)
 * ...
+{% endhint %}
 
 ## Samples
 
@@ -58,7 +58,6 @@ _Your en.json \(translation strings\) will look like:_
 ### Using for &lt;br /&gt; and other simple html elements in translations \(v10.4.0\)
 
 {% hint style="info" %}
-
 This was newly added in react-i18next@**v10.4.0**
 
 Allows elements not having additional attributes like className and only no children \(void\) or one text child:
@@ -71,6 +70,7 @@ but not:
 
 * &lt;i className="icon-gear" /&gt;  
 * &lt;strong title="something"&gt;bold something&lt;/strong&gt;
+{% endhint %}
 
 It allows you to have basic html tags inside your translations which will get converted to valid react elements:
 
@@ -155,8 +155,6 @@ Trans.children = [
   '.'
 ]
 ```
-
-{% hint style="info" %}
 
 **Rules:**
 
