@@ -35,6 +35,27 @@ i18n.init({
 });
 ```
 
+## I18nextProvider changes
+
+The `I18nextProvider` does no longer provides as much properties as before. So please make the necessary changes in your codebase after migrating.
+
+```javascript
+// New props
+{
+  i18n,
+  defaultNS,
+}
+
+// Old props
+{
+  i18n,
+  defaultNS,
+  reportNS,
+  lng: i18n && i18n.language,
+  t: i18n && i18n.t.bind(i18n),
+}
+```
+
 ## Components v9 -&gt; v10
 
 | Type | v9 | v10 |
