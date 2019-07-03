@@ -8,7 +8,9 @@ While for sure this is the least efficient method for adding new translations, w
 
 ## 2\) Using an extraction tool
 
-You can either use the [i18next-parser](https://github.com/i18next/i18next-parser) or [i18next-scanner](https://github.com/i18next/i18next-scanner) to extract all the strings from your code files.
+Static extraction tools can read through your code files to automatically find and export translation keys. [i18next-scanner](http://i18next.github.io/i18next-scanner), [i18next-parser](https://github.com/i18next/i18next-parser) and [babel-plugin-i18next-extract](https://github.com/gilbsgilbs/babel-plugin-i18next-extract) are sensible choices to achieve this goal.
+
+For more information about extraction tools, see [plugin and utils](https://www.i18next.com/overview/plugins-and-utils#extraction-tools) documentation page.
 
 ## 3\) Runtime extraction
 
