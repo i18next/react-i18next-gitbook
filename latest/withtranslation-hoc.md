@@ -73,6 +73,10 @@ const ExtendedComponent = withTranslation()(MyComponent);
 <ExtendedComponent useSuspense={false} />
 ```
 
+{% hint style="info" %}
+Not using Suspense you will need to handle the not ready state yourself by eg. render a loading component as long `props.tReady === false` . Not doing so will result in rendering your translations before they loaded which will cause save missing be called although translations exists \(just yet not loaded\).
+{% endhint %}
+
 ## How to
 
 ### use ref \(&gt;= v10.6.0\)

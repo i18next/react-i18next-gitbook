@@ -64,3 +64,7 @@ const { t, i18n } = useTranslation('ns1', { i18n });
 const { t, i18n, ready } = useTranslation('ns1', { useSuspense: false });
 ```
 
+{% hint style="info" %}
+Not using Suspense you will need to handle the not ready state yourself by eg. render a loading component as long `ready === false` . Not doing so will result in rendering your translations before they loaded which will cause save missing be called although translations exists \(just yet not loaded\).
+{% endhint %}
+
