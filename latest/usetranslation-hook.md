@@ -16,7 +16,7 @@ export function MyComponent() {
 }
 ```
 
-While you most time only need the t function to translate your content you also get the i18n instance to eg. change the language.
+While most of the time you only need the `t` function to translate your content, you can also get the i18n instance (in order to change the language).
 
 ```javascript
 i18n.changeLanguage('en-US');
