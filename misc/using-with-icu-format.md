@@ -135,6 +135,37 @@ The macro will add the needed import for Trans Component and generate the correc
 
 The correct string for translations will be shown in the browser console output as a missing string \(if set debug: true on i18next init\) or submitted via saveMissing \(have saveMissing set true and a i18next backend supporting saving missing keys\).
 
+If linting or other code analysis tools are complaining or failing because of the invalid JSX syntax, you can use the
+`defaults` prop instead of putting your message as a child, and it will be parsed and updated to the correct format.
+
+```javascript
+import { Trans } from 'react-i18next/icu.macro';
+
+const user = 'John Doe';
+
+<Trans 
+  i18nKey="icu_and_trans_defaults"
+  defaults="We invited <strong>{user}</strong>."
+/>
+```
+
+This will be converted by the macro into:
+
+```javascript
+import { Trans } from 'react-i18next';
+
+const user = 'John Doe';
+
+<Trans 
+  i18nKey="icu_and_trans_defaults"
+  values={{user}}
+  defaults="We invited <0>{user}</0>."
+  components={[<strong>{user}</strong>]}
+/>
+```
+
+The defaults parsing supports the `@babel/react` preset, so any expressions that require more complex parsing may not work.
+
 **More samples:**
 
 ```markup
@@ -143,14 +174,20 @@ The correct string for translations will be shown in the browser console output 
 
 // interpolation and components
 <Trans>Welcome, <strong>{ name }</strong>!</Trans>
+<Trans defaults="Welcome, <strong>{ name }</strong>" />
 
 // number formatting
 <Trans>Trainers: { trainersCount, number }</Trans>
 <Trans>Trainers: <strong>{ trainersCount, number }</strong>!</Trans>
+<Trans defaults="Trainers: <strong>{ trainersCount, number }</strong>!" />
 
 // date formatting
 <Trans>Caught on { catchDate, date, short }</Trans>
 <Trans>Caught on <strong>{ catchDate, date, short }</strong>!</Trans>
+<Trans defaults="Caught on <strong>{ catchDate, date, short }</strong>!" />
+
+<Trans>You have <Link to="/inbox">{ unread, number } messages</Link></Trans>
+<Trans defaults="You have <Link to='/inbox'>{ unread, number } messages</Link>" />
 ```
 
 #### Select
@@ -208,6 +245,37 @@ import { Plural } from 'react-i18next/icu.macro';
   $0={<Trans>There is <strong>no</strong> item.</Trans>}
   one={<Trans>There is <strong>#</strong> item.</Trans>}
   other={<Trans>There are <strong>#</strong> items.</Trans>}
+/>
+```
+
+#### SelectOrdinal
+
+```javascript
+import { SelectOrdinal } from 'react-i18next/icu.macro';
+
+// simple SelectOrdinal
+<SelectOrdinal
+  i18nKey="optionalKey"
+  count={position}
+  one="You are #st in line"
+  two="You are #nd in line"
+  few="You are #rd in line"
+  other="You are #th in line"
+/>
+```
+
+```javascript
+import { SelectOrdinal } from 'react-i18next/icu.macro';
+
+// SelectOrdinal with inner components
+<SelectOrdinal
+  i18nKey="optionalKey"
+  count={position}
+  one={<Trans>You are <strong>#st in line</strong></Trans>}
+  two={<Trans>You are <strong>#nd in line</strong></Trans>}
+  few={<Trans>You are <strong>#rd in line</strong></Trans>}
+  other={<Trans>You are <strong>#th in line</strong></Trans>}
+  $7={<Trans>You are the lucky <strong>#th in line</strong></Trans>}
 />
 ```
 
