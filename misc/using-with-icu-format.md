@@ -135,8 +135,7 @@ The macro will add the needed import for Trans Component and generate the correc
 
 The correct string for translations will be shown in the browser console output as a missing string \(if set debug: true on i18next init\) or submitted via saveMissing \(have saveMissing set true and a i18next backend supporting saving missing keys\).
 
-If linting or other code analysis tools are complaining or failing because of the invalid JSX syntax, you can use the
-`defaults` prop instead of putting your message as a child, and it will be parsed and updated to the correct format.
+If linting or other code analysis tools are complaining or failing because of the invalid JSX syntax, you can use the `defaults` prop instead of putting your message as a child, and it will be parsed and updated to the correct format.
 
 ```javascript
 import { Trans } from 'react-i18next/icu.macro';

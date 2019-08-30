@@ -11,12 +11,12 @@ import { useTranslation } from 'react-i18next';
 export function MyComponent() {
   const { t, i18n } = useTranslation();
   // or const [t, i18n] = useTranslation();
-  
+
   return <p>{t('my translated text')}</p>
 }
 ```
 
-While most of the time you only need the `t` function to translate your content, you can also get the i18n instance (in order to change the language).
+While most of the time you only need the `t` function to translate your content, you can also get the i18n instance \(in order to change the language\).
 
 ```javascript
 i18n.changeLanguage('en-US');
@@ -28,7 +28,7 @@ The `useTranslation` hook will trigger a [Suspense](https://reactjs.org/docs/cod
 
 ## When to use?
 
-Use the `useTranslation` hook inside your **functional components** to access the translation function or i18n instance. 
+Use the `useTranslation` hook inside your **functional components** to access the translation function or i18n instance.
 
 ## useTranslation params
 

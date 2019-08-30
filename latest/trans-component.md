@@ -169,6 +169,7 @@ Trans.children = [
 | i18nKey | string \(undefined\) | is optional if you prefer to use text as keys you can omit that and the translation will be used as a key. |
 | t | function \(undefined\) | t function to use instead of i18next.t |
 | count | integer \(undefined\) | optional count if you use a plural |
+| tOptions | object \(undefined\) | optional options you like to pass to t function call \(eg. context, postProcessor, ...\) |
 | parent | node \(undefined\) | a component to wrap the content into \(default none, can be globally set on i18next.init\) -&gt; needed for **react &lt; v16** |
 | i18n | object \(undefined\) | i18next instance to use if not provided |
 | defaults | string \(undefined\) | use this instead of default content in children \(useful when using ICU\) |
