@@ -164,19 +164,79 @@ Trans.children = [
 
 ## Trans props
 
-| _**name**_ | _**type \(default\)**_ | _**description**_ |
-| :--- | :--- | :--- |
-| i18nKey | string \(undefined\) | is optional if you prefer to use text as keys you can omit that and the translation will be used as a key. |
-| t | function \(undefined\) | t function to use instead of i18next.t |
-| count | integer \(undefined\) | optional count if you use a plural |
-| tOptions | object \(undefined\) | optional options you like to pass to t function call \(eg. context, postProcessor, ...\) |
-| parent | node \(undefined\) | a component to wrap the content into \(default none, can be globally set on i18next.init\) -&gt; needed for **react &lt; v16** |
-| i18n | object \(undefined\) | i18next instance to use if not provided |
-| defaults | string \(undefined\) | use this instead of default content in children \(useful when using ICU\) |
-| values | object \(undefined\) | interpolation values if not provided in children |
-| components | array\[nodes\] \(undefined\) | components to interpolate based on index of tag &lt;0&gt;&lt;/0&gt;, ... |
-
-## Additional options on i18next.init
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left"><em><b>name</b></em>
+      </th>
+      <th style="text-align:left"><em><b>type (default)</b></em>
+      </th>
+      <th style="text-align:left"><em><b>description</b></em>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">i18nKey</td>
+      <td style="text-align:left">string (undefined)</td>
+      <td style="text-align:left">
+        <p>is optional if you prefer to use text as keys you can omit that and the
+          translation will be used as a key.</p>
+        <p></p>
+        <p>can contain the used namespace by prepending it key in form <code>&apos;ns:key&apos;</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">ns</td>
+      <td style="text-align:left">string (undefined)</td>
+      <td style="text-align:left">namespace to use</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">t</td>
+      <td style="text-align:left">function (undefined)</td>
+      <td style="text-align:left">t function to use instead of i18next.t</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">count</td>
+      <td style="text-align:left">integer (undefined)</td>
+      <td style="text-align:left">optional count if you use a plural</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">tOptions</td>
+      <td style="text-align:left">object (undefined)</td>
+      <td style="text-align:left">optional options you like to pass to t function call (eg. context, postProcessor,
+        ...)</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">parent</td>
+      <td style="text-align:left">node (undefined)</td>
+      <td style="text-align:left">a component to wrap the content into (default none, can be globally set
+        on i18next.init) -&gt; needed for <b>react &lt; v16</b>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">i18n</td>
+      <td style="text-align:left">object (undefined)</td>
+      <td style="text-align:left">i18next instance to use if not provided</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">defaults</td>
+      <td style="text-align:left">string (undefined)</td>
+      <td style="text-align:left">use this instead of default content in children (useful when using ICU)</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">values</td>
+      <td style="text-align:left">object (undefined)</td>
+      <td style="text-align:left">interpolation values if not provided in children</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">components</td>
+      <td style="text-align:left">array[nodes] (undefined)</td>
+      <td style="text-align:left">components to interpolate based on index of tag &lt;0&gt;&lt;/0&gt;, ...</td>
+    </tr>
+  </tbody>
+</table>## Additional options on i18next.init
 
 ```javascript
 i18next.init({
