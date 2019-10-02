@@ -1,12 +1,12 @@
 # Migrating v9 to v10
 
-v10 is a complete rewrite taking the chance to clean up some complexity added from v1 to v9.
+v10 is a complete rewrite, taking the chance to clean up some complexity added from v1 to v9.
 
-This means you will need to test your application more cautious before release.
+This means you will need to test your application more cautiously before release.
 
 ## New in v10
 
-Most obvious the hook function to use inside functional components:
+The most obvious change is the hook function for use inside functional components:
 
 ```jsx
 import React from 'react';
@@ -21,11 +21,11 @@ export function MyComponent() {
 
 ## Components without replacement
 
-The Interpolation which was for a long time marked as deprecated and replaced by the Trans Component was removed finally. So you will need to replace it with the Trans Component.
+The Interpolation component (which was marked as deprecated for a long time and replaced by the Trans Component) was removed finally. You will need to replace it with the Trans Component.
 
 ## Migration
 
-Replace your components like described below. Not having to use `Suspense` in your existing App you can set `useSuspense: false` in react.init options.react:
+Replace your components like described below. If you don't have to use `Suspense` in your existing App you can set `useSuspense: false` in react.init options.react:
 
 ```javascript
 i18n.init({
@@ -37,7 +37,7 @@ i18n.init({
 
 ## I18nextProvider changes
 
-The `I18nextProvider` does no longer provides as much properties as before. So please make the necessary changes in your codebase after migrating.
+The `I18nextProvider` no longer provides as many properties as before. Make the necessary changes in your codebase after migrating.
 
 ```javascript
 // New props
