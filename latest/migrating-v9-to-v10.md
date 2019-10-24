@@ -21,7 +21,7 @@ export function MyComponent() {
 
 ## Components without replacement
 
-The Interpolation component (which was marked as deprecated for a long time and replaced by the Trans Component) was removed finally. You will need to replace it with the Trans Component.
+The Interpolation component \(which was marked as deprecated for a long time and replaced by the Trans Component\) was removed finally. You will need to replace it with the Trans Component.
 
 ## Migration
 
