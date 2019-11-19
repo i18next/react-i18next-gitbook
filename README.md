@@ -44,7 +44,7 @@ If you prefer not using semantic keys but text - [that's also possible](https://
 
 ## On top: Localization as a service
 
-i18next supports tranlation management tools such as [locize.com](http://locize.com/?utm_source=react_i18next_com&utm_medium=gitbook).
+i18next supports translation management tools such as [locize.com](http://locize.com/?utm_source=react_i18next_com&utm_medium=gitbook).
 
 ![](.gitbook/assets/dashboard.png)
 
