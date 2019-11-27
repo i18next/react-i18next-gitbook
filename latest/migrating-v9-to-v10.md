@@ -58,13 +58,13 @@ The `I18nextProvider` no longer provides as many properties as before. Make the 
 
 ## Components v9 -&gt; v10
 
-| Type | v9 | v10 |
-| :--- | :--- | :--- |
-| hook | - | useTranslation |
-| HOC | withNamespaces | withTranslation |
-| render prop | NamespacesConsumer | Translation |
-| i18next plugin | reactI18nextModule | initReactI18next |
-| Provider | I18nextProvider | I18nextProvider |
-| Complex Translation | Trans | Trans |
-| Interpolations | Interpolate | Trans |
+| Type | &lt;= v7 \(v8\) | v9 \(v8\) | v10 |
+| :--- | :--- | :--- | :--- |
+| hook |  | - | useTranslation |
+| HOC | translate | withNamespaces | withTranslation |
+| render prop | I18n | NamespacesConsumer | Translation |
+| i18next plugin | reactI18nextModule | reactI18nextModule | initReactI18next |
+| Provider | I18nextProvider | I18nextProvider | I18nextProvider |
+| Complex Translation | Trans | Trans | Trans |
+| Interpolations | Interpolate | Interpolate | Trans |
 
