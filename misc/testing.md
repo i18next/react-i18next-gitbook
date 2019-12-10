@@ -21,10 +21,10 @@ Or use [https://github.com/kadirahq/react-stubber](https://github.com/kadirahq/r
 const tDefault = (key) => key;
 const StubbableInterpolate = mayBeStubbed(Interpolate);
 const stubInterpolate = function () {
-    stub(StubbableInterpolate, (props, context) => {
-        const t = (context && context.t) || tDefault;
-        return (<span>{t(props.i18nKey)}</span>);
-    });
+  stub(StubbableInterpolate, (props, context) => {
+    const t = (context && context.t) || tDefault;
+    return (<span>{t(props.i18nKey)}</span>);
+  });
 };
 ```
 
@@ -112,7 +112,8 @@ i18n
     resources: {
       en: {},
       de: {}
-})
+    }
+  })
 ```
 
 Now in your component `this.props.i18n.language` will return `en`.
