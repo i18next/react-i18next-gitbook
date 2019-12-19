@@ -78,11 +78,11 @@ It allows you to have basic html tags inside your translations which will get co
 <Trans i18nKey="welcomeUser">
   Hello <strong>{{name}}</strong>.
 </Trans>
-// JSON -> "welcomeUser": "Hello <strong>{{name}}</strong>.",
+// JSON -> "welcomeUser": "Hello <1>{{name}}</1>.",
 <Trans i18nKey="multiline">
   Some newlines <br/> would be <br/> fine
 </Trans>
-// JSON -> "multiline": "Some newlines <br/> would be <br/> fine"
+// JSON -> "multiline": "Some newlines <1/> would be <3/> fine"
 ```
 
 You can use i18next.options.react to adapt this behaviour:
