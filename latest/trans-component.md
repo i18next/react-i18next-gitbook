@@ -68,8 +68,9 @@ Allows elements not having additional attributes like className and only no chil
 
 but not:
 
-* &lt;i className="icon-gear" /&gt;  
-* &lt;strong title="something"&gt;bold something&lt;/strong&gt;
+* &lt;i className="icon-gear" /&gt;  // no attributes allowed
+* &lt;strong title="something"&gt;bold something&lt;/strong&gt; // no attr
+* &lt;bold&gt;bold&lt;i&gt;italic&lt;/i&gt;&lt;/b&gt; // no inner elements - only strings!
 {% endhint %}
 
 It allows you to have basic html tags inside your translations which will get converted to valid react elements:
