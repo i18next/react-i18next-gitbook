@@ -70,6 +70,7 @@ but not:
 
 * &lt;i className="icon-gear" /&gt;  
 * &lt;strong title="something"&gt;bold something&lt;/strong&gt;
+* &lt;strong&gt;bold &lt;i&gt;something&lt;/i&gt;&lt;/strong&gt;
 {% endhint %}
 
 It allows you to have basic html tags inside your translations which will get converted to valid react elements:
