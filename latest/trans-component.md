@@ -40,7 +40,7 @@ _Let's say you want to create following html output:_
 
 ```javascript
 <Trans i18nKey="userMessagesUnread" count={count}>
-  Hello <strong title={t('nameTitle')}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
+  Hello <strong title={t('nameTitle')}>{{name: name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
 </Trans>
 ```
 
@@ -76,7 +76,7 @@ It allows you to have basic html tags inside your translations which will get co
 
 ```jsx
 <Trans i18nKey="welcomeUser">
-  Hello <strong>{{name}}</strong>.
+  Hello <strong>{{name: name}}</strong>.
 </Trans>
 // JSON -> "welcomeUser": "Hello <1>{{name}}</1>.",
 <Trans i18nKey="multiline">
