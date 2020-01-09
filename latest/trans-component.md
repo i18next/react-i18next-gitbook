@@ -107,6 +107,42 @@ You can use i18next.options.react to adapt this behaviour:
 | transSupportBasicHtmlNodes | true | convert eg. &lt;br/&gt; found in translations to a react component of type br |
 | transKeepBasicHtmlNodesFor | \['br', 'strong', 'i', 'p'\] | Which nodes not to convert in defaultValue generation in the Trans component. |
 
+### Interpolation
+
+You can pass in variables to get interpolated into the translation string by passing down objects in node children containing those key:values.
+
+```jsx
+const person = { name: 'Henry', age: 21 };
+const { name, age } = person;
+
+<Trans>
+  Hello {{ name }}. // <- = {{ name: name }}
+</Trans>
+// Translation string: "Hello {{name}}"
+
+
+<Trans>
+  Hello {{ firstname: person.name }}.
+</Trans>
+// Translation string: "Hello {{firstname}}"
+```
+
+### Plural
+
+You will need to pass the `count` prop:
+
+```jsx
+const messages = ['message one', 'message two'];
+
+<Trans i18nKey="newMessages" count={messages.length}>
+  You got {{ count: messages.length }} messages.
+</Trans>
+
+// Translation strings:
+// "newMessages": "You got one message."
+// "newMessages_plural": "You got {{count}} messages."
+```
+
 ### Using with lists \(v10.5.0\)
 
 You can use list.map as children. Mapping dynamic content.
