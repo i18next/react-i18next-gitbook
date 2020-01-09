@@ -31,17 +31,31 @@ _Let's say you want to create following html output:_
 **Before:** Your react code would have looked something like:
 
 ```javascript
-<div>
-  Hello <strong title="this is your name">{name}</strong>, you have {count} unread message(s). <Link to="/msgs">Go to messages</Link>.
-</div>
+function MyComponent({ person, messages }) {
+  const { name } = person;
+  const count = messages.length;
+  
+  return (
+    <div>
+      Hello <strong title="this is your name">{name}</strong>, you have {count} unread message(s). <Link to="/msgs">Go to messages</Link>.
+    </div>
+  );
+}
 ```
 
 **After:** With the trans component just change it to:
 
 ```javascript
-<Trans i18nKey="userMessagesUnread" count={count}>
-  Hello <strong title={t('nameTitle')}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
-</Trans>
+function MyComponent({ person, messages }) {
+  const { name } = person;
+  const count = messages.length;
+  
+  return (
+    <Trans i18nKey="userMessagesUnread" count={count}>
+      Hello <strong title={t('nameTitle')}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
+    </Trans>
+  );
+}
 ```
 
 _Your en.json \(translation strings\) will look like:_
