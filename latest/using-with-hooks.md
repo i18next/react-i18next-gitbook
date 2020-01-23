@@ -133,7 +133,7 @@ const MyComponent = withTranslation()(LegacyComponentClass)
 
 // i18n translations might still be loaded by the xhr backend
 // use react's Suspense
-function App() {
+export default function App() {
   return (
     <Suspense fallback="loading">
       <MyComponent />
