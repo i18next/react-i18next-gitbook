@@ -30,7 +30,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 // for passing in lng and translations on init
 
 i18n
-  // load translation using xhr -> see /public/locales
+  // load translation using xhr -> see /public/locales (i.e. https://github.com/i18next/react-i18next/tree/master/example/react/public/locales)
   // learn more: https://github.com/i18next/i18next-xhr-backend
   .use(Backend)
   // detect user language
