@@ -4,6 +4,8 @@
 
 You should have a look at [next-i18next](https://github.com/isaachinman/next-i18next) which extends react-i18next to bring it to next.js the easiest way.
 
+> `next-i18next` does not yet support Next.js in [**Serverless** mode](https://nextjs.org/blog/next-8#serverless-nextjs) (as of March 2020). If your goal is to use Next.js with Serverless, then you should have a look at ["Next Right Now"](https://github.com/UnlyEd/next-right-now), which is a Next.js 9 boilerplate with built-in `i18next`, `react-i18next` and Locize.
+
 ## Setting the i18next instance based on req
 
 Use the [I18nextProvider](i18nextprovider.md) to inject the i18next instance bound to the express.js i18n instance on the request object using [i18next-express-middleware](https://github.com/i18next/i18next-express-middleware).
