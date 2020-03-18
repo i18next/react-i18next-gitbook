@@ -31,6 +31,8 @@ _Let's say you want to create following html output:_
 **Before:** Your react code would have looked something like:
 
 ```javascript
+import React from 'react';
+
 function MyComponent({ person, messages }) {
   const { name } = person;
   const count = messages.length;
@@ -46,6 +48,9 @@ function MyComponent({ person, messages }) {
 **After:** With the trans component just change it to:
 
 ```javascript
+import React from 'react';
+import { Trans } from 'react-i18next'
+
 function MyComponent({ person, messages }) {
   const { name } = person;
   const count = messages.length;
