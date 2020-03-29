@@ -4,7 +4,7 @@
 
 You should have a look at [next-i18next](https://github.com/isaachinman/next-i18next) which extends react-i18next to bring it to next.js the easiest way.
 
-> `next-i18next` does not yet support Next.js in [**Serverless** mode](https://nextjs.org/blog/next-8#serverless-nextjs) (as of March 2020). If your goal is to use Next.js with Serverless, then you should have a look at ["Next Right Now"](https://github.com/UnlyEd/next-right-now), which is a Next.js 9 boilerplate with built-in `i18next`, `react-i18next` and Locize.
+> `next-i18next` does not yet support Next.js in [**Serverless** mode](https://nextjs.org/blog/next-8#serverless-nextjs) \(as of March 2020\). If your goal is to use Next.js with Serverless, then you should have a look at ["Next Right Now"](https://github.com/UnlyEd/next-right-now), which is a Next.js 9 boilerplate with built-in `i18next`, `react-i18next` and Locize.
 
 ## Setting the i18next instance based on req
 
@@ -28,7 +28,7 @@ import { useSSR } from 'react-i18next';
 
 export function InitSSR({ initialI18nStore, initialLanguage }) {
   useSSR(initialI18nStore, initialLanguage);
-  
+
   return <App />
 }
 ```
