@@ -16,7 +16,7 @@ For more information about extraction tools, see [plugin and utils](https://www.
 
 I18next has a setting to send all keys that it was unable to resolve during runtime using the attached backend.
 
-In case of the xhr-backend just set `saveMissing: true` on init:
+In case of the http-backend just set `saveMissing: true` on init:
 
 ```javascript
 import i18n from "i18next";
