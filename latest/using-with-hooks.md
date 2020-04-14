@@ -30,8 +30,8 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 // for passing in lng and translations on init
 
 i18n
-  // load translation using xhr -> see /public/locales (i.e. https://github.com/i18next/react-i18next/tree/master/example/react/public/locales)
-  // learn more: https://github.com/i18next/i18next-xhr-backend
+  // load translation using http -> see /public/locales (i.e. https://github.com/i18next/react-i18next/tree/master/example/react/public/locales)
+  // learn more: https://github.com/i18next/i18next-http-backend
   .use(Backend)
   // detect user language
   // learn more: https://github.com/i18next/i18next-browser-languageDetector
@@ -87,7 +87,7 @@ function MyComponent() {
   return <h1>{t('Welcome to React')}</h1>
 }
 
-// i18n translations might still be loaded by the xhr backend
+// i18n translations might still be loaded by the http backend
 // use react's Suspense
 export default function App() {
   return (
@@ -131,7 +131,7 @@ class LegacyComponentClass extends Component {
 }
 const MyComponent = withTranslation()(LegacyComponentClass)
 
-// i18n translations might still be loaded by the xhr backend
+// i18n translations might still be loaded by the http backend
 // use react's Suspense
 export default function App() {
   return (
