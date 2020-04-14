@@ -6,13 +6,13 @@ The instance is an initialized i18next instance. In the following code snippet, 
 
 ```javascript
 import i18n from 'i18next';
-import XHR from 'i18next-xhr-backend';
+import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
 
 
 i18n
-  .use(XHR)
+  .use(Backend)
   .use(LanguageDetector)
   .use(initReactI18next) // bind react-i18next to the instance
   .init({

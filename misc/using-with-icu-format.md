@@ -17,7 +17,7 @@ To enable ICU format you will need to include the [i18next-icu](https://github.c
 ```javascript
 import i18n from 'i18next';
 import ICU from 'i18next-icu';
-import XHR from 'i18next-xhr-backend';
+import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { reactI18nextModule } from 'react-i18next';
 
@@ -28,7 +28,7 @@ i18n
   .use(new ICU({
     localeData: de // you also can pass in array of localeData
   }))
-  .use(XHR)
+  .use(Backend)
   .use(LanguageDetector)
   .use(reactI18nextModule) // if not using I18nextProvider
   .init({
