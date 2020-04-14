@@ -10,7 +10,7 @@ Install both react-i18next and i18next package:
 npm install react-i18next i18next --save
 
 // when like to detect user language and load translation
-npm install i18next-xhr-backend i18next-browser-languagedetector --save
+npm install i18next-http-backend i18next-browser-languagedetector --save
 ```
 
 ### Configure i18next
@@ -23,7 +23,7 @@ Create a new file `i18n.js` beside your `index.js` containing following content:
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
-import Backend from 'i18next-xhr-backend';
+import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 // not like to use this?
 // have a look at the Quick start guide 
