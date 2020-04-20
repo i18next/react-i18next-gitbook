@@ -46,7 +46,7 @@ export default i18n;
 
 Check the [options](https://github.com/i18next/i18next-xhr-backend#backend-options) for where missing translation gets sent.
 
-Using node.js and express? You can get that endpoint for free: [https://github.com/i18next/i18next-express-middleware\#add-routes](https://github.com/i18next/i18next-express-middleware#add-routes)
+Using node.js and express? You can get that endpoint for free: [https://github.com/i18next/i18next-http-middleware\#add-routes](https://github.com/i18next/i18next-http-middleware#add-routes)
 
 This is the most convenient way of working with react-i18next: just develop and run your applications without worrying too much about adding translations to your catalog as those get added automatically.
 
