@@ -8,7 +8,7 @@ You should have a look at [next-i18next](https://github.com/isaachinman/next-i18
 
 ## Setting the i18next instance based on req
 
-Use the [I18nextProvider](i18nextprovider.md) to inject the i18next instance bound to the express.js i18n instance on the request object using [i18next-express-middleware](https://github.com/i18next/i18next-express-middleware).
+Use the [I18nextProvider](i18nextprovider.md) to inject the i18next instance bound to the http i18n instance on the request object using [i18next-http-middleware](https://github.com/i18next/i18next-http-middleware).
 
 ```jsx
 <I18nextProvider i18n={req.i18n}>
