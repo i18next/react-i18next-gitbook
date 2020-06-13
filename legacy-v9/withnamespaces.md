@@ -182,7 +182,9 @@ export default withNamespaces(
       <td style="text-align:left">use shallowEqual on props change if set to true</td>
     </tr>
   </tbody>
-</table>## withNamespaces props:
+</table>
+
+## withNamespaces props:
 
 | _**name**_ | _**type \(default\)**_ | _**description**_ |
 | :--- | :--- | :--- |

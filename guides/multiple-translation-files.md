@@ -14,6 +14,28 @@ This will lookup the key in a namespace \(file\) called common.json:
 i18next.t('common:look.deep');
 ```
 
+In order to use multiple namespaces/translation files, you need to specify it when calling [`useTranslation`](https://react.i18next.com/latest/usetranslation-hook) :
+
+```javascript
+const { t } = useTranslation(['translation', 'common']);
+```
+
+[`withTranslation`](https://react.i18next.com/latest/withtranslation-hoc):
+
+```javascript
+withTranslation(['translation', 'common'])(MyComponent);
+```
+
+or [`Translation`](https://react.i18next.com/latest/translation-render-prop):
+
+```javascript
+<Translation ns={['translation', 'common']}>
+{
+  (t) => <p>{t('common:look.deep')}</p>
+}
+</Translation>
+```
+
 ## Separating translation files
 
 In i18next you got a lot of options to add translations on init, in your code calling API methods or using one of the backend implementation. For a detailed write up check out the ["Add or load translation guide on i18next.com"](https://www.i18next.com/how-to/add-or-load-translations).

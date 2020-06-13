@@ -112,3 +112,4 @@ function TranslatableView() {
     </tr>
   </tbody>
 </table>
+

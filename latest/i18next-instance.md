@@ -100,5 +100,7 @@ All additional options for react in init options:
       <td style="text-align:left">If using Suspense or not</td>
     </tr>
   </tbody>
-</table>For more initialization options have look at the [docs](https://www.i18next.com/configuration-options.html).
+</table>
+
+For more initialization options have look at the [docs](https://www.i18next.com/configuration-options.html).
 

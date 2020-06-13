@@ -253,7 +253,9 @@ Trans.children = [
     </tr>
   </thead>
   <tbody></tbody>
-</table>| ns | string \(undefined\) | namespace to use |
+</table>
+
+| ns | string \(undefined\) | namespace to use |
 | :--- | :--- | :--- |
 
 
