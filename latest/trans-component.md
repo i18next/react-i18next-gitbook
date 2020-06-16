@@ -89,6 +89,19 @@ _Your en.json \(translation strings\) will look like:_
 [**saveMissing**](https://www.i18next.com/overview/configuration-options#missing-keys) will send a valid defaultValue
 {% endhint %}
 
+### Alternative usage \(v11.6.0\)
+
+```javascript
+<Trans
+  i18nKey="myKey" // optional -> fallbacks to defaults if not provided
+  defaults="hello <italic>beautiful</italic> <bold>{{what}}</bold>" // optional defaultValue
+  values={{ what: 'world'}}
+  components={{ italic: <i />, bold: <strong /> }}
+/>
+```
+
+This format is useful to interpolate a component multiple times. Another advantage is the simpler &lt;&gt; named tags -&gt; which makes guessing indexes a thing of the past.
+
 ### Using for &lt;br /&gt; and other simple html elements in translations \(v10.4.0\)
 
 {% hint style="info" %}
@@ -179,17 +192,24 @@ You can use list.map as children. Mapping dynamic content.
 
 Setting `i18nIsDynamicList` on the wrapping element will assert the nodeToString function creating the string for saveMissing will not contain children.
 
-### Alternative usage
+### Alternative usage \(components array\)
 
-Depending on using [ICU as translation format](https://github.com/i18next/i18next-icu) it is not possible to have the needed syntax as children \(invalid jsx\). You can alternatively use the component like:
+Some use cases might be simpler by just passing content as props:
 
 ```javascript
 <Trans
-  defaults="hello <0>{{what}}</0>"
+  i18nKey="myKey" // optional -> fallbacks to defaults if not provided
+  defaults="hello <0>{{what}}</0>" // optional defaultValue
   values={{ what: 'world'}}
   components={[<strong>univers</strong>]}
 />
 ```
+
+{% hint style="info" %}
+`<0>` -&gt; 0 is the index of the component in the components array
+{% endhint %}
+
+Eg. this format is needed when using [ICU as translation format](https://github.com/i18next/i18next-icu) as it is not possible to have the needed syntax as children \(invalid jsx\).
 
 ## How to get the correct translation string?
 
