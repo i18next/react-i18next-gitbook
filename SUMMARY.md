@@ -41,3 +41,7 @@
 * [Interpolate \(v9\)](legacy-v9/interpolate.md)
 * [SSR \(v9\)](legacy-v9/serverside-rendering.md)
 
+---
+
+* [localization as a service](https://locize.com)
+
