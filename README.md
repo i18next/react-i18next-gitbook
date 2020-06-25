@@ -42,7 +42,7 @@ As react-i18next depends on [i18next](http://i18next.com) you can use it in any 
 
 If you prefer not using semantic keys but text - [that's also possible](https://www.i18next.com/principles/fallback.html#key-fallback).
 
-## On top: Localization as a service
+## On top: [Localization as a service](https://locize.com)
 
 i18next supports translation management tools such as [locize.com](http://locize.com/?utm_source=react_i18next_com&utm_medium=gitbook).
 
