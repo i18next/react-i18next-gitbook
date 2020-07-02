@@ -23,7 +23,7 @@ i18n.changeLanguage('en-US');
 ```
 
 {% hint style="info" %}
-The `useTranslation` hook will trigger a [Suspense](https://reactjs.org/docs/code-splitting.html#suspense) if not ready \(eg. pending load of translation files\). You can set `useSuspense` to false if prefer not using Suspense.
+The `useTranslation` hook will trigger a [Suspense](https://reactjs.org/docs/concurrent-mode-suspense.html) if not ready \(eg. pending load of translation files\). You can set `useSuspense` to false if prefer not using Suspense.
 {% endhint %}
 
 ## When to use?
