@@ -1,5 +1,5 @@
 {
-    "plugins": [ "addcssjs", "edit-link", "theme-api", "jsfiddle", "custom-favicon", "simple-page-toc", "anchors" ],
+    "plugins": [ "addcssjs", "edit-link", "theme-api", "jsfiddle", "custom-favicon", "simple-page-toc", "anchors", "hints" ],
     "pluginsConfig": {
         "edit-link": {
             "base": "https://github.com/i18next/react-i18next-gitbook/edit/master/",
