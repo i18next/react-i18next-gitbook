@@ -257,58 +257,16 @@ Trans.children = [
 
 | _**name**_ | _**type \(default\)**_ | _**description**_ |
 | :--- | :--- | :--- |
-
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">i18nKey</th>
-      <th style="text-align:left">string (undefined)</th>
-      <th style="text-align:left">
-        <p>is optional if you prefer to use text as keys you can omit that and the
-          translation will be used as a key.</p>
-        <p>can contain the used namespace by prepending it key in form <code>&apos;ns:key&apos;</code>
-        </p>
-      </th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
-
-| ns | string \(undefined\) | namespace to use |
-| :--- | :--- | :--- |
-
-
-| t | function \(undefined\) | t function to use instead of i18next.t |
-| :--- | :--- | :--- |
-
-
-| count | integer \(undefined\) | optional count if you use a plural |
-| :--- | :--- | :--- |
-
-
-| tOptions | object \(undefined\) | optional options you like to pass to t function call \(eg. context, postProcessor, ...\) |
-| :--- | :--- | :--- |
-
-
-| parent | node \(undefined\) | a component to wrap the content into \(default none, can be globally set on i18next.init\) -&gt; needed for **react &lt; v16** |
-| :--- | :--- | :--- |
-
-
-| i18n | object \(undefined\) | i18next instance to use if not provided |
-| :--- | :--- | :--- |
-
-
-| defaults | string \(undefined\) | use this instead of default content in children \(useful when using ICU\) |
-| :--- | :--- | :--- |
-
-
-| values | object \(undefined\) | interpolation values if not provided in children |
-| :--- | :--- | :--- |
-
-
-| components | array\[nodes\] \(undefined\) | components to interpolate based on index of tag &lt;0&gt;&lt;/0&gt;, ... |
-| :--- | :--- | :--- |
+| i18nKey | string (undefined) | is optional. if you prefer to use text as keys you can omit that and the translation will be used as a key. Can contain the used namespace by prepending it key in form `'ns:key'` |
+| ns | string (undefined) | namespace to use |
+| t | function (undefined) | t function to use instead of i18next.t |
+| count | integer (undefined) | optional count if you use a plural |
+| tOptions | object (undefined) | optional options you like to pass to t function call \(eg. context, postProcessor, ...\) |
+| parent | node (undefined) | a component to wrap the content into \(default none, can be globally set on i18next.init\) -> needed for **react < v16** |
+| i18n | object (undefined) | i18next instance to use if not provided |
+| defaults | string (undefined) | use this instead of default content in children \(useful when using ICU\) |
+| values | object (undefined) | interpolation values if not provided in children |
+| components | array\[nodes\] (undefined) | components to interpolate based on index of tag <0></0>, ... |
 
 
 ```javascript
