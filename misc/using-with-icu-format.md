@@ -1,6 +1,6 @@
 # Using with ICU format
 
-i18next itself is flexible enough to support multiple existing i18next formats beside it's own.
+i18next itself is flexible enough to support multiple existing i18next formats beside its own.
 
 {% hint style="info" %}
 Find the full working sample here:
