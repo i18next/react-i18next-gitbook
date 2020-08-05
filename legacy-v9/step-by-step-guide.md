@@ -209,7 +209,7 @@ It's essential to have at least your outer page level / container component wrap
 
 ## 2\) Lazy loading translations
 
-We not yet started splitting translations into multiple files \(which is highly recommended for larger projects\) but we already see that adding more languages would result in bundling unneeded translations into the application.
+We haven't yet started splitting translations into multiple files \(which is highly recommended for larger projects\) but we already see that adding more languages would result in bundling unneeded translations into the application.
 
 > Why not just use dynamic imports to load the language needed?
 
