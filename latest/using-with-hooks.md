@@ -15,7 +15,7 @@ npm install i18next-http-backend i18next-browser-languagedetector --save
 
 ### Configure i18next
 
-I18next is the core of the i18n functionality while react-i18next extends and glue it to react.
+I18next is the core of the i18n functionality while react-i18next extends and glues it to react.
 
 Create a new file `i18n.js` beside your `index.js` containing following content:
 
