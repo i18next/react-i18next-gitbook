@@ -2,14 +2,14 @@
 
 ## Install needed dependencies
 
-We expect you having an existing react application supporting [hooks](https://reactjs.org/docs/hooks-intro.html) \(v16.7.0-alpha of react and react-dom\).
+We expect you to have an existing react application supporting [hooks](https://reactjs.org/docs/hooks-intro.html) \(v16.7.0-alpha of react and react-dom\).
 
 Install both react-i18next and i18next package:
 
 ```bash
 npm install react-i18next i18next --save
 
-// when like to detect user language and load translation
+// if you'd like to detect user language and load translation
 npm install i18next-http-backend i18next-browser-languagedetector --save
 ```
 
@@ -25,7 +25,7 @@ import { initReactI18next } from 'react-i18next';
 
 import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
-// not like to use this?
+// don't want to use this?
 // have a look at the Quick start guide 
 // for passing in lng and translations on init
 
@@ -114,7 +114,7 @@ Please note the t function will be either bound to the default namespace defined
 
 #### Using the withTranslation HOC
 
-There might be some legacy cases where you still forced to use classes. No worry we still provide a hoc to cover this cases:
+There might be some legacy cases where you are still forced to use classes. Don't worry, we still provide a hoc to cover this cases:
 
 ```jsx
 import React, { Component, Suspense } from 'react';
