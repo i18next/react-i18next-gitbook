@@ -149,9 +149,9 @@ Don't worry if you do not yet understand how the Trans component works in detail
 
 ## Next steps
 
-Depending on your learn type you now could read the more in depth [step by step](../latest/using-with-hooks.md) guide and learn how to load translations using xhr or how to change the language.
+Depending on your learning style, you can now read the more in-depth [step by step](../latest/using-with-hooks.md) guide and learn how to load translations using xhr or how to change the language.
 
-Prefer having code to checkout? Directly dive our examples:
+Prefer having code to checkout? Directly dive into our examples:
 
 * [Example react](https://github.com/i18next/react-i18next/tree/master/example/react)
 
