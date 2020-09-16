@@ -102,6 +102,11 @@ _Your en.json \(translation strings\) will look like:_
 
 This format is useful to interpolate a component multiple times. Another advantage is the simpler &lt;&gt; named tags -&gt; which makes guessing indexes a thing of the past.
 
+{% hint style="warning" %} 
+Existing self-closing HTML tag names are reserved keys.
+`link: <Link />`, `img: <img src="" />`, `media: <img src="" />` won't work
+{% endhint %}
+
 ### Using for &lt;br /&gt; and other simple html elements in translations \(v10.4.0\)
 
 {% hint style="info" %}
