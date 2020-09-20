@@ -102,9 +102,8 @@ _Your en.json \(translation strings\) will look like:_
 
 This format is useful to interpolate a component multiple times. Another advantage is the simpler &lt;&gt; named tags -&gt; which makes guessing indexes a thing of the past.
 
-{% hint style="warning" %} 
-Existing self-closing HTML tag names are reserved keys.
-`link: <Link />`, `img: <img src="" />`, `media: <img src="" />` won't work
+{% hint style="warning" %}
+Existing self-closing HTML tag names are reserved keys. `link: <Link />`, `img: <img src="" />`, `media: <img src="" />` won't work
 {% endhint %}
 
 ### Using for &lt;br /&gt; and other simple html elements in translations \(v10.4.0\)
@@ -267,12 +266,11 @@ Trans.children = [
 | `t` | `function (undefined)` | `t` function to use instead of i18next.t |
 | `count` | `integer (undefined)` | optional count if you use a plural |
 | `tOptions` | `object (undefined)` | optional options you like to pass to `t` function call \(eg. `context`, `postProcessor`, ...\) |
-| `parent` | `node (undefined)` | a component to wrap the content into \(default none, can be globally set on i18next.init\) -> needed for **react < v16** |
+| `parent` | `node (undefined)` | a component to wrap the content into \(default none, can be globally set on i18next.init\) -&gt; needed for **react &lt; v16** |
 | `i18n` | `object (undefined)` | i18next instance to use if not provided |
 | `defaults` | `string (undefined)` | use this instead of default content in children \(useful when using ICU\) |
 | `values` | `object (undefined)` | interpolation values if not provided in children |
-| `components` | `array[nodes] (undefined)` | components to interpolate based on index of tag <0></0>, ... |
-
+| `components` | `array[nodes] (undefined)` | components to interpolate based on index of tag , ... |
 
 ```javascript
 i18next.init({

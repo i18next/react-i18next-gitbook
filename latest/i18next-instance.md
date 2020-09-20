@@ -45,11 +45,11 @@ All additional options for react in init options:
 
 | options | default | description |
 | :--- | :--- | :--- |
-| bindI18n | 'languageChanged' | which events trigger a rerender, can be set to false or string of events <br /> separated by "" |
+| bindI18n | 'languageChanged' | which events trigger a rerender, can be set to false or string of events   separated by "" |
 | bindI18nStore | '' | define which events on [resourceStore](https://www.i18next.com/overview/api#store-events) should trigger a rerender |
 | transEmptyNodeValue | '' | how to treat failed lookups in Trans component |
-| transSupportBasicHtmlNodes | true | convert eg. `<br/>` found in translations to a react component of type br <br /> [See Trans component](trans-component.md#using-for-simple-html-elements-in-translations-v-10-4-0) |
-| transKeepBasicHtmlNodesFor | ['br', 'strong', 'i', 'p'] | Which nodes not to convert in defaultValue generation in the Trans component. <br /> [See Trans component](trans-component.md#using-for-simple-html-elements-in-translations-v-10-4-0) |
+| transSupportBasicHtmlNodes | true | convert eg. `<br/>` found in translations to a react component of type br   [See Trans component](trans-component.md#using-for-simple-html-elements-in-translations-v-10-4-0) |
+| transKeepBasicHtmlNodesFor | \['br', 'strong', 'i', 'p'\] | Which nodes not to convert in defaultValue generation in the Trans component.   [See Trans component](trans-component.md#using-for-simple-html-elements-in-translations-v-10-4-0) |
 | useSuspense | true | If using Suspense or not |
 
 For more initialization options have look at the [docs](https://www.i18next.com/configuration-options.html).
