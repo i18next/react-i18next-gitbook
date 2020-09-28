@@ -8,7 +8,7 @@ react-i18next can be added to your project using **npm**:
 
 ```bash
 # npm
-$ npm install react-i18next --save
+$ npm install react-i18next i18next --save
 ```
 
 In the `/dist` folder you find specific builds for `commonjs`, `es6 modules`,...
