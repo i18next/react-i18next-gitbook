@@ -108,7 +108,16 @@ const { t, i18n } = useTranslation(['page1', 'common']);
 
 #### Translation Files
 
-By default, the translation file will be looked up under `public/locales/<langulage_code>/translation.json`
+Create a new file `public/locales/<langulage_code>/translation.json` with the following sample content.
+```
+{
+  "title": "Welcome to react using react-i18next",
+  "description": {
+    "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
+    "part2": "Switch language between english and german using buttons above."
+  }
+}
+```
 
 Files are plain JSON you can checkout the full sample [here](https://github.com/i18next/react-i18next/tree/master/example/react/public/locales).
 
