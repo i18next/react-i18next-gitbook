@@ -106,6 +106,10 @@ const { t, i18n } = useTranslation('common');
 const { t, i18n } = useTranslation(['page1', 'common']);
 ```
 
+#### Translation Files
+
+By default, the translation file will be looked up under `public/locales/<langulage_code>/translation.json`
+
 Files are plain JSON you can checkout the full sample [here](https://github.com/i18next/react-i18next/tree/master/example/react/public/locales).
 
 {% hint style="info" %}
