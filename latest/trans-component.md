@@ -2,7 +2,7 @@
 
 ## Important note
 
-While the Trans components gives you a lot of power by letting you interpolate or translate complex react elements - the truth is - in most cases you won't need it.
+While the Trans component gives you a lot of power by letting you interpolate or translate complex react elements - the truth is - in most cases you won't need it.
 
 **As long you have no react nodes you like to be integrated into a translated text** \(text formatting, like `strong`, `i`, ...\) **or adding some link component - you won't need it** - most can be done by using the good old `t` function.
 
@@ -35,7 +35,7 @@ Using the **t** function have a look at i18next documentation:
 
 ### Using with react components
 
-So you learned there is no need to use the Trans component everywhere \(the plain t function will just do fine in most cases\).
+So you learned there is no need to use the Trans component everywhere \(the plain `t` function will just do fine in most cases\).
 
 This component enables you to nest any react content to be translated as one string. Supports both plural and interpolation.
 
@@ -60,7 +60,7 @@ function MyComponent({ person, messages }) {
 }
 ```
 
-**After:** With the trans component just change it to:
+**After:** With the Trans component just change it to:
 
 ```javascript
 import React from 'react';
