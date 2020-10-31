@@ -40,6 +40,22 @@ jest.mock('react-i18next', () => ({
 }));
 ```
 
+Or, when using the `useTranslation` hook instead of `withTranslation`, mock it like:
+
+```javascript
+jest.mock('react-i18next', () => ({
+  // this mock makes sure any components using the translate hook can use it without a warning being shown
+  useTranslation: () => {
+    return {
+      t: (str) => str,
+      i18n: {
+        changeLanguage: () => new Promise(() => {}),
+      },
+    };
+  },
+}));
+```
+
 {% hint style="success" %}
 You can find a full sample for testing with jest here: [https://github.com/i18next/react-i18next/tree/master/example/test-jest](https://github.com/i18next/react-i18next/tree/master/example/test-jest)
 {% endhint %}
