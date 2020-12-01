@@ -6,6 +6,8 @@ While the Trans component gives you a lot of power by letting you interpolate or
 
 **As long you have no react nodes you like to be integrated into a translated text** \(text formatting, like `strong`, `i`, ...\) **or adding some link component - you won't need it** - most can be done by using the good old `t` function.
 
+See all Trans props are listed [here](https://react.i18next.com/latest/trans-component#trans-props).
+
 {% hint style="warning" %}
 It does ONLY interpolation. It does not rerender on language change or load any translations needed. Use useTranslation, withTranslation for those cases.
 {% endhint %}

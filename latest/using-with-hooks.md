@@ -109,7 +109,8 @@ const { t, i18n } = useTranslation(['page1', 'common']);
 #### Translation Files
 
 Create a new file `public/locales/<language_code>/translation.json` with the following sample content.
-```
+
+```text
 {
   "title": "Welcome to react using react-i18next",
   "description": {
