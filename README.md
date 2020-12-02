@@ -46,7 +46,7 @@ If you prefer not using semantic keys but text - [that's also possible](https://
 
 i18next supports translation management tools such as [locize.com](http://locize.com/?utm_source=react_i18next_com&utm_medium=gitbook).
 
-![](.gitbook/assets/dashboard.png)
+![](.gitbook/assets/general-locize-screen.png)
 
 [Learn more about the enterprise offering](https://www.i18next.com/for-enterprises.html)
 
