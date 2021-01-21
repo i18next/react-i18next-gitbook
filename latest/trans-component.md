@@ -204,6 +204,7 @@ Some use cases might be simpler by just passing content as props:
 
 ```javascript
 <Trans
+  t={t}
   i18nKey="myKey" // optional -> fallbacks to defaults if not provided
   defaults="hello <0>{{what}}</0>" // optional defaultValue
   values={{ what: 'world'}}
