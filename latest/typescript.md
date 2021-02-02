@@ -6,7 +6,7 @@ react-i18next has embedded type definitions. If your project is relying on **Typ
 
 ## Create a declaration file
 
-TypeScript definitions for react-i18next can be extended by using Type Augmentation and Declaration Merging.
+TypeScript definitions for react-i18next can be extended by using [Type Augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation) and [Merging Interfaces](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces).
 So the first step is creating a declaration file (`react-i18next.d.ts`), for example:
 
 ```ts
@@ -74,13 +74,13 @@ Or:
 const { t } = useTranslation(`${ns}Default`);
 ```
 
-TypeScript will lose the literal value, and it will infer the `key` as string, which will cause to throw the error above. In that case, you will need to assert the template string `as const`, like this:
+TypeScript will lose the literal value, and it will infer the `key` as string, which will cause to throw the error above. In this case, you will need to assert the template string `as const`, like this:
 ```ts
 const { t } = useTranslation();
 t(`${expression}.title` as const);
 ```
 
-For now, that is the only possible workaround. This is a TypeScript limitation which will be handled on [TypeScript 4.2](https://devblogs.microsoft.com/typescript/announcing-typescript-4-2-beta/#smarter-type-alias-preservation).
+For now, this is the only possible workaround. This is a TypeScript limitation which will be handled on [TypeScript 4.2](https://devblogs.microsoft.com/typescript/announcing-typescript-4-2-beta/#smarter-type-alias-preservation).
 
 ### Tagged Template Literal
 
