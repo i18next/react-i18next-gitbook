@@ -21,6 +21,7 @@
 * [I18nextProvider](latest/i18nextprovider.md)
 * [SSR \(additional components\)](latest/ssr.md)
 * [Migrating v9 to v10](latest/migrating-v9-to-v10.md)
+* [TypeScript](latest/typescript.md)
 
 ## Misc
 
