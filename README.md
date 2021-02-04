@@ -50,3 +50,5 @@ i18next supports translation management tools such as [locize.com](http://locize
 
 [Learn more about the enterprise offering](https://www.i18next.com/for-enterprises.html)
 
+## [Ready to take i18next to the next level?](http://locize.com/?utm_source=i18next_com&utm_medium=gitbook)
+
