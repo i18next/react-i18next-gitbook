@@ -55,3 +55,5 @@ Wanna have this process on steroids? Just hook up a [locize.com](https://locize.
 [Check out this tutorial!](https://github.com/locize/react-tutorial)
 {% endhint %}
 
+{% embed url="https://youtu.be/osScyaGMVqo" %}
+
