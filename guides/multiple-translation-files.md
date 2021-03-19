@@ -60,5 +60,9 @@ So you do not need to load all translations upfront enabling you to create huge 
 See how your developer experience with this localization workflow [could look like](https://youtu.be/osScyaGMVqo).  
 There's also the possibility to have an [even more focused developer experience](https://youtu.be/VfxBpSXarlU), with the help of the [auto-machinetranslation workflow](https://docs.locize.com/whats-inside/auto-machine-translation) and the use of the save missing keys functionality, new keys not only gets added to locize automatically, while developing the app, but are also [automatically translated](https://youtu.be/VfxBpSXarlU) into the target languages using machine translation \(like [Google Translate](https://cloud.google.com/translate)\).
 
+{% embed url="https://youtu.be/osScyaGMVqo" %}
+
+{% embed url="https://youtu.be/VfxBpSXarlU" %}
+
 
 
