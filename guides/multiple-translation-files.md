@@ -50,5 +50,15 @@ All take arguments to define which namespaces to load and will Suspense renderin
 
 So you do not need to load all translations upfront enabling you to create huge react based applications without slowing down loading of the first page cause all translations need to be loaded upfront \(hello other i18n implementations\).
 
+## Manage your translations with a management GUI
+
+### \*\*\*\*[**locize**](https://locize.com) is the perfect translation management tool for your [**i18next**](https://www.i18next.com) project
+
+#### ➡️ [i18next](https://www.i18next.com/) + [locize](https://locize.com/) = [true continuous localization](https://locize.com/how-it-works.html#continouslocalization)
+
+[Here](https://github.com/locize/react-tutorial) you can find a step by step guide, which will unleash the full power of i18next in combination with locize.  
+See how your developer experience with this localization workflow [could look like](https://youtu.be/osScyaGMVqo).  
+There's also the possibility to have an [even more focused developer experience](https://youtu.be/VfxBpSXarlU), with the help of the [auto-machinetranslation workflow](https://docs.locize.com/whats-inside/auto-machine-translation) and the use of the save missing keys functionality, new keys not only gets added to locize automatically, while developing the app, but are also [automatically translated](https://youtu.be/VfxBpSXarlU) into the target languages using machine translation \(like [Google Translate](https://cloud.google.com/translate)\).
+
 
 

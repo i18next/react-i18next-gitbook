@@ -51,6 +51,7 @@ Using node.js and express? You can get that endpoint for free: [https://github.c
 This is the most convenient way of working with react-i18next: just develop and run your applications without worrying too much about adding translations to your catalog as those get added automatically.
 
 {% hint style="info" %}
-Wanna have this process on steroids? Just hook up a [locize.com](https://locize.com) localization project using the provided backend and get both the saveMissing and loading of translations automated in a true continuous localization process.
+Wanna have this process on steroids? Just hook up a [locize.com](https://locize.com) localization project using the provided backend and get both the saveMissing and loading of translations automated in a true continuous localization process.  
+[Check out this tutorial!](https://github.com/locize/react-tutorial)
 {% endhint %}
 
