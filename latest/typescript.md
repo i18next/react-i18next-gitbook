@@ -3,7 +3,7 @@
 react-i18next has embedded type definitions. If your project is relying on **TypeScript 4.1+**, and you want to enhance IDE Experience and prevent errors \(such as type coercion\), you should follow the instructions below in order to get the `t` function fully-type safe \(`keys` and `return` type\).
 
 {% hint style="info" %}
-This an **optional** feature and was newly added in react-i18next@v11.8.0. [Here](https://github.com/i18next/react-i18next/tree/master/example/react-typescript4.1) you can see some examples of use.
+This is an **optional** feature and was newly added in react-i18next@v11.8.0. [Here](https://github.com/i18next/react-i18next/tree/master/example/react-typescript4.1) you can see some examples of use.
 {% endhint %}
 
 ## Create a declaration file
