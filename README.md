@@ -46,6 +46,12 @@ If you prefer not using semantic keys but text - [that's also possible](https://
 
 i18next supports translation management tools such as [locize.com](http://locize.com/?utm_source=react_i18next_com&utm_medium=gitbook).
 
+{% hint style="success" %}
+[Here](https://github.com/locize/react-tutorial) you can find a step by step guide, which will unleash the full power of i18next in combination with locize.  
+See how your developer experience with this localization workflow [could look like](https://youtu.be/osScyaGMVqo).  
+There's also the possibility to have an [even more focused developer experience](https://youtu.be/VfxBpSXarlU), with the help of the [auto-machinetranslation workflow](https://docs.locize.com/whats-inside/auto-machine-translation) and the use of the save missing keys functionality, new keys not only gets added to locize automatically, while developing the app, but are also [automatically translated](https://youtu.be/VfxBpSXarlU) into the target languages using machine translation \(like [Google Translate](https://cloud.google.com/translate)\).
+{% endhint %}
+
 ![](.gitbook/assets/general-locize-screen.png)
 
 [Learn more about the enterprise offering](https://www.i18next.com/for-enterprises.html)
