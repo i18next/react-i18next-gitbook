@@ -2,7 +2,7 @@
 
 ## Install needed dependencies
 
-We expect you to have an existing react application supporting [hooks](https://reactjs.org/docs/hooks-intro.html) \(v16.7.0-alpha of react and react-dom\).
+We expect you to have an existing react application supporting [hooks](https://reactjs.org/docs/hooks-intro.html) \(at least v16.7.0-alpha of react and react-dom\).
 
 Install both react-i18next and i18next package:
 
