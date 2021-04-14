@@ -16,6 +16,12 @@ As react-i18next depends on [i18next](http://i18next.com) you can use it in any 
 
 > **Learn once - translate everywhere**.
 
+{% hint style="success" %}
+[Here](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb) you'll find a simple tutorial on how to best use react-i18next.  
+Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[  
+ ![](.gitbook/assets/title-width.jpg)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
+{% endhint %}
+
 ## What does my code look like
 
 **Before:** Your React code would have looked something like:
