@@ -111,7 +111,7 @@ Existing self-closing HTML tag names are reserved keys. `link: <Link />`, `img: 
 ### Using for &lt;br /&gt; and other simple html elements in translations \(v10.4.0\)
 
 {% hint style="info" %}
-This was newly added in react-i18next@**v10.4.0**
+This was added in react-i18next@**v10.4.0**
 
 Allows elements not having additional attributes like className and only no children \(void\) or one text child:
 
