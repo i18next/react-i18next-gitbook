@@ -12,7 +12,7 @@ Find the full working sample here:
 
 ## Extend the i18n instance with ICU module
 
-To enable ICU format you will need to include the [i18next-icu](https://github.com/i18next/i18next-icu) module into your [i18next instance](../legacy-v9/i18next-instance.md).
+To enable [ICU format](https://devpal.co/icu-message-editor/) you will need to include the [i18next-icu](https://github.com/i18next/i18next-icu) module into your [i18next instance](../legacy-v9/i18next-instance.md).
 
 ```javascript
 import i18n from 'i18next';
