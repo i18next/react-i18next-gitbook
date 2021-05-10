@@ -94,7 +94,7 @@ Learn more about the hook [useTranslation](../latest/usetranslation-hook.md).
 
 Using higher order components is one of the most used method to extend existing components by passing additional props to them.
 
-The `t` function is in i18next the main function to translate content. Read the [documentation](https://www.i18next.com/translation-function/essentials) for all the options.
+The `t` function is the main function in i18next to translate content. Read the [documentation](https://www.i18next.com/translation-function/essentials) for all the options.
 
 ```jsx
 import React from 'react';
