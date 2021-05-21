@@ -127,3 +127,11 @@ ReactDOM.render(
 This sample while very simple does come with some [drawbacks](guides/the-drawbacks-of-other-i18n-solutions.md) to getting the full potential from using react-i18next you should read the extended [step by step guide](latest/using-with-hooks.md).
 {% endhint %}
 
+### Do you like to read a more complete step by step tutorial?
+
+{% hint style="success" %}
+[Here](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb) you'll find a simple tutorial on how to best use react-i18next.  
+Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[  
+ ![](.gitbook/assets/title-width.jpg)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
+{% endhint %}
+
