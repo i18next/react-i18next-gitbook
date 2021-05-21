@@ -62,6 +62,10 @@ i18n
   export default i18n;
 ```
 
+{% hint style="info" %}
+The file does not need to be named `i18n.js`, it can be any other filename. Just make sure you import it accordingly.
+{% endhint %}
+
 The interesting part here is by `i18n.use(initReactI18next)` we pass the i18n instance to react-i18next which will make it available for all the components via the context api.
 
 Then import that in `index.js`:
