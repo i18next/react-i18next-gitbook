@@ -12,6 +12,18 @@ npm install react-i18next i18next --save
 
 Why do you need i18next package? i18next is the core that provides all translation functionality while react-i18next gives some extra power for using with react.
 
+#### Do you directly want to see an example?
+
+Check out this basic [react example](https://github.com/i18next/react-i18next/tree/master/example/react) with a [browser language-detector](https://github.com/i18next/i18next-browser-languageDetector) and a [http backend](https://github.com/i18next/i18next-http-backend) to load translations from.
+
+#### Do you like to read a more complete step by step tutorial?
+
+{% hint style="success" %}
+[Here](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb) you'll find a simple tutorial on how to best use react-i18next.  
+Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[  
+ ![](../.gitbook/assets/title-width.jpg)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
+{% endhint %}
+
 ## Configure i18next
 
 Create a new file `i18n.js` beside your `index.js` containing following content:
@@ -39,7 +51,8 @@ i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .init({
     resources,
-    lng: "en",
+    lng: "en", // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
+    // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
 
     keySeparator: false, // we do not use keys in form messages.welcome
 
