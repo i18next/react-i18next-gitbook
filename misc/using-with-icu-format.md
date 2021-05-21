@@ -188,6 +188,122 @@ The defaults parsing supports the `@babel/react` preset, so any expressions that
 <Trans defaults="You have <Link to='/inbox'>{ unread, number } messages</Link>" />
 ```
 
+#### Tagged Template for ICU
+
+To support complex interpolations, `react-i18next` provides additional imports from the `icu.macro`. These provide a way to
+represent translations closer to the ICU messageformat syntax, but in a manner that is compatible with React and strictly typed
+in typescript.
+
+For example, to format a number:
+
+```tsx
+import { Trans } from "react-i18next/icu.macro";
+
+const num = 1;
+
+<Trans i18nKey="number">
+ Incremented {num, number} times
+</Trans>
+```
+
+the above syntax, although valid javascript, will error when using a linting tool like eslint. Instead, we can do this:
+
+```tsx
+import { Trans, number } from "react-i18next/icu.macro";
+
+const num = 1;
+
+<Trans i18nKey="number">
+ Incremented {number`${num}`} times
+</Trans>
+```
+
+This results in the translation string `Incremented {num, number} times`
+
+Supported interpolators are `number`, `date`, `time`, `select`, `plural`, and `selectOrdinal`.
+
+More complex skeletons can also be represented:
+
+```tsx
+import { Trans, number } from "react-i18next/icu.macro";
+
+const awesomePercentage = 100;
+
+<Trans i18nKey="number">
+ It's awesome {number`${awesomePercentage}, ::percent`} of the time
+</Trans>
+```
+
+This results in the translation string `It's awesome {awesomePercentage, number, ::percent} of the time`.
+
+##### Complex interpolations with plural/select/selectOrdinal
+
+The `plural` and `select` and `selectOrdinal` interpolations support more advanced syntax. For instance, it is possible to interpolate
+both React elements and other interpolations:
+
+```tsx
+import { Trans, plural, number } from "react-i18next/icu.macro";
+
+const awesomePercentage = 100;
+
+<Trans i18nKey="number">
+ {plural`${awesomePercentage},
+   =0 { It's ${<i>never</i>} awesome }
+   =100 { It is ${<b>ALWAYS</b>} awesome! }
+   other { It's awesome {number`${awesomePercentage}, ::percent`} of the time }`}
+</Trans>
+```
+
+This will result in the translation string `{awesomePercentage, plural, =0 { It's <0>never&lt;/0&gt; awesome } =100 { It is <1>ALWAYS&lt;/1&gt; awesome! } =100 { It's awesome {awesomePercentage, number, ::percent} of the time }}`
+
+It possible to nest any interpolated type, including nested `plural`, `select`, or `selectOrdinal`.
+
+##### Typescript support for interpolated template strings
+
+The `number`, `plural`, and `selectOrdinal` functions will error if a non-number typed variable is interpolated.
+
+```tsx
+import { Trans, number } from "react-i18next/icu.macro";
+
+// type error below - awesomePercentage must be a number
+const awesomePercentage = "100";
+
+<Trans i18nKey="number">
+ It's awesome {number`${awesomePercentage}, ::percent`} of the time
+</Trans>
+```
+
+The `date` and `time` functions will error if a non-Date object is interpolated.
+
+```tsx
+import { Trans, date } from "react-i18next/icu.macro";
+
+// type error below - awesomePercentage must be a number
+const notADate = "100";
+
+<Trans i18nKey="number">
+ What time is it? it's {date`${notADate}`} o'clock
+</Trans>
+```
+
+Finally, the `select` function will error if a non-string is interpolated.
+
+```tsx
+import { Trans, select } from "react-i18next/icu.macro";
+
+// type error below - awesomePercentage must be a number
+const notAString = 100;
+
+<Trans i18nKey="number">
+ {select`${notAString} oops { you have to pass in a string } other { oh well }`}
+</Trans>
+```
+
+### Alternative syntax for select and plural
+
+It is also possible to display `select` and `plural` and `selectOrdinal` using Elements `Select`, `Plural` and `SelectOrdinal`.
+All of them have full type safety in typescript.
+
 #### Select
 
 There is no way to directly add the needed ICU format inside a JSX child - so we had to add another component that gets transpiled to needed Trans component:
