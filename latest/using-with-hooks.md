@@ -32,6 +32,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 i18n
   // load translation using http -> see /public/locales (i.e. https://github.com/i18next/react-i18next/tree/master/example/react/public/locales)
   // learn more: https://github.com/i18next/i18next-http-backend
+  // want your translations to be loaded from a professional CDN? => https://github.com/locize/react-tutorial#step-2---use-the-locize-cdn
   .use(Backend)
   // detect user language
   // learn more: https://github.com/i18next/i18next-browser-languageDetector
@@ -125,6 +126,10 @@ Files are plain JSON you can checkout the full sample [here](https://github.com/
 {% hint style="info" %}
 Please note the t function will be either bound to the default namespace defined on i18next init or to the first one passed in in arguments.
 {% endhint %}
+
+{% page-ref page="../guides/extracting-translations.md" %}
+
+{% page-ref page="../guides/multiple-translation-files.md" %}
 
 #### Using the withTranslation HOC
 
