@@ -42,8 +42,9 @@ i18n.use(initReactI18next).init({
   ns: ['ns1', 'ns2'],
   resources,
 });
+```
 
-**` react-i18next.d.ts`**
+**`react-i18next.d.ts`**
 ```tsx
 import { resources } from './i18n';
 
