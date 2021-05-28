@@ -29,7 +29,8 @@ declare module 'react-i18next' {
 Or, if you want to include all namespaces at once, you can use the following approach:
 
 **`i18n.ts`**
-```tsx
+
+```text
 export const resources = {
   en: {
     ns1,
@@ -45,7 +46,8 @@ i18n.use(initReactI18next).init({
 ```
 
 **`react-i18next.d.ts`**
-```tsx
+
+```text
 import { resources } from './i18n';
 
 declare module 'react-i18next' {

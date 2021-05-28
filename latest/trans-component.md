@@ -141,10 +141,47 @@ It allows you to have basic html tags inside your translations which will get co
 
 You can use i18next.options.react to adapt this behaviour:
 
-| option | default | description |
-| :--- | :--- | :--- |
-| `transSupportBasicHtmlNodes` | `true` | convert eg. &lt;br/&gt; found in translations to a react component of type br |
-| `transKeepBasicHtmlNodesFor` | `['br', 'strong', 'i', 'p']` | Which nodes not to convert in defaultValue generation in the Trans component. |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">option</th>
+      <th style="text-align:left">default</th>
+      <th style="text-align:left">description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left"><code>transSupportBasicHtmlNodes</code>
+      </td>
+      <td style="text-align:left"><code>true</code>
+      </td>
+      <td style="text-align:left">convert eg. &lt;br/&gt; found in translations to a react component of
+        type br</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>transKeepBasicHtmlNodesFor</code>
+      </td>
+      <td style="text-align:left"><code>[&apos;br&apos;, &apos;strong&apos;, &apos;i&apos;, &apos;p&apos;]</code>
+      </td>
+      <td style="text-align:left">Which nodes not to convert in defaultValue generation in the Trans component.</td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><code>transWrapTextNodes</code>
+      </td>
+      <td style="text-align:left"><code>&apos;&apos;</code>
+      </td>
+      <td style="text-align:left">
+        <p>Wrap text nodes in a user-specified element.</p>
+        <p>i.e. set it to <code>&apos;span&apos;</code>. By default, text nodes are
+          not wrapped.</p>
+        <p>Can be used to work around a well-known Google Translate issue with React
+          apps. See: <a href="https://github.com/facebook/react/issues/11538">facebook/react#11538</a> 
+        </p>
+        <p>(v11.10.0)</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ### Interpolation
 
