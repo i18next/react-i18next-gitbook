@@ -324,6 +324,10 @@ i18next.init({
     transEmptyNodeValue: '', // what to return for empty Trans
     transSupportBasicHtmlNodes: true, // allow <br/> and simple html elements in translations
     transKeepBasicHtmlNodesFor: ['br', 'strong', 'i'], // don't convert to <1></1> if simple react elements
+    transWrapTextNodes: '', // Wrap text nodes in a user-specified element.
+                            // i.e. set it to 'span'. By default, text nodes are not wrapped.
+                            // Can be used to work around a well-known Google Translate issue with React apps. See: facebook/react#11538
+                            // (v11.10.0)
   }
 });
 ```
