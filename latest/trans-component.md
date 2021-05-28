@@ -312,6 +312,8 @@ Trans.children = [
 | `values` | `object (undefined)` | interpolation values if not provided in children |
 | `components` | `array[nodes] (undefined)` | components to interpolate based on index of tag , ... |
 
+### i18next options
+
 ```javascript
 i18next.init({
   // ...
@@ -326,7 +328,7 @@ i18next.init({
     transKeepBasicHtmlNodesFor: ['br', 'strong', 'i'], // don't convert to <1></1> if simple react elements
     transWrapTextNodes: '', // Wrap text nodes in a user-specified element.
                             // i.e. set it to 'span'. By default, text nodes are not wrapped.
-                            // Can be used to work around a well-known Google Translate issue with React apps. See: facebook/react#11538
+                            // Can be used to work around a well-known Google Translate issue with React apps. See: https://github.com/facebook/react/issues/11538
                             // (v11.10.0)
   }
 });
@@ -334,5 +336,13 @@ i18next.init({
 
 {% hint style="warning" %}
 Please be aware if you are using **React 15 or below**, you need to set the `defaultTransParent` or `parent` in props.
+{% endhint %}
+
+{% hint style="danger" %}
+**Are you having troubles when your website users are using Google Translate?**  
+Yes, Google Translates seems to manipulate the DOM and makes React not happy!  
+There's a work around, you can wrap text nodes with`<span>`.  
+To do so, set the `transWrapTextNodes` option to `'span'`.  
+_If you want to know more about the Google Translate issue with React, have a look at_ [_this_](https://github.com/facebook/react/issues/11538#issuecomment-390386520)_._
 {% endhint %}
 
