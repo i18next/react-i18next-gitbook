@@ -341,8 +341,9 @@ Please be aware if you are using **React 15 or below**, you need to set the `def
 {% hint style="danger" %}
 **Are you having troubles when your website users are using Google Translate?**  
 Yes, Google Translates seems to manipulate the DOM and makes React not happy!  
-There's a work around, you can wrap text nodes with`<span>`.  
-To do so, set the `transWrapTextNodes` option to `'span'`.  
+**There's a work around:** you can wrap text nodes with`<span>`.  
+To do so, set the `transWrapTextNodes` option to `'span'`.
+
 _If you want to know more about the Google Translate issue with React, have a look at_ [_this_](https://github.com/facebook/react/issues/11538#issuecomment-390386520)_._
 {% endhint %}
 
