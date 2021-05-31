@@ -1,6 +1,6 @@
 # Drawbacks of other i18n solutions
 
-Let's make the sample using our own base i18n framework [i18next](https://i18next.com). Like all other solutions, some come [drawbacks](the-drawbacks-of-other-i18n-solutions.md#the-drawbacks). These will be highlighted after samples.
+Let's make the sample using our own base i18n framework [i18next](https://i18next.com). Like all other solutions, some come with [drawbacks](the-drawbacks-of-other-i18n-solutions.md#the-drawbacks). These will be highlighted after samples.
 
 ## Using a pure javascript i18n framework
 
