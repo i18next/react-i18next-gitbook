@@ -17,6 +17,8 @@ import 'react-i18next';
 import ns1 from 'locales/en/ns1.json';
 import ns2 from 'locales/en/ns2.json';
 
+
+// react-i18next versions lower than 11.11.0
 declare module 'react-i18next' {
   // and extend them!
   interface Resources {
@@ -24,13 +26,28 @@ declare module 'react-i18next' {
     ns2: typeof ns2;
   }
 }
+
+// react-i18next versions higher than 11.11.0
+declare module 'react-i18next' {
+  // and extend them!
+  interface CustomTypeOptions {
+    // custom namespace type if you changed it
+    defaultNS: 'ns1';
+    // custom resources type
+    resources: {
+      ns1: typeof ns1;
+      ns2: typeof ns2;
+    };
+  };
+};
 ```
 
 Or, if you want to include all namespaces at once, you can use the following approach:
 
 **`i18n.ts`**
 
-```text
+```typescript
+export const defaultNS = 'ns1'
 export const resources = {
   en: {
     ns1,
@@ -41,19 +58,29 @@ export const resources = {
 i18n.use(initReactI18next).init({
   lng: 'en',
   ns: ['ns1', 'ns2'],
+  defaultNS,
   resources,
 });
 ```
 
 **`react-i18next.d.ts`**
 
-```text
-import { resources } from './i18n';
+```typescript
+import { resources, defaultNS } from './i18n';
 
+// react-i18next versions lower than 11.11.0
 declare module 'react-i18next' {
   type DefaultResources = typeof resources['en'];
   interface Resources extends DefaultResources {}
 }
+
+// react-i18next versions higher than 11.11.0
+declare module 'react-i18next' {
+  interface CustomTypeOptions {
+    defaultNS: typeof defaultNS;
+    resources: typeof resources['en'];
+  };
+};
 ```
 
 That's all! Your `t` function should be fully typed by now.
