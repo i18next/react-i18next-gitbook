@@ -10,6 +10,8 @@ While for sure this is the least efficient method for adding new translations, w
 
 Static extraction tools can read through your code files to automatically find and export translation keys. [i18next-scanner](http://i18next.github.io/i18next-scanner), [i18next-parser](https://github.com/i18next/i18next-parser) and [babel-plugin-i18next-extract](https://github.com/gilbsgilbs/babel-plugin-i18next-extract) are sensible choices to achieve this goal.
 
+_Or try_ [_translation-check_](https://github.com/locize/translation-check)_, it shows an overview of your translations in a nice UI. Check which keys are not yet translated._
+
 For more information about extraction tools, see [plugin and utils](https://www.i18next.com/overview/plugins-and-utils#extraction-tools) documentation page.
 
 ## 3\) Runtime extraction
@@ -52,5 +54,5 @@ Wanna have this process on steroids? Just hook up a [locize.com](https://locize.
 [Check out this tutorial!](https://github.com/locize/react-tutorial)
 {% endhint %}
 
-{% embed url="https://youtu.be/osScyaGMVqo" %}
+{% embed url="https://youtu.be/osScyaGMVqo" caption="" %}
 
