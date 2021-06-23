@@ -1,11 +1,9 @@
 # Using with ICU format
 
-i18next itself is flexible enough to support multiple existing i18next formats beside its own.
+i18next itself is flexible enough to support multiple existing i18next formats beside its own. So also the ICU format, thanks to [i18next-icu](https://github.com/i18next/i18next-icu).
 
 {% hint style="info" %}
-Find the full working sample here:
-
-[https://github.com/i18next/react-i18next/tree/master/example/v9.x.x/react-icu](https://github.com/i18next/react-i18next/tree/master/example/v9.x.x/react-icu)
+Find the full working sample [here](https://github.com/i18next/react-i18next/tree/master/example/react-icu).
 {% endhint %}
 
 ![](../.gitbook/assets/screen-shot-2018-07-30-at-10.25.19.png)
@@ -21,13 +19,8 @@ import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { reactI18nextModule } from 'react-i18next';
 
-// import locale-data for needed lngs
-import de from 'i18next-icu/locale-data/de';
-
 i18n
-  .use(new ICU({
-    localeData: de // you also can pass in array of localeData
-  }))
+  .use(ICU)
   .use(Backend)
   .use(LanguageDetector)
   .use(reactI18nextModule) // if not using I18nextProvider
@@ -51,23 +44,22 @@ i18n
 export default i18n;
 ```
 
-{% hint style="info" %}
-To dynamically import the needed locale-data have a look here: [https://github.com/locize/locize-react-intl-example/blob/master/src/locize/index.js\#L53](https://github.com/locize/locize-react-intl-example/blob/master/src/locize/index.js#L53)
-{% endhint %}
-
 ## Use the ICU format
 
 ### using t function
 
 ```javascript
 import React, { Component } from 'react';
-import { translate } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
-function myComponent({ t }) => {
+function MyComponent() {
+  const { t, i18n } = useTranslation();
+  // or const [t, i18n] = useTranslation();
+  
   return <div>{t('icu', { numPersons: 500 })}</div>
 }
 
-export default translate()(myComponent);
+// ...
 
 // json
 "icu": "{numPersons, plural, =0 {no persons} =1 {one person} other {# persons}}",
@@ -194,7 +186,7 @@ To support complex interpolations, `react-i18next` provides additional imports f
 
 For example, to format a number:
 
-```text
+```javascript
 import { Trans } from "react-i18next/icu.macro";
 
 const num = 1;
@@ -206,7 +198,7 @@ const num = 1;
 
 the above syntax, although valid javascript, will error when using a linting tool like eslint. Instead, we can do this:
 
-```text
+```javascript
 import { Trans, number } from "react-i18next/icu.macro";
 
 const num = 1;
@@ -222,7 +214,7 @@ Supported interpolators are `number`, `date`, `time`, `select`, `plural`, and `s
 
 More complex skeletons can also be represented:
 
-```text
+```javascript
 import { Trans, number } from "react-i18next/icu.macro";
 
 const awesomePercentage = 100;
@@ -238,7 +230,7 @@ This results in the translation string `It's awesome {awesomePercentage, number,
 
 The `plural` and `select` and `selectOrdinal` interpolations support more advanced syntax. For instance, it is possible to interpolate both React elements and other interpolations:
 
-```text
+```javascript
 import { Trans, plural, number } from "react-i18next/icu.macro";
 
 const awesomePercentage = 100;
@@ -259,7 +251,7 @@ It possible to nest any interpolated type, including nested `plural`, `select`, 
 
 The `number`, `plural`, and `selectOrdinal` functions will error if a non-number typed variable is interpolated.
 
-```text
+```javascript
 import { Trans, number } from "react-i18next/icu.macro";
 
 // type error below - awesomePercentage must be a number
@@ -272,7 +264,7 @@ const awesomePercentage = "100";
 
 The `date` and `time` functions will error if a non-Date object is interpolated.
 
-```text
+```javascript
 import { Trans, date } from "react-i18next/icu.macro";
 
 // type error below - awesomePercentage must be a number
@@ -285,7 +277,7 @@ const notADate = "100";
 
 Finally, the `select` function will error if a non-string is interpolated.
 
-```text
+```javascript
 import { Trans, select } from "react-i18next/icu.macro";
 
 // type error below - awesomePercentage must be a number
