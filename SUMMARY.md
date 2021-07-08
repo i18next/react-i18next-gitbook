@@ -8,7 +8,7 @@
 * [Drawbacks of other i18n solutions](guides/the-drawbacks-of-other-i18n-solutions.md)
 * [Quick start](guides/quick-start.md)
 * [Multiple Translation Files](guides/multiple-translation-files.md)
-* [Extracting translations](guides/extracting-translations.md)
+* [Extracting translations](https://www.i18next.com/how-to/extracting-translations)
 
 ## latest
 

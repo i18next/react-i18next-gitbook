@@ -127,8 +127,6 @@ Files are plain JSON you can checkout the full sample [here](https://github.com/
 Please note the t function will be either bound to the default namespace defined on i18next init or to the first one passed in in arguments.
 {% endhint %}
 
-{% page-ref page="../guides/extracting-translations.md" %}
-
 {% page-ref page="../guides/multiple-translation-files.md" %}
 
 #### Using the withTranslation HOC
