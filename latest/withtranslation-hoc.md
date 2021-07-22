@@ -138,7 +138,7 @@ import { withTranslation, WithTranslation } from 'react-i18next';
 
 class MyComponent extends Component<IProps, IState> {
   render() {
-    return <div>{this.props.t('My translated text')}</p>
+    return <div>{this.props.t('My translated text')}</div>
   }
 }
 
