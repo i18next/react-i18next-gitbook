@@ -128,3 +128,27 @@ Extended.static = MyComponent.static;
 export default Extended;
 ```
 
+### use TypeScript with class components
+
+To get proper type annotations while using TypeScript, import the interface `WithTranslation` and extend it with your own props interface.
+
+```tsx
+import React, { Component } from 'react';
+import { withTranslation, WithTranslation } from 'react-i18next';
+
+class MyComponent extends Component<IProps, IState> {
+  render() {
+    return <div>{this.props.t('My translated text')}</div>
+  }
+}
+
+interface IProps extends WithTranslation {
+  prop: any;
+}
+
+interface IState {
+  state: any;
+}
+
+export default withTranslation()(MyComponent);
+```
