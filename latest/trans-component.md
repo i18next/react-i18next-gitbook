@@ -88,7 +88,8 @@ _Your en.json \(translation strings\) will look like:_
 ```
 
 {% hint style="info" %}
-[**saveMissing**](https://www.i18next.com/overview/configuration-options#missing-keys) will send a valid defaultValue
+[**saveMissing**](https://www.i18next.com/overview/configuration-options#missing-keys) will send a valid `defaultValue`.  
+Also, The `i18nKey` is optional, in case you already use text as translation keys.
 {% endhint %}
 
 ### Alternative usage \(v11.6.0\)
@@ -185,14 +186,14 @@ You can use i18next.options.react to adapt this behaviour:
 
 ### Interpolation
 
-You can pass in variables to get interpolated into the translation string by passing down objects in node children containing those key:values.
+You can pass in variables to get interpolated into the translation string by using objects containing those key:values.
 
 ```jsx
 const person = { name: 'Henry', age: 21 };
 const { name, age } = person;
 
 <Trans>
-  Hello {{ name }}. // <- = {{ name: name }}
+  Hello {{ name }}. // <- = {{ "name": name }}
 </Trans>
 // Translation string: "Hello {{name}}"
 
@@ -221,7 +222,7 @@ const messages = ['message one', 'message two'];
 
 ### Using with lists \(v10.5.0\)
 
-You can use list.map as children. Mapping dynamic content.
+You can still use Array.map as children, to map dynamic content into components, using an extra option on the wrapper:
 
 ```jsx
 <Trans i18nKey="list_map">
@@ -237,7 +238,7 @@ Setting `i18nIsDynamicList` on the wrapping element will assert the nodeToString
 
 ### Alternative usage \(components array\)
 
-Some use cases might be simpler by just passing content as props:
+Some use cases, such as the ICU format, might be simpler by just passing content as props:
 
 ```javascript
 <Trans
@@ -252,7 +253,7 @@ Some use cases might be simpler by just passing content as props:
 `<0>` -&gt; 0 is the index of the component in the components array
 {% endhint %}
 
-Eg. this format is needed when using [ICU as translation format](https://github.com/i18next/i18next-icu) as it is not possible to have the needed syntax as children \(invalid jsx\).
+E.g. this format is needed when using [ICU as translation format](https://github.com/i18next/i18next-icu) as it is not possible to have the needed syntax as children \(invalid jsx\).
 
 ## How to get the correct translation string?
 
@@ -293,9 +294,9 @@ Trans.children = [
 
 **Rules:**
 
-* child is a string =&gt; nothing to wrap just take the string  
-* child is an object =&gt; nothing to do it's used for interpolation  
-* child is an element: wrap it's children in &lt;i&gt;&lt;/i&gt; where i is the index of that element position in children and handle it's children with same rules \(starting element.children index at 0 again\)
+* child is a string: nothing to wrap; just take the string  
+* child is an object: nothing to do; it's used for interpolation  
+* child is an element: wrap it's children in `<x></x>` where `x` is the index of that element's position in the `children` list; handle its children with the same rules \(starting `element.children` index at 0 again\)
 
 ## Trans props
 
