@@ -62,5 +62,3 @@ There's also the possibility to have an [even more focused developer experience]
 
 [Learn more about the enterprise offering](https://www.i18next.com/for-enterprises.html)
 
-## [Ready to take i18next to the next level?](http://locize.com/?utm_source=i18next_com&utm_medium=gitbook)
-
