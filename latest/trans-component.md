@@ -176,7 +176,7 @@ You can use i18next.options.react to adapt this behaviour:
         <p>i.e. set it to <code>&apos;span&apos;</code>. By default, text nodes are
           not wrapped.</p>
         <p>Can be used to work around a well-known Google Translate issue with React
-          apps. See: <a href="https://github.com/facebook/react/issues/11538">facebook/react#11538</a> 
+          apps. See: <a href="https://github.com/facebook/react/issues/11538">facebook/react#11538</a>
         </p>
         <p>(v11.10.0)</p>
       </td>

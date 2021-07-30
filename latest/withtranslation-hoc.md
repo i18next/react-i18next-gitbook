@@ -132,7 +132,7 @@ export default Extended;
 
 To get proper type annotations while using TypeScript, import the interface `WithTranslation` and extend it with your own props interface.
 
-```tsx
+```text
 import React, { Component } from 'react';
 import { withTranslation, WithTranslation } from 'react-i18next';
 
@@ -152,3 +152,4 @@ interface IState {
 
 export default withTranslation()(MyComponent);
 ```
+
