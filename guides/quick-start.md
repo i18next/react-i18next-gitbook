@@ -24,11 +24,6 @@ Some basics of i18next and some cool possibilities on how to optimize your local
  ![](../.gitbook/assets/title-width.jpg)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
 {% endhint %}
 
-> **Would you like to visually check the progress state of your translations?**
->
-> _Try_ [_translation-check_](https://github.com/locize/translation-check)_, it shows an overview of your translations in a nice UI. Check which keys are not yet translated._  
-> [![](../.gitbook/assets/preview.jpg) ](https://github.com/locize/translation-check)
-
 ## Configure i18next
 
 Create a new file `i18n.js` beside your `index.js` containing following content:
@@ -181,4 +176,9 @@ Depending on your learning style, you can now read the more in-depth [step by st
 Prefer having code to checkout? Directly dive into our examples:
 
 * [Example react](https://github.com/i18next/react-i18next/tree/master/example/react)
+
+> **Would you like to visually check the progress state of your translations?**
+>
+> _Try_ [_translation-check_](https://github.com/locize/translation-check)_, it shows an overview of your translations in a nice UI. Check which keys are not yet translated._  
+> [![](../.gitbook/assets/preview.jpg) ](https://github.com/locize/translation-check)
 
