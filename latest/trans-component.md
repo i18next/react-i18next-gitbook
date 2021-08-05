@@ -2,14 +2,14 @@
 
 ## Important note
 
-While the Trans component gives you a lot of power by letting you interpolate or translate complex react elements - the truth is - in most cases you won't need it.
+While `<Trans>` gives you a lot of power by letting you interpolate or translate complex React elements, the truth is: in most cases you don't even need it.
 
-**As long you have no react nodes you like to be integrated into a translated text** \(text formatting, like `strong`, `i`, ...\) **or adding some link component - you won't need it** - most can be done by using the good old `t` function.
+**As long you have no React/HTML nodes integrated into a cohesive sentence** \(text formatting like `strong`, `em`, link components, maybe others), **you won't need it** - most of the times you will be using the good old `t` function.
 
-All Trans props are listed [here](https://react.i18next.com/latest/trans-component#trans-props).
+You may be looking directly for the [Trans props](https://react.i18next.com/latest/trans-component#trans-props).
 
 {% hint style="warning" %}
-It does ONLY interpolation. It does not rerender on language change or load any translations needed. Use useTranslation, withTranslation for those cases.
+It does ONLY interpolation. It does not rerender on language change or load any translations needed. Check [`useTranslation` hook](usetranslation-hook.md) or [`withTranslation` HOC](withtranslation-hoc.md) for those cases.
 {% endhint %}
 
 ```javascript
@@ -24,40 +24,39 @@ function MyComponent() {
 ```
 
 {% hint style="info" %}
-Using the **t** function have a look at i18next documentation:
+Have a look at the [i18next documentation](https://www.i18next.com) for details on the the `t` function:
 
 * [essentials](https://www.i18next.com/essentials.html)
 * [interpolation](https://www.i18next.com/interpolation.html)
 * [formatting](https://www.i18next.com/formatting.html)
 * [plurals](https://www.i18next.com/plurals.html)
-* ...
-{% endhint %}
+
+
+  {% endhint %}
 
 ## Samples
 
-### Using with react components
+### Using with React components
 
 So you learned there is no need to use the Trans component everywhere \(the plain `t` function will just do fine in most cases\).
 
-This component enables you to nest any react content to be translated as one string. Supports both plural and interpolation.
+This component enables you to nest any React content to be translated as one cohesive string. It supports both plural and interpolation.
 
-_Let's say you want to create following html output:_
+_Let's say you want to create following HTML output:_
 
 > Hello **Arthur**, you have 42 unread messages. [Go to messages](../legacy-v9/trans-component.md).
 
-**Before:** Your react code would have looked something like:
+**Before:** Your untranslated React code would have looked something like:
 
 ```javascript
-import React from 'react';
-
 function MyComponent({ person, messages }) {
   const { name } = person;
   const count = messages.length;
 
   return (
-    <div>
-      Hello <strong title="this is your name">{name}</strong>, you have {count} unread message(s). <Link to="/msgs">Go to messages</Link>.
-    </div>
+    <>
+      Hello <strong title="This is your name">{name}</strong>, you have {count} unread message(s). <Link to="/msgs">Go to messages</Link>.
+    </>
   );
 }
 ```
@@ -65,8 +64,7 @@ function MyComponent({ person, messages }) {
 **After:** With the Trans component just change it to:
 
 ```javascript
-import React from 'react';
-import { Trans } from 'react-i18next'
+import { Trans } from 'react-i18next';
 
 function MyComponent({ person, messages }) {
   const { name } = person;
@@ -83,16 +81,17 @@ function MyComponent({ person, messages }) {
 _Your en.json \(translation strings\) will look like:_
 
 ```javascript
+"nameTitle": "This is your name",
 "userMessagesUnread": "Hello <1>{{name}}</1>, you have {{count}} unread message. <5>Go to message</5>.",
 "userMessagesUnread_plural": "Hello <1>{{name}}</1>, you have {{count}} unread messages.  <5>Go to messages</5>.",
 ```
 
 {% hint style="info" %}
-[**saveMissing**](https://www.i18next.com/overview/configuration-options#missing-keys) will send a valid `defaultValue`.  
+[**saveMissing**](https://www.i18next.com/overview/configuration-options#missing-keys) will send a valid `defaultValue` based on the component children.  
 Also, The `i18nKey` is optional, in case you already use text as translation keys.
 {% endhint %}
 
-### Alternative usage \(v11.6.0\)
+### Alternative usage which lists the components \(v11.6.0\)
 
 ```javascript
 <Trans
@@ -103,86 +102,47 @@ Also, The `i18nKey` is optional, in case you already use text as translation key
 />
 ```
 
-This format is useful to interpolate a component multiple times. Another advantage is the simpler &lt;&gt; named tags -&gt; which makes guessing indexes a thing of the past.
+This format is useful if you want to interpolate the same node multiple times. Another advantage is the simpler named tags, which avoids the trouble with index guessing - however, this can also be achieved with `transSupportBasicHtmlNodes`, see the next section.
 
 {% hint style="warning" %}
-Existing self-closing HTML tag names are reserved keys. `link: <Link />`, `img: <img src="" />`, `media: <img src="" />` won't work
+Existing self-closing HTML tag names are reserved keys and won't work. Examples: `link: <Link />`, `img: <img src="" />`, `media: <img src="" />`{% endhint %}
+
+### Usage with simple HTML elements like &lt;br /&gt; and others \(v10.4.0\)
+
+There are two options that allow you to have basic HTML tags inside your translations, instead of numeric indexes. However, this only works for elements without additional attributes (like `className`), having none or a single text children.
+
+Examples of elements that will be readable in translation strings:
+
+* `<br/>`
+* `<strong>bold</strong>`
+* `<p>some paragraph</p>`
+
+Examples that will be converted to indexed nodes:
+
+* `<i className="icon-gear" />`: no attributes allowed
+* `<strong title="something">{{name}}</strong>`: only text nodes allowed
+* `<b>bold <i>italic</i></b>`: no nested elements, even simple ones
 {% endhint %}
-
-### Using for &lt;br /&gt; and other simple html elements in translations \(v10.4.0\)
-
-{% hint style="info" %}
-This was added in react-i18next@**v10.4.0**
-
-Allows elements not having additional attributes like className and only no children \(void\) or one text child:
-
-* &lt;br/&gt;  
-* &lt;strong&gt;bold&lt;/strong&gt;  
-* &lt;p&gt;some paragraph&lt;/p&gt;  
-
-but not:
-
-* &lt;i className="icon-gear" /&gt;  // no attributes allowed
-* &lt;strong title="something"&gt;bold something&lt;/strong&gt; // no attr
-* &lt;bold&gt;bold&lt;i&gt;italic&lt;/i&gt;&lt;/b&gt; // no inner elements - only strings!
-{% endhint %}
-
-It allows you to have basic html tags inside your translations which will get converted to valid react elements:
 
 ```jsx
 <Trans i18nKey="welcomeUser">
-  Hello <strong>{{name}}</strong>.
+  Hello <strong>{{name}}</strong>. <Link to="/inbox">See my profile</Link>
 </Trans>
-// JSON -> "welcomeUser": "Hello <1>{{name}}</1>.",
+// JSON -> "welcomeUser": "Hello <strong>{{name}}</strong>. <1>See my profile</1>"
+
 <Trans i18nKey="multiline">
   Some newlines <br/> would be <br/> fine
 </Trans>
-// JSON -> "multiline": "Some newlines <1/> would be <3/> fine"
+// JSON -> "multiline": "Some newlines <br/> would be <br/> fine"
 ```
 
-You can use i18next.options.react to adapt this behaviour:
+Here is what can be configured in `i18next.options.react` that affect this behaviour:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">option</th>
-      <th style="text-align:left">default</th>
-      <th style="text-align:left">description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><code>transSupportBasicHtmlNodes</code>
-      </td>
-      <td style="text-align:left"><code>true</code>
-      </td>
-      <td style="text-align:left">convert eg. &lt;br/&gt; found in translations to a react component of
-        type br</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>transKeepBasicHtmlNodesFor</code>
-      </td>
-      <td style="text-align:left"><code>[&apos;br&apos;, &apos;strong&apos;, &apos;i&apos;, &apos;p&apos;]</code>
-      </td>
-      <td style="text-align:left">Which nodes not to convert in defaultValue generation in the Trans component.</td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><code>transWrapTextNodes</code>
-      </td>
-      <td style="text-align:left"><code>&apos;&apos;</code>
-      </td>
-      <td style="text-align:left">
-        <p>Wrap text nodes in a user-specified element.</p>
-        <p>i.e. set it to <code>&apos;span&apos;</code>. By default, text nodes are
-          not wrapped.</p>
-        <p>Can be used to work around a well-known Google Translate issue with React
-          apps. See: <a href="https://github.com/facebook/react/issues/11538">facebook/react#11538</a>
-        </p>
-        <p>(v11.10.0)</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Option | Default | Description |
+| :--- | :--- | :--- |
+| `transSupportBasicHtmlNodes` | `true` | Enables keeping the name of simple nodes (e.g. `<br/>`) in translations instead of indexed keys |
+| `transKeepBasicHtmlNodesFor` | `['br', 'strong', 'i', 'p']` | Which nodes are allowed to be kept in translations during `defaultValue` generation of `<Trans>`. |
+| `transWrapTextNodes` (v11.10.0) | `''` | Wrap text nodes in a user-specified element. e.g. set it to `span`. By default, text nodes are not wrapped. Can be used to work around a well-known Google Translate issue with React apps. See [facebook/react#11538](https://github.com/facebook/react/issues/11538). |
 
 ### Interpolation
 
@@ -222,7 +182,7 @@ const messages = ['message one', 'message two'];
 
 ### Using with lists \(v10.5.0\)
 
-You can still use Array.map as children, to map dynamic content into components, using an extra option on the wrapper:
+You can still use `Array.map()` to turn dynamic content into nodes, using an extra option on a wrapping element:
 
 ```jsx
 <Trans i18nKey="list_map">
@@ -234,7 +194,7 @@ You can still use Array.map as children, to map dynamic content into components,
 // JSON -> "list_map": "My dogs are named: <1></1>"
 ```
 
-Setting `i18nIsDynamicList` on the wrapping element will assert the nodeToString function creating the string for saveMissing will not contain children.
+Setting `i18nIsDynamicList` on the parent element will assert the `nodeToString` function creating the string for `saveMissing` will not contain children.
 
 ### Alternative usage \(components array\)
 
@@ -260,11 +220,11 @@ E.g. this format is needed when using [ICU as translation format](https://github
 Guessing replacement tags _\(&lt;0&gt;&lt;/0&gt;\)_ of your component is rather difficult. There are four options to get those translations directly generated by i18next:
 
 1. use React Developer Tools to inspect the `<Trans>` component instance and look at the `props.children` array for array index of the tag in question.
-2. use `debug = true` in i18next init call and watch your console for the missing key output 
-3. use the [saveMissing feature](https://www.i18next.com/configuration-options.html#missing-keys) of i18next to get those translations pushed to your backend or handled by a custom missing key handler. 
+2. use `debug = true` in `i18next.init()` options and watch your console for the missing key output 
+3. use the [saveMissing feature](https://www.i18next.com/configuration-options.html#missing-keys) of i18next to get those translations pushed to your backend or handled by a custom function. 
 4. understand how those numbers get generated from child index:
 
-**jsx:**
+**Sample JSX:**
 
 ```javascript
 <Trans i18nKey="userMessagesUnread" count={count}>
@@ -272,23 +232,23 @@ Guessing replacement tags _\(&lt;0&gt;&lt;/0&gt;\)_ of your component is rather 
 </Trans>
 ```
 
-**results in string:**
+**Resulting translation string:**
 
 ```text
 "Hello <1>{{name}}</1>, you have {{count}} unread message. <5>Go to message</5>."
 ```
 
-**based on** the node tree**:**
+**The complete the node tree**:
 
 ```javascript
 Trans.children = [
-  'Hello ',                           // index 0: only a string
-  { children: [{ name: 'Jan'  }] },   // index 1: element strong -> child object for interpolation
-  ', you have',                       // index 2: only a string
-  { count: 10 },                      // index 3: just object for interpolation
-  ' unread messages. ',               // index 4
-  { children: [ 'Go to messages' ] }, // index 5: element link -> child just a string
-  '.'
+  'Hello ',                         // 0: only a string
+  { children: [{ name: 'Jan' }] },  // 1: <strong> with child object for interpolation
+  ', you have',                     // 2: only a string
+  { count: 10 },                    // 3: plain object for interpolation
+  ' unread messages. ',             // 4: only a string
+  { children: ['Go to messages'] }, // 5: <Link> with a string child
+  '.'                               // 6: yep, you guessed: another string
 ]
 ```
 
@@ -300,18 +260,20 @@ Trans.children = [
 
 ## Trans props
 
+All properties are optional, although you'll need to use `i18nKey` if you're not using natural language keys (text-based). 
+
 | _**name**_ | _**type \(default\)**_ | _**description**_ |
 | :--- | :--- | :--- |
-| `i18nKey` | `string (undefined)` | is optional. if you prefer to use text as keys you can omit that and the translation will be used as a key. Can contain the used namespace by prepending it key in form `'ns:key'` |
-| `ns` | `string (undefined)` | namespace to `use` |
-| `t` | `function (undefined)` | `t` function to use instead of i18next.t |
-| `count` | `integer (undefined)` | optional count if you use a plural |
-| `tOptions` | `object (undefined)` | optional options you like to pass to `t` function call \(eg. `context`, `postProcessor`, ...\) |
-| `parent` | `node (undefined)` | a component to wrap the content into \(default none, can be globally set on i18next.init\) -&gt; needed for **react &lt; v16** |
+| `i18nKey` | `string (undefined)` | If you prefer to use text as keys you can omit this, and the translation will be used as key. Can contain the namespace by prepending it in the form `'ns:key'` (depending on `i18next.options.nsSeparator`) |
+| `ns` | `string (undefined)` | Namespace to use. May also be embedded in `i18nKey`, see above. |
+| `t` | `function (undefined)` | `t` function to use instead of `i18next.t()` |
+| `count` | `integer (undefined)` | Numeric value for pluralizable strings |
+| `tOptions` | `object (undefined)` | Extra options to pass to `t()` \(e.g. `context`, `postProcessor`, ...\) |
+| `parent` | `node (undefined)` | A component to wrap the content into \(can be globally set on `i18next.init`\). **Required for React &lt; v16** |
 | `i18n` | `object (undefined)` | i18next instance to use if not provided |
-| `defaults` | `string (undefined)` | use this instead of default content in children \(useful when using ICU\) |
-| `values` | `object (undefined)` | interpolation values if not provided in children |
-| `components` | `array[nodes] (undefined)` | components to interpolate based on index of tag , ... |
+| `defaults` | `string (undefined)` | Use this instead of using the children as default translation value \(useful for ICU\) |
+| `values` | `object (undefined)` | Interpolation values if not provided in children |
+| `components` | `array[nodes] (undefined)` | Components to interpolate based on index of tag |
 
 ### i18next options
 
@@ -336,14 +298,13 @@ i18next.init({
 ```
 
 {% hint style="warning" %}
-Please be aware if you are using **React 15 or below**, you need to set the `defaultTransParent` or `parent` in props.
+Please be aware if you are using **React 15 or below**, you are required to set the `defaultTransParent` option, or pass a `parent` via props.
 {% endhint %}
 
 {% hint style="danger" %}
-**Are you having troubles when your website users are using Google Translate?**  
-Yes, Google Translates seems to manipulate the DOM and makes React not happy!  
-**There's a work around:** you can wrap text nodes with`<span>`.  
-To do so, set the `transWrapTextNodes` option to `'span'`.
+**Are you having trouble when your website is ran through Google Translate?**  
+Google Translate seems to manipulate the DOM and makes React quite unhappy!  
+**There's a work around:** you can wrap text nodes with`<span>` using `transWrapTextNodes: 'span'`.
 
 _If you want to know more about the Google Translate issue with React, have a look at_ [_this_](https://github.com/facebook/react/issues/11538#issuecomment-390386520)_._
 {% endhint %}
