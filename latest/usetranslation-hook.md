@@ -57,6 +57,26 @@ import i18n from './i18n';
 const { t, i18n } = useTranslation('ns1', { i18n });
 ```
 
+### Optional keyPrefix option
+
+```javascript
+// having resources like this:
+/*{
+  "translation": {
+    "very": {
+      "deeply": {
+        "nested": {
+          "key": "here"
+        }
+      }
+    }
+  }
+}*/
+// you can define a keyPrefix to be used for the resulting t function
+const { t } = useTranslation('translation', { keyPrefix: 'very.deeply.nested' });
+const text = t('key'); // "here"
+```
+
 ### Not using Suspense
 
 ```javascript

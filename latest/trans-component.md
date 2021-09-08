@@ -4,7 +4,7 @@
 
 While `<Trans>` gives you a lot of power by letting you interpolate or translate complex React elements, the truth is: in most cases you don't even need it.
 
-**As long you have no React/HTML nodes integrated into a cohesive sentence** \(text formatting like `strong`, `em`, link components, maybe others), **you won't need it** - most of the times you will be using the good old `t` function.
+**As long you have no React/HTML nodes integrated into a cohesive sentence** \(text formatting like `strong`, `em`, link components, maybe others\), **you won't need it** - most of the times you will be using the good old `t` function.
 
 You may be looking directly for the [Trans props](https://react.i18next.com/latest/trans-component#trans-props).
 
@@ -30,9 +30,7 @@ Have a look at the [i18next documentation](https://www.i18next.com) for details 
 * [interpolation](https://www.i18next.com/interpolation.html)
 * [formatting](https://www.i18next.com/formatting.html)
 * [plurals](https://www.i18next.com/plurals.html)
-
-
-  {% endhint %}
+{% endhint %}
 
 ## Samples
 
@@ -105,11 +103,12 @@ Also, The `i18nKey` is optional, in case you already use text as translation key
 This format is useful if you want to interpolate the same node multiple times. Another advantage is the simpler named tags, which avoids the trouble with index guessing - however, this can also be achieved with `transSupportBasicHtmlNodes`, see the next section.
 
 {% hint style="warning" %}
-Existing self-closing HTML tag names are reserved keys and won't work. Examples: `link: <Link />`, `img: <img src="" />`, `media: <img src="" />`{% endhint %}
+Existing self-closing HTML tag names are reserved keys and won't work. Examples: `link: <Link />`, `img: <img src="" />`, `media: <img src="" />`
+{% endhint %}
 
 ### Usage with simple HTML elements like &lt;br /&gt; and others \(v10.4.0\)
 
-There are two options that allow you to have basic HTML tags inside your translations, instead of numeric indexes. However, this only works for elements without additional attributes (like `className`), having none or a single text children.
+There are two options that allow you to have basic HTML tags inside your translations, instead of numeric indexes. However, this only works for elements without additional attributes \(like `className`\), having none or a single text children.
 
 Examples of elements that will be readable in translation strings:
 
@@ -122,7 +121,6 @@ Examples that will be converted to indexed nodes:
 * `<i className="icon-gear" />`: no attributes allowed
 * `<strong title="something">{{name}}</strong>`: only text nodes allowed
 * `<b>bold <i>italic</i></b>`: no nested elements, even simple ones
-{% endhint %}
 
 ```jsx
 <Trans i18nKey="welcomeUser">
@@ -140,9 +138,9 @@ Here is what can be configured in `i18next.options.react` that affect this behav
 
 | Option | Default | Description |
 | :--- | :--- | :--- |
-| `transSupportBasicHtmlNodes` | `true` | Enables keeping the name of simple nodes (e.g. `<br/>`) in translations instead of indexed keys |
+| `transSupportBasicHtmlNodes` | `true` | Enables keeping the name of simple nodes \(e.g. `<br/>`\) in translations instead of indexed keys |
 | `transKeepBasicHtmlNodesFor` | `['br', 'strong', 'i', 'p']` | Which nodes are allowed to be kept in translations during `defaultValue` generation of `<Trans>`. |
-| `transWrapTextNodes` (v11.10.0) | `''` | Wrap text nodes in a user-specified element. e.g. set it to `span`. By default, text nodes are not wrapped. Can be used to work around a well-known Google Translate issue with React apps. See [facebook/react#11538](https://github.com/facebook/react/issues/11538). |
+| `transWrapTextNodes` \(v11.10.0\) | `''` | Wrap text nodes in a user-specified element. e.g. set it to `span`. By default, text nodes are not wrapped. Can be used to work around a well-known Google Translate issue with React apps. See [facebook/react\#11538](https://github.com/facebook/react/issues/11538). |
 
 ### Interpolation
 
@@ -260,11 +258,11 @@ Trans.children = [
 
 ## Trans props
 
-All properties are optional, although you'll need to use `i18nKey` if you're not using natural language keys (text-based). 
+All properties are optional, although you'll need to use `i18nKey` if you're not using natural language keys \(text-based\).
 
 | _**name**_ | _**type \(default\)**_ | _**description**_ |
 | :--- | :--- | :--- |
-| `i18nKey` | `string (undefined)` | If you prefer to use text as keys you can omit this, and the translation will be used as key. Can contain the namespace by prepending it in the form `'ns:key'` (depending on `i18next.options.nsSeparator`) |
+| `i18nKey` | `string (undefined)` | If you prefer to use text as keys you can omit this, and the translation will be used as key. Can contain the namespace by prepending it in the form `'ns:key'` \(depending on `i18next.options.nsSeparator`\) |
 | `ns` | `string (undefined)` | Namespace to use. May also be embedded in `i18nKey`, see above. |
 | `t` | `function (undefined)` | `t` function to use instead of `i18next.t()` |
 | `count` | `integer (undefined)` | Numeric value for pluralizable strings |
@@ -304,7 +302,7 @@ Please be aware if you are using **React 15 or below**, you are required to set 
 {% hint style="danger" %}
 **Are you having trouble when your website is ran through Google Translate?**  
 Google Translate seems to manipulate the DOM and makes React quite unhappy!  
-**There's a work around:** you can wrap text nodes with`<span>` using `transWrapTextNodes: 'span'`.
+**There's a work around:** you can wrap text nodes with`<span>` using `transWrapTextNodes: 'span'`.
 
 _If you want to know more about the Google Translate issue with React, have a look at_ [_this_](https://github.com/facebook/react/issues/11538#issuecomment-390386520)_._
 {% endhint %}

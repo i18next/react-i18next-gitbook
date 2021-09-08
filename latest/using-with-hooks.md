@@ -196,6 +196,6 @@ Prefer having code to checkout? Directly dive into our example:
 {% hint style="success" %}
 [Here](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb) you'll find a simple tutorial on how to best use react-i18next.  
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[  
- ![](../.gitbook/assets/title-width.jpg)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
+![](../.gitbook/assets/title-width.jpg)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
 {% endhint %}
 
