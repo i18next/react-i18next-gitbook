@@ -59,6 +59,8 @@ const { t, i18n } = useTranslation('ns1', { i18n });
 
 ### Optional keyPrefix option
 
+> available in version &gt;= 11.12.0
+
 ```javascript
 // having resources like this:
 /*{
