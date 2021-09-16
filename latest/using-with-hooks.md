@@ -124,7 +124,7 @@ Create a new file `public/locales/<language_code>/translation.json` with the fol
 Files are plain JSON you can checkout the full sample [here](https://github.com/i18next/react-i18next/tree/master/example/react/public/locales).
 
 {% hint style="info" %}
-Please note the t function will be either bound to the default namespace defined on i18next init or to the first one passed in in arguments.
+Please note the t function will be either bound to the default namespace defined on i18next init or to the first one passed in arguments.
 {% endhint %}
 
 {% page-ref page="../guides/multiple-translation-files.md" %}
