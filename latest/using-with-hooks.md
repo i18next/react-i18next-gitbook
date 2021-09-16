@@ -131,7 +131,7 @@ Please note the t function will be either bound to the default namespace defined
 
 #### Using the withTranslation HOC
 
-There might be some legacy cases where you are still forced to use classes. Don't worry, we still provide a hoc to cover this cases:
+There might be some legacy cases where you are still forced to use classes. Don't worry, we still provide a hoc to cover these cases:
 
 ```jsx
 import React, { Component, Suspense } from 'react';
