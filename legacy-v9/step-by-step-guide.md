@@ -395,7 +395,7 @@ Having translation files like:
 
 This was possible by setting `keySeparator: false` on `i18n.init`
 
-The upside of this the code can be more readable but the content of the key might get soon rather different from the value it reflects. You could even go a step further by disabling any fallback language an [using the key as fallback](https://www.i18next.com/principles/fallback#key-fallback) - but be aware if you got a typo in the key acting as fallback value you will need to change it.
+The upside of this the code can be more readable but the content of the key might get soon rather different from the value it reflects. You could even go a step further by disabling any fallback language and [using the key as fallback](https://www.i18next.com/principles/fallback#key-fallback) - but be aware if you got a typo in the key acting as fallback value you will need to change it.
 
 ### b\) keybased catalog
 
