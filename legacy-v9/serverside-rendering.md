@@ -15,11 +15,11 @@ To learn more you should have a look at our samples:
 The usage of the `reactI18nextModule` for holding the i18n instance is not a valid option \(the instance would be set globally\). Always use the I18nextProvider like done in the samples above.
 {% endhint %}
 
-For futher information see this [issue](https://github.com/i18next/react-i18next/issues/375).
+For further information see this [issue](https://github.com/i18next/react-i18next/issues/375).
 
 ## Pass language and translations down to client
 
-Both the [i18nextProvider](i18nextprovider.md) and [translate hoc]() allows to pass in `initialI18nStore` and `initialLanguage`. By doing so the translations won't be loaded and initial clientside render will avoid any flickering or rerender by checksum mismatch.
+Both the [i18nextProvider](i18nextprovider.md) and [translate hoc]() allow to pass in `initialI18nStore` and `initialLanguage`. By doing so the translations won't be loaded and initial clientside render will avoid any flickering or rerender by checksum mismatch.
 
 For details check the docs of those components or **have a look at the examples above**.
 
