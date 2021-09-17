@@ -59,7 +59,9 @@ const { t, i18n } = useTranslation('ns1', { i18n });
 
 ### Optional keyPrefix option
 
-> available in version &gt;= 11.12.0
+> available in react-i18next version &gt;= 11.12.0
+>
+> depends on i18next version &gt;= 20.6.0
 
 ```javascript
 // having resources like this:
