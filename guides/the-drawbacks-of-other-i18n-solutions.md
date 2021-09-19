@@ -68,7 +68,7 @@ ReactDOM.render(
 
 ## The drawbacks
 
-Before we come to the drawbacks let's highlight some advantage of those solutions above - they are very simple to get started.
+Before we come to the drawbacks let's highlight some advantages of those solutions above - they are very simple to get started.
 
 ### Changing the language
 
