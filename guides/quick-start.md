@@ -4,7 +4,7 @@
 
 We expect you having an existing react application - if not give [create-react-app](https://github.com/facebook/create-react-app) a try.
 
-Install both react-i18next and i18next package:
+Install both react-i18next and i18next packages:
 
 ```bash
 npm install react-i18next i18next --save
