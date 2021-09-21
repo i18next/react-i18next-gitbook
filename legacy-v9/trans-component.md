@@ -106,7 +106,7 @@ Trans.children = [
 {% hint style="info" %}
 **Rules:**  
 - child is a string =&gt; nothing to wrap just take the string  
-- child is an object =&gt; nothing to to it's used for interpolation  
+- child is an object =&gt; nothing to do it's used for interpolation  
 - child is an element: wrap it's children in &lt;i&gt;&lt;/i&gt; where i is the index of that element position in children and handle it's children with same rules \(starting element.children index at 0 again\)
 {% endhint %}
 
