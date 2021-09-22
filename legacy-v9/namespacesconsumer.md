@@ -73,7 +73,7 @@ function TranslatableView() {
     <tr>
       <td style="text-align:left">nsMode</td>
       <td style="text-align:left">string (&apos;default&apos;)</td>
-      <td style="text-align:left"><em>default:</em> namespaces will be loaded an the first will be set as
+      <td style="text-align:left"><em>default:</em> namespaces will be loaded and the first will be set as
         default
         <br />
         <br /><em>fallback:</em> namespaces will be used as fallbacks used in order provided</td>
