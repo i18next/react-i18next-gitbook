@@ -6,7 +6,7 @@ i18next itself is flexible enough to support multiple existing i18next formats b
 Find the full working sample [here](https://github.com/i18next/react-i18next/tree/master/example/react-icu).
 {% endhint %}
 
-![](../.gitbook/assets/screen-shot-2018-07-30-at-10.25.19.png)
+![](<../.gitbook/assets/Screen Shot 2018-07-30 at 10.25.19.png>)
 
 ## Extend the i18n instance with ICU module
 
@@ -95,7 +95,7 @@ We invited <strong>John Doe</strong>.
 
 While this works the resulting JSX is very verbose - guess we could do better.
 
-### using babel macros \(Trans, Plural, Select\)
+### using babel macros (Trans, Plural, Select)
 
 {% hint style="info" %}
 Thanks to using [kentcdodds/babel-plugin-macros](https://github.com/kentcdodds/babel-plugin-macros) we could use some babel magic to transpile nicer looking jsx to above Trans markup.
@@ -104,7 +104,7 @@ Check [https://github.com/kentcdodds/babel-plugin-macros/blob/master/other/docs/
 
 Using create-react-app? Make sure you are using react-scripts v2 as it includes the macro plugin.
 
-```text
+```
 $ # Create a new application
 $ npx create-react-app
 $ # Upgrade an existing application
@@ -124,7 +124,7 @@ const user = 'John Doe';
 
 The macro will add the needed import for Trans Component and generate the correct Trans component for you.
 
-The correct string for translations will be shown in the browser console output as a missing string \(if set debug: true on i18next init\) or submitted via saveMissing \(have saveMissing set true and a i18next backend supporting saving missing keys\).
+The correct string for translations will be shown in the browser console output as a missing string (if set debug: true on i18next init) or submitted via saveMissing (have saveMissing set true and a i18next backend supporting saving missing keys).
 
 If linting or other code analysis tools are complaining or failing because of the invalid JSX syntax, you can use the `defaults` prop instead of putting your message as a child, and it will be parsed and updated to the correct format.
 
@@ -382,7 +382,7 @@ import { SelectOrdinal } from 'react-i18next/icu.macro';
 ```
 
 {% hint style="info" %}
-The needed plural forms can be looked up in the official unicode cldr table: [http://www.unicode.org/cldr/charts/33/supplemental/language\_plural\_rules.html](http://www.unicode.org/cldr/charts/33/supplemental/language_plural_rules.html)
+The needed plural forms can be looked up in the official unicode cldr table: [http://www.unicode.org/cldr/charts/33/supplemental/language_plural_rules.html](http://www.unicode.org/cldr/charts/33/supplemental/language_plural_rules.html)
 
 In addition to the plural forms you can specify results for given number values like show above:
 
@@ -390,4 +390,3 @@ In addition to the plural forms you can specify results for given number values 
 
 in ICU it would be `=0 {show if zero}` but `=` is not allowed to be leading char in attributes so we replaced it with `$`
 {% endhint %}
-

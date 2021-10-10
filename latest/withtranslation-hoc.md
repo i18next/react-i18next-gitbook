@@ -1,8 +1,8 @@
-# withTranslation \(HOC\)
+# withTranslation (HOC)
 
 ## What it does
 
-The `withTranslation` is a classic HOC \(higher order component\) and gets the `t` function and `i18n` instance inside your component via props.
+The `withTranslation` is a classic HOC (higher order component) and gets the `t` function and `i18n` instance inside your component via props.
 
 ```jsx
 import React from 'react';
@@ -22,12 +22,12 @@ i18n.changeLanguage('en-US');
 ```
 
 {% hint style="info" %}
-The `withTranslation` HOC will trigger a [Suspense](https://reactjs.org/docs/code-splitting.html#suspense) if not ready \(eg. pending load of translation files\). You can set `useSuspense` to false if prefer not using Suspense.
+The `withTranslation` HOC will trigger a [Suspense](https://reactjs.org/docs/code-splitting.html#suspense) if not ready (eg. pending load of translation files). You can set `useSuspense` to false if prefer not using Suspense.
 {% endhint %}
 
 ## When to use?
 
-Use the `withTranslation` HOC to wrap **any component \(class or function\)** to access the translation function or i18n instance.
+Use the `withTranslation` HOC to wrap **any component (class or function)** to access the translation function or i18n instance.
 
 ## withTranslation params
 
@@ -74,12 +74,12 @@ const ExtendedComponent = withTranslation()(MyComponent);
 ```
 
 {% hint style="info" %}
-Not using Suspense you will need to handle the not ready state yourself by eg. render a loading component as long `props.tReady === false` . Not doing so will result in rendering your translations before they loaded which will cause save missing be called although translations exist \(just yet not loaded\).
+Not using Suspense you will need to handle the not ready state yourself by eg. render a loading component as long `props.tReady === false` . Not doing so will result in rendering your translations before they loaded which will cause save missing be called although translations exist (just yet not loaded).
 {% endhint %}
 
 ## How to
 
-### use ref \(&gt;= v10.6.0\)
+### use ref (>= v10.6.0)
 
 You can use forwardRefs like:
 
@@ -132,7 +132,7 @@ export default Extended;
 
 To get proper type annotations while using TypeScript, import the interface `WithTranslation` and extend it with your own props interface.
 
-```text
+```
 import React, { Component } from 'react';
 import { withTranslation, WithTranslation } from 'react-i18next';
 
@@ -152,4 +152,3 @@ interface IState {
 
 export default withTranslation()(MyComponent);
 ```
-

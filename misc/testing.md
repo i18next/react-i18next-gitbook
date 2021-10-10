@@ -123,7 +123,7 @@ it('dispatches SORT_TABLE', () => {
 
 As translations aren't provided, `this.props.i18n.language` will be `undefined`. In case your application relies on that value you can mock resources by adding these lines to the object passed to init:
 
-```text
+```
 i18n
   .init({
     ...
@@ -136,4 +136,3 @@ i18n
 ```
 
 Now in your component `this.props.i18n.language` will return `en`.
-

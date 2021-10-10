@@ -1,4 +1,4 @@
-# withI18n \(v9\)
+# withI18n (v9)
 
 {% hint style="info" %}
 Was introduced in v8.0.0. Not available in older versions.
@@ -25,4 +25,3 @@ This component won't trigger a rerender on language change. The passed down `t` 
 
 If you do **not pass in translations** on `i18n.init` we highly encourage using the [withNamespaces](withnamespaces.md) hoc.
 {% endhint %}
-

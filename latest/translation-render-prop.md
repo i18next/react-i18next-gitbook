@@ -1,6 +1,6 @@
-# Translation \(render prop\)
+# Translation (render prop)
 
-## What it does <a id="what-it-does"></a>
+## What it does <a href="what-it-does" id="what-it-does"></a>
 
 The `Translation` is a render prop and gets the `t` function and `i18n` instance to your component.
 
@@ -26,12 +26,12 @@ i18n.changeLanguage('en-US');
 ```
 
 {% hint style="info" %}
-The `Translation` render prop will trigger a [Suspense](https://reactjs.org/docs/code-splitting.html#suspense) if not ready \(eg. pending load of translation files\). You can set `useSuspense` to false if prefer not using Suspense.
+The `Translation` render prop will trigger a [Suspense](https://reactjs.org/docs/code-splitting.html#suspense) if not ready (eg. pending load of translation files). You can set `useSuspense` to false if prefer not using Suspense.
 {% endhint %}
 
 ## When to use?
 
-Use the `Translation` render prop inside **any component \(class or function\)** to access the translation function or i18n instance. 
+Use the `Translation` render prop inside **any component (class or function)** to access the translation function or i18n instance. 
 
 ## Translation params
 
@@ -69,6 +69,4 @@ import i18n from './i18n';
 }
 </Translation>
 ```
-
-
 

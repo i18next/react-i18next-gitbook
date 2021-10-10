@@ -1,4 +1,4 @@
-# Step by step guide \(v9\)
+# Step by step guide (v9)
 
 Lets start with the sample created in the [quick start guide](../guides/quick-start.md) and extend it to be of more use.
 
@@ -16,7 +16,7 @@ npm install react-i18next@legacy i18next --save
 
 Added following files:
 
-**translation.json** \(/public/locales/en/translation.json\)
+**translation.json** (/public/locales/en/translation.json)
 
 ```javascript
 {
@@ -24,7 +24,7 @@ Added following files:
 }
 ```
 
-**i18n.js** \(/src/i18n.js\)
+**i18n.js** (/src/i18n.js)
 
 ```javascript
 import i18n from "i18next";
@@ -85,11 +85,11 @@ function App ({ t }) {
 export default withNamespaces()(App);
 ```
 
-## 1\) Adding more languages
+## 1) Adding more languages
 
-### a\) Add an additional language file
+### a) Add an additional language file
 
-**translation.json** \(/public/locales/**de**/translation.json\)
+**translation.json** (/public/locales/**de**/translation.json)
 
 ```javascript
 {
@@ -97,7 +97,7 @@ export default withNamespaces()(App);
 }
 ```
 
-### b\) Add the additional translations on init
+### b) Add the additional translations on init
 
 in i18n.js:
 
@@ -119,7 +119,7 @@ const resources = {
 // ...
 ```
 
-### c\) Auto detect the user language
+### c) Auto detect the user language
 
 As the language is set on `i18n.init` you either could create some custom code setting the needed language or just use one of the provided language detectors coming with i18next.
 
@@ -128,7 +128,7 @@ For browser usage there is the [i18next-browser-languageDetector](https://github
 * cookie
 * localStorage
 * navigator
-* querystring \(append `?lng=LANGUAGE` to URL\)
+* querystring (append `?lng=LANGUAGE` to URL)
 * htmlTag
 * path
 * subdomain
@@ -176,7 +176,7 @@ export default i18n;
 
 Now we already are able to set language based on the browsers set language or by appending `?lng=LANGUAGE` to the URL.
 
-### d\) Let the user toggle the language
+### d) Let the user toggle the language
 
 Call [i18n.changeLanguage](https://www.i18next.com/overview/api#changelanguage) is all needed to do.
 
@@ -206,9 +206,9 @@ export default withNamespaces()(App);
 It's essential to have at least your outer page level / container component wrapped with the [withNamespaces](withnamespaces.md) or [NamespacesConsumer](namespacesconsumer.md) as those are bound to the [languageChanged event](https://www.i18next.com/overview/api#onlanguagechanged) and trigger a needed rerender.
 {% endhint %}
 
-## 2\) Lazy loading translations
+## 2) Lazy loading translations
 
-We haven't yet started splitting translations into multiple files \(which is highly recommended for larger projects\) but we already see that adding more languages would result in bundling unneeded translations into the application.
+We haven't yet started splitting translations into multiple files (which is highly recommended for larger projects) but we already see that adding more languages would result in bundling unneeded translations into the application.
 
 > Why not just use dynamic imports to load the language needed?
 
@@ -216,7 +216,7 @@ This for sure works but comes with one drawback. If you have a change in your tr
 
 This might not be a problem when starting but at some point you will learn localization is a complete different beast than just adding i18n to your code. You will keep translations as separated from your code as you can - so developers and translators can work as independent as possible.
 
-### a\) Adding lazy loading for translations
+### a) Adding lazy loading for translations
 
 This will be simpler than you think. All needed to be done is adding another package called [i18next-xhr-backend](https://github.com/i18next/i18next-xhr-backend) and using that.
 
@@ -257,11 +257,11 @@ export default i18n;
 i18next implementation is smart enough to only load needed languages and comes with intelligent deduplications so even multiple load requests for files in different code locations result in one request while notifying all needed requester.
 {% endhint %}
 
-### b\) Loading multiple translation files
+### b) Loading multiple translation files
 
 Lets assume your project started to grow and you like to split translations into multiple files.
 
-Without configuration i18next will always load one file \(namespace\) named `translation`. Learn more about namespaces [here](https://www.i18next.com/principles/namespaces).
+Without configuration i18next will always load one file (namespace) named `translation`. Learn more about namespaces [here](https://www.i18next.com/principles/namespaces).
 
 You can load them on i18n.init or in code like:
 
@@ -284,7 +284,7 @@ But that will load all upfront or in some custom code where you would need to ha
 
 As you might guess the withNamespaces hocs role is to lazy load the needed namespaces.
 
-**page2.json Add more translation files:** \(/public/locales/en/page2.json\)
+**page2.json Add more translation files:** (/public/locales/en/page2.json)
 
 ```javascript
 {
@@ -292,7 +292,7 @@ As you might guess the withNamespaces hocs role is to lazy load the needed names
 }
 ```
 
-**Page2.js** \(/src/Page2.js\)
+**Page2.js** (/src/Page2.js)
 
 ```jsx
 import React from 'react';
@@ -307,7 +307,7 @@ function Page2 ({ t }) {
 export default withNamespaces('page2')(Page2);
 ```
 
-### c\) Handle rendering while translations are not yet loaded
+### c) Handle rendering while translations are not yet loaded
 
 In the above `Page2` you will notice the initial render will trigger the load for `page2.json` but also render the page without the translations ready. There will be a rerender when the translations where loaded resulting in the page flickering.
 
@@ -375,9 +375,9 @@ You can set the wait option either globally for all instances or individually li
 `withNamepaces('page2', { wait: true })(Page2);`
 {% endhint %}
 
-## 3\) Sidequest: natural vs. keybased catalog
+## 3) Sidequest: natural vs. keybased catalog
 
-### a\) natural keys
+### a) natural keys
 
 Until now we had organised translation and keys in natural language.
 
@@ -397,7 +397,7 @@ This was possible by setting `keySeparator: false` on `i18n.init`
 
 The upside of this the code can be more readable but the content of the key might get soon rather different from the value it reflects. You could even go a step further by disabling any fallback language and [using the key as fallback](https://www.i18next.com/principles/fallback#key-fallback) - but be aware if you got a typo in the key acting as fallback value you will need to change it.
 
-### b\) keybased catalog
+### b) keybased catalog
 
 Some i18n frameworks organise having more technical keys allowing those to be even structured into hierarchies. This is the default in i18next too - so removing `keySeparator: false` on `i18n.init` would enable having catalogs and `t` usage like:
 
@@ -417,7 +417,7 @@ accessed like:
 
 If you prefer natural or keybased is a matter of taste...both can be used with react-i18next. Just avoid mixing those styles.
 
-## 4\) HOCs are dead - long lives the render props
+## 4) HOCs are dead - long lives the render props
 
 We won't open a debate over which is better as in our opinion both have their use case and there is no reason to just use one of the two options.
 
@@ -446,7 +446,7 @@ export default function Page2 () {
 }
 ```
 
-## 5\) Translate JSX nodes as one string
+## 5) Translate JSX nodes as one string
 
 Let's translate this:
 
@@ -522,4 +522,3 @@ The `<1>`, `<3>` pseudo tags are based on the index of appearance in `nodes.chil
 ```
 
 The Trans component also supports interpolation and plurals just read the [full documentation](trans-component.md) of that component.
-

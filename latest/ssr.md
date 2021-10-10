@@ -1,6 +1,6 @@
-# SSR \(additional components\)
+# SSR (additional components)
 
-## Using [Next.js](https://nextjs.org/)?
+## Using [Next.js](https://nextjs.org)?
 
 You should have a look at [next-i18next](https://github.com/isaachinman/next-i18next) which extends react-i18next to bring it to next.js the easiest way.
 
@@ -8,7 +8,7 @@ You should have a look at [next-i18next](https://github.com/isaachinman/next-i18
 >
 > [Here](https://github.com/locize/next-i18next-locize) you can also find a next-i18next app example in combination with locize, that offers 2 different approaches.
 >
-> `next-i18next@v5.0.0` supports `Next.js v9.5` in [**Serverless** mode](https://nextjs.org/blog/next-8#serverless-nextjs) \(as of [July 2020](https://github.com/isaachinman/next-i18next/issues/274#issuecomment-664616304)\). If your goal is to use earlier versions of Next.js with Serverless, then you should have a look at ["Next Right Now"](https://github.com/UnlyEd/next-right-now), which is a Next.js 9 boilerplate with built-in `i18next`, `react-i18next` and Locize.
+> `next-i18next@v5.0.0` supports `Next.js v9.5` in [**Serverless** mode](https://nextjs.org/blog/next-8#serverless-nextjs) (as of [July 2020](https://github.com/isaachinman/next-i18next/issues/274#issuecomment-664616304)). If your goal is to use earlier versions of Next.js with Serverless, then you should have a look at ["Next Right Now"](https://github.com/UnlyEd/next-right-now), which is a Next.js 9 boilerplate with built-in `i18next`, `react-i18next` and Locize.
 
 ## Setting the i18next instance based on req
 
@@ -22,7 +22,7 @@ Use the [I18nextProvider](i18nextprovider.md) to inject the i18next instance bou
 
 ## Passing initial translations / initial language down to client
 
-To avoid asynchronous loading of translation on the client side \(and the possible Suspense out of that\) you will need to pass down initialLanguage \(will call changeLanguage on i18next\) and initialI18nStore \(will prefill translations in i18next store\).
+To avoid asynchronous loading of translation on the client side (and the possible Suspense out of that) you will need to pass down initialLanguage (will call changeLanguage on i18next) and initialI18nStore (will prefill translations in i18next store).
 
 ### using the useSSR hook
 
@@ -50,4 +50,3 @@ const ExtendedApp = withSSR()(App);
 ```
 
 The ExtendedApp in this case will also have the composed `ExtendedApp.getInitialProps()`
-

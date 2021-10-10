@@ -1,10 +1,10 @@
-# withNamespaces \(v9\)
+# withNamespaces (v9)
 
 {% hint style="info" %}
 Was introduced in v8.0.0. Not available in older versions.
 {% endhint %}
 
-The withNamespaces [hoc](https://reactjs.org/docs/higher-order-components.html) is responsible for passing the [**t** function](https://www.i18next.com/overview/api#t) to your component. It enables all the translation functionality provided by i18next. Further, it asserts your component gets re-rendered on language change or changes to the translation catalog itself \(loaded translations\).
+The withNamespaces [hoc](https://reactjs.org/docs/higher-order-components.html) is responsible for passing the [**t** function](https://www.i18next.com/overview/api#t) to your component. It enables all the translation functionality provided by i18next. Further, it asserts your component gets re-rendered on language change or changes to the translation catalog itself (loaded translations).
 
 ```javascript
 withNamespaces(namespaces, options)(MyComponent);
@@ -108,87 +108,21 @@ export default withNamespaces(
 )(TranslatableView);
 ```
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left"><em><b>option</b></em>
-      </th>
-      <th style="text-align:left"><em><b>type (default)</b></em>
-      </th>
-      <th style="text-align:left"><em><b>description</b></em>
-      </th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>wait</b>
-      </td>
-      <td style="text-align:left">boolean (false)</td>
-      <td style="text-align:left">
-        <p>assert all provided namespaces are loaded before rendering the component
-          (can be set <a href="i18next-instance.md">globally</a> too)</p>
-        <p></p>
-        <p><b>In most cases you like to set this to true.</b> If not handling not
-          ready by evaluating tReady.</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">nsMode</td>
-      <td style="text-align:left">string (&apos;default&apos;)</td>
-      <td style="text-align:left">
-        <p><em>default:</em> namespaces will be loaded an the first will be set as
-          default or</p>
-        <p></p>
-        <p><em>fallback:</em> namespaces will be used as fallbacks used in order provided</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">innerRef</td>
-      <td style="text-align:left">function or object (undefined)</td>
-      <td style="text-align:left">
-        <p>either pass in a object React.createRef or a ref function like (c) =&gt;
-          this.myRef = c;</p>
-        <p></p>
-        <p><a href="https://gist.github.com/gaearon/1a018a023347fe1c2476073330cc5509">read more</a>
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">bindI18n</td>
-      <td style="text-align:left">string (&apos;languageChanged loaded&apos;)</td>
-      <td style="text-align:left">which events trigger a rerender, can be set to false or string of events</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">bindStore</td>
-      <td style="text-align:left">string (&apos;added removed&apos;)</td>
-      <td style="text-align:left">which events on store trigger a rerender, can be set to false or string
-        of events</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">omitBoundRerenders</td>
-      <td style="text-align:left">boolean (true)</td>
-      <td style="text-align:left">Does not trigger rerenders while state not ready - avoiding unneeded renders
-        on init</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">i18n</td>
-      <td style="text-align:left">object (undefined)</td>
-      <td style="text-align:left">pass i18next via options (useful for <a href="https://github.com/i18next/react-i18next/tree/master/example/nextjs">next.js usage</a>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">usePureComponent</td>
-      <td style="text-align:left">boolean (false)</td>
-      <td style="text-align:left">use shallowEqual on props change if set to true</td>
-    </tr>
-  </tbody>
-</table>
+| _**option**_       | _**type (default)**_              | _**description**_                                                                                                                                                                                                                                                     |
+| ------------------ | --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **wait**           | boolean (false)                   | <p>assert all provided namespaces are loaded before rendering the component (can be set <a href="i18next-instance.md">globally</a> too)</p><p></p><p><strong>In most cases you like to set this to true.</strong> If not handling not ready by evaluating tReady.</p> |
+| nsMode             | string ('default')                | <p><em>default:</em> namespaces will be loaded an the first will be set as default or</p><p></p><p><em>fallback:</em> namespaces will be used as fallbacks used in order provided</p>                                                                                 |
+| innerRef           | function or object (undefined)    | <p>either pass in a object React.createRef or a ref function like (c) => this.myRef = c;</p><p></p><p><a href="https://gist.github.com/gaearon/1a018a023347fe1c2476073330cc5509">read more</a></p>                                                                    |
+| bindI18n           | string ('languageChanged loaded') | which events trigger a rerender, can be set to false or string of events                                                                                                                                                                                              |
+| bindStore          | string ('added removed')          | which events on store trigger a rerender, can be set to false or string of events                                                                                                                                                                                     |
+| omitBoundRerenders | boolean (true)                    | Does not trigger rerenders while state not ready - avoiding unneeded renders on init                                                                                                                                                                                  |
+| i18n               | object (undefined)                | pass i18next via options (useful for [next.js usage](https://github.com/i18next/react-i18next/tree/master/example/nextjs)                                                                                                                                             |
+| usePureComponent   | boolean (false)                   | use shallowEqual on props change if set to true                                                                                                                                                                                                                       |
 
 ## withNamespaces props:
 
-| _**name**_ | _**type \(default\)**_ | _**description**_ |
-| :--- | :--- | :--- |
-| i18n | object \(undefined\) | pass i18next instance by props instead of having it on context |
-| initialI18nStore | object \(undefined\) | pass in initial translations \(useful for [next.js usage](https://github.com/i18next/react-i18next/tree/master/example/nextjs)\) |
-| initialLanguage | object \(undefined\) | pass in initial language \(useful for [next.js usage](https://github.com/i18next/react-i18next/tree/master/example/nextjs)\) |
-
+| _**name**_       | _**type (default)**_ | _**description**_                                                                                                              |
+| ---------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| i18n             | object (undefined)   | pass i18next instance by props instead of having it on context                                                                 |
+| initialI18nStore | object (undefined)   | pass in initial translations (useful for [next.js usage](https://github.com/i18next/react-i18next/tree/master/example/nextjs)) |
+| initialLanguage  | object (undefined)   | pass in initial language (useful for [next.js usage](https://github.com/i18next/react-i18next/tree/master/example/nextjs))     |

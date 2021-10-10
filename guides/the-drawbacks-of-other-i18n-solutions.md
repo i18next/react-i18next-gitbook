@@ -97,9 +97,8 @@ Let's take following content:
 
 In most frameworks you will end having to split this into multiple translation strings. But for your translators it would make sense to have this as one sentence to translate like eg.:
 
-```text
+```
 Hello <1>{name}</1>, you have <3>{count} unread message(s)</3>.
 ```
 
 You can do this using the [Trans component](../latest/trans-component.md).
-

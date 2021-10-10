@@ -2,7 +2,7 @@
 
 ## Install needed dependencies
 
-We expect you to have an existing react application supporting [hooks](https://reactjs.org/docs/hooks-intro.html) \(at least v16.7.0-alpha of react and react-dom\).
+We expect you to have an existing react application supporting [hooks](https://reactjs.org/docs/hooks-intro.html) (at least v16.7.0-alpha of react and react-dom).
 
 Install both react-i18next and i18next packages:
 
@@ -111,7 +111,7 @@ const { t, i18n } = useTranslation(['page1', 'common']);
 
 Create a new file `public/locales/<language_code>/translation.json` with the following sample content.
 
-```text
+```
 {
   "title": "Welcome to react using react-i18next",
   "description": {
@@ -127,7 +127,9 @@ Files are plain JSON you can checkout the full sample [here](https://github.com/
 Please note the t function will be either bound to the default namespace defined on i18next init or to the first one passed in arguments.
 {% endhint %}
 
-{% page-ref page="../guides/multiple-translation-files.md" %}
+{% content-ref url="../guides/multiple-translation-files.md" %}
+[multiple-translation-files.md](../guides/multiple-translation-files.md)
+{% endcontent-ref %}
 
 #### Using the withTranslation HOC
 
@@ -194,8 +196,7 @@ Prefer having code to checkout? Directly dive into our example:
 ### Do you like to read a more complete step by step tutorial?
 
 {% hint style="success" %}
-[Here](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb) you'll find a simple tutorial on how to best use react-i18next.  
-Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[  
-![](../.gitbook/assets/title-width.jpg)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
+[Here](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb) you'll find a simple tutorial on how to best use react-i18next.\
+Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
+![](<../.gitbook/assets/title width.jpg>)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
 {% endhint %}
-

@@ -43,14 +43,13 @@ export default i18n;
 
 All additional options for react in init options:
 
-| options | default | description |
-| :--- | :--- | :--- |
-| bindI18n | 'languageChanged' | which events trigger a rerender, can be set to false or string of events   separated by "" |
-| bindI18nStore | '' | define which events on [resourceStore](https://www.i18next.com/overview/api#store-events) should trigger a rerender |
-| transEmptyNodeValue | '' | how to treat failed lookups in Trans component |
-| transSupportBasicHtmlNodes | true | convert eg. `<br/>` found in translations to a react component of type br   [See Trans component](trans-component.md#using-for-simple-html-elements-in-translations-v-10-4-0) |
-| transKeepBasicHtmlNodesFor | \['br', 'strong', 'i', 'p'\] | Which nodes not to convert in defaultValue generation in the Trans component.   [See Trans component](trans-component.md#using-for-simple-html-elements-in-translations-v-10-4-0) |
-| useSuspense | true | If using Suspense or not |
+| options                    | default                     | description                                                                                                                                                                                                        |
+| -------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| bindI18n                   | 'languageChanged'           | <p>which events trigger a rerender, can be set to false or string of events <br> separated by ""</p>                                                                                                               |
+| bindI18nStore              | ''                          | define which events on [resourceStore](https://www.i18next.com/overview/api#store-events) should trigger a rerender                                                                                                |
+| transEmptyNodeValue        | ''                          | how to treat failed lookups in Trans component                                                                                                                                                                     |
+| transSupportBasicHtmlNodes | true                        | <p>convert eg. <code>&#x3C;br/></code> found in translations to a react component of type br <br> <a href="trans-component.md#using-for-simple-html-elements-in-translations-v-10-4-0">See Trans component</a></p> |
+| transKeepBasicHtmlNodesFor | \['br', 'strong', 'i', 'p'] | <p>Which nodes not to convert in defaultValue generation in the Trans component. <br> <a href="trans-component.md#using-for-simple-html-elements-in-translations-v-10-4-0">See Trans component</a></p>             |
+| useSuspense                | true                        | If using Suspense or not                                                                                                                                                                                           |
 
 For more initialization options have look at the [docs](https://www.i18next.com/configuration-options.html).
-

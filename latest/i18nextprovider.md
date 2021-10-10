@@ -16,11 +16,10 @@ import App from './App';
 
 ## When to use?
 
-You will only need to use the provider in scenarios for SSR \(ServerSideRendering\) or if you need to support multiple i18next instances - eg. if you provide a component library. 
+You will only need to use the provider in scenarios for SSR (ServerSideRendering) or if you need to support multiple i18next instances - eg. if you provide a component library. 
 
 ## I18nextProvider props
 
-| _**name**_ | **type \(**_**default\)**_ | _**description**_ |
-| :--- | :--- | :--- |
-| **i18n** | object \(undefined\) | pass i18next instance the provider will pass it down to translation components by context |
-
+| _**name**_ | **type (**_**default)**_ | _**description**_                                                                         |
+| ---------- | ------------------------ | ----------------------------------------------------------------------------------------- |
+| **i18n**   | object (undefined)       | pass i18next instance the provider will pass it down to translation components by context |

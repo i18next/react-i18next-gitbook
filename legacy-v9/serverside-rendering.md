@@ -1,4 +1,4 @@
-# SSR \(v9\)
+# SSR (v9)
 
 ## Using next.js?
 
@@ -8,11 +8,11 @@ You should have a look at [next-i18next](https://github.com/isaachinman/next-i18
 
 To learn more you should have a look at our samples:
 
-* [razzle \(sample provided by react-i18next\)](https://github.com/i18next/react-i18next/tree/master/example/razzle-ssr)
+* [razzle (sample provided by react-i18next)](https://github.com/i18next/react-i18next/tree/master/example/razzle-ssr)
 * [simpleblack's boilerplate](https://github.com/simpleblack/react-redux-universal-hot-example)
 
 {% hint style="info" %}
-The usage of the `reactI18nextModule` for holding the i18n instance is not a valid option \(the instance would be set globally\). Always use the I18nextProvider like done in the samples above.
+The usage of the `reactI18nextModule` for holding the i18n instance is not a valid option (the instance would be set globally). Always use the I18nextProvider like done in the samples above.
 {% endhint %}
 
 For further information see this [issue](https://github.com/i18next/react-i18next/issues/375).
@@ -46,7 +46,7 @@ match({...matchArguments}, (error, redirectLocation, renderProps) => {
 
 ## use the i18next-express-middleware
 
-When using [i18next-express-middleware](https://github.com/i18next/i18next-express-middleware), you can use `req.i18n` as the `i18next` instance for `I18nextProvider` it will assert no request conflicts happen \(each request gets it's cloned instance of i18next\):
+When using [i18next-express-middleware](https://github.com/i18next/i18next-express-middleware), you can use `req.i18n` as the `i18next` instance for `I18nextProvider` it will assert no request conflicts happen (each request gets it's cloned instance of i18next):
 
 ```javascript
 import { I18nextProvider } from 'react-i18next';
@@ -63,4 +63,3 @@ app.use((req, res) => {
    // render as desired now ...
 });
 ```
-

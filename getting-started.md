@@ -56,7 +56,7 @@ You will get the t function by using the [useTranslation](latest/usetranslation-
 
 ### JSX tree
 
-Sometimes you might want to include html formatting or components like links into your translations. \(Always try to get the best result for your translators - the final string to translate should be a complete sentence\).
+Sometimes you might want to include html formatting or components like links into your translations. (Always try to get the best result for your translators - the final string to translate should be a complete sentence).
 
 **Before:** Your react code would have looked something like:
 
@@ -124,7 +124,7 @@ ReactDOM.render(
 
 #### RESULT:
 
-![Preview of content](.gitbook/assets/screen-shot-2018-09-30-at-16.58.18.png)
+![Preview of content](<.gitbook/assets/Screen Shot 2018-09-30 at 16.58.18.png>)
 
 {% hint style="info" %}
 This sample while very simple does come with some [drawbacks](guides/the-drawbacks-of-other-i18n-solutions.md) to getting the full potential from using react-i18next you should read the extended [step by step guide](latest/using-with-hooks.md).
@@ -133,8 +133,7 @@ This sample while very simple does come with some [drawbacks](guides/the-drawbac
 ### Do you like to read a more complete step by step tutorial?
 
 {% hint style="success" %}
-[Here](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb) you'll find a simple tutorial on how to best use react-i18next.  
-Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[  
- ![](.gitbook/assets/title-width.jpg)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
+[Here](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb) you'll find a simple tutorial on how to best use react-i18next.\
+Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
+ ![](<.gitbook/assets/title width.jpg>)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
 {% endhint %}
-

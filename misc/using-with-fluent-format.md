@@ -7,4 +7,3 @@ Find the full working sample here:
 
 [https://github.com/i18next/react-i18next/tree/master/example/v9.x.x/react-fluent](https://github.com/i18next/react-i18next/tree/master/example/v9.x.x/react-fluent)
 {% endhint %}
-

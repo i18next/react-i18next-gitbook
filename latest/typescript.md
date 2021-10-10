@@ -1,6 +1,6 @@
 # TypeScript
 
-react-i18next has embedded type definitions. If your project is relying on **TypeScript 4.1+**, and you want to enhance IDE Experience and prevent errors \(such as type coercion\), you should follow the instructions below in order to get the `t` function fully-type safe \(`keys` and `return` type\).
+react-i18next has embedded type definitions. If your project is relying on **TypeScript 4.1+**, and you want to enhance IDE Experience and prevent errors (such as type coercion), you should follow the instructions below in order to get the `t` function fully-type safe (`keys` and `return` type).
 
 {% hint style="info" %}
 This is an **optional** feature and was newly added in react-i18next@v11.8.0. [Here](https://github.com/i18next/react-i18next/tree/master/example/react-typescript4.1) you can see some examples of use.
@@ -8,7 +8,7 @@ This is an **optional** feature and was newly added in react-i18next@v11.8.0. [H
 
 ## Create a declaration file
 
-TypeScript definitions for react-i18next can be extended by using [Type Augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation) and [Merging Interfaces](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces). So the first step is creating a declaration file \(`react-i18next.d.ts`\), for example:
+TypeScript definitions for react-i18next can be extended by using [Type Augmentation](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#module-augmentation) and [Merging Interfaces](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces). So the first step is creating a declaration file (`react-i18next.d.ts`), for example:
 
 ```typescript
 // import the original type declarations
@@ -97,7 +97,7 @@ If you face this issue:
 
 > Argument of type 'string' is not assignable to parameter of type ...
 
-When using the following approach \(template literal with an expression\):
+When using the following approach (template literal with an expression):
 
 ```typescript
 const { t } = useTranslation();
@@ -128,4 +128,3 @@ t`key1.key2`;
 ```
 
 The `keys` and `return` type inference will not work, because [TemplateStringsArray](https://github.com/microsoft/TypeScript/issues/33304) does not accept generic types yet. You can use Tagged Template Literal syntax, but it will accept any string as argument.
-

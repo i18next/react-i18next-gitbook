@@ -1,4 +1,4 @@
-# useTranslation \(hook\)
+# useTranslation (hook)
 
 ## What it does
 
@@ -16,14 +16,14 @@ export function MyComponent() {
 }
 ```
 
-While most of the time you only need the `t` function to translate your content, you can also get the i18n instance \(in order to change the language\).
+While most of the time you only need the `t` function to translate your content, you can also get the i18n instance (in order to change the language).
 
 ```javascript
 i18n.changeLanguage('en-US');
 ```
 
 {% hint style="info" %}
-The `useTranslation` hook will trigger a [Suspense](https://reactjs.org/docs/concurrent-mode-suspense.html) if not ready \(eg. pending load of translation files\). You can set `useSuspense` to false if prefer not using Suspense.
+The `useTranslation` hook will trigger a [Suspense](https://reactjs.org/docs/concurrent-mode-suspense.html) if not ready (eg. pending load of translation files). You can set `useSuspense` to false if prefer not using Suspense.
 {% endhint %}
 
 ## When to use?
@@ -59,9 +59,9 @@ const { t, i18n } = useTranslation('ns1', { i18n });
 
 ### Optional keyPrefix option
 
-> available in react-i18next version &gt;= 11.12.0
+> available in react-i18next version >= 11.12.0
 >
-> depends on i18next version &gt;= 20.6.0
+> depends on i18next version >= 20.6.0
 
 ```javascript
 // having resources like this:
@@ -89,6 +89,5 @@ const { t, i18n, ready } = useTranslation('ns1', { useSuspense: false });
 ```
 
 {% hint style="info" %}
-Not using Suspense you will need to handle the not ready state yourself by eg. render a loading component as long `ready === false` . Not doing so will result in rendering your translations before they loaded which will cause save missing be called although translations exists \(just yet not loaded\).
+Not using Suspense you will need to handle the not ready state yourself by eg. render a loading component as long `ready === false` . Not doing so will result in rendering your translations before they loaded which will cause save missing be called although translations exists (just yet not loaded).
 {% endhint %}
-
