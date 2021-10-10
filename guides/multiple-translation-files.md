@@ -11,7 +11,7 @@ i18next.t('look.deep');
 This will lookup the key in a namespace (file) called common.json:
 
 ```javascript
-i18next.t('common:look.deep'); // not recommended with ns prefix
+i18next.t('common:look.deep'); // not recommended with ns prefix when used in combination with natural language keys
 // better use the ns option:
 i18next.t('look.deep', { ns: 'common' })
 ```
