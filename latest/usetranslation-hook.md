@@ -44,7 +44,7 @@ t('key'); // will be looked up from namespace ns1
 // the t function will be set to first namespace as default
 const { t, i18n } = useTranslation(['ns1', 'ns2', 'ns3']);
 t('key'); // will be looked up from namespace ns1
-t('ns2:key'); // will be looked up from namespace ns2
+t('key', { ns: 'ns2' }); // will be looked up from namespace ns2
 ```
 
 ### Overriding the i18next instance
