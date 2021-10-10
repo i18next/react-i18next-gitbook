@@ -11,7 +11,7 @@ i18next.t('look.deep');
 This will lookup the key in a namespace (file) called common.json:
 
 ```javascript
-i18next.t('common:look.deep'); 
+i18next.t('common:look.deep'); // not recommended with ns prefix
 // better use the ns option:
 i18next.t('look.deep', { ns: 'common' })
 ```
@@ -33,7 +33,7 @@ or [`Translation`](https://react.i18next.com/latest/translation-render-prop):
 ```javascript
 <Translation ns={['translation', 'common']}>
 {
-  (t) => <p>{t('common:look.deep')}</p>
+  (t) => <p>{t('look.deep', { ns: 'common' })}</p>
 }
 </Translation>
 ```
