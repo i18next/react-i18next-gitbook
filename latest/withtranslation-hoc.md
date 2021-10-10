@@ -47,7 +47,7 @@ withTranslation(['ns1', 'ns2', 'ns3'])(MyComponent);
 
 // inside your component MyComponent
 this.props.t('key'); // will be looked up from namespace ns1
-this.props.t('ns2:key'); // will be looked up from namespace ns2
+this.props.t('key', { ns: 'ns2' }); // will be looked up from namespace ns2
 ```
 
 ### Overriding the i18next instance
