@@ -242,7 +242,7 @@ Guessing replacement tags _(<0>\</0>)_ of your component is rather difficult. Th
 Trans.children = [
   'Hello ',                         // 0: only a string
   { children: [{ name: 'Jan' }] },  // 1: <strong> with child object for interpolation
-  ', you have',                     // 2: only a string
+  ', you have ',                    // 2: only a string
   { count: 10 },                    // 3: plain object for interpolation
   ' unread messages. ',             // 4: only a string
   { children: ['Go to messages'] }, // 5: <Link> with a string child
