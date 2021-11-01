@@ -81,6 +81,17 @@ const { t } = useTranslation('translation', { keyPrefix: 'very.deeply.nested' })
 const text = t('key'); // "here"
 ```
 
+{% hint style="warning" %}
+Do **not** use the `keyPrefix` option if you want to use keys with prefixed namespace notation:
+
+i.e.
+
+```javascript
+const { t } = useTranslation('translation', { keyPrefix: 'very.deeply.nested' });
+const text = t('ns:key'); // this will not work
+```
+{% endhint %}
+
 ### Not using Suspense
 
 ```javascript
