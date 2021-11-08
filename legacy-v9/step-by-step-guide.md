@@ -278,7 +278,7 @@ i18n.init({
 i18n.loadNamespaces('anotherNamespace', (err, t) => { /* ... */ });
 ```
 
-But that will load all upfront or in some custom code where you would need to handle manually that the translations where loaded. So there is a better way.
+But that will load all upfront or in some custom code where you would need to handle manually that the translations were loaded. So there is a better way.
 
 #### Use the withNamespaces hoc
 
@@ -476,7 +476,7 @@ So naiv approach using the `t` function would result in
 </p>
 ```
 
-So you end up with 5 keys in your translation file and your translator has no idea about how this 5 keys relate to each other. Further what happens in other languages where the order needs to be changed?!?
+So you end up with 5 keys in your translation file and your translator has no idea about how these 5 keys relate to each other. Further what happens in other languages where the order needs to be changed?!?
 
 So you won't have luck with this approach.
 
