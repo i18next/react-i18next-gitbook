@@ -26,10 +26,10 @@ function MyComponent() {
 {% hint style="info" %}
 Have a look at the [i18next documentation](https://www.i18next.com) for details on the the `t` function:
 
-* [essentials](https://www.i18next.com/essentials.html)
-* [interpolation](https://www.i18next.com/interpolation.html)
-* [formatting](https://www.i18next.com/formatting.html)
-* [plurals](https://www.i18next.com/plurals.html)
+* [essentials](https://www.i18next.com/translation-function/essentials.html)
+* [interpolation](https://www.i18next.com/translation-function/interpolation.html)
+* [formatting](https://www.i18next.com/translation-function/formatting.html)
+* [plurals](https://www.i18next.com/translation-function/plurals.html)
 {% endhint %}
 
 ## Samples
