@@ -77,8 +77,8 @@ i18n
     fallbackLng: 'en',
 
     // have a common namespace used around the full app
-    ns: ['translations'],
-    defaultNS: 'translations',
+    ns: ['translationsNS'],
+    defaultNS: 'translationsNS',
 
     debug: true,
 
@@ -86,7 +86,7 @@ i18n
       escapeValue: false, // not needed for react!!
     },
 
-    resources: { en: { translations: {} } },
+    resources: { en: { translationsNS: {} } },
   });
 
 export default i18n;
