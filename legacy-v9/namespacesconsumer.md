@@ -9,10 +9,10 @@ The NamespacesConsumer is a so called render prop. The component passes the [**t
 {% hint style="info" %}
 To learn more about using the **t** function have a look at i18next documentation:
 
-* [essentials](https://www.i18next.com/essentials.html)
-* [interpolation](https://www.i18next.com/interpolation.html)
-* [formatting](https://www.i18next.com/formatting.html)
-* [plurals](https://www.i18next.com/plurals.html)
+* [essentials](https://www.i18next.com/translation-function/essentials)
+* [interpolation](https://www.i18next.com/translation-function/interpolation)
+* [formatting](https://www.i18next.com/translation-function/formatting)
+* [plurals](https://www.i18next.com/translation-function/plurals)
 * ...
 {% endhint %}
 
