@@ -4,6 +4,11 @@ v10 is a complete rewrite, taking the chance to clean up some complexity added f
 
 This means you will need to test your application more cautiously before release.
 
+{% hint style="info" %}
+This is a specific migration guide regarding the complete react-i18next rewrite in v10.\
+If you're looking for general release notes, please have a look in the [CHANGELOG](https://github.com/i18next/react-i18next/blob/master/CHANGELOG.md) file.
+{% endhint %}
+
 ## New in v10
 
 The most obvious change is the hook function for use inside functional components:
