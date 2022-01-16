@@ -19,7 +19,7 @@ As react-i18next depends on [i18next](http://i18next.com) you can use it in any 
 {% hint style="success" %}
 [Here](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb) you'll find a simple tutorial on how to best use react-i18next.\
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
- ![](<.gitbook/assets/title width.jpg>)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
+&#x20;![](<.gitbook/assets/title width.jpg>)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
 {% endhint %}
 
 ## What does my code look like
@@ -58,6 +58,6 @@ See how your developer experience with this localization workflow [could look li
 There's also the possibility to have an [even more focused developer experience](https://youtu.be/VfxBpSXarlU), with the help of the [auto-machinetranslation workflow](https://docs.locize.com/whats-inside/auto-machine-translation) and the use of the save missing keys functionality, new keys not only gets added to locize automatically, while developing the app, but are also [automatically translated](https://youtu.be/VfxBpSXarlU) into the target languages using machine translation (like [Google Translate](https://cloud.google.com/translate)).
 {% endhint %}
 
-![](.gitbook/assets/general-locize-screen.png)
+{% embed url="https://youtu.be/ds-yEEYP1Ks" %}
 
-[Learn more about the enterprise offering](https://www.i18next.com/for-enterprises.html)
+[Learn more about the enterprise offering](https://www.i18next.com/overview/for-enterprises)
