@@ -85,6 +85,16 @@ ReactDOM.render(
 );
 ```
 
+{% hint style="info" %}
+If you need to access the `t` function or the `i18next` instance from outside of a React component you can simply import your `./i18n.js` and use the exported i18next instance:
+
+```
+import i18next from './i18n'
+
+i18next.t('my.key')
+```
+{% endhint %}
+
 ## Translate your content
 
 ### Using the hook
