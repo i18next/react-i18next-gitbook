@@ -15,6 +15,14 @@ You should have a look at [next-i18next](https://github.com/isaachinman/next-i18
 > [Here](https://dev.to/adrai/static-html-export-with-i18n-compatibility-in-nextjs-8cd) you'll find a simple tutorial on how to best use next-i18next in a SSG environment.\
 > [![](../.gitbook/assets/next-ssg.jpeg)](https://dev.to/adrai/static-html-export-with-i18n-compatibility-in-nextjs-8cd)
 
+
+
+## Using [Remix](https://remix.run)?
+
+You should have a look at [remix-i18next](https://github.com/sergiodxa/remix-i18next) which extends react-i18next to bring it to Remix the easiest way.
+
+> [Here](https://github.com/locize/locize-remix-i18next-example) you'll find a simple example on how to best use remix-i18next.
+
 ## Setting the i18next instance based on req
 
 Use the [I18nextProvider](i18nextprovider.md) to inject the i18next instance bound to the http i18n instance on the request object using [i18next-http-middleware](https://github.com/i18next/i18next-http-middleware).
