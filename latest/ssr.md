@@ -25,7 +25,7 @@ You should have a look at [remix-i18next](https://github.com/sergiodxa/remix-i18
 
 ## Setting the i18next instance based on req
 
-Use the [I18nextProvider](i18nextprovider.md) to inject the i18next instance bound to the http i18n instance on the request object using [i18next-http-middleware](https://github.com/i18next/i18next-http-middleware).
+Use the [I18nextProvider](i18nextprovider.md) to inject the i18next instance for example bound to the http i18n instance on the request object using [i18next-http-middleware](https://github.com/i18next/i18next-http-middleware).
 
 ```jsx
 <I18nextProvider i18n={req.i18n}>
