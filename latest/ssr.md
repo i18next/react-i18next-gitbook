@@ -21,7 +21,9 @@ You should have a look at [next-i18next](https://github.com/isaachinman/next-i18
 
 You should have a look at [remix-i18next](https://github.com/sergiodxa/remix-i18next) which extends react-i18next to bring it to Remix the easiest way.
 
-> [Here](https://github.com/locize/locize-remix-i18next-example) you'll find a simple example on how to best use remix-i18next.
+> [Here](https://github.com/locize/locize-remix-i18next-example) you'll find a simple example and [here a step by step tutorial](https://dev.to/adrai/how-to-internationalize-a-remix-application-2bep) on how to best use remix-i18next.
+>
+> [![](../.gitbook/assets/remix-localization.jpg)](https://dev.to/adrai/how-to-internationalize-a-remix-application-2bep)
 
 ## Setting the i18next instance based on req
 
