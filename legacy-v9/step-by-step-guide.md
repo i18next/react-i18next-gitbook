@@ -1,6 +1,10 @@
 # Step by step guide (v9)
 
-Lets start with the sample created in the [quick start guide](../guides/quick-start.md) and extend it to be of more use.
+{% hint style="warning" %}
+This guide is based on an older react-i18next version! Please have a look at [this detailed guide](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i1) for a newer version.
+{% endhint %}
+
+Let's start with the sample created in the [quick start guide](../guides/quick-start.md) and extend it to be of more use.
 
 {% hint style="info" %}
 react-i18next will run in any environment without you having to do changes to your babel or webpack setup.
@@ -218,10 +222,10 @@ This might not be a problem when starting but at some point you will learn local
 
 ### a) Adding lazy loading for translations
 
-This will be simpler than you think. All needed to be done is adding another package called [i18next-xhr-backend](https://github.com/i18next/i18next-xhr-backend) and using that.
+This will be simpler than you think. All needed to be done is adding another package called [i18next-http-backend](https://github.com/i18next/i18next-http-backend) and using that.
 
 ```bash
-npm install i18next-xhr-backend --save
+npm install i18next-http-backend --save
 ```
 
 **i18n.js**
@@ -229,7 +233,7 @@ npm install i18next-xhr-backend --save
 ```javascript
 import i18n from "i18next";
 import detector from "i18next-browser-languagedetector";
-import backend from "i18next-xhr-backend";
+import backend from "i18next-http-backend";
 import { reactI18nextModule } from "react-i18next";
 
 // translations are already at
@@ -342,7 +346,7 @@ You can configure the withNamespaces / NamespacesConsumer to not render the cont
 ```javascript
 import i18n from "i18next";
 import detector from "i18next-browser-languagedetector";
-import backend from "i18next-xhr-backend";
+import backend from "i18next-http-backend";
 import { reactI18nextModule } from "react-i18next";
 
 i18n
@@ -464,7 +468,7 @@ For this your JSX might look like:
 </p>
 ```
 
-So naiv approach using the `t` function would result in
+So naive approach using the `t` function would result in
 
 ```jsx
 <p>
