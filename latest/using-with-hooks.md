@@ -9,7 +9,7 @@ Install both react-i18next and i18next packages:
 ```bash
 npm install react-i18next i18next --save
 
-// if you'd like to detect user language and load translation
+# if you'd like to detect user language and load translation
 npm install i18next-http-backend i18next-browser-languagedetector --save
 ```
 
