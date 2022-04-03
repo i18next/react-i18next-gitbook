@@ -14,8 +14,13 @@ You should have a look at [next-i18next](https://github.com/isaachinman/next-i18
 > **Using SSG / `next export`?**\
 > [Here](https://dev.to/adrai/static-html-export-with-i18n-compatibility-in-nextjs-8cd) you'll find a simple tutorial on how to best use next-i18next in a SSG environment.\
 > [![](../.gitbook/assets/next-ssg.jpeg)](https://dev.to/adrai/static-html-export-with-i18n-compatibility-in-nextjs-8cd)
-
-
+>
+>
+>
+> **Looking for an optimized Next.js translations setup?**\
+> [Here](https://dev.to/adrai/all-side-optimized-nextjs-translations-4n9i) you'll find a blog post on how to best use next-i18next with client side translation download and SEO optimization.
+>
+> [![](../.gitbook/assets/next-i18next.jpg)](https://dev.to/adrai/all-side-optimized-nextjs-translations-4n9i)
 
 ## Using [Remix](https://remix.run)?
 
