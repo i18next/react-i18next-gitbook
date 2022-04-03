@@ -8,12 +8,7 @@ You should have a look at [next-i18next](https://github.com/isaachinman/next-i18
 >
 > [Here](https://github.com/locize/next-i18next-locize) you can also find a next-i18next app example in combination with locize, that offers 2 different approaches.
 >
-> `next-i18next@v5.0.0` supports `Next.js v9.5` in [**Serverless** mode](https://nextjs.org/blog/next-8#serverless-nextjs) (as of [July 2020](https://github.com/isaachinman/next-i18next/issues/274#issuecomment-664616304)). If your goal is to use earlier versions of Next.js with Serverless, then you should have a look at ["Next Right Now"](https://github.com/UnlyEd/next-right-now), which is a Next.js 9 boilerplate with built-in `i18next`, `react-i18next` and Locize.\
->
->
-> **Using SSG / `next export`?**\
-> [Here](https://dev.to/adrai/static-html-export-with-i18n-compatibility-in-nextjs-8cd) you'll find a simple tutorial on how to best use next-i18next in a SSG environment.\
-> [![](../.gitbook/assets/next-ssg.jpeg)](https://dev.to/adrai/static-html-export-with-i18n-compatibility-in-nextjs-8cd)
+> `next-i18next@v5.0.0` supports `Next.js v9.5` in [**Serverless** mode](https://nextjs.org/blog/next-8#serverless-nextjs) (as of [July 2020](https://github.com/isaachinman/next-i18next/issues/274#issuecomment-664616304)). If your goal is to use earlier versions of Next.js with Serverless, then you should have a look at ["Next Right Now"](https://github.com/UnlyEd/next-right-now), which is a Next.js 9 boilerplate with built-in `i18next`, `react-i18next` and Locize.
 >
 >
 >
@@ -21,6 +16,12 @@ You should have a look at [next-i18next](https://github.com/isaachinman/next-i18
 > [Here](https://dev.to/adrai/all-side-optimized-nextjs-translations-4n9i) you'll find a blog post on how to best use next-i18next with client side translation download and SEO optimization.
 >
 > [![](../.gitbook/assets/next-i18next.jpg)](https://dev.to/adrai/all-side-optimized-nextjs-translations-4n9i)
+>
+> ****
+>
+> **Using SSG / `next export`?**\
+> [Here](https://dev.to/adrai/static-html-export-with-i18n-compatibility-in-nextjs-8cd) you'll find a simple tutorial on how to best use next-i18next in a SSG environment.\
+> [![](../.gitbook/assets/next-ssg.jpeg)](https://dev.to/adrai/static-html-export-with-i18n-compatibility-in-nextjs-8cd)
 
 ## Using [Remix](https://remix.run)?
 
