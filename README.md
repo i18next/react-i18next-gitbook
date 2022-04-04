@@ -22,6 +22,13 @@ Some basics of i18next and some cool possibilities on how to optimize your local
 &#x20;![](<.gitbook/assets/title width.jpg>)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
 {% endhint %}
 
+{% hint style="info" %}
+**Using Next.js?**\
+[Here](https://dev.to/adrai/all-side-optimized-nextjs-translations-4n9i) you'll find a blog post on how to best use [next-i18next](https://github.com/isaachinman/next-i18next) with [client side translation download](https://github.com/isaachinman/next-i18next#client-side-loading-of-translations-via-http) and SEO optimization.
+
+[![](.gitbook/assets/next-i18next.jpg)](https://dev.to/adrai/all-side-optimized-nextjs-translations-4n9i)
+{% endhint %}
+
 ## What does my code look like
 
 **Before:** Your React code would have looked something like:
