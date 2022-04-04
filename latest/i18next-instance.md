@@ -52,4 +52,4 @@ All additional options for react in init options:
 | transKeepBasicHtmlNodesFor | \['br', 'strong', 'i', 'p'] | <p>Which nodes not to convert in defaultValue generation in the Trans component. <br> <a href="trans-component.md#using-for-simple-html-elements-in-translations-v-10-4-0">See Trans component</a></p>             |
 | useSuspense                | true                        | If using Suspense or not                                                                                                                                                                                           |
 
-For more initialization options have look at the [docs](https://www.i18next.com/configuration-options.html).
+For more initialization options have look at the [docs](https://www.i18next.com/overview/configuration-options).
