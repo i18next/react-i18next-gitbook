@@ -16,7 +16,7 @@ import App from './App';
 
 ## When to use?
 
-You will only need to use the provider in scenarios for SSR (ServerSideRendering) or if you need to support multiple i18next instances - eg. if you provide a component library. 
+You will only need to use the provider if you need to support multiple i18next instances - eg. if you provide a component library ([like this example](https://github.com/i18next/react-i18next/tree/master/example/react-component-lib)) or in scenarios for [SSR (ServerSideRendering)](ssr.md).&#x20;
 
 ## I18nextProvider props
 
