@@ -6,7 +6,7 @@ Let's make the sample using our own base i18n framework [i18next](https://i18nex
 
 ```javascript
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 import i18n from "i18next";
 
 // translation catalog
@@ -31,9 +31,9 @@ class App extends Component {
 }
 
 // append app to dom
-ReactDOM.render(
-  <App />,
-  document.getElementById("root")
+const root = createRoot(document.getElementById('root'));
+root.render(
+  <App />
 );
 ```
 
@@ -45,7 +45,7 @@ So let's make this more visible with some pseudo code:
 
 ```javascript
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from 'react-dom/client';
 import { I18nProvider, FormattedString } from "i18nLib";
 
 // import translation catalog
@@ -58,11 +58,11 @@ class App extends Component {
 }
 
 // append app to dom
-ReactDOM.render(
+const root = createRoot(document.getElementById('root'));
+root.render(
   <I18nProvider lng="en" resources={resources}>
     <App />,
   </I18nProvider>
-  document.getElementById("root")
 );
 ```
 
