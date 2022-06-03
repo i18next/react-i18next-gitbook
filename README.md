@@ -10,6 +10,8 @@ You should read the [i18next](https://www.i18next.com) documentation. The [confi
 
 The module provides multiple components eg. to assert that needed translations get loaded or that your content gets rendered when the language changes.
 
+{% embed url="https://www.youtube.com/watch?t=705s&v=SA_9i4TtxLQ" %}
+
 react-i18next is optimally suited for **server-side rendering**. It provides extra extension point to work with next.js, for e.g. [Learn more](legacy-v9/serverside-rendering.md).
 
 As react-i18next depends on [i18next](http://i18next.com) you can use it in any other UI framework and on the server-side (node.js, .net, ...) too. Like the React philosophy - just:
@@ -19,7 +21,7 @@ As react-i18next depends on [i18next](http://i18next.com) you can use it in any 
 {% hint style="success" %}
 [Here](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb) you'll find a simple tutorial on how to best use react-i18next.\
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
-&#x20;![](<.gitbook/assets/title width.jpg>)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
+&#x20;<img src=".gitbook/assets/title-width.jpg" alt="" data-size="original">](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
 {% endhint %}
 
 {% hint style="info" %}
@@ -57,7 +59,7 @@ If you prefer not using semantic keys but text - [that's also possible](https://
 
 ## On top: [Localization as a service](https://locize.com)
 
-i18next supports translation management tools such as [locize.com](http://locize.com).
+i18next supports translation management tools such as [locize.com](http://locize.com/?utm\_source=react\_i18next\_com\&utm\_medium=gitbook).
 
 {% hint style="success" %}
 [Here](https://github.com/locize/react-tutorial) you can find a step by step guide, which will unleash the full power of i18next in combination with locize.\
