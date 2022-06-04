@@ -219,7 +219,7 @@ Guessing replacement tags _(<0>\</0>)_ of your component is rather difficult. Th
 
 1. use React Developer Tools to inspect the `<Trans>` component instance and look at the `props.children` array for array index of the tag in question.
 2. use `debug = true` in `i18next.init()` options and watch your console for the missing key output
-3. use the [saveMissing feature](https://www.i18next.com/configuration-options.html#missing-keys) of i18next to get those translations pushed to your backend or handled by a custom function.
+3. use the [saveMissing feature](https://www.i18next.com/configuration-options#missing-keys) of i18next to get those translations pushed to your backend or handled by a custom function.
 4. understand how those numbers get generated from child index:
 
 **Sample JSX:**
