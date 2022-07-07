@@ -21,12 +21,12 @@ As react-i18next depends on [i18next](http://i18next.com) you can use it in any 
 {% hint style="success" %}
 [Here](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb) you'll find a simple tutorial on how to best use react-i18next.\
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
-&#x20;<img src=".gitbook/assets/title-width.jpg" alt="" data-size="original">](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
+&#x20;<img src=".gitbook/assets/title width.jpg" alt="" data-size="original">](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
 {% endhint %}
 
 {% hint style="info" %}
 **Using Next.js?**\
-[Here](https://dev.to/adrai/all-side-optimized-nextjs-translations-4n9i) you'll find a blog post on how to best use [next-i18next](https://github.com/isaachinman/next-i18next) with [client side translation download](https://github.com/isaachinman/next-i18next#client-side-loading-of-translations-via-http) and SEO optimization.
+[Here](https://dev.to/adrai/all-side-optimized-nextjs-translations-4n9i) you'll find a blog post on how to best use [next-i18next](https://github.com/i18next/next-i18next) with [client side translation download](https://github.com/i18next/next-i18next#client-side-loading-of-translations-via-http) and SEO optimization.
 
 [![](.gitbook/assets/next-i18next.jpg)](https://dev.to/adrai/all-side-optimized-nextjs-translations-4n9i)
 {% endhint %}

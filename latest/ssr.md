@@ -1,8 +1,8 @@
 # SSR (additional components)
 
-## Using [Next.js](https://nextjs.org)?
+## Using [Next.js](https://nextjs.org/)?
 
-You should have a look at [next-i18next](https://github.com/isaachinman/next-i18next) which extends react-i18next to bring it to next.js the easiest way.
+You should have a look at [next-i18next](https://github.com/i18next/next-i18next) which extends react-i18next to bring it to next.js the easiest way.
 
 > With `next-i18next@v8.0.0` and `Next.js v10`, next-i18next has done a major rewrite of the package, leveraging the built-in [internationalized routing](https://nextjs.org/docs/advanced-features/i18n-routing) provided by Next.js.
 >
@@ -21,7 +21,7 @@ You should have a look at [next-i18next](https://github.com/isaachinman/next-i18
 >
 > **Using SSG / `next export`?**\
 > [Here](https://dev.to/adrai/static-html-export-with-i18n-compatibility-in-nextjs-8cd) you'll find a simple tutorial on how to best use next-i18next in a SSG environment.\
-> [![](../.gitbook/assets/next-ssg.jpeg)](https://dev.to/adrai/static-html-export-with-i18n-compatibility-in-nextjs-8cd)
+> [<img src="../.gitbook/assets/next-ssg.jpeg" alt="" data-size="original">](https://dev.to/adrai/static-html-export-with-i18n-compatibility-in-nextjs-8cd)
 
 ## Using [Remix](https://remix.run)?
 
