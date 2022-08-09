@@ -31,6 +31,14 @@ You should have a look at [remix-i18next](https://github.com/sergiodxa/remix-i18
 >
 > [![](../.gitbook/assets/remix-localization.jpg)](https://dev.to/adrai/how-to-internationalize-a-remix-application-2bep)
 
+## Using [Gatsby](https://www.gatsbyjs.com/)?
+
+You should have a look at [gatsby-plugin-react-i18next](https://github.com/microapps/gatsby-plugin-react-i18next) which extends react-i18next to bring it to Gatsby the easiest way.
+
+> [Here](https://github.com/locize/locize-gatsby-example) you'll find a simple example and [here a step by step tutorial](https://dev.to/adrai/best-internationalization-for-gatsby-mkf) on how to best use [gatsby-plugin-react-i18next](https://github.com/microapps/gatsby-plugin-react-i18next).
+>
+> [![](../.gitbook/assets/gatsby-i18next.jpg)](https://dev.to/adrai/best-internationalization-for-gatsby-mkf)
+
 ## Setting the i18next instance based on req
 
 Use the [I18nextProvider](i18nextprovider.md) to inject the i18next instance for example bound to the http i18n instance on the request object using [i18next-http-middleware](https://github.com/i18next/i18next-http-middleware).
