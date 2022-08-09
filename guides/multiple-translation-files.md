@@ -56,7 +56,7 @@ So you do not need to load all translations upfront enabling you to create huge 
 
 ### ****[**locize**](https://locize.com) is the perfect translation management tool for your [**i18next**](https://www.i18next.com) project
 
-#### ➡️ [i18next](https://www.i18next.com) + [locize](https://locize.com) = [true continuous localization](https://locize.com/how-it-works.html#continouslocalization)
+#### ➡️ [i18next](https://www.i18next.com/) + [locize](https://locize.com/) = [true continuous localization](https://locize.com/how-it-works.html#continouslocalization)
 
 [Here](https://github.com/locize/react-tutorial) you can find a step by step guide, which will unleash the full power of i18next in combination with locize.\
 See how your developer experience with this localization workflow [could look like](https://youtu.be/osScyaGMVqo).\

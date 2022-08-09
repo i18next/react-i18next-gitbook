@@ -31,6 +31,13 @@ Some basics of i18next and some cool possibilities on how to optimize your local
 [![](.gitbook/assets/next-i18next.jpg)](https://dev.to/adrai/all-side-optimized-nextjs-translations-4n9i)
 {% endhint %}
 
+{% hint style="info" %}
+**Using Gatsby?**\
+[Here](https://github.com/locize/locize-gatsby-example) you can find an example and an appropriate [blog post](https://dev.to/adrai/best-internationalization-for-gatsby-mkf).
+
+[![](.gitbook/assets/gatsby-i18next.jpg)](https://dev.to/adrai/best-internationalization-for-gatsby-mkf)
+{% endhint %}
+
 ## What does my code look like
 
 **Before:** Your React code would have looked something like:
