@@ -13,31 +13,31 @@ You should have a look at [next-i18next](https://github.com/i18next/next-i18next
 >
 >
 > **Looking for an optimized Next.js translations setup?**\
-> [Here](https://dev.to/adrai/all-side-optimized-nextjs-translations-4n9i) you'll find a blog post on how to best use next-i18next with client side translation download and SEO optimization.
+> [Here](https://locize.com/blog/next-i18next/) you'll find a blog post on how to best use next-i18next with client side translation download and SEO optimization.
 >
-> [![](../.gitbook/assets/next-i18next.jpg)](https://dev.to/adrai/all-side-optimized-nextjs-translations-4n9i)
+> [![](../.gitbook/assets/next-i18next.jpg)](https://locize.com/blog/next-i18next/)
 >
 > ****
 >
 > **Using SSG / `next export`?**\
-> [Here](https://dev.to/adrai/static-html-export-with-i18n-compatibility-in-nextjs-8cd) you'll find a simple tutorial on how to best use next-i18next in a SSG environment.\
-> [<img src="../.gitbook/assets/next-ssg.jpeg" alt="" data-size="original">](https://dev.to/adrai/static-html-export-with-i18n-compatibility-in-nextjs-8cd)
+> [Here](https://locize.com/blog/next-i18n-static/) you'll find a simple tutorial on how to best use next-i18next in a SSG environment.\
+> [<img src="../.gitbook/assets/next-ssg.jpeg" alt="" data-size="original">](https://locize.com/blog/next-i18n-static/)
 
 ## Using [Remix](https://remix.run)?
 
 You should have a look at [remix-i18next](https://github.com/sergiodxa/remix-i18next) which extends react-i18next to bring it to Remix the easiest way.
 
-> [Here](https://github.com/locize/locize-remix-i18next-example) you'll find a simple example and [here a step by step tutorial](https://dev.to/adrai/how-to-internationalize-a-remix-application-2bep) on how to best use remix-i18next.
+> [Here](https://github.com/locize/locize-remix-i18next-example) you'll find a simple example and [here a step by step tutorial](https://locize.com/blog/remix-i18n/) on how to best use remix-i18next.
 >
-> [![](../.gitbook/assets/remix-localization.jpg)](https://dev.to/adrai/how-to-internationalize-a-remix-application-2bep)
+> [![](../.gitbook/assets/remix-localization.jpg)](https://locize.com/blog/remix-i18n/)
 
 ## Using [Gatsby](https://www.gatsbyjs.com/)?
 
 You should have a look at [gatsby-plugin-react-i18next](https://github.com/microapps/gatsby-plugin-react-i18next) which extends react-i18next to bring it to Gatsby the easiest way.
 
-> [Here](https://github.com/locize/locize-gatsby-example) you'll find a simple example and [here a step by step tutorial](https://dev.to/adrai/best-internationalization-for-gatsby-mkf) on how to best use [gatsby-plugin-react-i18next](https://github.com/microapps/gatsby-plugin-react-i18next).
+> [Here](https://github.com/locize/locize-gatsby-example) you'll find a simple example and [here a step by step tutorial](https://locize.com/blog/gatsby-i18n/) on how to best use [gatsby-plugin-react-i18next](https://github.com/microapps/gatsby-plugin-react-i18next).
 >
-> [![](../.gitbook/assets/gatsby-i18next.jpg)](https://dev.to/adrai/best-internationalization-for-gatsby-mkf)
+> [![](../.gitbook/assets/gatsby-i18next.jpg)](https://locize.com/blog/gatsby-i18n/)
 
 ## Setting the i18next instance based on req
 

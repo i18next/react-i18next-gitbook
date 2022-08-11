@@ -1,7 +1,7 @@
 # Step by step guide (v9)
 
 {% hint style="warning" %}
-This guide is based on an older react-i18next version! Please have a look at [this detailed guide](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i1) for a newer version.
+This guide is based on an older react-i18next version! Please have a look at [this detailed guide](https://locize.com/blog/react-i18next/) for a newer version.
 {% endhint %}
 
 Let's start with the sample created in the [quick start guide](../guides/quick-start.md) and extend it to be of more use.

@@ -19,23 +19,30 @@ As react-i18next depends on [i18next](http://i18next.com) you can use it in any 
 > **Learn once - translate everywhere**.
 
 {% hint style="success" %}
-[Here](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb) you'll find a simple tutorial on how to best use react-i18next.\
+[Here](https://locize.com/blog/react-i18next/) you'll find a simple tutorial on how to best use react-i18next.\
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
-&#x20;<img src=".gitbook/assets/title width.jpg" alt="" data-size="original">](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
+&#x20;<img src=".gitbook/assets/title width.jpg" alt="" data-size="original">](https://locize.com/blog/react-i18next/)
 {% endhint %}
 
 {% hint style="info" %}
 **Using Next.js?**\
-[Here](https://dev.to/adrai/all-side-optimized-nextjs-translations-4n9i) you'll find a blog post on how to best use [next-i18next](https://github.com/i18next/next-i18next) with [client side translation download](https://github.com/i18next/next-i18next#client-side-loading-of-translations-via-http) and SEO optimization.
+[Here](https://locize.com/blog/next-i18next/) you'll find a blog post on how to best use [next-i18next](https://github.com/i18next/next-i18next) with [client side translation download](https://github.com/i18next/next-i18next#client-side-loading-of-translations-via-http) and SEO optimization.
 
-[![](.gitbook/assets/next-i18next.jpg)](https://dev.to/adrai/all-side-optimized-nextjs-translations-4n9i)
+[![](.gitbook/assets/next-i18next.jpg)](https://locize.com/blog/next-i18next/)
+{% endhint %}
+
+{% hint style="info" %}
+**Using Remix?**\
+[Here](https://github.com/locize/locize-remix-i18next-example) you'll find a simple example and [here a step by step tutorial](https://locize.com/blog/remix-i18n/) on how to best use remix-i18next.
+
+[![](../.gitbook/assets/remix-localization.jpg)](https://locize.com/blog/remix-i18n/)
 {% endhint %}
 
 {% hint style="info" %}
 **Using Gatsby?**\
-[Here](https://github.com/locize/locize-gatsby-example) you can find an example and an appropriate [blog post](https://dev.to/adrai/best-internationalization-for-gatsby-mkf).
+[Here](https://github.com/locize/locize-gatsby-example) you can find an example and an appropriate [blog post](https://locize.com/blog/gatsby-i18n/).
 
-[![](.gitbook/assets/gatsby-i18next.jpg)](https://dev.to/adrai/best-internationalization-for-gatsby-mkf)
+[![](.gitbook/assets/gatsby-i18next.jpg)](https://locize.com/blog/gatsby-i18n/)
 {% endhint %}
 
 ## What does my code look like

@@ -19,9 +19,9 @@ Check out this basic [react example](https://github.com/i18next/react-i18next/tr
 #### Do you like to read a more complete step by step tutorial?
 
 {% hint style="success" %}
-[Here](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb) you'll find a simple tutorial on how to best use react-i18next.\
+[Here](https://locize.com/blog/react-i18next/) you'll find a simple tutorial on how to best use react-i18next.\
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
-![](<../.gitbook/assets/title width.jpg>)](https://dev.to/adrai/how-to-properly-internationalize-a-react-application-using-i18next-3hdb)
+![](<../.gitbook/assets/title width.jpg>)](https://locize.com/blog/react-i18next/)
 {% endhint %}
 
 ## Configure i18next
