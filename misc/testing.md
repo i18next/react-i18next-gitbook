@@ -68,7 +68,7 @@ export default function CustomComponent() {
   return &#x3C;div>{t('some.key', { some: 'variable' })}&#x3C;/div>;
 }
 <strong>
-</strong><strong>// test.js
+</strong><strong>// test
 </strong><strong>import React from 'react';
 </strong>import { mount } from 'enzyme';
 import UseTranslationWithInterpolation from './UseTranslationWithInterpolation';
