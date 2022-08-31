@@ -2,7 +2,7 @@
 
 ## What is react-i18next?
 
-react-i18next is a powerful **internationalization** framework for **React** / **React Native** which is based on [i18next](http://i18next.com). Check out the [history of i18next](https://www.i18next.com/misc/the-history-of-i18next) and [when react-i18next was introduced](https://www.i18next.com/misc/the-history-of-i18next#v2).
+react-i18next is a powerful **internationalization** framework for [**React**](https://reactjs.org) / [**React Native**](https://reactnative.dev/) which is based on [i18next](http://i18next.com). Check out the [history of i18next](https://www.i18next.com/misc/the-history-of-i18next) and [when react-i18next was introduced](https://www.i18next.com/misc/the-history-of-i18next#v2).
 
 {% hint style="info" %}
 You should read the [i18next](https://www.i18next.com) documentation. The [configuration options](https://www.i18next.com/overview/configuration-options) and translation functionalities like [plurals](https://www.i18next.com/translation-function/plurals), [formatting](https://www.i18next.com/translation-function/formatting), [interpolation](https://www.i18next.com/translation-function/interpolation), ... are documented there.
@@ -21,7 +21,7 @@ As react-i18next depends on [i18next](http://i18next.com) you can use it in any 
 {% hint style="success" %}
 [Here](https://locize.com/blog/react-i18next/) you'll find a simple tutorial on how to best use react-i18next.\
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
-&#x20;<img src=".gitbook/assets/title width.jpg" alt="" data-size="original">](https://locize.com/blog/react-i18next/)
+<img src=".gitbook/assets/title width.jpg" alt="" data-size="original">](https://locize.com/blog/react-i18next/)
 {% endhint %}
 
 {% hint style="info" %}
@@ -35,7 +35,7 @@ Some basics of i18next and some cool possibilities on how to optimize your local
 **Using Remix?**\
 [Here](https://github.com/locize/locize-remix-i18next-example) you'll find a simple example and [here a step by step tutorial](https://locize.com/blog/remix-i18n/) on how to best use remix-i18next.
 
-[![](../.gitbook/assets/remix-localization.jpg)](https://locize.com/blog/remix-i18n/)
+[![](.gitbook/assets/remix-localization.jpg)](https://locize.com/blog/remix-i18n/)
 {% endhint %}
 
 {% hint style="info" %}
