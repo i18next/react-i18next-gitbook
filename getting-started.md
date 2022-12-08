@@ -75,7 +75,7 @@ Sometimes you might want to include html formatting or components like links int
 ```
 
 {% hint style="info" %}
-Learn more about the Trans Component [here](latest/trans-component.md)&#x20;
+Learn more about the Trans Component [here](latest/trans-component.md)
 {% endhint %}
 
 ## Basic sample
@@ -124,7 +124,7 @@ root.render(
 
 #### RESULT:
 
-![Preview of content](<.gitbook/assets/Screen Shot 2018-09-30 at 16.58.18.png>)
+![Preview of content](.gitbook/assets/screen-shot-2018-09-30-at-16.58.18.png)
 
 {% hint style="info" %}
 This sample while very simple does come with some [drawbacks](guides/the-drawbacks-of-other-i18n-solutions.md) to getting the full potential from using react-i18next you should read the extended [step by step guide](latest/using-with-hooks.md).
@@ -135,5 +135,5 @@ This sample while very simple does come with some [drawbacks](guides/the-drawbac
 {% hint style="success" %}
 [Here](https://locize.com/blog/react-i18next/) you'll find a simple tutorial on how to best use react-i18next.\
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
-&#x20;<img src=".gitbook/assets/title width.jpg" alt="" data-size="original">](https://locize.com/blog/react-i18next/)
+<img src=".gitbook/assets/title-width.jpg" alt="" data-size="original">](https://locize.com/blog/react-i18next/)
 {% endhint %}

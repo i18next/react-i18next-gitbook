@@ -21,7 +21,7 @@ Check out this basic [react example](https://github.com/i18next/react-i18next/tr
 {% hint style="success" %}
 [Here](https://locize.com/blog/react-i18next/) you'll find a simple tutorial on how to best use react-i18next.\
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
-![](<../.gitbook/assets/title width.jpg>)](https://locize.com/blog/react-i18next/)
+![](../.gitbook/assets/title-width.jpg)](https://locize.com/blog/react-i18next/)
 {% endhint %}
 
 ## Configure i18next
@@ -190,4 +190,4 @@ Prefer having code to checkout? Directly dive into our examples:
 > **Would you like to visually check the progress state of your translations?**
 >
 > _Try_ [_translation-check_](https://github.com/locize/translation-check)_, it shows an overview of your translations in a nice UI. Check which keys are not yet translated._\
-> [![](../.gitbook/assets/preview.jpg) ](https://github.com/locize/translation-check)
+> [![](../.gitbook/assets/preview.jpg)](https://github.com/locize/translation-check)

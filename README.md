@@ -21,14 +21,19 @@ As react-i18next depends on [i18next](http://i18next.com) you can use it in any 
 {% hint style="success" %}
 [Here](https://locize.com/blog/react-i18next/) you'll find a simple tutorial on how to best use react-i18next.\
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
-<img src=".gitbook/assets/title width.jpg" alt="" data-size="original">](https://locize.com/blog/react-i18next/)
+<img src=".gitbook/assets/title-width.jpg" alt="" data-size="original">](https://locize.com/blog/react-i18next/)
 {% endhint %}
 
 {% hint style="info" %}
 **Using Next.js?**\
 [Here](https://locize.com/blog/next-i18next/) you'll find a blog post on how to best use [next-i18next](https://github.com/i18next/next-i18next) with [client side translation download](https://github.com/i18next/next-i18next#client-side-loading-of-translations-via-http) and SEO optimization.
 
-[![](.gitbook/assets/next-i18next.jpg)](https://locize.com/blog/next-i18next/)
+[![](.gitbook/assets/next-i18next.jpg)](https://locize.com/blog/next-i18next/)\
+\
+**Using Next.js 13 with the new app directory?**\
+Then [this article](https://locize.com/blog/next-13-app-dir-i18n) is what you are looking for!
+
+[![](.gitbook/assets/next-13-app-dir-i18n.jpg)](https://locize.com/blog/next-13-app-dir-i18n)
 {% endhint %}
 
 {% hint style="info" %}

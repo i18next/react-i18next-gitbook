@@ -1,5 +1,11 @@
 # SSR (additional components)
 
+## Using [Next.js](https://nextjs.org/) 13 with _app directory_?
+
+Then check out [this article](https://locize.com/blog/next-13-app-dir-i18n) describing how to best internationalize it with i18next.
+
+[![](../.gitbook/assets/next-13-app-dir-i18n.jpg)](https://locize.com/blog/next-13-app-dir-i18n)
+
 ## Using [Next.js](https://nextjs.org/)?
 
 You should have a look at [next-i18next](https://github.com/i18next/next-i18next) which extends react-i18next to bring it to next.js the easiest way.
@@ -10,14 +16,12 @@ You should have a look at [next-i18next](https://github.com/i18next/next-i18next
 >
 > `next-i18next@v5.0.0` supports `Next.js v9.5` in [**Serverless** mode](https://nextjs.org/blog/next-8#serverless-nextjs) (as of [July 2020](https://github.com/isaachinman/next-i18next/issues/274#issuecomment-664616304)). If your goal is to use earlier versions of Next.js with Serverless, then you should have a look at ["Next Right Now"](https://github.com/UnlyEd/next-right-now), which is a Next.js 9 boilerplate with built-in `i18next`, `react-i18next` and Locize.
 >
->
->
 > **Looking for an optimized Next.js translations setup?**\
 > [Here](https://locize.com/blog/next-i18next/) you'll find a blog post on how to best use next-i18next with client side translation download and SEO optimization.
 >
 > [![](../.gitbook/assets/next-i18next.jpg)](https://locize.com/blog/next-i18next/)
 >
-> ****
+> ***
 >
 > **Using SSG / `next export`?**\
 > [Here](https://locize.com/blog/next-i18n-static/) you'll find a simple tutorial on how to best use next-i18next in a SSG environment.\
