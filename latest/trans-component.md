@@ -106,6 +106,10 @@ This format is useful if you want to interpolate the same node multiple times. A
 Existing self-closing HTML tag names are reserved keys and won't work. Examples: `link: <Link />`, `img: <img src="" />`, `media: <img src="" />`
 {% endhint %}
 
+{% hint style="info" %}
+Make sure you also adapt your translation resources to include the _named tags_ (`<italic>`) instead of the _indexed tags_ (`<0>`)!
+{% endhint %}
+
 ### Usage with simple HTML elements like \<br /> and others (v10.4.0)
 
 There are two options that allow you to have basic HTML tags inside your translations, instead of numeric indexes. However, this only works for elements without additional attributes (like `className`), having none or a single text children.
