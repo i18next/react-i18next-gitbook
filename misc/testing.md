@@ -53,6 +53,10 @@ jest.mock('react-i18next', () => ({
       },
     };
   },
+  initReactI18next: {
+    type: '3rdParty',
+    init: () => {},
+  }
 }));
 ```
 
@@ -76,6 +80,10 @@ import { useTranslation } from 'react-i18next';
 
 jest.mock('react-i18next', () => ({
   useTranslation: jest.fn(),
+  initReactI18next: {
+    type: '3rdParty',
+    init: jest.fn(),
+  }
 }));
 
 const tSpy = jest.fn((str) => str);
