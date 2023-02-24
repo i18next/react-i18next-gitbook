@@ -99,7 +99,7 @@ i18next.t('my.key')
 
 ### Using the hook
 
-Using the hook in functional components is one of the options you got.
+Using the hook in functional components is one of the options you have.
 
 The `t` function is the main function in i18next to translate content. Read the [documentation](https://www.i18next.com/translation-function/essentials) for all the options.
 

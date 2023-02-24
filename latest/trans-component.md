@@ -174,12 +174,12 @@ You will need to pass the `count` prop:
 const messages = ['message one', 'message two'];
 
 <Trans i18nKey="newMessages" count={messages.length}>
-  You got {{ count: messages.length }} messages.
+  You have {{ count: messages.length }} messages.
 </Trans>
 
 // Translation strings:
-// "newMessages": "You got one message."
-// "newMessages_plural": "You got {{count}} messages."
+// "newMessages": "You have one message."
+// "newMessages_plural": "You have {{count}} messages."
 ```
 
 ### Using with lists (v10.5.0)

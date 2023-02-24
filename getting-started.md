@@ -32,7 +32,7 @@ You can also add a script tag to load react-i18next from one of the CDNs providi
 You should read the [i18next](https://www.i18next.com) documentation at some point as we do not repeat all the [configuration options](https://www.i18next.com/overview/configuration-options) and translation functionalities like [plurals](https://www.i18next.com/translation-function/plurals), [formatting](https://www.i18next.com/translation-function/formatting), [interpolation](https://www.i18next.com/translation-function/interpolation), ... here.
 {% endhint %}
 
-You got two options to translate your content:
+You have two options to translate your content:
 
 ### Simple content
 
