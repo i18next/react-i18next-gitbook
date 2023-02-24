@@ -40,7 +40,7 @@ or [`Translation`](https://react.i18next.com/latest/translation-render-prop):
 
 ## Separating translation files
 
-In i18next you got a lot of options to add translations on init, in your code calling API methods or using one of the backend implementation. For a detailed write up check out the ["Add or load translation guide on i18next.com"](https://www.i18next.com/how-to/add-or-load-translations).
+In i18next you have a lot of options to add translations on init, in your code calling API methods or using one of the backend implementation. For a detailed write up check out the ["Add or load translation guide on i18next.com"](https://www.i18next.com/how-to/add-or-load-translations).
 
 With react-i18next you can use any of the components passing down the `t` function to your components to load namespaces:
 
