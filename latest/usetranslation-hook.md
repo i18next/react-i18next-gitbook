@@ -64,9 +64,8 @@ const { t, i18n } = useTranslation('ns1', { i18n });
 > depends on i18next version >= 20.6.0
 
 ```javascript
-// having resources like this:
+// having JSON in namespace "translation" like this:
 /*{
-  "translation": {
     "very": {
       "deeply": {
         "nested": {
@@ -74,7 +73,6 @@ const { t, i18n } = useTranslation('ns1', { i18n });
         }
       }
     }
-  }
 }*/
 // you can define a keyPrefix to be used for the resulting t function
 const { t } = useTranslation('translation', { keyPrefix: 'very.deeply.nested' });
