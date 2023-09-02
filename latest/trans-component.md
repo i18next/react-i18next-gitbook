@@ -69,7 +69,7 @@ function MyComponent({ person, messages }) {
   const count = messages.length;
 
   return (
-    <Trans i18nKey="userMessagesUnread" count={count}>
+    <Trans i18nKey="userMessagesUnread" values={{ name, count}}>
       Hello <strong title={t('nameTitle')}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
     </Trans>
   );
