@@ -21,7 +21,7 @@ As react-i18next depends on [i18next](http://i18next.com) you can use it in any 
 {% hint style="success" %}
 [Here](https://locize.com/blog/react-i18next/) you'll find a simple tutorial on how to best use react-i18next.\
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
-<img src=".gitbook/assets/title width.jpg" alt="" data-size="original">](https://locize.com/blog/react-i18next/)
+<img src=".gitbook/assets/title width (1).jpg" alt="" data-size="original">](https://locize.com/blog/react-i18next/)
 {% endhint %}
 
 {% hint style="info" %}

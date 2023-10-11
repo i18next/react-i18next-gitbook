@@ -21,7 +21,7 @@ You should have a look at [next-i18next](https://github.com/i18next/next-i18next
 >
 > [![](../.gitbook/assets/next-i18next.jpg)](https://locize.com/blog/next-i18next/)
 >
-> ***
+>
 >
 > **Using SSG / `next export`?**\
 > [Here](https://locize.com/blog/next-i18n-static/) you'll find a simple tutorial on how to best use next-i18next in a SSG environment.\
