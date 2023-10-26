@@ -54,7 +54,7 @@ So you do not need to load all translations upfront enabling you to create huge 
 
 ## Manage your translations with a management GUI
 
-### ****[**locize**](https://locize.com) is the perfect translation management tool for your [**i18next**](https://www.i18next.com) project
+### [**locize**](https://locize.com) is the perfect translation management tool for your [**i18next**](https://www.i18next.com) project
 
 #### ➡️ [i18next](https://www.i18next.com/) + [locize](https://locize.com/) = [true continuous localization](https://locize.com/how-it-works.html#continouslocalization)
 
