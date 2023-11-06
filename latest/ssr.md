@@ -2,9 +2,9 @@
 
 ## Using [Next.js](https://nextjs.org/) 13 with _app directory_?
 
-Then check out [this article](https://locize.com/blog/next-13-app-dir-i18n) describing how to best internationalize it with i18next.
+Then check out [this article](https://locize.com/blog/next-app-dir-i18n/) describing how to best internationalize it with i18next.
 
-[![](../.gitbook/assets/next-13-app-dir-i18n.jpg)](https://locize.com/blog/next-13-app-dir-i18n)
+[![](../.gitbook/assets/next-13-app-dir-i18n.jpg)](https://locize.com/blog/next-app-dir-i18n/)
 
 ## Using [Next.js](https://nextjs.org/)?
 
@@ -21,7 +21,7 @@ You should have a look at [next-i18next](https://github.com/i18next/next-i18next
 >
 > [![](../.gitbook/assets/next-i18next.jpg)](https://locize.com/blog/next-i18next/)
 >
->
+> ***
 >
 > **Using SSG / `next export`?**\
 > [Here](https://locize.com/blog/next-i18n-static/) you'll find a simple tutorial on how to best use next-i18next in a SSG environment.\
