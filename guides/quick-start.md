@@ -88,11 +88,13 @@ root.render(
 {% hint style="info" %}
 If you need to access the `t` function or the `i18next` instance from outside of a React component you can simply import your `./i18n.js` and use the exported i18next instance:
 
-```
-import i18next from './i18n'
-
+<pre><code><strong>import i18next from './i18n'
+</strong>
 i18next.t('my.key')
-```
+</code></pre>
+
+\
+Also read about this [here](https://github.com/i18next/react-i18next/issues/1236#issuecomment-762039023).
 {% endhint %}
 
 ## Translate your content
