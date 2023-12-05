@@ -86,6 +86,6 @@ See how your developer experience with this localization workflow [could look li
 There's also the possibility to have an [even more focused developer experience](https://youtu.be/VfxBpSXarlU), with the help of the [auto-machinetranslation workflow](https://docs.locize.com/whats-inside/auto-machine-translation) and the use of the save missing keys functionality, new keys not only gets added to locize automatically, while developing the app, but are also [automatically translated](https://youtu.be/VfxBpSXarlU) into the target languages using machine translation (like [Google Translate](https://cloud.google.com/translate)).
 {% endhint %}
 
-{% embed url="https://youtu.be/ds-yEEYP1Ks" %}
+{% embed url="https://www.youtube.com/watch?v=TFV_vhJs5DY" %}
 
 [Learn more about the enterprise offering](https://www.i18next.com/overview/for-enterprises)
