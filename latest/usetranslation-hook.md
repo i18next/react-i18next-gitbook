@@ -97,6 +97,16 @@ const text = t('ns:key'); // this will not work
 ```
 {% endhint %}
 
+### Optional lng option
+
+> available in react-i18next version >= 12.3.1
+
+```javascript
+// you can pass a language to be used for the resulting t function
+const { t } = useTranslation('translation', { lng: 'de' });
+const text = t('key'); // "hier"
+```
+
 ### Not using Suspense
 
 ```javascript
