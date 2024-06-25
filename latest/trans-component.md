@@ -110,6 +110,50 @@ Existing self-closing HTML tag names are reserved keys and won't work. Examples:
 Make sure you also adapt your translation resources to include the _named tags_ (`<italic>`) instead of the _indexed tags_ (`<0>`)!
 {% endhint %}
 
+### Overriding React component props (v11.5.0)
+
+In some cases you may want to override the props of a given component based on the active language.
+
+This can be achieved by providing prop values inside of your translations. Such values will override whatever has been passed to the component present in the `components` prop of the `Trans` component.
+
+In the example below we want our custom link component to have a different `href` value based on the active language. This is how our custom link component is being used:
+
+```javascript
+<Trans
+  i18nKey="myKey"
+  components={{ 
+    CustomLink: <MyCustomLinkComponent href="value-to-be-overridden"/> 
+    }}
+/>
+```
+
+with the following being our translation message:
+
+```json
+  "myKey": "This is a <CustomLink href=\"https://example.com/\">link to example.com</CustomLink>."
+```
+
+This setup will render the following JSX:
+
+```html
+This is a <MyCustomLinkComponent href="https://example.com/">link to example.com</MyCustomLinkComponent>.
+```
+
+This approach also works with listed components:
+
+```javascript
+<Trans
+  i18nKey="myKey"
+  components={[ <MyCustomLinkComponent href="value-to-be-overridden"/> ]}
+/>
+```
+
+With this then making up our translation message:
+
+```json
+  "myKey": "This is a <0 href=\"https://example.com/\">link to example.com</0>."
+```
+
 ### Usage with simple HTML elements like \<br /> and others (v10.4.0)
 
 There are two options that allow you to have basic HTML tags inside your translations, instead of numeric indexes. However, this only works for elements without additional attributes (like `className`), having none or a single text children.
@@ -268,12 +312,12 @@ All properties are optional, although you'll need to use `i18nKey` if you're not
 | ---------------- | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `i18nKey`        | `string (undefined)`       | <p>If you prefer to use text as keys you can omit this, and the translation will be used as key. Can contain the namespace by prepending it in the form <code>'ns:key'</code> (depending on <code>i18next.options.nsSeparator</code>)</p><p>But this is not recommended when used in combination with natural language keys, better use the dedicated ns parameter: <code>&#x3C;Trans i18nKey="myKey" ns="myNS">&#x3C;/Trans></code></p> |
 | `ns`             | `string (undefined)`       | Namespace to use. May also be embedded in `i18nKey` but not recommended when used in combination with natural language keys, see above.                                                                                                                                                                                                                                                                                                  |
-| `t`              | `function (undefined)`     | `t` function to use instead of the global `i18next.t()` or the `t()` function provided by the nearest [provider](https://react.i18next.com/latest/i18nextprovider).                                                                                                                                                                                                                                                                                                                                                                                             |
+| `t`              | `function (undefined)`     | `t` function to use instead of the global `i18next.t()` or the `t()` function provided by the nearest [provider](https://react.i18next.com/latest/i18nextprovider).                                                                                                                                                                                                                                                                      |
 | `count`          | `integer (undefined)`      | Numeric value for pluralizable strings                                                                                                                                                                                                                                                                                                                                                                                                   |
 | `context`        | `string (undefined)`       | Value used for the [context feature](https://www.i18next.com/translation-function/context).                                                                                                                                                                                                                                                                                                                                              |
 | `tOptions`       | `object (undefined)`       | Extra options to pass to `t()` (e.g. `context`, `postProcessor`, ...)                                                                                                                                                                                                                                                                                                                                                                    |
 | `parent`         | `node (undefined)`         | A component to wrap the content into (can be globally set on `i18next.init`). **Required for React < v16**                                                                                                                                                                                                                                                                                                                               |
-| `i18n`           | `object (undefined)`       | i18next instance to use if not provided by context                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `i18n`           | `object (undefined)`       | i18next instance to use if not provided by context                                                                                                                                                                                                                                                                                                                                                                                       |
 | `defaults`       | `string (undefined)`       | Use this instead of using the children as default translation value (useful for ICU)                                                                                                                                                                                                                                                                                                                                                     |
 | `values`         | `object (undefined)`       | Interpolation values if not provided in children                                                                                                                                                                                                                                                                                                                                                                                         |
 | `components`     | `array[nodes] (undefined)` | Components to interpolate based on index of tag                                                                                                                                                                                                                                                                                                                                                                                          |
