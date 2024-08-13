@@ -8,7 +8,7 @@ You should have a look at [next-i18next](https://github.com/isaachinman/next-i18
 
 To learn more you should have a look at our samples:
 
-* [razzle (sample provided by react-i18next)](https://github.com/i18next/react-i18next/tree/master/example/razzle-ssr)
+* [razzle (sample provided by react-i18next)](https://github.com/i18next/react-i18next/tree/v9.x.x/example/razzle-ssr)
 * [simpleblack's boilerplate](https://github.com/simpleblack/react-redux-universal-hot-example)
 
 {% hint style="info" %}
