@@ -116,7 +116,7 @@ export default withNamespaces(
 | bindI18n           | string ('languageChanged loaded') | which events trigger a rerender, can be set to false or string of events                                                                                                                                                                                              |
 | bindStore          | string ('added removed')          | which events on store trigger a rerender, can be set to false or string of events                                                                                                                                                                                     |
 | omitBoundRerenders | boolean (true)                    | Does not trigger rerenders while state not ready - avoiding unneeded renders on init                                                                                                                                                                                  |
-| i18n               | object (undefined)                | pass i18next via options (useful for [next.js usage](https://github.com/i18next/react-i18next/tree/master/example/nextjs)                                                                                                                                             |
+| i18n               | object (undefined)                | pass i18next via options (useful for [next.js usage](https://github.com/i18next/react-i18next/tree/v9.x.x/example/nextjs)                                                                                                                                             |
 | usePureComponent   | boolean (false)                   | use shallowEqual on props change if set to true                                                                                                                                                                                                                       |
 
 ## withNamespaces props:
@@ -124,5 +124,5 @@ export default withNamespaces(
 | _**name**_       | _**type (default)**_ | _**description**_                                                                                                              |
 | ---------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | i18n             | object (undefined)   | pass i18next instance by props instead of having it on context                                                                 |
-| initialI18nStore | object (undefined)   | pass in initial translations (useful for [next.js usage](https://github.com/i18next/react-i18next/tree/master/example/nextjs)) |
-| initialLanguage  | object (undefined)   | pass in initial language (useful for [next.js usage](https://github.com/i18next/react-i18next/tree/master/example/nextjs))     |
+| initialI18nStore | object (undefined)   | pass in initial translations (useful for [next.js usage](https://github.com/i18next/react-i18next/tree/v9.x.x/example/nextjs)) |
+| initialLanguage  | object (undefined)   | pass in initial language (useful for [next.js usage](https://github.com/i18next/react-i18next/tree/v9.x.x/example/nextjs))     |
