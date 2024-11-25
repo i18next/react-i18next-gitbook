@@ -34,7 +34,9 @@ Or mock it like:
 jest.mock('react-i18next', () => ({
   // this mock makes sure any components using the translate HoC receive the t function as a prop
   withTranslation: () => Component => {
-    Component.defaultProps = { ...Component.defaultProps, t: () => "" };
+    Component.defaultProps = { ...Component.defaultProps, t: (i18nKey) => i18nKey };
+    // or with TypeScript:
+    //Component.defaultProps = { ...Component.defaultProps, t: (i18nKey: string) => i18nKey };
     return Component;
   },
 }));
@@ -47,7 +49,9 @@ jest.mock('react-i18next', () => ({
   // this mock makes sure any components using the translate hook can use it without a warning being shown
   useTranslation: () => {
     return {
-      t: (str) => str,
+      t: (i18nKey) => i18nKey,
+      // or with TypeScript:
+      //t: (i18nKey: string) => i18nKey,
       i18n: {
         changeLanguage: () => new Promise(() => {}),
       },
