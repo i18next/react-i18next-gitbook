@@ -10,7 +10,6 @@ import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import { initReactI18next } from 'react-i18next';
 
-
 i18n
   .use(Backend)
   .use(LanguageDetector)
@@ -37,20 +36,20 @@ i18n
     */
   });
 
-
 export default i18n;
 ```
 
 All additional options for react in init options:
 
-| options                    | default                     | description                                                                                                                                                                                                      |
-| -------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| bindI18n                   | 'languageChanged'           | <p>which events trigger a rerender, can be set to false or string of events<br>separated by ""</p>                                                                                                               |
-| bindI18nStore              | ''                          | define which events on [resourceStore](https://www.i18next.com/overview/api#store-events) should trigger a rerender                                                                                              |
-| transEmptyNodeValue        | ''                          | how to treat failed lookups in Trans component                                                                                                                                                                   |
-| transSupportBasicHtmlNodes | true                        | <p>convert eg. <code>&#x3C;br/></code> found in translations to a react component of type br<br><a href="trans-component.md#using-for-simple-html-elements-in-translations-v-10-4-0">See Trans component</a></p> |
-| transKeepBasicHtmlNodesFor | \['br', 'strong', 'i', 'p'] | <p>Which nodes not to convert in defaultValue generation in the Trans component.<br><a href="trans-component.md#using-for-simple-html-elements-in-translations-v-10-4-0">See Trans component</a></p>             |
-| useSuspense                | true                        | If using Suspense or not                                                                                                                                                                                         |
-| keyPrefix                  | undefined                   | the optional `keyPrefix` will be automatically applied to the returned `t` function in [useTranslation](usetranslation-hook.md#optional-keyprefix-option) for example.                                           |
+| options                         | default                     | description                                                                                                                                                                                                      |
+| ------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| bindI18n                        | 'languageChanged'           | <p>which events trigger a rerender, can be set to false or string of events<br>separated by ""</p>                                                                                                               |
+| bindI18nStore                   | ''                          | define which events on [resourceStore](https://www.i18next.com/overview/api#store-events) should trigger a rerender                                                                                              |
+| transEmptyNodeValue             | ''                          | how to treat failed lookups in Trans component                                                                                                                                                                   |
+| transSupportBasicHtmlNodes      | true                        | <p>convert eg. <code>&#x3C;br/></code> found in translations to a react component of type br<br><a href="trans-component.md#using-for-simple-html-elements-in-translations-v-10-4-0">See Trans component</a></p> |
+| transKeepBasicHtmlNodesFor      | \['br', 'strong', 'i', 'p'] | <p>Which nodes not to convert in defaultValue generation in the Trans component.<br><a href="trans-component.md#using-for-simple-html-elements-in-translations-v-10-4-0">See Trans component</a></p>             |
+| useSuspense                     | true                        | If using Suspense or not                                                                                                                                                                                         |
+| keyPrefix                       | undefined                   | the optional `keyPrefix` will be automatically applied to the returned `t` function in [useTranslation](usetranslation-hook.md#optional-keyprefix-option) for example.                                           |
+| silentReactInterpolationWarning | undefined                   | Silence interpolation warning, N.B. These warnings are relevant and should be fixed. This option is provided as a temporary measure to ease the development phase.                                               |
 
 For more initialization options have look at the [docs](https://www.i18next.com/overview/configuration-options).
