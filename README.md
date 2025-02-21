@@ -30,10 +30,10 @@ Some basics of i18next and some cool possibilities on how to optimize your local
 
 [![](.gitbook/assets/next-i18next.jpg)](https://locize.com/blog/next-i18next/)\
 \
-**Using Next.js 13 with the new app directory?**\
-Then [this article](https://locize.com/blog/next-13-app-dir-i18n) is what you are looking for!
+**Using Next.js with the new app directory?**\
+Then [this article](https://www.locize.com/blog/next-app-dir-i18n) is what you are looking for!
 
-[![](.gitbook/assets/next-13-app-dir-i18n.jpg)](https://locize.com/blog/next-13-app-dir-i18n)
+[![](.gitbook/assets/next-13-app-dir-i18n.jpg)](https://www.locize.com/blog/next-app-dir-i18n)
 {% endhint %}
 
 {% hint style="info" %}
@@ -78,7 +78,7 @@ If you prefer not using semantic keys but text - [that's also possible](https://
 
 ## On top: [Localization as a service](https://locize.com)
 
-i18next supports translation management tools such as [locize.com](http://locize.com/?utm\_source=react\_i18next\_com\&utm\_medium=gitbook).
+i18next supports translation management tools such as [locize.com](http://locize.com/?utm_source=react_i18next_com\&utm_medium=gitbook).
 
 {% hint style="success" %}
 [Here](https://github.com/locize/react-tutorial) you can find a step by step guide, which will unleash the full power of i18next in combination with locize.\
