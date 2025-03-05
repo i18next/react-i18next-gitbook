@@ -19,6 +19,12 @@ As react-i18next depends on [i18next](http://i18next.com) you can use it in any 
 > **Learn once - translate everywhere**.
 
 {% hint style="success" %}
+Check out [this video](https://youtu.be/37rcHVcQ6t0) and the corresponding [blog post](https://www.locize.com/blog/how-to-easily-add-i18n-to-your-software) about "Vite + React + TypeScript" with i18next.
+
+<img src=".gitbook/assets/title1.png" alt="" data-size="original">
+{% endhint %}
+
+{% hint style="success" %}
 [Here](https://locize.com/blog/react-i18next/) you'll find a simple tutorial on how to best use react-i18next.\
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
 <img src=".gitbook/assets/title width (1).jpg" alt="" data-size="original">](https://locize.com/blog/react-i18next/)

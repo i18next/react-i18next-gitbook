@@ -2,7 +2,7 @@
 
 ## Install needed dependencies
 
-We expect you having an existing react application - if not give [create-react-app](https://github.com/facebook/create-react-app) a try.
+We expect you having an existing react application - if not give [Vite](https://vite.dev/guide/#scaffolding-your-first-vite-project) (`npm create vite@latest`) or similar a try.
 
 Install both react-i18next and i18next packages:
 
