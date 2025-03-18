@@ -94,7 +94,7 @@ i18next.t('my.key')
 </code></pre>
 
 \
-Also read about this [here](https://github.com/i18next/react-i18next/issues/1236#issuecomment-762039023).
+Also read about this [here](https://www.locize.com/blog/how-to-use-i18next-t-outside-react-components) and [here](https://github.com/i18next/react-i18next/issues/1236#issuecomment-762039023).
 {% endhint %}
 
 ## Translate your content
