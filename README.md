@@ -60,7 +60,7 @@ Then [this article](https://www.locize.com/blog/next-app-dir-i18n) is what you a
 
 **Before:** Your React code would have looked something like:
 
-```markup
+```jsx
 ...
 <div>Just simple content</div>
 <div>
@@ -71,7 +71,7 @@ Then [this article](https://www.locize.com/blog/next-app-dir-i18n) is what you a
 
 **After:** With the `Trans` component just change it to:
 
-```markup
+```jsx
 ...
 <div>{t('simpleContent')}</div>
 <Trans i18nKey="userMessagesUnread" count={count}>

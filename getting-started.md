@@ -40,13 +40,13 @@ Simple content can easily be translated using the provided `t` function.
 
 **Before:**
 
-```javascript
+```jsx
 <div>Just simple content</div>
 ```
 
 **After:**
 
-```javascript
+```jsx
 <div>{t('simpleContent')}</div>
 ```
 
@@ -60,7 +60,7 @@ Sometimes you might want to include html formatting or components like links int
 
 **Before:** Your react code would have looked something like:
 
-```javascript
+```jsx
 <div>
   Hello <strong title="this is your name">{name}</strong>, you have {count} unread message(s). <Link to="/msgs">Go to messages</Link>.
 </div>
@@ -68,7 +68,7 @@ Sometimes you might want to include html formatting or components like links int
 
 **After:** With the trans component just change it to:
 
-```javascript
+```jsx
 <Trans i18nKey="userMessagesUnread" count={count}>
   Hello <strong title={t('nameTitle')}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
 </Trans>
