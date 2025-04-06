@@ -1,10 +1,10 @@
 # SSR (additional components)
 
-## Using [Next.js](https://nextjs.org/) 13 with _app directory_?
+## Using [Next.js](https://nextjs.org/) App Router?
 
-Then check out [this article](https://locize.com/blog/next-app-dir-i18n/) describing how to best internationalize it with i18next.
+Then check out [this article](https://www.locize.com/blog/i18n-next-app-router) describing how to best internationalize it with i18next.
 
-[![](../.gitbook/assets/next-13-app-dir-i18n.jpg)](https://locize.com/blog/next-app-dir-i18n/)
+[![](https://cdn.prod.website-files.com/67a323e323a50df7f24f0a94/67f268673fcfae53e5d4697c_i18n-next-app-router.jpg)](https://www.locize.com/blog/i18n-next-app-router)
 
 ## Using [Next.js](https://nextjs.org/)?
 

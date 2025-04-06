@@ -36,10 +36,10 @@ Some basics of i18next and some cool possibilities on how to optimize your local
 
 [![](.gitbook/assets/next-i18next.jpg)](https://locize.com/blog/next-i18next/)\
 \
-**Using Next.js with the new app directory?**\
-Then [this article](https://www.locize.com/blog/next-app-dir-i18n) is what you are looking for!
+**Using Next.js with the new App Router?**\
+Then [this article](https://www.locize.com/blog/i18n-next-app-router) is what you are looking for!
 
-[![](.gitbook/assets/next-13-app-dir-i18n.jpg)](https://www.locize.com/blog/next-app-dir-i18n)
+[![](https://cdn.prod.website-files.com/67a323e323a50df7f24f0a94/67f268673fcfae53e5d4697c_i18n-next-app-router.jpg)](https://www.locize.com/blog/i18n-next-app-router)
 {% endhint %}
 
 {% hint style="info" %}
