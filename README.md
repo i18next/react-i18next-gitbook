@@ -10,6 +10,11 @@ You should read the [i18next](https://www.i18next.com) documentation. The [confi
 
 The module provides multiple components eg. to assert that needed translations get loaded or that your content gets rendered when the language changes.
 
+{% hint style="warning" %}
+Managing JSON files manually?\
+When your project grows, streamline your workflow with [locize](https://locize.com), the official TMS built by the creators of i18next. **Try it for free!**
+{% endhint %}
+
 {% embed url="https://www.youtube.com/watch?t=705s&v=SA_9i4TtxLQ" %}
 
 react-i18next is optimally suited for **server-side rendering**. It provides extra extension point to work with next.js, for e.g. [Learn more](legacy-v9/serverside-rendering.md).
