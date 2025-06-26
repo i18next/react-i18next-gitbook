@@ -12,7 +12,7 @@ The module provides multiple components eg. to assert that needed translations g
 
 {% hint style="warning" %}
 Managing JSON files manually?\
-When your project grows, streamline your workflow with [locize](https://locize.com), the official TMS built by the creators of i18next. **Try it for free!**
+When your project grows, streamline your workflow with [locize](https://locize.com), the official TMS built by the creators of i18next. [**Try it for free!**](https://www.locize.com/i18next)
 {% endhint %}
 
 {% embed url="https://www.youtube.com/watch?t=705s&v=SA_9i4TtxLQ" %}
