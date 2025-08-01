@@ -4,6 +4,8 @@
 
 The `withTranslation` is a classic HOC (higher order component) and gets the `t` function and `i18n` instance inside your component via props.
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```jsx
 import React from 'react';
 import { withTranslation } from 'react-i18next';
@@ -14,6 +16,21 @@ function MyComponent({ t, i18n }) {
 
 export default withTranslation()(MyComponent);
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+import React from 'react';
+import { withTranslation } from 'react-i18next';
+
+function MyComponent({ t, i18n }) {
+  return <p>{t($ => $['my translated text'])}</p>
+}
+
+export default withTranslation()(MyComponent);
+```
+{% endtab %}
+{% endtabs %}
 
 While you most time only need the t function to translate your content you also get the i18n instance to eg. change the language.
 
@@ -33,7 +50,9 @@ Use the `withTranslation` HOC to wrap **any component (class or function)** to a
 
 ### Loading namespaces
 
-```javascript
+{% tabs %}
+{% tab title="JavaScript" %}
+```jsx
 // load a specific namespace
 // the t function will be set to that namespace as default
 withTranslation('ns1')(MyComponent);
@@ -49,6 +68,27 @@ withTranslation(['ns1', 'ns2', 'ns3'])(MyComponent);
 this.props.t('key'); // will be looked up from namespace ns1
 this.props.t('key', { ns: 'ns2' }); // will be looked up from namespace ns2
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+// load a specific namespace
+// the t function will be set to that namespace as default
+withTranslation('ns1')(MyComponent);
+
+// inside your component MyComponent
+this.props.t('key'); // will be looked up from namespace ns1
+
+// load multiple namespaces
+// the t function will be set to first namespace as default
+withTranslation(['ns1', 'ns2', 'ns3'])(MyComponent);
+
+// inside your component MyComponent
+this.props.t($ => $.key); // will be looked up from namespace ns1
+this.props.t($ => $.key, { ns: 'ns2' }); // will be looked up from namespace ns2
+```
+{% endtab %}
+{% endtabs %}
 
 ### Overriding the i18next instance
 
@@ -132,13 +172,30 @@ export default Extended;
 
 To get proper type annotations while using TypeScript, import the interface `WithTranslation` and extend it with your own props interface.
 
+{% tabs %}
+{% tab title="JavaScript" %}
+```jsx
+import React, { Component } from 'react';
+import { withTranslation, WithTranslation } from 'react-i18next';
+
+class MyComponent extends Component {
+  render() {
+    return <div>{this.props.t('My translated text')}</div>
+  }
+}
+
+export default withTranslation()(MyComponent);
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
 import React, { Component } from 'react';
 import { withTranslation, WithTranslation } from 'react-i18next';
 
 class MyComponent extends Component<IProps, IState> {
   render() {
-    return <div>{this.props.t('My translated text')}</div>
+    return <div>{this.props.t($ => $['My translated text'])}</div>
   }
 }
 
@@ -152,3 +209,5 @@ interface IState {
 
 export default withTranslation()(MyComponent);
 ```
+{% endtab %}
+{% endtabs %}
