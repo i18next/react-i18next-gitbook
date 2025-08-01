@@ -76,6 +76,8 @@ Then [this article](https://www.locize.com/blog/i18n-next-app-router) is what yo
 
 **After:** With the `Trans` component just change it to:
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```jsx
 ...
 <div>{t('simpleContent')}</div>
@@ -84,6 +86,19 @@ Then [this article](https://www.locize.com/blog/i18n-next-app-router) is what yo
 </Trans>
 ...
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+...
+<div>{t($ => $.simpleContent)}</div>
+<Trans i18nKey="userMessagesUnread" count={count}>
+  Hello <strong title={t($ => $.nameTitle)}>{{name}}</strong>, you have {{count}} unread message(s). <Link to="/msgs">Go to messages</Link>.
+</Trans>
+...
+```
+{% endtab %}
+{% endtabs %}
 
 If you prefer not using semantic keys but text - [that's also possible](https://www.i18next.com/principles/fallback.html#key-fallback).
 
