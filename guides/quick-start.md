@@ -106,7 +106,7 @@ If you need to access the `t` function or the `i18next` instance from outside of
 
 <pre><code><strong>import i18next from './i18n'
 </strong>
-i18next.t($ => $['my.key'])
+i18next.t($ => $.my.key)
 </code></pre>
 
 \
