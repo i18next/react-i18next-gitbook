@@ -17,7 +17,9 @@ import { MyComponent } from './myComponent';
 
 Or use [https://github.com/kadirahq/react-stubber](https://github.com/kadirahq/react-stubber) to stub i18n functionality:
 
-```javascript
+{% tabs %}
+{% tab title="JavaScript" %}
+```jsx
 const tDefault = (key) => key;
 const StubbableInterpolate = mayBeStubbed(Interpolate);
 const stubInterpolate = function () {
@@ -27,6 +29,21 @@ const stubInterpolate = function () {
   });
 };
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+const tDefault = (key) => key;
+const StubbableInterpolate = mayBeStubbed(Interpolate);
+const stubInterpolate = function () {
+  stub(StubbableInterpolate, (props, context) => {
+    const t = (context && context.t) || tDefault;
+    return (<span>{t($ => $[props.i18nKey])}</span>);
+  });
+};
+```
+{% endtab %}
+{% endtabs %}
 
 Or mock it like:
 
@@ -66,6 +83,8 @@ jest.mock('react-i18next', () => ({
 
 or, you can also spy the `t` function:
 
+{% tabs %}
+{% tab title="JavaScript" %}
 <pre class="language-jsx"><code class="lang-jsx"><strong>// implementation
 </strong>import React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -107,6 +126,52 @@ it('test render', () => {
   expect(tSpy).toHaveBeenLastCalledWith('some.key', { some: 'variable' });
 });
 </code></pre>
+{% endtab %}
+
+{% tab title="TypeScript" %}
+<pre class="language-tsx"><code class="lang-tsx"><strong>// implementation
+</strong>import React from 'react';
+import { useTranslation } from 'react-i18next';
+
+export default function CustomComponent() {
+  const { t } = useTranslation();
+
+  return &#x3C;div>{t($ => $.some.key, { some: 'variable' })}&#x3C;/div>;
+}
+
+<strong>// test
+</strong>import React from 'react';
+import { mount } from 'enzyme';
+import UseTranslationWithInterpolation from './UseTranslationWithInterpolation';
+import { useTranslation } from 'react-i18next';
+
+jest.mock('react-i18next', () => ({
+  useTranslation: jest.fn(),
+}));
+
+it('test render', () => {
+  const useTranslationSpy = useTranslation;
+  const tSpy = jest.fn((str) => str);
+  useTranslationSpy.mockReturnValue({
+    t: tSpy,
+    i18n: {
+      changeLanguage: () => new Promise(() => {}),
+    },
+  });
+
+  const mounted = mount(&#x3C;UseTranslationWithInterpolation />);
+
+  // console.log(mounted.debug());
+  expect(mounted.contains(&#x3C;div>some.key&#x3C;/div>)).toBe(true);
+
+  // If you want you can also check how the t function has been called,
+  // but basically this is testing your mock and not the actual code.
+  expect(tSpy).toHaveBeenCalledTimes(1);
+  expect(tSpy).toHaveBeenLastCalledWith('some.key', { some: 'variable' });
+});
+</code></pre>
+{% endtab %}
+{% endtabs %}
 
 {% hint style="success" %}
 You can find a full sample for testing with jest here: [https://github.com/i18next/react-i18next/tree/master/example/test-jest](https://github.com/i18next/react-i18next/tree/master/example/test-jest)
