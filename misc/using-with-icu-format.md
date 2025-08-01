@@ -48,7 +48,9 @@ export default i18n;
 
 ### using t function
 
-```javascript
+{% tabs %}
+{% tab title="JavaScript" %}
+```jsx
 import React, { Component } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -67,6 +69,30 @@ function MyComponent() {
 // result:
 <div>500 persons</div>
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+import React, { Component } from 'react';
+import { useTranslation } from 'react-i18next';
+
+function MyComponent() {
+  const { t, i18n } = useTranslation();
+  // or const [t, i18n] = useTranslation();
+  
+  return <div>{t($ => $.icu, { numPersons: 500 })}</div>
+}
+
+// ...
+
+// json
+"icu": "{numPersons, plural, =0 {no persons} =1 {one person} other {# persons}}",
+
+// result:
+<div>500 persons</div>
+```
+{% endtab %}
+{% endtabs %}
 
 ### using the Trans Component
 
@@ -382,7 +408,7 @@ import { SelectOrdinal } from 'react-i18next/icu.macro';
 ```
 
 {% hint style="info" %}
-The needed plural forms can be looked up in the official unicode cldr table: [http://www.unicode.org/cldr/charts/33/supplemental/language_plural_rules.html](http://www.unicode.org/cldr/charts/33/supplemental/language_plural_rules.html)
+The needed plural forms can be looked up in the official unicode cldr table: [http://www.unicode.org/cldr/charts/33/supplemental/language\_plural\_rules.html](http://www.unicode.org/cldr/charts/33/supplemental/language_plural_rules.html)
 
 In addition to the plural forms you can specify results for given number values like show above:
 
