@@ -4,7 +4,9 @@ Let's make the sample using our own base i18n framework [i18next](https://i18nex
 
 ## Using a pure javascript i18n framework
 
-```javascript
+{% tabs %}
+{% tab title="JavaScript" %}
+```jsx
 import React, { Component } from "react";
 import { createRoot } from 'react-dom/client';
 import i18n from "i18next";
@@ -36,6 +38,43 @@ root.render(
   <App />
 );
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+import React, { Component } from "react";
+import { createRoot } from 'react-dom/client';
+import i18n from "i18next";
+
+// translation catalog
+const resources = {
+  en: {
+    translation: {
+      "welcome": "Welcome to React and react-i18next"
+    }
+  }
+};
+
+// initialize i18next with catalog and language to use
+i18n.init({
+  resources,
+  lng: "en"
+});
+
+class App extends Component {
+  render() {
+    return <h2>{i18n.t($ => $.welcome)}</h2>;
+  }
+}
+
+// append app to dom
+const root = createRoot(document.getElementById('root'));
+root.render(
+  <App />
+);
+```
+{% endtab %}
+{% endtabs %}
 
 ## More react adapted "react-i18n"
 
