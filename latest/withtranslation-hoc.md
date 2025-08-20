@@ -77,7 +77,7 @@ this.props.t('key', { ns: 'ns2' }); // will be looked up from namespace ns2
 withTranslation('ns1')(MyComponent);
 
 // inside your component MyComponent
-this.props.t('key'); // will be looked up from namespace ns1
+this.props.t($ => $.key); // will be looked up from namespace ns1
 
 // load multiple namespaces
 // the t function will be set to first namespace as default
