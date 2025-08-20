@@ -4,6 +4,8 @@
 
 It gets the `t` function and `i18n` instance inside your functional component.
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```jsx
 import React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -15,6 +17,22 @@ export function MyComponent() {
   return <p>{t('my translated text')}</p>
 }
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+
+export function MyComponent() {
+  const { t, i18n } = useTranslation(); // not passing any namespace will use the defaultNS (by default set to 'translation')
+  // or const [t, i18n] = useTranslation();
+
+  return <p>{t($ => $['my translated text'])}</p>
+}
+```
+{% endtab %}
+{% endtabs %}
 
 While most of the time you only need the `t` function to translate your content, you can also get the i18n instance (in order to change the language).
 
@@ -41,7 +59,23 @@ You'll also see how to use it when you need to work with [multiple namespaces](h
 
 ### Loading namespaces
 
-```javascript
+{% tabs %}
+{% tab title="JavaScript" %}
+<pre class="language-jsx"><code class="lang-jsx"><strong>// load a specific namespace
+</strong><strong>// the t function will be set to that namespace as default
+</strong>const { t, i18n } = useTranslation('ns1');
+t('key'); // will be looked up from namespace ns1
+
+// load multiple namespaces
+// the t function will be set to first namespace as default
+const { t, i18n } = useTranslation(['ns1', 'ns2', 'ns3']);
+t('key'); // will be looked up from namespace ns1
+t('key', { ns: 'ns2' }); // will be looked up from namespace ns2
+</code></pre>
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
 // load a specific namespace
 // the t function will be set to that namespace as default
 const { t, i18n } = useTranslation('ns1');
@@ -50,9 +84,11 @@ t('key'); // will be looked up from namespace ns1
 // load multiple namespaces
 // the t function will be set to first namespace as default
 const { t, i18n } = useTranslation(['ns1', 'ns2', 'ns3']);
-t('key'); // will be looked up from namespace ns1
-t('key', { ns: 'ns2' }); // will be looked up from namespace ns2
+t($ => $.key); // will be looked up from namespace ns1
+t($ => $.key, { ns: 'ns2' }); // will be looked up from namespace ns2
 ```
+{% endtab %}
+{% endtabs %}
 
 ### Overriding the i18next instance
 
@@ -70,7 +106,9 @@ const { t, i18n } = useTranslation('ns1', { i18n });
 >
 > depends on i18next version >= 20.6.0
 
-```javascript
+{% tabs %}
+{% tab title="JavaScript" %}
+```jsx
 // having JSON in namespace "translation" like this:
 /*{
     "very": {
@@ -85,7 +123,29 @@ const { t, i18n } = useTranslation('ns1', { i18n });
 const { t } = useTranslation('translation', { keyPrefix: 'very.deeply.nested' });
 const text = t('key'); // "here"
 ```
+{% endtab %}
 
+{% tab title="TypeScript" %}
+```tsx
+// having JSON in namespace "translation" like this:
+/*{
+    "very": {
+      "deeply": {
+        "nested": {
+          "key": "here"
+        }
+      }
+    }
+}*/
+// you can define a keyPrefix to be used for the resulting t function
+const { t } = useTranslation('translation', { keyPrefix: 'very.deeply.nested' });
+const text = t($ => $.key); // "here"
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="JavaScript" %}
 {% hint style="warning" %}
 Do **not** use the `keyPrefix` option if you want to use keys with prefixed namespace notation:
 
@@ -96,16 +156,43 @@ const { t } = useTranslation('translation', { keyPrefix: 'very.deeply.nested' })
 const text = t('ns:key'); // this will not work
 ```
 {% endhint %}
+{% endtab %}
+
+{% tab title="TypeScript" %}
+{% hint style="warning" %}
+Do **not** use the `keyPrefix` option if you want to use keys with prefixed namespace notation:
+
+i.e.
+
+```javascript
+const { t } = useTranslation('translation', { keyPrefix: 'very.deeply.nested' });
+const text = t($ => $.key, { ns: 'ns' }); // this will not work
+```
+{% endhint %}
+{% endtab %}
+{% endtabs %}
 
 ### Optional lng option
 
 > available in react-i18next version >= 12.3.1
 
-```javascript
+{% tabs %}
+{% tab title="JavaScript" %}
+```jsx
 // you can pass a language to be used for the resulting t function
 const { t } = useTranslation('translation', { lng: 'de' });
 const text = t('key'); // "hier"
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+// you can pass a language to be used for the resulting t function
+const { t } = useTranslation('translation', { lng: 'de' });
+const text = t($ => $.key); // "hier"
+```
+{% endtab %}
+{% endtabs %}
 
 ### Not using Suspense
 

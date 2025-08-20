@@ -1,9 +1,11 @@
 # Translation (render prop)
 
-## What it does <a href="what-it-does" id="what-it-does"></a>
+## What it does <a href="#what-it-does" id="what-it-does"></a>
 
 The `Translation` is a render prop and gets the `t` function and `i18n` instance to your component.
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```jsx
 import React from 'react';
 import { Translation } from 'react-i18next';
@@ -18,6 +20,25 @@ export function MyComponent() {
   )
 }
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+import React from 'react';
+import { Translation } from 'react-i18next';
+
+export function MyComponent() {
+  return (
+    <Translation>
+      {
+        (t, { i18n }) => <p>{t($ => $['my translated text'])}</p>
+      }
+    </Translation>
+  )
+}
+```
+{% endtab %}
+{% endtabs %}
 
 While you most time only need the t function to translate your content you also get the i18n instance to eg. change the language.
 
@@ -31,12 +52,14 @@ The `Translation` render prop will trigger a [Suspense](https://reactjs.org/docs
 
 ## When to use?
 
-Use the `Translation` render prop inside **any component (class or function)** to access the translation function or i18n instance. 
+Use the `Translation` render prop inside **any component (class or function)** to access the translation function or i18n instance.
 
 ## Translation params
 
 ### Loading namespaces
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```jsx
 // load a specific namespace
 // the t function will be set to that namespace as default
@@ -54,9 +77,33 @@ Use the `Translation` render prop inside **any component (class or function)** t
 }
 </Translation>
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+// load a specific namespace
+// the t function will be set to that namespace as default
+<Translation ns="ns1">
+{
+  (t) => <p>{t($ => $['my translated text'])}</p> // will be looked up from namespace ns1
+}
+</Translation>
+
+// load multiple namespaces
+// the t function will be set to first namespace as default
+<Translation ns={['ns1', 'ns2', 'ns3']}>
+{
+  (t) => <p>{t($ => $['my translated text'])}</p> // will be looked up from namespace ns1
+}
+</Translation>
+```
+{% endtab %}
+{% endtabs %}
 
 ### Overriding the i18next instance
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```jsx
 // passing in an i18n instance
 // use only if you do not like the default instance
@@ -69,4 +116,20 @@ import i18n from './i18n';
 }
 </Translation>
 ```
+{% endtab %}
 
+{% tab title="TypeScript" %}
+```tsx
+// passing in an i18n instance
+// use only if you do not like the default instance
+// set by i18next.use(initReactI18next) or the I18nextProvider
+import i18n from './i18n';
+
+<Translation i18n={i18n}>
+{
+  (t, { i18n }) => <p>{t($ => $['my translated text'])}</p> // will be looked up from namespace ns1
+}
+</Translation>
+```
+{% endtab %}
+{% endtabs %}

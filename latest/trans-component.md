@@ -61,7 +61,9 @@ function MyComponent({ person, messages }) {
 
 **After:** With the Trans component just change it to:
 
-```javascript
+{% tabs %}
+{% tab title="JavaScript" %}
+```jsx
 import { Trans } from 'react-i18next';
 
 function MyComponent({ person, messages }) {
@@ -75,6 +77,25 @@ function MyComponent({ person, messages }) {
   );
 }
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+import { Trans } from 'react-i18next';
+
+function MyComponent({ person, messages }) {
+  const { name } = person;
+  const count = messages.length;
+
+  return (
+    <Trans i18nKey="userMessagesUnread" count={count}>
+      Hello <strong title={t($ => $.nameTitle)}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
+    </Trans>
+  );
+}
+```
+{% endtab %}
+{% endtabs %}
 
 _Your en.json (translation strings) will look like:_
 
@@ -272,11 +293,23 @@ Guessing replacement tags _(<0>\</0>)_ of your component is rather difficult. Th
 
 **Sample JSX:**
 
-```javascript
+{% tabs %}
+{% tab title="JavaScript" %}
+```jsx
 <Trans i18nKey="userMessagesUnread" count={count}>
     Hello <strong title={t('nameTitle')}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
 </Trans>
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+<Trans i18nKey="userMessagesUnread" count={count}>
+    Hello <strong title={t($ => $.nameTitle)}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
+</Trans>
+```
+{% endtab %}
+{% endtabs %}
 
 **Resulting translation string:**
 

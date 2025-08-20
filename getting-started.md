@@ -46,9 +46,19 @@ Simple content can easily be translated using the provided `t` function.
 
 **After:**
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```jsx
 <div>{t('simpleContent')}</div>
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+<div>{t($ => $.simpleContent)}</div>
+```
+{% endtab %}
+{% endtabs %}
 
 {% hint style="info" %}
 You will get the t function by using the [useTranslation](latest/usetranslation-hook.md) hook or the [withTranslation](latest/withtranslation-hoc.md) hoc.
@@ -74,6 +84,24 @@ Sometimes you might want to include html formatting or components like links int
 </Trans>
 ```
 
+{% tabs %}
+{% tab title="JavaScript" %}
+```
+<Trans i18nKey="userMessagesUnread" count={count}>
+  Hello <strong title={t('nameTitle')}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
+</Trans>
+```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```
+<Trans i18nKey="userMessagesUnread" count={count}>
+  Hello <strong title={t($ => $.nameTitle)}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
+</Trans>
+```
+{% endtab %}
+{% endtabs %}
+
 {% hint style="info" %}
 Learn more about the Trans Component [here](latest/trans-component.md)
 {% endhint %}
@@ -82,7 +110,9 @@ Learn more about the Trans Component [here](latest/trans-component.md)
 
 This basic sample tries to add i18n in a one file sample.
 
-```javascript
+{% tabs %}
+{% tab title="JavaScript" %}
+```jsx
 import React from "react";
 import { createRoot } from 'react-dom/client';
 import i18n from "i18next";
@@ -121,6 +151,50 @@ root.render(
   <App />
 );
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+import React from "react";
+import { createRoot } from 'react-dom/client';
+import i18n from "i18next";
+import { useTranslation, initReactI18next } from "react-i18next";
+
+i18n
+  .use(initReactI18next) // passes i18n down to react-i18next
+  .init({
+    // the translations
+    // (tip move them in a JSON file and import them,
+    // or even better, manage them via a UI: https://react.i18next.com/guides/multiple-translation-files#manage-your-translations-with-a-management-gui)
+    resources: {
+      en: {
+        translation: {
+          "Welcome to React": "Welcome to React and react-i18next"
+        }
+      }
+    },
+    lng: "en", // if you're using a language detector, do not define the lng option
+    fallbackLng: "en",
+
+    interpolation: {
+      escapeValue: false // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
+    }
+  });
+
+function App() {
+  const { t } = useTranslation();
+
+  return <h2>{t($ => $['Welcome to React'])}</h2>;
+}
+
+// append app to dom
+const root = createRoot(document.getElementById('root'));
+root.render(
+  <App />
+);
+```
+{% endtab %}
+{% endtabs %}
 
 #### RESULT:
 

@@ -85,6 +85,8 @@ root.render(
 );
 ```
 
+{% tabs %}
+{% tab title="JavaScript" %}
 {% hint style="info" %}
 If you need to access the `t` function or the `i18next` instance from outside of a React component you can simply import your `./i18n.js` and use the exported i18next instance:
 
@@ -96,6 +98,22 @@ i18next.t('my.key')
 \
 Also read about this [here](https://www.locize.com/blog/how-to-use-i18next-t-outside-react-components) and [here](https://github.com/i18next/react-i18next/issues/1236#issuecomment-762039023).
 {% endhint %}
+{% endtab %}
+
+{% tab title="TypeScript" %}
+{% hint style="info" %}
+If you need to access the `t` function or the `i18next` instance from outside of a React component you can simply import your `./i18n.js` and use the exported i18next instance:
+
+<pre><code><strong>import i18next from './i18n'
+</strong>
+i18next.t($ => $.my.key)
+</code></pre>
+
+\
+Also read about this [here](https://www.locize.com/blog/how-to-use-i18next-t-outside-react-components) and [here](https://github.com/i18next/react-i18next/issues/1236#issuecomment-762039023).
+{% endhint %}
+{% endtab %}
+{% endtabs %}
 
 ## Translate your content
 
@@ -105,6 +123,8 @@ Using the hook in functional components is one of the options you have.
 
 The `t` function is the main function in i18next to translate content. Read the [documentation](https://www.i18next.com/translation-function/essentials) for all the options.
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```jsx
 import React from 'react';
 
@@ -116,6 +136,22 @@ function MyComponent () {
   return <h1>{t('Welcome to React')}</h1>
 }
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+import React from 'react';
+
+// the hook
+import { useTranslation } from 'react-i18next';
+
+function MyComponent () {
+  const { t, i18n } = useTranslation();
+  return <h1>{t($ => $['Welcome to React'])}</h1>
+}
+```
+{% endtab %}
+{% endtabs %}
 
 Learn more about the hook [useTranslation](../latest/usetranslation-hook.md).
 
@@ -125,6 +161,8 @@ Using higher order components is one of the most used method to extend existing 
 
 The `t` function is the main function in i18next to translate content. Read the [documentation](https://www.i18next.com/translation-function/essentials) for all the options.
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```jsx
 import React from 'react';
 
@@ -137,6 +175,23 @@ function MyComponent ({ t }) {
 
 export default withTranslation()(MyComponent);
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+import React from 'react';
+
+// the hoc
+import { withTranslation } from 'react-i18next';
+
+function MyComponent ({ t }) {
+  return <h1>{t($ => $['Welcome to React'])}</h1>
+}
+
+export default withTranslation()(MyComponent);
+```
+{% endtab %}
+{% endtabs %}
 
 Learn more about the higher order component [withTranslation](../latest/withtranslation-hoc.md).
 
@@ -144,6 +199,8 @@ Learn more about the higher order component [withTranslation](../latest/withtran
 
 The render prop enables you to use the `t` function inside your component.
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```jsx
 import React from 'react';
 
@@ -160,6 +217,27 @@ export default function MyComponent () {
   )
 }
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+import React from 'react';
+
+// the render prop
+import { Translation } from 'react-i18next';
+
+export default function MyComponent () {
+  return (
+    <Translation>
+      {
+        t => <h1>{t($ => $['Welcome to React'])}</h1>
+      }
+    </Translation>
+  )
+}
+```
+{% endtab %}
+{% endtabs %}
 
 Learn more about the render prop [Translation](../latest/translation-render-prop.md).
 

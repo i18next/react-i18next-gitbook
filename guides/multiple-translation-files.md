@@ -4,17 +4,37 @@ One of the advantages of react-i18next is based on i18next it supports the separ
 
 So while this takes the translation from the defined default namespace:
 
-```javascript
+{% tabs %}
+{% tab title="JavaScript" %}
+```jsx
 i18next.t('look.deep');
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+i18next.t($ => $.look.deep);
+```
+{% endtab %}
+{% endtabs %}
 
 This will lookup the key in a namespace (file) called common.json:
 
-```javascript
+{% tabs %}
+{% tab title="JavaScript" %}
+```jsx
 i18next.t('common:look.deep'); // not recommended with ns prefix when used in combination with natural language keys
 // better use the ns option:
 i18next.t('look.deep', { ns: 'common' })
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+i18next.t($ => $.look.deep, { ns: 'common' })
+```
+{% endtab %}
+{% endtabs %}
 
 In order to use multiple namespaces/translation files, you need to specify it when calling [`useTranslation`](https://react.i18next.com/latest/usetranslation-hook) :
 
@@ -30,13 +50,27 @@ withTranslation(['translation', 'common'])(MyComponent);
 
 or [`Translation`](https://react.i18next.com/latest/translation-render-prop):
 
-```javascript
+{% tabs %}
+{% tab title="JavaScript" %}
+```jsx
 <Translation ns={['translation', 'common']}>
 {
   (t) => <p>{t('look.deep', { ns: 'common' })}</p>
 }
 </Translation>
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+<Translation ns={['translation', 'common']}>
+{
+  (t) => <p>{t($ => $.look.deep, { ns: 'common' })}</p>
+}
+</Translation>
+```
+{% endtab %}
+{% endtabs %}
 
 ## Separating translation files
 
@@ -65,4 +99,3 @@ There's also the possibility to have an [even more focused developer experience]
 {% embed url="https://youtu.be/osScyaGMVqo" %}
 
 {% embed url="https://youtu.be/VfxBpSXarlU" %}
-

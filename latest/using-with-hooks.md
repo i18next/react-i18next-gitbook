@@ -72,6 +72,8 @@ root.render(
 );
 ```
 
+{% tabs %}
+{% tab title="JavaScript" %}
 {% hint style="info" %}
 If you need to access the `t` function or the `i18next` instance from outside of a React component you can simply import your `./i18n.js` and use the exported i18next instance:
 
@@ -81,6 +83,20 @@ import i18next from './i18n'
 i18next.t('my.key')
 ```
 {% endhint %}
+{% endtab %}
+
+{% tab title="TypeScript" %}
+{% hint style="info" %}
+If you need to access the `t` function or the `i18next` instance from outside of a React component you can simply import your `./i18n.js` and use the exported i18next instance:
+
+```
+import i18next from './i18n'
+
+i18next.t($ => $.my.key)
+```
+{% endhint %}
+{% endtab %}
+{% endtabs %}
 
 ### Translate your content
 
@@ -88,6 +104,8 @@ i18next.t('my.key')
 
 You can use the hook inside your functional components like:
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```jsx
 import React, { Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -108,6 +126,31 @@ export default function App() {
   );
 }
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+import React, { Suspense } from 'react';
+import { useTranslation } from 'react-i18next';
+
+function MyComponent() {
+  const { t, i18n } = useTranslation();
+
+  return <h1>{t($ => $['Welcome to React'])}</h1>
+}
+
+// i18n translations might still be loaded by the http backend
+// use react's Suspense
+export default function App() {
+  return (
+    <Suspense fallback="loading">
+      <MyComponent />
+    </Suspense>
+  );
+}
+```
+{% endtab %}
+{% endtabs %}
 
 The useTranslation hook function takes one options argument. You can either pass in a namespace or an array of namespaces to load.
 
@@ -145,6 +188,8 @@ Please note the t function will be either bound to the default namespace defined
 
 There might be some legacy cases where you are still forced to use classes. Don't worry, we still provide a hoc to cover these cases:
 
+{% tabs %}
+{% tab title="JavaScript" %}
 ```jsx
 import React, { Component, Suspense } from 'react';
 import { withTranslation } from 'react-i18next';
@@ -170,6 +215,36 @@ export default function App() {
   );
 }
 ```
+{% endtab %}
+
+{% tab title="TypeScript" %}
+```tsx
+import React, { Component, Suspense } from 'react';
+import { withTranslation } from 'react-i18next';
+
+class LegacyComponentClass extends Component {
+  render() {
+    const { t } = this.props;
+
+    return (
+      <h1>{t($ => $['Welcome to React'])}</h1>
+    )
+  }
+}
+const MyComponent = withTranslation()(LegacyComponentClass)
+
+// i18n translations might still be loaded by the http backend
+// use react's Suspense
+export default function App() {
+  return (
+    <Suspense fallback="loading">
+      <MyComponent />
+    </Suspense>
+  );
+}
+```
+{% endtab %}
+{% endtabs %}
 
 The withTranslation hook function takes one options argument. You can either pass in a namespace or a array of namespaces to load.
 
