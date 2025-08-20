@@ -408,7 +408,7 @@ import { SelectOrdinal } from 'react-i18next/icu.macro';
 ```
 
 {% hint style="info" %}
-The needed plural forms can be looked up in the official unicode cldr table: [http://www.unicode.org/cldr/charts/33/supplemental/language\_plural\_rules.html](http://www.unicode.org/cldr/charts/33/supplemental/language_plural_rules.html)
+The needed plural forms can be looked up in the official unicode cldr table: [http://www.unicode.org/cldr/charts/33/supplemental/language_plural_rules.html](http://www.unicode.org/cldr/charts/33/supplemental/language_plural_rules.html)
 
 In addition to the plural forms you can specify results for given number values like show above:
 
