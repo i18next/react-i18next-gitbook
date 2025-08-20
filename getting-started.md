@@ -96,7 +96,7 @@ Sometimes you might want to include html formatting or components like links int
 {% tab title="TypeScript" %}
 ```
 <Trans i18nKey="userMessagesUnread" count={count}>
-  Hello <strong title={t('nameTitle')}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
+  Hello <strong title={t($ => $.nameTitle)}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
 </Trans>
 ```
 {% endtab %}
