@@ -166,7 +166,7 @@ i.e.
 
 ```javascript
 const { t } = useTranslation('translation', { keyPrefix: 'very.deeply.nested' });
-const text = t($ => $.ns.key); // this will not work
+const text = t($ => $.key, { ns: 'ns' }); // this will not work
 ```
 {% endhint %}
 {% endtab %}
