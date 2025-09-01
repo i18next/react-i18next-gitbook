@@ -90,6 +90,11 @@ t($ => $.key, { ns: 'ns2' }); // will be looked up from namespace ns2
 {% endtab %}
 {% endtabs %}
 
+{% hint style="warning" %}
+Only the `t` function is bound to the namespace, behind the scenes it uses the [getFixedT](https://www.i18next.com/overview/api#getfixedt) function of i18next.\
+The `i18n` instance is the normal i18next instance. Not bound to anything special.
+{% endhint %}
+
 ### Overriding the i18next instance
 
 ```javascript
