@@ -32,7 +32,13 @@ You can also add a script tag to load react-i18next from one of the CDNs providi
 You should read the [i18next](https://www.i18next.com) documentation at some point as we do not repeat all the [configuration options](https://www.i18next.com/overview/configuration-options) and translation functionalities like [plurals](https://www.i18next.com/translation-function/plurals), [formatting](https://www.i18next.com/translation-function/formatting), [interpolation](https://www.i18next.com/translation-function/interpolation), ... here.
 {% endhint %}
 
-You have two options to translate your content:
+> **Official CLI**
+>
+> ⭐ [i18next-cli](https://github.com/i18next/i18next-cli)
+>
+> The official, high-performance, all-in-one command-line tool for i18next. It handles key extraction, code linting, locale syncing, and type generation. It's built with modern technologies for maximum speed and accuracy. This is the recommended tool for all i18next projects.
+
+**You have two options to translate your content:**
 
 ### Simple content
 
