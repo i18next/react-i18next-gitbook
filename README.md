@@ -1,5 +1,11 @@
 # Introduction
 
+{% hint style="success" %}
+🎉 Announcing [`i18next-cli`](https://github.com/i18next/i18next-cli):\
+&#x20;       The New Official Toolkit for i18next.\
+⇒ [Learn More](https://www.locize.com/blog/i18next-cli)
+{% endhint %}
+
 ## What is react-i18next?
 
 react-i18next is a powerful **internationalization** framework for [**React**](https://reactjs.org) / [**React Native**](https://reactnative.dev/) which is based on [**i18next**](https://www.i18next.com). Check out the [history of i18next](https://www.i18next.com/misc/the-history-of-i18next) and [when react-i18next was introduced](https://www.i18next.com/misc/the-history-of-i18next#v2).

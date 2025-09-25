@@ -1,5 +1,13 @@
 # Trans Component
 
+
+
+{% hint style="success" %}
+🎉 Announcing [`i18next-cli`](https://github.com/i18next/i18next-cli):\
+&#x20;       The New Official Toolkit for i18next.\
+⇒ [Learn More](https://www.locize.com/blog/i18next-cli)
+{% endhint %}
+
 ## Important note
 
 While `<Trans>` gives you a lot of power by letting you interpolate or translate complex React elements, the truth is: in most cases you don't even need it.
