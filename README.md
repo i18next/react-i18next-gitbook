@@ -17,7 +17,11 @@ When your project grows, streamline your workflow with [locize](https://locize.c
 
 {% embed url="https://www.youtube.com/watch?t=705s&v=SA_9i4TtxLQ" %}
 
-react-i18next is optimally suited for **server-side rendering**. It provides extra extension point to work with next.js, for e.g. [Learn more](legacy-v9/serverside-rendering.md).
+> **Official CLI**
+>
+> ⭐ [i18next-cli](https://github.com/i18next/i18next-cli)
+>
+> The official, high-performance, all-in-one command-line tool for i18next. It handles key extraction, code linting, locale syncing, and type generation. It's built with modern technologies for maximum speed and accuracy. This is the recommended tool for all i18next projects.
 
 As react-i18next depends on [i18next](http://i18next.com) you can use it in any other UI framework and on the server-side (node.js, .net, ...) too. Like the React philosophy - just:
 
