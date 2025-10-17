@@ -96,19 +96,24 @@ function MyComponent() {
 
 ### using the Trans Component
 
-As is including plain ICU syntax inside a JSX node will result in invalid JSX as the ICU format uses curly brackets that are reserved by JSX.
+{% hint style="warning" %}
+Warning: direct use of `Trans` (not using the `icu.macro` babel macro) may not be compatible with [`react-compiler`](https://react.dev/learn/react-compiler). Use the `IcuTrans` component or the `icu.macro` babel macro instead.
+{% endhint %}
 
-So the default option is to use the [Trans Component](../legacy-v9/trans-component.md) just with props like:
+Using ICU syntax is not possible within a JSX node because `{curly brackets}` are reserved for interpolation.
+
+To work around this, you can use the [IcuTrans Component](../latest/icu-trans-component.md) directly
+like this:
 
 ```javascript
-import { Trans } from 'react-i18next';
+import { IcuTrans } from 'react-i18next';
 
 const user = 'John Doe';
 
-<Trans
+<IcuTrans
   i18nKey="icu_and_trans"
-  defaults="We invited <0>{user}</0>."
-  components={[<strong>dummyChild</strong>]}
+  defaultTranslation="We invited <0>{user}</0>."
+  content={[{ type: "strong" }]}
   values={{ user }}
 />
 
@@ -119,7 +124,7 @@ const user = 'John Doe';
 We invited <strong>John Doe</strong>.
 ```
 
-While this works the resulting JSX is very verbose - guess we could do better.
+While this works the resulting JSX is very verbose and prone to errors. Let's use a babel macro to provide more intuitive syntax!
 
 ### using babel macros (Trans, Plural, Select)
 
@@ -148,43 +153,15 @@ const user = 'John Doe';
 </Trans>
 ```
 
-The macro will add the needed import for Trans Component and generate the correct Trans component for you.
+The macro will add the needed import for the `IcuTrans` Component and generate the correct `IcuTrans` component for you.
 
 The correct string for translations will be shown in the browser console output as a missing string (if set debug: true on i18next init) or submitted via saveMissing (have saveMissing set true and a i18next backend supporting saving missing keys).
-
-If linting or other code analysis tools are complaining or failing because of the invalid JSX syntax, you can use the `defaults` prop instead of putting your message as a child, and it will be parsed and updated to the correct format.
-
-```javascript
-import { Trans } from 'react-i18next/icu.macro';
-
-const user = 'John Doe';
-
-<Trans 
-  i18nKey="icu_and_trans_defaults"
-  defaults="We invited <strong>{user}</strong>."
-/>
-```
-
-This will be converted by the macro into:
-
-```javascript
-import { Trans } from 'react-i18next';
-
-const user = 'John Doe';
-
-<Trans 
-  i18nKey="icu_and_trans_defaults"
-  values={{user}}
-  defaults="We invited <0>{user}</0>."
-  components={[<strong>{user}</strong>]}
-/>
-```
 
 The defaults parsing supports the `@babel/react` preset, so any expressions that require more complex parsing may not work.
 
 **More samples:**
 
-```markup
+```jsx
 // basic interpolation
 <Trans>Welcome, { name }!</Trans>
 
@@ -224,7 +201,7 @@ const num = 1;
 
 the above syntax, although valid javascript, will error when using a linting tool like eslint. Instead, we can do this:
 
-```javascript
+```jsx
 import { Trans, number } from "react-i18next/icu.macro";
 
 const num = 1;
@@ -240,7 +217,7 @@ Supported interpolators are `number`, `date`, `time`, `select`, `plural`, and `s
 
 More complex skeletons can also be represented:
 
-```javascript
+```jsx
 import { Trans, number } from "react-i18next/icu.macro";
 
 const awesomePercentage = 100;
@@ -256,7 +233,7 @@ This results in the translation string `It's awesome {awesomePercentage, number,
 
 The `plural` and `select` and `selectOrdinal` interpolations support more advanced syntax. For instance, it is possible to interpolate both React elements and other interpolations:
 
-```javascript
+```jsx
 import { Trans, plural, number } from "react-i18next/icu.macro";
 
 const awesomePercentage = 100;
@@ -277,7 +254,7 @@ It possible to nest any interpolated type, including nested `plural`, `select`, 
 
 The `number`, `plural`, and `selectOrdinal` functions will error if a non-number typed variable is interpolated.
 
-```javascript
+```jsx
 import { Trans, number } from "react-i18next/icu.macro";
 
 // type error below - awesomePercentage must be a number
@@ -290,7 +267,7 @@ const awesomePercentage = "100";
 
 The `date` and `time` functions will error if a non-Date object is interpolated.
 
-```javascript
+```jsx
 import { Trans, date } from "react-i18next/icu.macro";
 
 // type error below - awesomePercentage must be a number
@@ -303,7 +280,7 @@ const notADate = "100";
 
 Finally, the `select` function will error if a non-string is interpolated.
 
-```javascript
+```jsx
 import { Trans, select } from "react-i18next/icu.macro";
 
 // type error below - awesomePercentage must be a number
@@ -322,7 +299,7 @@ It is also possible to display `select` and `plural` and `selectOrdinal` using E
 
 There is no way to directly add the needed ICU format inside a JSX child - so we had to add another component that gets transpiled to needed Trans component:
 
-```javascript
+```jsx
 import { Select } from 'react-i18next/icu.macro';
 
 // simple select
@@ -335,7 +312,7 @@ import { Select } from 'react-i18next/icu.macro';
 />
 ```
 
-```javascript
+```jsx
 import { Select } from 'react-i18next/icu.macro';
 
 // select with inner components
@@ -350,7 +327,7 @@ import { Select } from 'react-i18next/icu.macro';
 
 #### Plural
 
-```javascript
+```jsx
 import { Plural } from 'react-i18next/icu.macro';
 
 // simple plural
@@ -363,7 +340,7 @@ import { Plural } from 'react-i18next/icu.macro';
 />
 ```
 
-```javascript
+```jsx
 import { Plural } from 'react-i18next/icu.macro';
 
 // plural with inner components
@@ -378,7 +355,7 @@ import { Plural } from 'react-i18next/icu.macro';
 
 #### SelectOrdinal
 
-```javascript
+```jsx
 import { SelectOrdinal } from 'react-i18next/icu.macro';
 
 // simple SelectOrdinal
@@ -392,7 +369,7 @@ import { SelectOrdinal } from 'react-i18next/icu.macro';
 />
 ```
 
-```javascript
+```jsx
 import { SelectOrdinal } from 'react-i18next/icu.macro';
 
 // SelectOrdinal with inner components
