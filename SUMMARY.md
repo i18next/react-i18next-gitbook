@@ -18,6 +18,7 @@
 * [withTranslation (HOC)](latest/withtranslation-hoc.md)
 * [Translation (render prop)](latest/translation-render-prop.md)
 * [Trans Component](latest/trans-component.md)
+* [IcuTrans Component](latest/icu-trans-component.md)
 * [I18nextProvider](latest/i18nextprovider.md)
 * [SSR (additional components)](latest/ssr.md)
 * [Migrating v9 to v10](latest/migrating-v9-to-v10.md)
