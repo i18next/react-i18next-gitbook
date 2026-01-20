@@ -150,14 +150,14 @@ In the example below we want our custom link component to have a different `href
   i18nKey="myKey"
   components={{ 
     CustomLink: <MyCustomLinkComponent href="value-to-be-overridden"/> 
-    }}
+  }}
 />
 ```
 
 with the following being our translation message:
 
 ```json
-  "myKey": "This is a <CustomLink href=\"https://example.com/\">link to example.com</CustomLink>."
+"myKey": "This is a <CustomLink href=\"https://example.com/\">link to example.com</CustomLink>."
 ```
 
 This setup will render the following JSX:
@@ -178,7 +178,7 @@ This approach also works with listed components:
 With this then making up our translation message:
 
 ```json
-  "myKey": "This is a <0 href=\"https://example.com/\">link to example.com</0>."
+"myKey": "This is a <0 href=\"https://example.com/\">link to example.com</0>."
 ```
 
 ### Usage with simple HTML elements like \<br /> and others (v10.4.0)
@@ -261,7 +261,7 @@ You can still use `Array.map()` to turn dynamic content into nodes, using an ext
 <Trans i18nKey="list_map">
   My dogs are named:
   <ul i18nIsDynamicList>
-     {['rupert', 'max'].map(dog => (<li>{dog}</li>))}
+    {['rupert', 'max'].map(dog => (<li>{dog}</li>))}
   </ul>
 </Trans>
 // JSON -> "list_map": "My dogs are named: <1></1>"
@@ -303,7 +303,7 @@ Guessing replacement tags _(<0>\</0>)_ of your component is rather difficult. Th
 {% tab title="JavaScript" %}
 ```jsx
 <Trans i18nKey="userMessagesUnread" count={count}>
-    Hello <strong title={t('nameTitle')}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
+  Hello <strong title={t('nameTitle')}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
 </Trans>
 ```
 {% endtab %}
@@ -311,7 +311,7 @@ Guessing replacement tags _(<0>\</0>)_ of your component is rather difficult. Th
 {% tab title="TypeScript" %}
 ```tsx
 <Trans i18nKey="userMessagesUnread" count={count}>
-    Hello <strong title={t($ => $.nameTitle)}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
+  Hello <strong title={t($ => $.nameTitle)}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
 </Trans>
 ```
 {% endtab %}
