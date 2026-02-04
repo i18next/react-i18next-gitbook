@@ -2,7 +2,7 @@
 
 {% hint style="success" %}
 🎉 Announcing [`i18next-cli`](https://github.com/i18next/i18next-cli):\
-&#x20;       The New Official Toolkit for i18next.\
+The New Official Toolkit for i18next.\
 ⇒ [Learn More](https://www.locize.com/blog/i18next-cli)
 {% endhint %}
 
@@ -236,6 +236,38 @@ const { name, age } = person;
 </Trans>
 // Translation string: "Hello {{firstname}}"
 ```
+
+#### TypeScript Usage
+
+When using TypeScript, you may encounter a type error when interpolating variables within React elements:
+
+```tsx
+<Trans>
+  Hello <i>{{name}}</i>
+</Trans>
+// Error: Object literal may only specify known properties...
+```
+
+This occurs because React's type definitions don't expect object literals as children. Since `react-i18next` transforms these at runtime, you can safely work around this with a type assertion:
+
+```tsx
+// Create a reusable type helper
+type TransInterpolation = Record<string, string | number>;
+
+<Trans>
+  Hello <i>{{name} as TransInterpolation}</i>
+</Trans>
+```
+
+For simpler cases, you can also cast directly to `any`:
+
+```tsx
+<Trans>
+  Hello <i>{{name} as any}</i>
+</Trans>
+```
+
+**Note:** Avoid using the `allowObjectInHTMLChildren` compiler option, as this weakens type safety globally across your entire React application. But if you're ok with that, this is also a valid option.
 
 ### Plural
 
