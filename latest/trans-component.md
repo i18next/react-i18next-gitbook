@@ -285,6 +285,16 @@ const messages = ['message one', 'message two'];
 // "newMessages_plural": "You have {{count}} messages."
 ```
 
+As of v16.4.0, the `count` prop is optional when `{{ count }}` is present in the children, react-i18next will infer it automatically by walking the children tree.
+
+{% hint style="info" %}
+**Notes:**
+
+* Inference requires `count` to be a JavaScript **number**. A string value will not be inferred.
+* An explicit `count` prop always takes precedence over any inferred value, including `count={0}`.
+* Without children (key-only form), the `count` prop remains required.
+{% endhint %}
+
 ### Using with lists (v10.5.0)
 
 You can still use `Array.map()` to turn dynamic content into nodes, using an extra option on a wrapping element:
@@ -384,7 +394,7 @@ All properties are optional, although you'll need to use `i18nKey` if you're not
 | `i18nKey`           | `string (undefined)`       | <p>If you prefer to use text as keys you can omit this, and the translation will be used as key. Can contain the namespace by prepending it in the form <code>'ns:key'</code> (depending on <code>i18next.options.nsSeparator</code>)</p><p>But this is not recommended when used in combination with natural language keys, better use the dedicated ns parameter: <code>&#x3C;Trans i18nKey="myKey" ns="myNS">&#x3C;/Trans></code></p> |
 | `ns`                | `string (undefined)`       | Namespace to use. May also be embedded in `i18nKey` but not recommended when used in combination with natural language keys, see above.                                                                                                                                                                                                                                                                                                  |
 | `t`                 | `function (undefined)`     | `t` function to use instead of the global `i18next.t()` or the `t()` function provided by the nearest [provider](https://react.i18next.com/latest/i18nextprovider).                                                                                                                                                                                                                                                                      |
-| `count`             | `integer (undefined)`      | Numeric value for pluralizable strings                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `count`             | `integer (undefined)`      | Numeric value for pluralizable strings. As of v16.4.0, optional when `{{ count }}` appears in children, the value will be inferred automatically. Must be a JavaScript `number` for inference to work. An explicit prop always takes precedence. Still required when using `<Trans>` without children.                                                                                                                                   |
 | `context`           | `string (undefined)`       | Value used for the [context feature](https://www.i18next.com/translation-function/context).                                                                                                                                                                                                                                                                                                                                              |
 | `tOptions`          | `object (undefined)`       | Extra options to pass to `t()` (e.g. `context`, `postProcessor`, ...)                                                                                                                                                                                                                                                                                                                                                                    |
 | `parent`            | `node (undefined)`         | A component to wrap the content into (can be globally set on `i18next.init`). **Required for React < v16**                                                                                                                                                                                                                                                                                                                               |
