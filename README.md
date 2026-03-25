@@ -134,3 +134,7 @@ There's also the possibility to have an [even more focused developer experience]
 {% embed url="https://www.youtube.com/watch?v=TFV_vhJs5DY" %}
 
 [Learn more about the enterprise offering](https://www.i18next.com/overview/for-enterprises)
+
+#### Manage your i18next translations directly from Claude and other AI assistants via the [Locize MCP server](https://www.locize.com/docs/integration/mcp)
+
+{% embed url="https://youtu.be/G7bfVfyseaQ" %}
