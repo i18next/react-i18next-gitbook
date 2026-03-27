@@ -46,7 +46,7 @@ You can use [formatting](https://www.i18next.com/formatting.html) as in i18next.
 **props**:
 
 * i18nKey: the key to lookup
-* options: [options](http://i18next.com/docs/options/#t-options) to use for translation (exclude interpolation variables!)
+* options: [options](https://www.i18next.com/overview/configuration-options) to use for translation (exclude interpolation variables!)
 * parent: optional component to wrap translation into (default 'span')
 * useDangerouslySetInnerHTML: allows use of raw html tags in translation values
 * dangerouslySetInnerHTMLPartElement: optional component to wrap parts of translation values into (default 'span'), used with `useDangerouslySetInnerHTML={true}` only

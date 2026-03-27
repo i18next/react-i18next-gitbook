@@ -1,20 +1,14 @@
 # SSR (additional components)
 
-## Using [Next.js](https://nextjs.org/) App Router?
-
-Then check out [this article](https://www.locize.com/blog/i18n-next-app-router) describing how to best internationalize it with i18next.
-
-[![](https://cdn.prod.website-files.com/67a323e323a50df7f24f0a94/67f268673fcfae53e5d4697c_i18n-next-app-router.jpg)](https://www.locize.com/blog/i18n-next-app-router)
-
 ## Using [Next.js](https://nextjs.org/)?
 
-You should have a look at [next-i18next](https://github.com/i18next/next-i18next) which extends react-i18next to bring it to next.js the easiest way.
+You should have a look at [next-i18next](https://github.com/i18next/next-i18next) which extends react-i18next to bring it to Next.js the easiest way.
 
-> With `next-i18next@v8.0.0` and `Next.js v10`, next-i18next has done a major rewrite of the package, leveraging the built-in [internationalized routing](https://nextjs.org/docs/advanced-features/i18n-routing) provided by Next.js.
+Since `next-i18next@v16`, both **App Router** and **Pages Router** are supported within a single package — no boilerplate needed. The library provides `getT()` for Server Components, `useT()` for Client Components, and automatic language detection via proxy/middleware.
+
+> [Here](https://www.locize.com/blog/next-i18next-v16/) you can read about all the improvements in next-i18next v16.
 >
-> [Here](https://github.com/locize/next-i18next-locize) you can also find a next-i18next app example in combination with locize, that offers 2 different approaches.
->
-> `next-i18next@v5.0.0` supports `Next.js v9.5` in [**Serverless** mode](https://nextjs.org/blog/next-8#serverless-nextjs) (as of [July 2020](https://github.com/isaachinman/next-i18next/issues/274#issuecomment-664616304)). If your goal is to use earlier versions of Next.js with Serverless, then you should have a look at ["Next Right Now"](https://github.com/UnlyEd/next-right-now), which is a Next.js 9 boilerplate with built-in `i18next`, `react-i18next` and Locize.
+> [Here](https://github.com/locize/next-i18next-locize) you can also find a next-i18next app example in combination with locize.
 >
 > **Looking for an optimized Next.js translations setup?**\
 > [Here](https://locize.com/blog/next-i18next/) you'll find a blog post on how to best use next-i18next with client side translation download and SEO optimization.

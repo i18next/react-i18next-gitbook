@@ -10,20 +10,20 @@ Find the full working sample [here](https://github.com/i18next/react-i18next/tre
 
 ## Extend the i18n instance with ICU module
 
-To enable ICU format you will need to include the [i18next-icu](https://github.com/i18next/i18next-icu) module into your [i18next instance](../legacy-v9/i18next-instance.md).
+To enable ICU format you will need to include the [i18next-icu](https://github.com/i18next/i18next-icu) module into your [i18next instance](../latest/i18next-instance.md).
 
 ```javascript
 import i18n from 'i18next';
 import ICU from 'i18next-icu';
 import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import { reactI18nextModule } from 'react-i18next';
+import { initReactI18next } from 'react-i18next';
 
 i18n
   .use(ICU)
   .use(Backend)
   .use(LanguageDetector)
-  .use(reactI18nextModule) // if not using I18nextProvider
+  .use(initReactI18next)
   .init({
     fallbackLng: 'en',
     debug: true,
@@ -33,11 +33,9 @@ i18n
     },
 
     // react i18next special options (optional)
-    react: {
-      bindI18n: 'languageChanged loaded',
-      bindStore: 'added removed',
-      nsMode: 'default'
-    }
+    // react: {
+    //   useSuspense: true
+    // }
   });
 
 
@@ -51,13 +49,13 @@ export default i18n;
 {% tabs %}
 {% tab title="JavaScript" %}
 ```jsx
-import React, { Component } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 function MyComponent() {
   const { t, i18n } = useTranslation();
   // or const [t, i18n] = useTranslation();
-  
+
   return <div>{t('icu', { numPersons: 500 })}</div>
 }
 
@@ -73,7 +71,7 @@ function MyComponent() {
 
 {% tab title="TypeScript" %}
 ```tsx
-import React, { Component } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 function MyComponent() {

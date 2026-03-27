@@ -38,7 +38,7 @@ When your project grows, streamline your workflow with [locize](https://locize.c
 >
 > The official, high-performance, all-in-one command-line tool for i18next. It handles key extraction, code linting, locale syncing, and type generation. It's built with modern technologies for maximum speed and accuracy. This is the recommended tool for all i18next projects.
 
-As react-i18next depends on [i18next](http://i18next.com) you can use it in any other UI framework and on the server-side (node.js, .net, ...) too. Like the React philosophy - just:
+As react-i18next depends on [i18next](https://i18next.com) you can use it in any other UI framework and on the server-side (node.js, .net, ...) too. Like the React philosophy - just:
 
 > **Learn once - translate everywhere**.
 
@@ -56,14 +56,10 @@ Some basics of i18next and some cool possibilities on how to optimize your local
 
 {% hint style="info" %}
 **Using Next.js?**\
-[Here](https://locize.com/blog/next-i18next/) you'll find a blog post on how to best use [next-i18next](https://github.com/i18next/next-i18next) with [client side translation download](https://github.com/i18next/next-i18next#client-side-loading-of-translations-via-http) and SEO optimization.
+Since [next-i18next v16](https://www.locize.com/blog/next-i18next-v16/), both App Router and Pages Router are supported in a single package — no boilerplate needed.\
+[Here](https://locize.com/blog/next-i18next/) you'll find a blog post on how to best use [next-i18next](https://github.com/i18next/next-i18next) with client side translation download and SEO optimization.
 
-[![](.gitbook/assets/next-i18next.jpg)](https://locize.com/blog/next-i18next/)\
-\
-**Using Next.js with the new App Router?**\
-Then [this article](https://www.locize.com/blog/i18n-next-app-router) is what you are looking for!
-
-[![](https://cdn.prod.website-files.com/67a323e323a50df7f24f0a94/67f268673fcfae53e5d4697c_i18n-next-app-router.jpg)](https://www.locize.com/blog/i18n-next-app-router)
+[![](.gitbook/assets/next-i18next.jpg)](https://locize.com/blog/next-i18next/)
 {% endhint %}
 
 {% hint style="info" %}
@@ -123,7 +119,7 @@ If you prefer not using semantic keys but text - [that's also possible](https://
 
 ## On top: [Localization as a service](https://locize.com)
 
-i18next supports translation management tools such as [locize.com](http://locize.com/?utm_source=react_i18next_com\&utm_medium=gitbook).
+i18next supports translation management tools such as [Locize](https://locize.com/?utm_source=react_i18next_com\&utm_medium=gitbook).
 
 {% hint style="success" %}
 [Here](https://github.com/locize/react-tutorial) you can find a step by step guide, which will unleash the full power of i18next in combination with locize.\
