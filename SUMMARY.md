@@ -30,19 +30,6 @@
 * [Using with fluent format](misc/using-with-fluent-format.md)
 * [Testing](misc/testing.md)
 
-## legacy v9
-
-* [Step by step guide (v9)](legacy-v9/step-by-step-guide.md)
-* [Overview (v9)](legacy-v9/overview.md)
-* [i18next instance (v9)](legacy-v9/i18next-instance.md)
-* [I18nextProvider (v9)](legacy-v9/i18nextprovider.md)
-* [withI18n (v9)](legacy-v9/withi18n.md)
-* [withNamespaces (v9)](legacy-v9/withnamespaces.md)
-* [NamespacesConsumer (v9)](legacy-v9/namespacesconsumer.md)
-* [Trans Component (v9)](legacy-v9/trans-component.md)
-* [Interpolate (v9)](legacy-v9/interpolate.md)
-* [SSR (v9)](legacy-v9/serverside-rendering.md)
-
 ***
 
 * [🌐 localization as a service](https://locize.com)

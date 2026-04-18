@@ -48,7 +48,7 @@ This component enables you to nest any React content to be translated as one coh
 
 _Let's say you want to create following HTML output:_
 
-> Hello **Arthur**, you have 42 unread messages. [Go to messages](../legacy-v9/trans-component.md).
+> Hello **Arthur**, you have 42 unread messages. [Go to messages](./trans-component.md).
 
 **Before:** Your untranslated React code would have looked something like:
 
