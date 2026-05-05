@@ -88,13 +88,13 @@ So you do not need to load all translations upfront enabling you to create huge 
 
 ## Manage your translations with a management GUI
 
-### [**locize**](https://locize.com) is the perfect translation management tool for your [**i18next**](https://www.i18next.com) project
+### [**locize**](https://www.locize.com?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=guides_multiple_translation_files) is the perfect translation management tool for your [**i18next**](https://www.i18next.com) project
 
-#### ➡️ [i18next](https://www.i18next.com/) + [locize](https://locize.com/) = [true continuous localization](https://locize.com/how-it-works.html#continouslocalization)
+#### ➡️ [i18next](https://www.i18next.com/) + [locize](https://www.locize.com/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=guides_multiple_translation_files) = [true continuous localization](https://www.locize.com/how-it-works?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=guides_multiple_translation_files#continuouslocalization)
 
 [Here](https://github.com/locize/react-tutorial) you can find a step by step guide, which will unleash the full power of i18next in combination with locize.\
 See how your developer experience with this localization workflow [could look like](https://youtu.be/osScyaGMVqo).\
-There's also the possibility to have an [even more focused developer experience](https://youtu.be/VfxBpSXarlU), with the help of the [auto-machinetranslation workflow](https://docs.locize.com/whats-inside/auto-machine-translation) and the use of the save missing keys functionality, new keys not only gets added to locize automatically, while developing the app, but are also [automatically translated](https://youtu.be/VfxBpSXarlU) into the target languages using machine translation (like [Google Translate](https://cloud.google.com/translate)).
+There's also the possibility to have an [even more focused developer experience](https://youtu.be/VfxBpSXarlU), with the help of the [auto-machinetranslation workflow](https://www.locize.com/docs/automatic-translation?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=guides_multiple_translation_files) and the use of the save missing keys functionality, new keys not only gets added to locize automatically, while developing the app, but are also [automatically translated](https://youtu.be/VfxBpSXarlU) into the target languages using machine translation (like [Google Translate](https://cloud.google.com/translate)).
 
 {% embed url="https://youtu.be/osScyaGMVqo" %}
 

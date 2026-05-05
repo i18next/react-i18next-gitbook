@@ -213,12 +213,12 @@ This sample while very simple does come with some [drawbacks](guides/the-drawbac
 ### Do you like to read a more complete step by step tutorial?
 
 {% hint style="info" %}
-[Here](https://locize.com/blog/react-i18next/) you'll find a simple tutorial on how to best use react-i18next.\
+[Here](https://www.locize.com/blog/react-i18next/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=getting_started) you'll find a simple tutorial on how to best use react-i18next.\
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
-<img src=".gitbook/assets/title width (1).jpg" alt="" data-size="original">](https://locize.com/blog/react-i18next/)
+<img src=".gitbook/assets/title width (1).jpg" alt="" data-size="original">](https://www.locize.com/blog/react-i18next/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=getting_started)
 {% endhint %}
 
 {% hint style="success" %}
-Don't have a [Locize](https://www.locize.com/) account yet?\
+Don't have a [Locize](https://www.locize.com/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=getting_started) account yet?\
 You can now sign up for a **Free plan** to test the integration in your development environment indefinitely.
 {% endhint %}

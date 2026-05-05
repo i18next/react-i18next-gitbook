@@ -49,10 +49,10 @@ The `useTranslation` hook will trigger a [Suspense](https://reactjs.org/docs/con
 Use the `useTranslation` hook inside your **functional components** to access the translation function or i18n instance.
 
 {% hint style="success" %}
-In [this tutorial](https://locize.com/blog/react-i18next/) you'll find some ways on how to use this useTranslation hook.
+In [this tutorial](https://www.locize.com/blog/react-i18next/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=latest_usetranslation_hook) you'll find some ways on how to use this useTranslation hook.
 
-You'll also see how to use it when you need to work with [multiple namespaces](https://locize.com/blog/react-i18next/#multiple-namespaces).[\
-<img src="../.gitbook/assets/title width (1).jpg" alt="" data-size="original">](https://locize.com/blog/react-i18next/)
+You'll also see how to use it when you need to work with [multiple namespaces](https://www.locize.com/blog/react-i18next/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=latest_usetranslation_hook#multiple-namespaces).[\
+<img src="../.gitbook/assets/title width (1).jpg" alt="" data-size="original">](https://www.locize.com/blog/react-i18next/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=latest_usetranslation_hook)
 {% endhint %}
 
 ## useTranslation params

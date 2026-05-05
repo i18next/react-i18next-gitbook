@@ -3,7 +3,7 @@
 {% hint style="success" %}
 🎉 Announcing [`i18next-cli`](https://github.com/i18next/i18next-cli):\
 The New Official Toolkit for i18next.\
-⇒ [Learn More](https://www.locize.com/blog/i18next-cli)
+⇒ [Learn More](https://www.locize.com/blog/i18next-cli?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=latest_trans_component)
 {% endhint %}
 
 ## Important note

@@ -4,13 +4,13 @@
 🚀 New: **Locize** is now **Free** for small projects!\
 We've replaced the trial-only model with a **Free plan**.\
 Manage up to 2,000 words and 100,000 downloads for $0/mo.\
-⇒ [Check it out!](https://www.locize.com/pricing)
+⇒ [Check it out!](https://www.locize.com/pricing?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 {% endhint %}
 
 {% hint style="info" %}
 🎉 Announcing [`i18next-cli`](https://github.com/i18next/i18next-cli):\
 The New Official Toolkit for i18next.\
-⇒ [Learn More](https://www.locize.com/blog/i18next-cli)
+⇒ [Learn More](https://www.locize.com/blog/i18next-cli?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 
 {% embed url="https://www.youtube.com/watch?v=aWZnZXwGg34" %}
 {% endhint %}
@@ -27,7 +27,7 @@ The module provides multiple components eg. to assert that needed translations g
 
 {% hint style="warning" %}
 Managing JSON files manually?\
-When your project grows, streamline your workflow with [locize](https://locize.com), the official TMS built by the creators of i18next. [**Try it for free!**](https://www.locize.com/i18next)
+When your project grows, streamline your workflow with [locize](https://www.locize.com?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme), the official TMS built by the creators of i18next. [**Try it for free!**](https://www.locize.com/i18next?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 {% endhint %}
 
 {% embed url="https://www.youtube.com/watch?t=705s&v=SA_9i4TtxLQ" %}
@@ -43,37 +43,37 @@ As react-i18next depends on [i18next](https://i18next.com) you can use it in any
 > **Learn once - translate everywhere**.
 
 {% hint style="success" %}
-Check out [this video](https://youtu.be/37rcHVcQ6t0) and the corresponding [blog post](https://www.locize.com/blog/how-to-easily-add-i18n-to-your-software) about "Vite + React + TypeScript" with i18next.
+Check out [this video](https://youtu.be/37rcHVcQ6t0) and the corresponding [blog post](https://www.locize.com/blog/how-to-easily-add-i18n-to-your-software?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme) about "Vite + React + TypeScript" with i18next.
 
 <img src=".gitbook/assets/title1.png" alt="" data-size="original">
 {% endhint %}
 
 {% hint style="success" %}
-[Here](https://locize.com/blog/react-i18next/) you'll find a simple tutorial on how to best use react-i18next.\
+[Here](https://www.locize.com/blog/react-i18next/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme) you'll find a simple tutorial on how to best use react-i18next.\
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
-<img src=".gitbook/assets/title width (1).jpg" alt="" data-size="original">](https://locize.com/blog/react-i18next/)
+<img src=".gitbook/assets/title width (1).jpg" alt="" data-size="original">](https://www.locize.com/blog/react-i18next/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 {% endhint %}
 
 {% hint style="info" %}
 **Using Next.js?**\
-Since [next-i18next v16](https://www.locize.com/blog/next-i18next-v16/), both App Router and Pages Router are supported in a single package — no boilerplate needed.\
-[Here](https://locize.com/blog/next-i18next/) you'll find a blog post on how to best use [next-i18next](https://github.com/i18next/next-i18next) with client side translation download and SEO optimization.
+Since [next-i18next v16](https://www.locize.com/blog/next-i18next-v16/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme), both App Router and Pages Router are supported in a single package — no boilerplate needed.\
+[Here](https://www.locize.com/blog/next-i18next/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme) you'll find a blog post on how to best use [next-i18next](https://github.com/i18next/next-i18next) with client side translation download and SEO optimization.
 
-[![](.gitbook/assets/next-i18next.jpg)](https://locize.com/blog/next-i18next/)
+[![](.gitbook/assets/next-i18next.jpg)](https://www.locize.com/blog/next-i18next/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 {% endhint %}
 
 {% hint style="info" %}
 **Using Remix?**\
-[Here](https://github.com/locize/locize-remix-i18next-example) you'll find a simple example and [here a step by step tutorial](https://locize.com/blog/remix-i18n/) on how to best use remix-i18next.
+[Here](https://github.com/locize/locize-remix-i18next-example) you'll find a simple example and [here a step by step tutorial](https://www.locize.com/blog/remix-i18n/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme) on how to best use remix-i18next.
 
-[![](.gitbook/assets/remix-localization.jpg)](https://locize.com/blog/remix-i18n/)
+[![](.gitbook/assets/remix-localization.jpg)](https://www.locize.com/blog/remix-i18n/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 {% endhint %}
 
 {% hint style="info" %}
 **Using Gatsby?**\
-[Here](https://github.com/locize/locize-gatsby-example) you can find an example and an appropriate [blog post](https://locize.com/blog/gatsby-i18n/).
+[Here](https://github.com/locize/locize-gatsby-example) you can find an example and an appropriate [blog post](https://www.locize.com/blog/gatsby-i18n/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme).
 
-[![](.gitbook/assets/gatsby-i18next.jpg)](https://locize.com/blog/gatsby-i18n/)
+[![](.gitbook/assets/gatsby-i18next.jpg)](https://www.locize.com/blog/gatsby-i18n/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 {% endhint %}
 
 ## What does my code look like
@@ -117,20 +117,20 @@ Since [next-i18next v16](https://www.locize.com/blog/next-i18next-v16/), both Ap
 
 If you prefer not using semantic keys but text - [that's also possible](https://www.i18next.com/principles/fallback.html#key-fallback).
 
-## On top: [Localization as a service](https://locize.com)
+## On top: [Localization as a service](https://www.locize.com?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 
-i18next supports translation management tools such as [Locize](https://locize.com/?utm_source=react_i18next_com\&utm_medium=gitbook).
+i18next supports translation management tools such as [Locize](https://www.locize.com/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme).
 
 {% hint style="success" %}
 [Here](https://github.com/locize/react-tutorial) you can find a step by step guide, which will unleash the full power of i18next in combination with locize.\
 See how your developer experience with this localization workflow [could look like](https://youtu.be/osScyaGMVqo).\
-There's also the possibility to have an [even more focused developer experience](https://youtu.be/VfxBpSXarlU), with the help of the [auto-machinetranslation workflow](https://docs.locize.com/whats-inside/auto-machine-translation) and the use of the save missing keys functionality, new keys not only gets added to locize automatically, while developing the app, but are also [automatically translated](https://youtu.be/VfxBpSXarlU) into the target languages using machine translation (like [Google Translate](https://cloud.google.com/translate)).
+There's also the possibility to have an [even more focused developer experience](https://youtu.be/VfxBpSXarlU), with the help of the [auto-machinetranslation workflow](https://www.locize.com/docs/automatic-translation?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme) and the use of the save missing keys functionality, new keys not only gets added to locize automatically, while developing the app, but are also [automatically translated](https://youtu.be/VfxBpSXarlU) into the target languages using machine translation (like [Google Translate](https://cloud.google.com/translate)).
 {% endhint %}
 
 {% embed url="https://www.youtube.com/watch?v=TFV_vhJs5DY" %}
 
 [Learn more about the enterprise offering](https://www.i18next.com/overview/for-enterprises)
 
-#### Manage your i18next translations directly from Claude and other AI assistants via the [Locize MCP server](https://www.locize.com/docs/integration/mcp)
+#### Manage your i18next translations directly from Claude and other AI assistants via the [Locize MCP server](https://www.locize.com/docs/integration/mcp?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 
 {% embed url="https://youtu.be/G7bfVfyseaQ" %}

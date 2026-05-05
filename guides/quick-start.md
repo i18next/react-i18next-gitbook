@@ -19,9 +19,9 @@ Check out this basic [react example](https://github.com/i18next/react-i18next/tr
 #### Do you like to read a more complete step by step tutorial?
 
 {% hint style="success" %}
-[Here](https://locize.com/blog/react-i18next/) you'll find a simple tutorial on how to best use react-i18next.\
+[Here](https://www.locize.com/blog/react-i18next/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=guides_quick_start) you'll find a simple tutorial on how to best use react-i18next.\
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
-![](<../.gitbook/assets/title width (1).jpg>)](https://locize.com/blog/react-i18next/)
+![](<../.gitbook/assets/title width (1).jpg>)](https://www.locize.com/blog/react-i18next/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=guides_quick_start)
 {% endhint %}
 
 ## Configure i18next
@@ -96,7 +96,7 @@ i18next.t('my.key')
 </code></pre>
 
 \
-Also read about this [here](https://www.locize.com/blog/how-to-use-i18next-t-outside-react-components) and [here](https://github.com/i18next/react-i18next/issues/1236#issuecomment-762039023).
+Also read about this [here](https://www.locize.com/blog/how-to-use-i18next-t-outside-react-components?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=guides_quick_start) and [here](https://github.com/i18next/react-i18next/issues/1236#issuecomment-762039023).
 {% endhint %}
 {% endtab %}
 
@@ -110,7 +110,7 @@ i18next.t($ => $.my.key)
 </code></pre>
 
 \
-Also read about this [here](https://www.locize.com/blog/how-to-use-i18next-t-outside-react-components) and [here](https://github.com/i18next/react-i18next/issues/1236#issuecomment-762039023).
+Also read about this [here](https://www.locize.com/blog/how-to-use-i18next-t-outside-react-components?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=guides_quick_start) and [here](https://github.com/i18next/react-i18next/issues/1236#issuecomment-762039023).
 {% endhint %}
 {% endtab %}
 {% endtabs %}

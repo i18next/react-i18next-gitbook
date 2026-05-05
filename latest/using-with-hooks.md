@@ -281,7 +281,7 @@ Prefer having code to checkout? Directly dive into our example:
 ### Do you like to read a more complete step by step tutorial?
 
 {% hint style="success" %}
-[Here](https://locize.com/blog/react-i18next/) you'll find a simple tutorial on how to best use react-i18next.\
+[Here](https://www.locize.com/blog/react-i18next/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=latest_using_with_hooks) you'll find a simple tutorial on how to best use react-i18next.\
 Some basics of i18next and some cool possibilities on how to optimize your localization workflow.[\
-![](<../.gitbook/assets/title width (1).jpg>)](https://locize.com/blog/react-i18next/)
+![](<../.gitbook/assets/title width (1).jpg>)](https://www.locize.com/blog/react-i18next/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=latest_using_with_hooks)
 {% endhint %}
