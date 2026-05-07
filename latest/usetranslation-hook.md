@@ -86,6 +86,13 @@ t('key'); // will be looked up from namespace ns1
 const { t, i18n } = useTranslation(['ns1', 'ns2', 'ns3']);
 t($ => $.key); // will be looked up from namespace ns1
 t($ => $.key, { ns: 'ns2' }); // will be looked up from namespace ns2
+
+// since react-i18next v17.0.7 / i18next v26.0.10 a selector path whose first
+// segment matches a *secondary* namespace is routed to that namespace too:
+t($ => $.ns2.key); // will be looked up from namespace ns2
+t($ => $.ns3.deep.key); // will be looked up from namespace ns3
+// the primary namespace ('ns1' here) is never rewritten — `$.ns1.key` would
+// mean a literal sub-key inside ns1 rather than a switch.
 ```
 {% endtab %}
 {% endtabs %}
@@ -93,6 +100,10 @@ t($ => $.key, { ns: 'ns2' }); // will be looked up from namespace ns2
 {% hint style="warning" %}
 Only the `t` function is bound to the namespace, behind the scenes it uses the [getFixedT](https://www.i18next.com/overview/api#getfixedt) function of i18next.\
 The `i18n` instance is the normal i18next instance. Not bound to anything special.
+{% endhint %}
+
+{% hint style="info" %}
+**Selector ns prefix vs. resolution scope.** Plain `t('key')` calls remain isolated to the **primary** namespace under default `nsMode` — they don't fall through to the secondary namespaces. Only the **selector**'s first segment is matched against the hook's full namespace list, via the new `scopeNs` argument that `useTranslation` now passes to `getFixedT`. If you want `t('key')` to fall through to all namespaces in order, use `nsMode: 'fallback'` (unchanged from before).
 {% endhint %}
 
 ### Overriding the i18next instance
