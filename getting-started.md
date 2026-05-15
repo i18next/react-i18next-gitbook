@@ -219,6 +219,6 @@ Some basics of i18next and some cool possibilities on how to optimize your local
 {% endhint %}
 
 {% hint style="success" %}
-Don't have a [Locize](https://www.locize.com/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=getting_started) account yet?\
+Don't have a [Locize](https://www.locize.com/i18next?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=getting_started) account yet?\
 You can now sign up for a **Free plan** to test the integration in your development environment indefinitely.
 {% endhint %}

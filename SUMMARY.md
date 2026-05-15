@@ -32,6 +32,6 @@
 
 ***
 
-* [🌐 localization as a service](https://www.locize.com?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=summary)
+* [🌐 localization as a service](https://www.locize.com/i18next?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=summary)
 * [🎓 i18next crash course](https://youtu.be/SA\_9i4TtxLQ?t=705)
 * [💾 GitHub Repository](https://github.com/i18next/react-i18next)

@@ -27,7 +27,7 @@ The module provides multiple components eg. to assert that needed translations g
 
 {% hint style="warning" %}
 Managing JSON files manually?\
-When your project grows, streamline your workflow with [locize](https://www.locize.com?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme), the official TMS built by the creators of i18next. [**Try it for free!**](https://www.locize.com/i18next?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
+When your project grows, streamline your workflow with [locize](https://www.locize.com/i18next?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme), the official TMS built by the creators of i18next. [**Try it for free!**](https://www.locize.com/i18next?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 {% endhint %}
 
 {% embed url="https://www.youtube.com/watch?t=705s&v=SA_9i4TtxLQ" %}
@@ -117,9 +117,9 @@ Since [next-i18next v16](https://www.locize.com/blog/next-i18next-v16/?utm_sourc
 
 If you prefer not using semantic keys but text - [that's also possible](https://www.i18next.com/principles/fallback.html#key-fallback).
 
-## On top: [Localization as a service](https://www.locize.com?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
+## On top: [Localization as a service](https://www.locize.com/i18next?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 
-i18next supports translation management tools such as [Locize](https://www.locize.com/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme).
+i18next supports translation management tools such as [Locize](https://www.locize.com/i18next?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme).
 
 {% hint style="success" %}
 [Here](https://github.com/locize/react-tutorial) you can find a step by step guide, which will unleash the full power of i18next in combination with locize.\

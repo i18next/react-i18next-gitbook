@@ -88,9 +88,9 @@ So you do not need to load all translations upfront enabling you to create huge 
 
 ## Manage your translations with a management GUI
 
-### [**locize**](https://www.locize.com?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=guides_multiple_translation_files) is the perfect translation management tool for your [**i18next**](https://www.i18next.com) project
+### [**locize**](https://www.locize.com/i18next?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=guides_multiple_translation_files) is the perfect translation management tool for your [**i18next**](https://www.i18next.com) project
 
-#### ➡️ [i18next](https://www.i18next.com/) + [locize](https://www.locize.com/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=guides_multiple_translation_files) = [true continuous localization](https://www.locize.com/how-it-works?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=guides_multiple_translation_files#continuouslocalization)
+#### ➡️ [i18next](https://www.i18next.com/) + [locize](https://www.locize.com/i18next?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=guides_multiple_translation_files) = [true continuous localization](https://www.locize.com/how-it-works?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=guides_multiple_translation_files#continuouslocalization)
 
 [Here](https://github.com/locize/react-tutorial) you can find a step by step guide, which will unleash the full power of i18next in combination with locize.\
 See how your developer experience with this localization workflow [could look like](https://youtu.be/osScyaGMVqo).\
