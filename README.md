@@ -54,6 +54,13 @@ Some basics of i18next and some cool possibilities on how to optimize your local
 <img src=".gitbook/assets/title width (1).jpg" alt="" data-size="original">](https://www.locize.com/blog/react-i18next/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 {% endhint %}
 
+{% hint style="success" %}
+**Who's using i18next?** At least **1,500+ of the world's top 100,000 websites** run on i18next — including many React apps built with react-i18next and next-i18next.\
+⇒ [See who uses i18next](https://www.locize.com/blog/who-uses-i18next?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=who_uses_i18next)
+
+[![](.gitbook/assets/who-uses-i18next.jpg)](https://www.locize.com/blog/who-uses-i18next?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=who_uses_i18next)
+{% endhint %}
+
 {% hint style="info" %}
 **Using Next.js?**\
 Since [next-i18next v16](https://www.locize.com/blog/next-i18next-v16/?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme), both App Router and Pages Router are supported in a single package — no boilerplate needed.\
