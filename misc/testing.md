@@ -15,35 +15,25 @@ import { MyComponent } from './myComponent';
 <MyComponent t={key => key} />
 ```
 
-Or use [https://github.com/kadirahq/react-stubber](https://github.com/kadirahq/react-stubber) to stub i18n functionality:
+Or create a manual mock in `__mocks__/react-i18next.js` (picked up automatically by jest) that covers `useTranslation`, `withTranslation` and `<Trans>` in one place, so components mixing all three render their keys and children as plain text:
 
-{% tabs %}
-{% tab title="JavaScript" %}
 ```jsx
-const tDefault = (key) => key;
-const StubbableInterpolate = mayBeStubbed(Interpolate);
-const stubInterpolate = function () {
-  stub(StubbableInterpolate, (props, context) => {
-    const t = (context && context.t) || tDefault;
-    return (<span>{t(props.i18nKey)}</span>);
-  });
-};
-```
-{% endtab %}
+const React = require('react');
+const reactI18next = require('react-i18next');
 
-{% tab title="TypeScript" %}
-```tsx
-const tDefault = (key) => key;
-const StubbableInterpolate = mayBeStubbed(Interpolate);
-const stubInterpolate = function () {
-  stub(StubbableInterpolate, (props, context) => {
-    const t = (context && context.t) || tDefault;
-    return (<span>{t($ => $[props.i18nKey])}</span>);
-  });
+const useMock = [(k) => k, { changeLanguage: () => new Promise(() => {}) }];
+useMock.t = (k) => k;
+useMock.i18n = { changeLanguage: () => new Promise(() => {}) };
+
+module.exports = {
+  ...reactI18next,
+  withTranslation: () => (Component) => (props) => <Component t={(k) => k} {...props} />,
+  Trans: ({ children, i18nKey }) => children ?? i18nKey,
+  useTranslation: () => useMock,
 };
 ```
-{% endtab %}
-{% endtabs %}
+
+A more complete version of this mock (including a `<Trans>` mock that renders nested elements) is part of the runnable jest example: [example/test-jest/src/\_\_mocks\_\_/react-i18next.js](https://github.com/i18next/react-i18next/blob/master/example/test-jest/src/__mocks__/react-i18next.js)
 
 Or mock it like:
 
@@ -97,7 +87,7 @@ export default function CustomComponent() {
 
 <strong>// test
 </strong>import React from 'react';
-import { mount } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 import UseTranslationWithInterpolation from './UseTranslationWithInterpolation';
 import { useTranslation } from 'react-i18next';
 
@@ -115,10 +105,9 @@ it('test render', () => {
     },
   });
 
-  const mounted = mount(&#x3C;UseTranslationWithInterpolation />);
+  render(&#x3C;UseTranslationWithInterpolation />);
 
-  // console.log(mounted.debug());
-  expect(mounted.contains(&#x3C;div>some.key&#x3C;/div>)).toBe(true);
+  expect(screen.getByText('some.key')).toBeInTheDocument();
 
   // If you want you can also check how the t function has been called,
   // but basically this is testing your mock and not the actual code.
@@ -141,7 +130,7 @@ export default function CustomComponent() {
 
 <strong>// test
 </strong>import React from 'react';
-import { mount } from 'enzyme';
+import { render, screen } from '@testing-library/react';
 import UseTranslationWithInterpolation from './UseTranslationWithInterpolation';
 import { useTranslation } from 'react-i18next';
 
@@ -159,10 +148,9 @@ it('test render', () => {
     },
   });
 
-  const mounted = mount(&#x3C;UseTranslationWithInterpolation />);
+  render(&#x3C;UseTranslationWithInterpolation />);
 
-  // console.log(mounted.debug());
-  expect(mounted.contains(&#x3C;div>some.key&#x3C;/div>)).toBe(true);
+  expect(screen.getByText('some.key')).toBeInTheDocument();
 
   // If you want you can also check how the t function has been called,
   // but basically this is testing your mock and not the actual code.
@@ -214,7 +202,7 @@ export default i18n;
 ```javascript
 import React from 'react';
 import { Provider } from 'react-redux';
-import { mount } from 'enzyme';
+import { render, fireEvent } from '@testing-library/react';
 import { I18nextProvider } from 'react-i18next';
 import configureStore from 'redux-mock-store';
 import ContactTable from './ContactTable';
@@ -225,14 +213,14 @@ const mockStore = configureStore([]);
 const store = mockStore({ contacts: [ ] });
 
 it('dispatches SORT_TABLE', () => {
-  const enzymeWrapper = mount(
+  const { container } = render(
     <Provider store={store}>
       <I18nextProvider i18n={i18n}>
         <ContactTable />
       </I18nextProvider>
     </Provider>
   );
-  enzymeWrapper.find('.sort').simulate('click');
+  fireEvent.click(container.querySelector('.sort'));
   const actions = store.getActions();
   expect(actions).toEqual([{ type: actionTypes.SORT_TABLE }]);
 });

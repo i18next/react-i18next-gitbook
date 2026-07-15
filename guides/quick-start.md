@@ -115,6 +115,10 @@ Also read about this [here](https://www.locize.com/blog/how-to-use-i18next-t-out
 {% endtab %}
 {% endtabs %}
 
+{% hint style="warning" %}
+**React Native:** the Hermes engine does not implement `Intl.PluralRules`, which i18next needs for plurals (mandatory since i18next v24). Add the 2-line [polyfill](https://github.com/eemeli/intl-pluralrules): `npm install intl-pluralrules` and `import 'intl-pluralrules'` before your i18next init.
+{% endhint %}
+
 ## Translate your content
 
 ### Using the hook

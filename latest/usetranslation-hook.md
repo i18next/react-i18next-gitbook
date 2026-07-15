@@ -220,3 +220,9 @@ const { t, i18n, ready } = useTranslation('ns1', { useSuspense: false });
 {% hint style="info" %}
 Not using Suspense you will need to handle the not ready state yourself by eg. render a loading component as long `!ready` . Not doing so will result in rendering your translations before they loaded which will cause save missing be called although translations exists (just yet not loaded).
 {% endhint %}
+
+### Troubleshooting
+
+**Blank screen or "suspended while rendering, but no fallback UI was specified"?** `useSuspense` is `true` by default: while translations load asynchronously (http backend, locize backend, ...), the component suspends. Either wrap it in a `<Suspense fallback={...}>` boundary, or set `useSuspense: false` and handle the `ready` flag as shown above. Since v17.0.10 a development-only console warning points this out when it happens.
+
+**"Rendered more hooks than during the previous render" pointing at `useTranslation`?** This was a bug in react-i18next < 16.3 (an early return before all hooks ran when the i18next instance wasn't ready yet, typically under init/render races or React StrictMode). It is fixed in >= 16.3; upgrade instead of working around it.

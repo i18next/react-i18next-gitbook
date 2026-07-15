@@ -46,6 +46,10 @@ So you learned there is no need to use the Trans component everywhere (the plain
 
 This component enables you to nest any React content to be translated as one cohesive string. It supports both plural and interpolation. The `<Trans>` component will automatically use the most relevant `t()` function (from the [context instance](https://react.i18next.com/latest/i18nextprovider) or the global instance), unless overridden via the `i18n` or `t` props.
 
+{% hint style="success" %}
+**Tip:** most projects find the **named-components form** the easiest to read and maintain: `components={{ bold: <strong />, myLink: <Link to="/msgs" /> }}` with `<bold>...</bold>` / `<myLink>...</myLink>` tags in the translation string. See [Alternative usage which lists the components](trans-component.md#alternative-usage-which-lists-the-components-v11.6.0). The indexed form (`<0>`, `<1>`) shown below is what it desugars to and what you will meet in older codebases and extraction tools. Also good to know: a literal `<` character inside a translation string (e.g. `count < 10`) is handled correctly since react-i18next 16.2.2; older versions tried to parse it as a tag.
+{% endhint %}
+
 _Let's say you want to create following HTML output:_
 
 > Hello **Arthur**, you have 42 unread messages. [Go to messages](./trans-component.md).
