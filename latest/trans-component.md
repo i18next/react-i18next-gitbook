@@ -389,6 +389,10 @@ Trans.children = [
 * child is an object: nothing to do; it's used for interpolation
 * child is an element: wrap it's children in `<x></x>` where `x` is the index of that element's position in the `children` list; handle its children with the same rules (starting `element.children` index at 0 again)
 
+{% hint style="info" %}
+These indexed tags are hard for translators too: a `<0></0>` moved to the wrong place breaks the sentence, and a plain spreadsheet gives no clue what element `0` even is. Showing the string where it actually renders avoids most of it. [Locize](https://www.locize.com/i18next?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=latest_trans_component\&from=i18next_react-trans-component__hint), the TMS built by the i18next team, has an in-context editor for translating directly on your running app, plus screenshot context per key, and keeps the tag structure intact.
+{% endhint %}
+
 ## Trans props
 
 All properties are optional, although you'll need to use `i18nKey` if you're not using natural language keys (text-based).
