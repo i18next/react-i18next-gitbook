@@ -37,6 +37,8 @@ You should read the [i18next](https://www.i18next.com) documentation at some poi
 > ⭐ [i18next-cli](https://github.com/i18next/i18next-cli)
 >
 > The official, high-performance, all-in-one command-line tool for i18next. It handles key extraction, code linting, locale syncing, and type generation. It's built with modern technologies for maximum speed and accuracy. This is the recommended tool for all i18next projects.
+>
+> Not sure how many strings are still hardcoded? Run the free [i18n readiness check](https://translate.i18next.com/repo-check) on your public GitHub repository first.
 
 **You have two options to translate your content:**
 
