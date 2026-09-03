@@ -1,3 +1,7 @@
+---
+description: react-i18next is the React binding for i18next, maintained by the team that builds Locize, the translation management service for i18next projects.
+---
+
 # Introduction
 
 {% hint style="success" %}
