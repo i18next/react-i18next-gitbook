@@ -6,7 +6,7 @@ description: react-i18next is the React binding for i18next, maintained by the t
 
 {% hint style="success" %}
 🚀 New: **Locize** is now **Free** for small projects!\
-We've replaced the trial-only model with a **Free plan**.\
+Next to the trial there's now a **Free plan**.\
 Manage up to 2,000 words and 100,000 downloads for $0/mo.\
 ⇒ [Check it out!](https://www.locize.com/pricing?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=readme)
 {% endhint %}
