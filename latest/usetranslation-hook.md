@@ -1,3 +1,7 @@
+---
+description: "The useTranslation hook: get t and i18n in function components, load namespaces, wait with Suspense, and use keyPrefix."
+---
+
 # useTranslation (hook)
 
 ## What it does

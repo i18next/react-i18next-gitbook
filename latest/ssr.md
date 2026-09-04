@@ -1,3 +1,7 @@
+---
+description: "Server-side rendering with react-i18next: Next.js (next-i18next), Remix, Gatsby, one i18next instance per request, and passing initial translations to the client."
+---
+
 # SSR (additional components)
 
 ## Using [Next.js](https://nextjs.org/)?

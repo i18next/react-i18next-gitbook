@@ -1,3 +1,7 @@
+---
+description: "The withTranslation higher-order component: inject t and i18n into class components, with namespaces and Suspense options."
+---
+
 # withTranslation (HOC)
 
 ## What it does

@@ -1,3 +1,7 @@
+---
+description: "Split translations into namespaces (multiple files), load them lazily, and use them with useTranslation and Trans."
+---
+
 # Multiple Translation Files
 
 One of the advantages of react-i18next is based on i18next it supports the separation of translations into multiple files - which are called namespaces in i18next context -> as you're accessing keys from a namespace defining that as a prefix:

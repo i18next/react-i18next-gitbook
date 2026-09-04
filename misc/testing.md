@@ -1,3 +1,7 @@
+---
+description: "Testing components that use react-i18next: export the plain component or test without stubbing, with an example i18next configuration for tests."
+---
+
 # Testing
 
 For testing purpose of your component you should export the pure component without extending with the withTranslation hoc and test that:

@@ -1,3 +1,7 @@
+---
+description: "TypeScript with react-i18next: typed keys and namespaces via i18next's CustomTypeOptions, and the Trans component."
+---
+
 # TypeScript
 
 {% hint style="warning" %}

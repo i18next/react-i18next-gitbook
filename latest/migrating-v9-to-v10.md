@@ -1,3 +1,7 @@
+---
+description: "Migrate react-i18next from v9 to v10: the rewrite, renamed exports and the hook-based API."
+---
+
 # Migrating v9 to v10
 
 v10 is a complete rewrite, taking the chance to clean up some complexity added from v1 to v9.

@@ -1,3 +1,7 @@
+---
+description: "Install react-i18next and i18next, initialize an instance, and translate your first React component with useTranslation."
+---
+
 # Getting started
 
 ## Installation

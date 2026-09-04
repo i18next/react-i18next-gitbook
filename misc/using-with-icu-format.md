@@ -1,3 +1,7 @@
+---
+description: "Use the ICU message format in react-i18next with i18next-icu, including plurals and selects in ICU syntax."
+---
+
 # Using with ICU format
 
 i18next itself is flexible enough to support multiple existing i18next formats beside its own. So also the ICU format, thanks to [i18next-icu](https://github.com/i18next/i18next-icu).

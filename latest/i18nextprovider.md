@@ -1,3 +1,7 @@
+---
+description: "I18nextProvider passes an i18next instance through React context, for multiple instances or server-side setups."
+---
+
 # I18nextProvider
 
 ## What it does

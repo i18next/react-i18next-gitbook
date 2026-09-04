@@ -1,3 +1,7 @@
+---
+description: "The Trans component: translate JSX with nested elements, links and variables, the important note on how children are indexed, and the usage samples."
+---
+
 # Trans Component
 
 {% hint style="success" %}

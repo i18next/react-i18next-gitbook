@@ -1,3 +1,7 @@
+---
+description: "Step-by-step guide to react-i18next with hooks: configuration, useTranslation, Trans, language switching and lazy loading."
+---
+
 # Step by step guide
 
 ## Install needed dependencies

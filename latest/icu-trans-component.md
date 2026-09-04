@@ -1,3 +1,7 @@
+---
+description: "IcuTrans, the Trans variant for ICU message format, used by the icu.macro Babel macro."
+---
+
 # IcuTrans Component
 
 ## Important note

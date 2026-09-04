@@ -1,3 +1,7 @@
+---
+description: "The Translation render prop: access t and i18n where hooks and HOCs do not fit."
+---
+
 # Translation (render prop)
 
 ## What it does <a href="#what-it-does" id="what-it-does"></a>

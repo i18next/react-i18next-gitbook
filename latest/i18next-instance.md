@@ -1,3 +1,7 @@
+---
+description: "Configure the i18next instance for react-i18next: initReactI18next, backends, language detection, and multiple instances."
+---
+
 # i18next instance
 
 The instance is an initialized i18next instance. In the following code snippet, we add a backend to load translations from server and a language detector for detecting user language.

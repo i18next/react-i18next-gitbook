@@ -1,3 +1,7 @@
+---
+description: "What react-i18next does differently from other React i18n solutions: changing the language at runtime, splitting translations into files, and translating mixed JSX in one sentence."
+---
+
 # Drawbacks of other i18n solutions
 
 Let's make the sample using our own base i18n framework [i18next](https://i18next.com). Like all other solutions, some come with [drawbacks](the-drawbacks-of-other-i18n-solutions.md#the-drawbacks). These will be highlighted after samples.

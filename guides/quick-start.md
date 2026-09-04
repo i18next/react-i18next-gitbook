@@ -1,3 +1,7 @@
+---
+description: "Add react-i18next to an existing React app in a few steps: install, configure i18next, use the useTranslation hook, and load translation files."
+---
+
 # Quick start
 
 ## Install needed dependencies
