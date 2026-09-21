@@ -137,6 +137,10 @@ Also, The `i18nKey` is optional, in case you already use text as translation key
 
 This format is useful if you want to interpolate the same node multiple times. Another advantage is the simpler named tags, which avoids the trouble with index guessing - however, this can also be achieved with `transSupportBasicHtmlNodes`, see the next section.
 
+{% hint style="info" %}
+When a supplied component has React-element children of its own, an empty paired tag preserves them. This works with named component maps (`<wrap></wrap>`), component arrays (`<0></0>`), and indexed JSX children (`<1></1>`). For example, `components={{ wrap: <a href="#"><svg /></a> }}` with `"myKey": "Link: <wrap></wrap>"` renders the icon inside the link; `<wrap/>` behaves the same. Put content inside `<wrap>...</wrap>` when the translation should provide the children instead.
+{% endhint %}
+
 {% hint style="warning" %}
 Existing self-closing HTML tag names are reserved keys and won't work. Examples: `link: <Link />`, `img: <img src="" />`, `media: <img src="" />`
 {% endhint %}
