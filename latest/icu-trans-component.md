@@ -185,6 +185,23 @@ export default async function Page() {
 
 The `react-i18next/IcuTransWithoutContext` entry point does not create a React context when it is imported, the same way `react-i18next/TransWithoutContext` works for `Trans`. Importing from the main `react-i18next` entry point in a Server Component can fail with `createContext is not a function`, depending on how far your bundler tree-shakes the package.
 
+### TypeScript
+
+With `parseInterpolation: 'icu'` in your `CustomTypeOptions` (i18next v26.5.0 and react-i18next v17.1.0 or later), `values` is typed from the message of `i18nKey`, the same way the options of `t` are. A misspelled or missing argument, or a value of the wrong type, is a type error:
+
+```tsx
+// resources: { welcome: 'Welcome, <0>{name}</0>! You have {count, plural, one {# message} other {# messages}}.' }
+<IcuTrans
+  i18nKey="welcome"
+  defaultTranslation="Welcome, <0>{name}</0>!"
+  content={[{ type: 'strong' }]}
+  values={{ nmae: 'Arthur', count: 2 }}
+  // error: 'nmae' does not exist in type '{ name: string | number; count: number; }'
+/>
+```
+
+`values` itself stays optional, as on `Trans`. See [Using with ICU format](../misc/using-with-icu-format.md) for the setup.
+
 ## IcuTrans props
 
 `defaultTranslation` and `content` are required properties, all others are optional. `IcuTrans` and `IcuTransWithoutContext` take the same props.
@@ -194,7 +211,7 @@ The `react-i18next/IcuTransWithoutContext` entry point does not create a React c
 | `i18nKey`            | `string (undefined)`    | The key to look up. If omitted, `defaultTranslation` is used as the key (natural language keys). Can contain the namespace in the form `'ns:key'` (depending on `i18next.options.nsSeparator`), but the dedicated `ns` prop is clearer. The TypeScript types currently require this prop. |
 | `defaultTranslation` | `string`                | The message in ICU format with numbered tags (`<0>...</0>`). Used when the key has no translation yet, and as the key when `i18nKey` is omitted. |
 | `content`            | `array`                 | Component declarations, one per numbered tag: `{ type, props }`, where `type` is a DOM element name (`'strong'`, `'a'`) or a component (`Link`), and the optional `props` are passed to it, for example `{ type: 'a', props: { href: '/somewhere' } }`. For tags nested inside a tag, put their declarations in `props.children`, see [Nested elements](icu-trans-component.md#nested-elements). |
-| `values`             | `object ({})`           | Values for the arguments of the ICU message, including the number for `plural` and `selectordinal`, for example `values={{ name, count }}`. These override the same names in `interpolation.defaultVariables`. |
+| `values`             | `object ({})`           | Values for the arguments of the ICU message, including the number for `plural` and `selectordinal`, for example `values={{ name, count }}`. These override the same names in `interpolation.defaultVariables`. With `parseInterpolation: 'icu'`, the TypeScript type is derived from the message, see [TypeScript](icu-trans-component.md#typescript). |
 | `ns`                 | `string \| string[] (undefined)` | Namespace to use. Falls back to the namespace of `t`, then the `defaultNS` of the [provider](i18nextprovider.md), then `i18next.options.defaultNS`. |
 | `t`                  | `function (undefined)`  | `t` function to use instead of `i18n.t()`, for example the one returned by [`useTranslation`](usetranslation-hook.md). |
 | `i18n`               | `object (undefined)`    | i18next instance to use. Falls back to the instance of the nearest [provider](i18nextprovider.md) (`IcuTrans` only), then to the global instance set by `initReactI18next`. |

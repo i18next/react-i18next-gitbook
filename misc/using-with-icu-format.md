@@ -53,7 +53,7 @@ export default i18n;
 With i18next-icu, i18next's own plural and context suffix keys (`key_one`, `key_male`), `{{name}}` interpolation and `$t()` nesting stop working. [Using ICU or MF2](https://www.i18next.com/how-to/using-icu-or-mf2) in the i18next docs lists what keeps working and what does not.
 
 {% hint style="info" %}
-**TypeScript:** set `parseInterpolation: false` in your `CustomTypeOptions` (since i18next v26.2.0). The type extractor looks for `{{variable}}`, so ICU plurals like `{count, plural, one {{count} row} other {{count} rows}}` otherwise make `t` ask for variables that do not exist. Keys are still checked, the values you pass to `t` are not.
+**TypeScript:** set `parseInterpolation: 'icu'` in your `CustomTypeOptions` (since i18next v26.5.0). The options of `t` and the `values` of `Trans` and `IcuTrans` are then checked against the ICU message: `{name}` takes a string or number, `plural`, `selectordinal` and `{n, number}` a number, `{d, date}` a `Date`, and a missing or misspelled argument is an error. The resources need literal types, as the resources file from the [i18next-cli](https://github.com/i18next/i18next-cli) `types` command has them.
 
 ```typescript
 // i18next.d.ts
@@ -61,10 +61,12 @@ import 'i18next';
 
 declare module 'i18next' {
   interface CustomTypeOptions {
-    parseInterpolation: false;
+    parseInterpolation: 'icu';
   }
 }
 ```
+
+With i18next v26.2.0 to v26.4.x, use `parseInterpolation: false` instead. The type extractor looks for `{{variable}}`, so ICU plurals like `{count, plural, one {{count} row} other {{count} rows}}` otherwise make `t` ask for variables that do not exist. Keys are still checked, the values are not.
 {% endhint %}
 
 ## Use the ICU format
