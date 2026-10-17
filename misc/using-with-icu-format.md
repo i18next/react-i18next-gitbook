@@ -14,7 +14,11 @@ Find the full working sample [here](https://github.com/i18next/react-i18next/tre
 
 ## Extend the i18n instance with ICU module
 
-To enable ICU format you will need to include the [i18next-icu](https://github.com/i18next/i18next-icu) module into your [i18next instance](../latest/i18next-instance.md).
+To enable ICU format you will need to include the [i18next-icu](https://github.com/i18next/i18next-icu) module into your [i18next instance](../latest/i18next-instance.md). `intl-messageformat` is a peer dependency of i18next-icu, so install both:
+
+```bash
+npm install i18next-icu intl-messageformat
+```
 
 ```javascript
 import i18n from 'i18next';
@@ -45,6 +49,23 @@ i18n
 
 export default i18n;
 ```
+
+With i18next-icu, i18next's own plural and context suffix keys (`key_one`, `key_male`), `{{name}}` interpolation and `$t()` nesting stop working. [Using ICU or MF2](https://www.i18next.com/how-to/using-icu-or-mf2) in the i18next docs lists what keeps working and what does not.
+
+{% hint style="info" %}
+**TypeScript:** set `parseInterpolation: false` in your `CustomTypeOptions` (since i18next v26.2.0). The type extractor looks for `{{variable}}`, so ICU plurals like `{count, plural, one {{count} row} other {{count} rows}}` otherwise make `t` ask for variables that do not exist. Keys are still checked, the values you pass to `t` are not.
+
+```typescript
+// i18next.d.ts
+import 'i18next';
+
+declare module 'i18next' {
+  interface CustomTypeOptions {
+    parseInterpolation: false;
+  }
+}
+```
+{% endhint %}
 
 ## Use the ICU format
 
@@ -99,13 +120,12 @@ function MyComponent() {
 ### using the Trans Component
 
 {% hint style="warning" %}
-Warning: direct use of `Trans` (not using the `icu.macro` babel macro) may not be compatible with [`react-compiler`](https://react.dev/learn/react-compiler). Use the `IcuTrans` component or the `icu.macro` babel macro instead.
+Warning: direct use of `Trans` (not using the `icu.macro` babel macro) may not be compatible with [`react-compiler`](https://react.dev/learn/react-compiler). Use the `IcuTrans` component instead.
 {% endhint %}
 
 Using ICU syntax is not possible within a JSX node because `{curly brackets}` are reserved for interpolation.
 
-To work around this, you can use the [IcuTrans Component](../latest/icu-trans-component.md) directly
-like this:
+To work around this, use the [IcuTrans Component](../latest/icu-trans-component.md). It takes the ICU message as a string and a list of components that replace the numbered tags:
 
 ```javascript
 import { IcuTrans } from 'react-i18next';
@@ -126,9 +146,19 @@ const user = 'John Doe';
 We invited <strong>John Doe</strong>.
 ```
 
-While this works the resulting JSX is very verbose and prone to errors. Let's use a babel macro to provide more intuitive syntax!
+See the [IcuTrans Component](../latest/icu-trans-component.md) page for plurals inside such a message, nested elements, usage in React Server Components and the props reference.
 
-### using babel macros (Trans, Plural, Select)
+### using babel macros (Trans, Plural, Select) (deprecated)
+
+{% hint style="warning" %}
+**Deprecated:** the `react-i18next/icu.macro` Babel macro is deprecated in favour of using the [IcuTrans Component](../latest/icu-trans-component.md) directly. It still works on Babel 7 and is not removed, but it gets no new features, and:
+
+* it fails on Babel 8 with `react-i18next/icu.macro: t.jSXIdentifier is not a function`
+* `<Plural count={count} ...>` renders the raw ICU message (`{count, plural, ...}`) when the variable is named `count`; another name such as `count={itemsCount}` works
+* a React `key` prop on `<Plural>` or `<Select>` is turned into an ICU case (`key {...}`) instead of staying a React key, so lists warn about missing keys and the extracted message changes
+
+Everything below compiles to `IcuTrans`, so each sample can be written as an `IcuTrans` element with the same message.
+{% endhint %}
 
 {% hint style="info" %}
 Thanks to using [kentcdodds/babel-plugin-macros](https://github.com/kentcdodds/babel-plugin-macros) we could use some babel magic to transpile nicer looking jsx to above Trans markup.
@@ -244,11 +274,11 @@ const awesomePercentage = 100;
  {plural`${awesomePercentage},
    =0 { It's ${<i>never</i>} awesome }
    =100 { It is ${<b>ALWAYS</b>} awesome! }
-   other { It's awesome {number`${awesomePercentage}, ::percent`} of the time }`}
+   other { It's awesome ${number`${awesomePercentage}, ::percent`} of the time }`}
 </Trans>
 ```
 
-This will result in the translation string `{awesomePercentage, plural, =0 { It's <0>never&lt;/0&gt; awesome } =100 { It is <1>ALWAYS&lt;/1&gt; awesome! } =100 { It's awesome {awesomePercentage, number, ::percent} of the time }}`
+This will result in the translation string `{awesomePercentage, plural, =0 { It's <0>never</0> awesome } =100 { It is <1>ALWAYS</1> awesome! } other { It's awesome {awesomePercentage, number, ::percent} of the time }}`
 
 It possible to nest any interpolated type, including nested `plural`, `select`, or `selectOrdinal`.
 
@@ -387,11 +417,11 @@ import { SelectOrdinal } from 'react-i18next/icu.macro';
 ```
 
 {% hint style="info" %}
-The needed plural forms can be looked up in the official unicode cldr table: [http://www.unicode.org/cldr/charts/33/supplemental/language_plural_rules.html](http://www.unicode.org/cldr/charts/33/supplemental/language_plural_rules.html)
+The needed plural forms can be looked up in the official unicode cldr table: [https://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html](https://www.unicode.org/cldr/charts/latest/supplemental/language_plural_rules.html)
 
 In addition to the plural forms you can specify results for given number values like show above:
 
-`0="show if zero"`
+`$0="show if zero"`
 
 in ICU it would be `=0 {show if zero}` but `=` is not allowed to be leading char in attributes so we replaced it with `$`
 {% endhint %}
