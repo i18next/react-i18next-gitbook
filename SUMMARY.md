@@ -21,6 +21,7 @@
 * [IcuTrans Component](latest/icu-trans-component.md)
 * [I18nextProvider](latest/i18nextprovider.md)
 * [SSR (additional components)](latest/ssr.md)
+* [Migrating v17 to v18](latest/migrating-v17-to-v18.md)
 * [Migrating v9 to v10](latest/migrating-v9-to-v10.md)
 * [TypeScript](latest/typescript.md)
 

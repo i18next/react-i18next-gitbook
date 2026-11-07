@@ -19,7 +19,7 @@ While `<Trans>` gives you a lot of power by letting you interpolate or translate
 You may be looking directly for the [Trans props](https://react.i18next.com/latest/trans-component#trans-props).
 
 {% hint style="warning" %}
-It does ONLY interpolation. It does not rerender on language change or load any translations needed. Check [`useTranslation` hook](usetranslation-hook.md) or [`withTranslation` HOC](withtranslation-hoc.md) for those cases.
+It does not load any translations needed. Check [`useTranslation` hook](usetranslation-hook.md) or [`withTranslation` HOC](withtranslation-hoc.md) for that. Since v18 it re-renders on language change by itself (on the `react.bindI18n` events, like `useTranslation`); before v18 it only updated when a parent re-rendered.
 {% endhint %}
 
 ```javascript
@@ -279,7 +279,7 @@ For simpler cases, you can also cast directly to `any`:
 </Trans>
 ```
 
-**Note:** Avoid using the `allowObjectInHTMLChildren` compiler option, as this weakens type safety globally across your entire React application. But if you're ok with that, this is also a valid option.
+**Note:** Avoid using the `allowObjectInHTMLChildren` type option, as this weakens type safety globally across your entire React application. But if you're ok with that, this is also a valid option. Since v18 it also needs `import 'react-i18next/augment-react';` next to your `CustomTypeOptions` declaration, and `skipLibCheck: true` with current `@types/react` (see [Migrating v17 to v18](migrating-v17-to-v18.md#allowobjectinhtmlchildren-needs-an-import)).
 
 ### Plural
 
@@ -418,8 +418,8 @@ All properties are optional, although you'll need to use `i18nKey` if you're not
 | `defaults`          | `string (undefined)`       | Use this instead of using the children as default translation value (useful for ICU)                                                                                                                                                                                                                                                                                                                                                     |
 | `values`            | `object (undefined)`       | Interpolation values if not provided in children                                                                                                                                                                                                                                                                                                                                                                                         |
 | `components`        | `array[nodes] (undefined)` | Components to interpolate based on index of tag                                                                                                                                                                                                                                                                                                                                                                                          |
-| `shouldUnescape`    | `boolean (false)`          | HTML encoded tags like: `&lt; &amp; &gt;` should be unescaped, to become: `< & >`                                                                                                                                                                                                                                                                                                                                                        |
-| `transDefaultProps` | `object (undefined)`       | Default props for the `Trans` component. Can be used to set default values for `tOptions`, `shouldUnescape`, `values`, and `components`.                                                                                                                                                                                                                                                                                                 |
+| `shouldUnescape`    | `boolean (false)`          | Ignored since v18: `Trans` always decodes HTML entities like `&lt; &amp; &gt;` to `< & >`. Before v18 it switched that decoding on.                                                                                                                                                                                                                                                                                                      |
+| `transDefaultProps` | `object (undefined)`       | Default props for the `Trans` component. Can be used to set default values for `tOptions`, `values`, and `components`.                                                                                                                                                                                                                                                                                                                   |
 
 ### i18next options
 
@@ -442,7 +442,6 @@ i18next.init({
     transDefaultProps: undefined, // default props for Trans component
     // {
     //   tOptions: { interpolation: { escapeValue: true } },
-    //   shouldUnescape: true,
     //   values: {},
   }
 });

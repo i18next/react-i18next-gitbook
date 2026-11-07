@@ -30,6 +30,8 @@ You can also add a script tag to load react-i18next from one of the CDNs providi
 * [https://unpkg.com/react-i18next/react-i18next.js](https://unpkg.com/react-i18next/react-i18next.js)
 * [https://unpkg.com/react-i18next/react-i18next.min.js](https://unpkg.com/react-i18next/react-i18next.min.js)
 
+Since v18 the UMD build uses the global `i18next` instead of bundling its own copy, so load [i18next's UMD build](https://unpkg.com/i18next/i18next.min.js) first.
+
 ## Translation "how to"
 
 {% hint style="info" %}
@@ -147,7 +149,7 @@ i18n
     fallbackLng: "en",
 
     interpolation: {
-      escapeValue: false // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
+      escapeValue: false // React escapes what it renders (keep true for t() output in dangerouslySetInnerHTML)
     }
   });
 
@@ -189,7 +191,7 @@ i18n
     fallbackLng: "en",
 
     interpolation: {
-      escapeValue: false // react already safes from xss => https://www.i18next.com/translation-function/interpolation#unescape
+      escapeValue: false // React escapes what it renders (keep true for t() output in dangerouslySetInnerHTML)
     }
   });
 

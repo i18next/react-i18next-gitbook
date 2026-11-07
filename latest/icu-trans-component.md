@@ -13,13 +13,13 @@ description: "IcuTrans, the Trans variant for ICU message format (i18next-icu): 
 **As long as you have no React/HTML nodes integrated into a cohesive sentence, you won't need it**: most of the time you will be using the good old `t` function.
 
 {% hint style="info" %}
-`IcuTrans` replaces the deprecated [`icu.macro` Babel macro](../misc/using-with-icu-format.md#using-babel-macros-trans-plural-select-deprecated), which compiled JSX into `IcuTrans` elements. Write `IcuTrans` directly instead.
+`IcuTrans` replaces the [`icu.macro` Babel macro](../misc/using-with-icu-format.md#using-babel-macros-trans-plural-select-removed-in-v18) (deprecated in v17.0.21, removed in v18), which compiled JSX into `IcuTrans` elements. Write `IcuTrans` directly instead.
 {% endhint %}
 
 [IcuTrans props reference](icu-trans-component.md#icutrans-props).
 
 {% hint style="warning" %}
-IcuTrans does ONLY interpolation. It does not rerender on language change or load any translations needed. Use [`useTranslation` hook](usetranslation-hook.md) or [`withTranslation` HOC](withtranslation-hoc.md) with `IcuTrans` to force a re-render on language changes.
+IcuTrans does not load any translations needed. Use [`useTranslation` hook](usetranslation-hook.md) or [`withTranslation` HOC](withtranslation-hoc.md) for that. Since v18 it re-renders on language change by itself (on the `react.bindI18n` events, like `useTranslation`); before v18 it needed one of them for that too.
 {% endhint %}
 
 ```javascript
@@ -27,7 +27,7 @@ import React from 'react';
 import { IcuTrans, useTranslation } from 'react-i18next';
 
 function MyComponent() {
-  // this will force a re-render when language changes or translation files are loaded
+  // this loads the namespace (and suspends until it is loaded)
   const { t } = useTranslation('myNamespace');
 
   return <IcuTrans i18nKey="helloWorld" defaultTranslation="Hello World" content={[]} t={t} />;
@@ -158,20 +158,20 @@ Features: <ul><li>Fast</li><li>Reliable</li></ul>
 
 HTML entities in the translation (`&amp;`, `&lt;`, `&nbsp;`, `&copy;`, numeric entities, ...) are decoded to their characters. `IcuTrans` renders a fragment, without a wrapping element.
 
-### Usage in React Server Components (v17.0.21)
+### Usage in React Server Components
 
-`IcuTrans` reads the i18next instance from React context, which Server Components do not have. In a Server Component, import `IcuTransWithoutContext` from its own entry point and pass `t` and `i18n` explicitly:
+Since v18, `import { IcuTrans } from 'react-i18next'` works in a Server Component: the package's `react-server` export condition gives Server Components the variant without React context (`IcuTransWithoutContext`). Pass `i18n` explicitly when you have an instance per request:
 
 ```jsx
 // app/[lng]/page.jsx (Server Component), here with next-i18next's getT
 import { getT } from 'next-i18next/server';
-import { IcuTransWithoutContext } from 'react-i18next/IcuTransWithoutContext';
+import { IcuTrans } from 'react-i18next';
 
 export default async function Page() {
   const { t, i18n } = await getT('common');
 
   return (
-    <IcuTransWithoutContext
+    <IcuTrans
       t={t}
       i18n={i18n}
       i18nKey="welcome"
@@ -183,7 +183,9 @@ export default async function Page() {
 }
 ```
 
-The `react-i18next/IcuTransWithoutContext` entry point does not create a React context when it is imported, the same way `react-i18next/TransWithoutContext` works for `Trans`. Importing from the main `react-i18next` entry point in a Server Component can fail with `createContext is not a function`, depending on how far your bundler tree-shakes the package.
+Without `i18n` it uses the global instance set by `initReactI18next`, which is the wrong one with an instance per request: pass that instance as `i18n` (`t` is optional; a `t` from `getFixedT` carries no instance). In development and with `debug: true` it warns when `i18n` is missing.
+
+Before v18 (since v17.0.21), import `IcuTransWithoutContext` from `react-i18next/IcuTransWithoutContext` instead: that entry point does not create a React context when it is imported, the same way `react-i18next/TransWithoutContext` works for `Trans`. Importing from the main `react-i18next` entry point in a Server Component can fail there with `createContext is not a function`. These entry points keep working in v18.
 
 ### TypeScript
 

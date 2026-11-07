@@ -50,7 +50,7 @@ i18n
     debug: true,
 
     interpolation: {
-      escapeValue: false, // not needed for react as it escapes by default
+      escapeValue: false, // React escapes what it renders (keep true for t() output in dangerouslySetInnerHTML)
     }
   });
 

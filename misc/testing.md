@@ -192,7 +192,7 @@ i18n
     debug: true,
 
     interpolation: {
-      escapeValue: false, // not needed for react!!
+      escapeValue: false, // React escapes what it renders (keep true for t() output in dangerouslySetInnerHTML)
     },
 
     resources: { en: { translationsNS: {} } },
