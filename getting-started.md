@@ -4,6 +4,18 @@ description: "Install react-i18next and i18next, initialize an instance, and tra
 
 # Getting started
 
+{% hint style="info" %}
+🤖 **Using a coding agent?** Paste this prompt into Claude Code, Cursor, Codex, GitHub Copilot, Gemini CLI or any agent that can run terminal commands:
+
+```
+Localize this app with i18next.
+Run `npx i18next-cli localize --print-agent-prompt` and follow
+the steps it prints, in order, checking each one before the next.
+```
+
+You review the diff, and the translation files stay in your repository unless you choose otherwise. ⇒ [What the prompt tells your agent](https://www.i18next.com/how-to/ai-coding-agents)
+{% endhint %}
+
 ## Installation
 
 ### Install using npm
