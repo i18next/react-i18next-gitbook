@@ -65,7 +65,7 @@ Some basics of i18next and some cool possibilities on how to optimize your local
 {% endhint %}
 
 {% hint style="success" %}
-**Who's using i18next?** At least **1,500+ of the world's top 100,000 websites** run on i18next — including many React apps built with react-i18next and next-i18next.\
+**Who's using i18next?** More than **1,100 of the world's top 100,000 websites** run i18next in their own code, many of them React apps built with react-i18next and next-i18next.\
 ⇒ [See who uses i18next](https://www.locize.com/blog/who-uses-i18next?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=who_uses_i18next)
 
 [![](.gitbook/assets/who-uses-i18next.jpg)](https://www.locize.com/blog/who-uses-i18next?utm_source=react_i18next_com\&utm_medium=gitbook\&utm_campaign=who_uses_i18next)
