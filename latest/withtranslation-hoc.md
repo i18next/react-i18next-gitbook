@@ -9,7 +9,7 @@ description: "The withTranslation higher-order component: inject t and i18n into
 The `withTranslation` is a classic HOC (higher order component) and gets the `t` function and `i18n` instance inside your component via props.
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```jsx
 import React from 'react';
 import { withTranslation } from 'react-i18next';
@@ -22,7 +22,7 @@ export default withTranslation()(MyComponent);
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 import React from 'react';
 import { withTranslation } from 'react-i18next';
@@ -55,7 +55,7 @@ Use the `withTranslation` HOC to wrap **any component (class or function)** to a
 ### Loading namespaces
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```jsx
 // load a specific namespace
 // the t function will be set to that namespace as default
@@ -74,7 +74,7 @@ this.props.t('key', { ns: 'ns2' }); // will be looked up from namespace ns2
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 // load a specific namespace
 // the t function will be set to that namespace as default
@@ -177,22 +177,30 @@ export default Extended;
 To get proper type annotations while using TypeScript, import the interface `WithTranslation` and extend it with your own props interface.
 
 {% tabs %}
-{% tab title="JavaScript" %}
-```jsx
+{% tab title="String keys" %}
+```tsx
 import React, { Component } from 'react';
 import { withTranslation, WithTranslation } from 'react-i18next';
 
-class MyComponent extends Component {
+class MyComponent extends Component<IProps, IState> {
   render() {
     return <div>{this.props.t('My translated text')}</div>
   }
+}
+
+interface IProps extends WithTranslation {
+  prop: any;
+}
+
+interface IState {
+  state: any;
 }
 
 export default withTranslation()(MyComponent);
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 import React, { Component } from 'react';
 import { withTranslation, WithTranslation } from 'react-i18next';

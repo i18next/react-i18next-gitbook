@@ -9,7 +9,7 @@ description: "The Translation render prop: access t and i18n where hooks and HOC
 The `Translation` is a render prop and gets the `t` function and `i18n` instance to your component.
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```jsx
 import React from 'react';
 import { Translation } from 'react-i18next';
@@ -26,7 +26,7 @@ export function MyComponent() {
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 import React from 'react';
 import { Translation } from 'react-i18next';
@@ -63,7 +63,7 @@ Use the `Translation` render prop inside **any component (class or function)** t
 ### Loading namespaces
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```jsx
 // load a specific namespace
 // the t function will be set to that namespace as default
@@ -83,7 +83,7 @@ Use the `Translation` render prop inside **any component (class or function)** t
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 // load a specific namespace
 // the t function will be set to that namespace as default
@@ -107,7 +107,7 @@ Use the `Translation` render prop inside **any component (class or function)** t
 ### Overriding the i18next instance
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```jsx
 // passing in an i18n instance
 // use only if you do not like the default instance
@@ -122,7 +122,7 @@ import i18n from './i18n';
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 // passing in an i18n instance
 // use only if you do not like the default instance

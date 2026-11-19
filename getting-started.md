@@ -73,13 +73,13 @@ Simple content can easily be translated using the provided `t` function.
 **After:**
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```jsx
 <div>{t('simpleContent')}</div>
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 <div>{t($ => $.simpleContent)}</div>
 ```
@@ -111,7 +111,7 @@ Sometimes you might want to include html formatting or components like links int
 ```
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```
 <Trans i18nKey="userMessagesUnread" count={count}>
   Hello <strong title={t('nameTitle')}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
@@ -119,7 +119,7 @@ Sometimes you might want to include html formatting or components like links int
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```
 <Trans i18nKey="userMessagesUnread" count={count}>
   Hello <strong title={t($ => $.nameTitle)}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
@@ -137,7 +137,7 @@ Learn more about the Trans Component [here](latest/trans-component.md)
 This basic sample tries to add i18n in a one file sample.
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```jsx
 import React from "react";
 import { createRoot } from 'react-dom/client';
@@ -179,7 +179,7 @@ root.render(
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 import React from "react";
 import { createRoot } from 'react-dom/client';

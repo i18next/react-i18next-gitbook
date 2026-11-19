@@ -9,7 +9,7 @@ description: "The useTranslation hook: get t and i18n in function components, lo
 It gets the `t` function and `i18n` instance inside your functional component.
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```jsx
 import React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -23,7 +23,7 @@ export function MyComponent() {
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 import React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -64,7 +64,7 @@ You'll also see how to use it when you need to work with [multiple namespaces](h
 ### Loading namespaces
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 <pre class="language-jsx"><code class="lang-jsx"><strong>// load a specific namespace
 </strong><strong>// the t function will be set to that namespace as default
 </strong>const { t, i18n } = useTranslation('ns1');
@@ -78,12 +78,12 @@ t('key', { ns: 'ns2' }); // will be looked up from namespace ns2
 </code></pre>
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 // load a specific namespace
 // the t function will be set to that namespace as default
 const { t, i18n } = useTranslation('ns1');
-t('key'); // will be looked up from namespace ns1
+t($ => $.key); // will be looked up from namespace ns1
 
 // load multiple namespaces
 // the t function will be set to first namespace as default
@@ -95,8 +95,8 @@ t($ => $.key, { ns: 'ns2' }); // will be looked up from namespace ns2
 // segment matches a *secondary* namespace is routed to that namespace too:
 t($ => $.ns2.key); // will be looked up from namespace ns2
 t($ => $.ns3.deep.key); // will be looked up from namespace ns3
-// the primary namespace ('ns1' here) is never rewritten — `$.ns1.key` would
-// mean a literal sub-key inside ns1 rather than a switch.
+// the primary namespace ('ns1' here) is not rewritten (except with
+// enableSelector: 'strict'): `$.ns1.key` means a literal sub-key inside ns1.
 ```
 {% endtab %}
 {% endtabs %}
@@ -127,7 +127,7 @@ const { t, i18n } = useTranslation('ns1', { i18n });
 > depends on i18next version >= 20.6.0
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```jsx
 // having JSON in namespace "translation" like this:
 /*{
@@ -145,7 +145,7 @@ const text = t('key'); // "here"
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 // having JSON in namespace "translation" like this:
 /*{
@@ -165,7 +165,7 @@ const text = t($ => $.key); // "here"
 {% endtabs %}
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 {% hint style="warning" %}
 Do **not** use the `keyPrefix` option if you want to use keys with prefixed namespace notation:
 
@@ -178,15 +178,15 @@ const text = t('ns:key'); // this will not work
 {% endhint %}
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 {% hint style="warning" %}
-Do **not** use the `keyPrefix` option if you want to use keys with prefixed namespace notation:
+Do **not** use the `keyPrefix` option if you want to switch to another namespace in the selector path:
 
 i.e.
 
 ```javascript
-const { t } = useTranslation('translation', { keyPrefix: 'very.deeply.nested' });
-const text = t($ => $.key, { ns: 'ns' }); // this will not work
+const { t } = useTranslation(['translation', 'ns'], { keyPrefix: 'very.deeply.nested' });
+const text = t($ => $.ns.key); // this will not work
 ```
 {% endhint %}
 {% endtab %}
@@ -197,7 +197,7 @@ const text = t($ => $.key, { ns: 'ns' }); // this will not work
 > available in react-i18next version >= 12.3.1
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```jsx
 // you can pass a language to be used for the resulting t function
 const { t } = useTranslation('translation', { lng: 'de' });
@@ -205,7 +205,7 @@ const text = t('key'); // "hier"
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 // you can pass a language to be used for the resulting t function
 const { t } = useTranslation('translation', { lng: 'de' });

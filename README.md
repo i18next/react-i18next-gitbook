@@ -109,7 +109,7 @@ Since [next-i18next v16](https://www.locize.com/blog/next-i18next-v16/?utm_sourc
 **After:** With the `Trans` component just change it to:
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```jsx
 ...
 <div>{t('simpleContent')}</div>
@@ -120,7 +120,7 @@ Since [next-i18next v16](https://www.locize.com/blog/next-i18next-v16/?utm_sourc
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 ...
 <div>{t($ => $.simpleContent)}</div>

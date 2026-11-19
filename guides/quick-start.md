@@ -90,7 +90,7 @@ root.render(
 ```
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 {% hint style="info" %}
 If you need to access the `t` function or the `i18next` instance from outside of a React component you can simply import your `./i18n.js` and use the exported i18next instance:
 
@@ -104,7 +104,7 @@ Also read about this [here](https://www.locize.com/blog/how-to-use-i18next-t-out
 {% endhint %}
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 {% hint style="info" %}
 If you need to access the `t` function or the `i18next` instance from outside of a React component you can simply import your `./i18n.js` and use the exported i18next instance:
 
@@ -132,7 +132,7 @@ Using the hook in functional components is one of the options you have.
 The `t` function is the main function in i18next to translate content. Read the [documentation](https://www.i18next.com/translation-function/essentials) for all the options.
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```jsx
 import React from 'react';
 
@@ -146,7 +146,7 @@ function MyComponent () {
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 import React from 'react';
 
@@ -170,7 +170,7 @@ Using higher order components is one of the most used method to extend existing 
 The `t` function is the main function in i18next to translate content. Read the [documentation](https://www.i18next.com/translation-function/essentials) for all the options.
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```jsx
 import React from 'react';
 
@@ -185,7 +185,7 @@ export default withTranslation()(MyComponent);
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 import React from 'react';
 
@@ -208,7 +208,7 @@ Learn more about the higher order component [withTranslation](../latest/withtran
 The render prop enables you to use the `t` function inside your component.
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```jsx
 import React from 'react';
 
@@ -227,7 +227,7 @@ export default function MyComponent () {
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 import React from 'react';
 

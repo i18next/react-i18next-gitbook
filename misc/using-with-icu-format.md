@@ -74,7 +74,7 @@ With i18next v26.2.0 to v26.4.x, use `parseInterpolation: false` instead. The ty
 ### using t function
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```jsx
 import React from 'react';
 import { useTranslation } from 'react-i18next';
@@ -96,7 +96,7 @@ function MyComponent() {
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 import React from 'react';
 import { useTranslation } from 'react-i18next';

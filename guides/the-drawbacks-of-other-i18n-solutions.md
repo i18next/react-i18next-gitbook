@@ -9,7 +9,7 @@ Let's make the sample using our own base i18n framework [i18next](https://i18nex
 ## Using a pure javascript i18n framework
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```jsx
 import React, { Component } from "react";
 import { createRoot } from 'react-dom/client';
@@ -44,7 +44,7 @@ root.render(
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 import React, { Component } from "react";
 import { createRoot } from 'react-dom/client';

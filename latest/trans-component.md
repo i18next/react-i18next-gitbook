@@ -76,7 +76,7 @@ function MyComponent({ person, messages }) {
 **After:** With the Trans component just change it to:
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```jsx
 import { Trans } from 'react-i18next';
 
@@ -93,7 +93,7 @@ function MyComponent({ person, messages }) {
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 import { Trans } from 'react-i18next';
 
@@ -354,7 +354,7 @@ Guessing replacement tags _(<0>\</0>)_ of your component is rather difficult. Th
 **Sample JSX:**
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```jsx
 <Trans i18nKey="userMessagesUnread" count={count}>
   Hello <strong title={t('nameTitle')}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.
@@ -362,7 +362,7 @@ Guessing replacement tags _(<0>\</0>)_ of your component is rather difficult. Th
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 <Trans i18nKey="userMessagesUnread" count={count}>
   Hello <strong title={t($ => $.nameTitle)}>{{name}}</strong>, you have {{count}} unread message. <Link to="/msgs">Go to messages</Link>.

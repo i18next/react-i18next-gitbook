@@ -66,7 +66,7 @@ function MyComponent({ person, messages }) {
 **After:** With the IcuTrans component change it to:
 
 {% tabs %}
-{% tab title="JavaScript" %}
+{% tab title="String keys" %}
 ```jsx
 import { IcuTrans, useTranslation } from 'react-i18next';
 
@@ -91,7 +91,7 @@ function MyComponent({ person, messages }) {
 ```
 {% endtab %}
 
-{% tab title="TypeScript" %}
+{% tab title="Selector API" %}
 ```tsx
 import { IcuTrans, useTranslation } from 'react-i18next';
 
